@@ -1,0 +1,17 @@
+# OPUS-100 orthogonal map, layer 8. Not a submission score. Not fit on SwissGov.
+# raw is the layer-map pass, not the graded file.
+# Graded average-rank: admin_de_43 0.2708, admin_fr_43 0.3385, admin_it_69 0.3643.
+fit de pairs 40
+fit fr pairs 40
+fit it pairs 40
+admin_de_43 raw 0.3942 mapped -0.1810 n 160
+admin_fr_43 raw 0.3512 mapped 0.2233 n 166
+admin_it_69 raw 0.3881 mapped -0.0240 n 202
+
+# OPUS-100 orthogonal map, 400 pairs, layer 8. Not a submission score. Not fit on SwissGov.
+fit de pairs 400
+fit fr pairs 400
+fit it pairs 400
+admin_de_43 raw 0.3942 mapped -0.0616 n 160
+admin_fr_43 raw 0.3512 mapped 0.1458 n 166
+admin_it_69 raw 0.3881 mapped 0.1479 n 202

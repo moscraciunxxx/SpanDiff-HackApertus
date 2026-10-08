@@ -1,0 +1,14 @@
+huggingface_hub>=1.5.0,<2.0
+tokenizers==0.22.2
+jsonlines==4.0.0
+numpy==2.3.5
+scipy==1.16.3
+nlpstats==0.0.1
+# The Dockerfile installs the CPU torch wheel, then this file, then
+# swiss-ai transformers at 3797303. That pin requires huggingface-hub>=1.5.0,<2.0.
+# The current PyPI release is 2.1.1, so this file stays on the 1.x range.
+# That pin allows tokenizers up to 0.23.0. The current release is 0.23.2.
+# This file pins 0.22.2, the version that graded these files. It has a manylinux2014 abi3 wheel.
+# numpy 2.3.5 and scipy 1.16.3 are the versions that printed the development score.
+# Both publish a cp311 Linux wheel. A fresh resolve would otherwise select newer builds.
+# A float32 model load is still refused. Do not add a default torch pin here.

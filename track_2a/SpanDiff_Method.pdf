@@ -1,0 +1,74 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1795 >>
+stream
+BT
+/F1 11 Tf
+48 740 Td
+16 TL
+(Track 2A. SpanDiff is a representation scorer, not a prompt. The model is) Tj
+T*
+(swiss-ai/Apertus-v1.5-8B. The submitted state is hidden state 15 \(index 0 is the) Tj
+T*
+(embedding\). Each side is encoded alone. Subwords are mean-pooled into the whitespace token) Tj
+T*
+(they overlap most. The score is clamp\(1 - max cosine to the other side, 0, 1\), written to) Tj
+T*
+(6 decimals. Generated tokens = 0. Apertus 70B was not run.) Tj
+T*
+(Development result from the official script with --split dev: Spearman de 0,296 ; fr 0,191) Tj
+T*
+(; it 0,324. Unweighted mean 0.270. Kendall de 0,238 ; fr 0,154 ; it 0,259. Each file has) Tj
+T*
+(168 lines. Forward-pass tokens on that run: 564349. Scoring time: 515 seconds.) Tj
+T*
+(The same command on the hidden-state-8 ablation printed de 0,245 ; fr 0,165 ; it 0,282 ;) Tj
+T*
+(mean 0.231. The final-layer clamped DiffAlign recipe printed de 0,053 ; fr 0,056 ; it) Tj
+T*
+(0,106 ; mean 0.072. Those files are not the submission.) Tj
+T*
+(Layer 15 was chosen because the saved per-language development map peaks in the middle of) Tj
+T*
+(the network, and the official development grade is higher at 15 than at 8. The map is in) Tj
+T*
+(docs/layer_curve.png. It is an average-rank study, not a second official score.) Tj
+T*
+(Windows are at most 512 tokenizer tokens. The development pass is 1619 windows. Each) Tj
+T*
+(window has one leading BOS, and that token is not pooled. EOS, PAD, UNK, and multimodal) Tj
+T*
+(special counts on that census were 0.) Tj
+T*
+(Encoder lines contain only id, text_a, text_b, labels_a, and labels_b. Labels are in [0,) Tj
+T*
+(1]. The writer rejects -1 and NaN. Label length equals the whitespace-token count.) Tj
+T*
+(Code is Apache-2.0. The report is CC-BY-4.0. SwissGov text stays CC-BY-4.0.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002088 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+2158
+%%EOF

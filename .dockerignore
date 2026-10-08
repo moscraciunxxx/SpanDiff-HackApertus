@@ -1,0 +1,7 @@
+.git
+**/__pycache__
+**/*.pyc
+.venv
+venv
+**/last_layer/
+track_2a/data/shards/

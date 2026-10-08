@@ -1,0 +1,5 @@
+official evaluate_predictions_admin --split dev exited 0
+The prefix was data/evaluation/encoder_predictions/dev/SpanDiff_admin_
+Spearman de 0,245; fr 0,165; it 0,282
+Kendall de 0,197; fr 0,133; it 0,224
+Each file had 168 lines. No padding count was printed.

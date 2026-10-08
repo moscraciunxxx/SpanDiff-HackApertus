@@ -1,0 +1,34 @@
+# Tokenizer-only census of the development windows. Weights were not loaded.
+# source_text used untokenized text on every side. The graded files were not rewritten.
+sides 1008
+untokenized_sides 1008
+joined_sides 0
+windows 1619
+forward_pass_tokens 564349
+forward_pass_de 184648
+forward_pass_fr 186024
+forward_pass_it 193677
+windows_de 532
+windows_fr 534
+windows_it 553
+max_len 512
+over512 0
+single_overflow 0
+encode_mismatch 0
+only_leading_bos 1619
+first_not_bos 0
+trailing_special 0
+interior_special 0
+empty_offsets 1619
+empty_per_window 1
+special_with_span 0
+content_empty_offset 0
+bos_id 1
+eos_id 2
+pad_id 3
+unk_id 0
+bos_count 1619
+eos_count 0
+pad_count 0
+unk_count 0
+multimodal_special_count 0

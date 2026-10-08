@@ -1,0 +1,11 @@
+# Sentence-restricted Spearman on French development pages. Not a submission score.
+# full is the layer-map ordinal page score, not the graded file. sentence restricts each token to the best-matching sentence on the other side.
+# Graded-file average-rank: admin_fr_10 0.1006, admin_fr_12 0.0813, admin_fr_43 0.3385, admin_fr_99 -0.0188, admin_fr_101 0.2087, admin_fr_142 -0.1345, admin_fr_174 0.0480, admin_fr_196 0.0494.
+admin_fr_10 sents 29/24 full -0.0038 sentence 0.0290
+admin_fr_12 sents 33/30 full -0.0298 sentence -0.0499
+admin_fr_43 sents 6/7 full 0.3512 sentence 0.3436
+admin_fr_99 sents 18/14 full 0.0021 sentence 0.0653
+admin_fr_101 sents 7/6 full 0.1873 sentence 0.3397
+admin_fr_142 sents 23/22 full -0.0634 sentence -0.0855
+admin_fr_174 sents 102/98 full -0.0289 sentence -0.0102
+admin_fr_196 sents 58/58 full -0.1236 sentence -0.0850

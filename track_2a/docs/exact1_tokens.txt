@@ -1,0 +1,40 @@
+# Exact-1 kept scores on the graded hidden-state-8 files. Not a submission score.
+# Kept means gold is not -1. Every one of these tokens is a single character.
+de 209
+fr 218
+it 192
+s_after_apostrophe de 127 fr 127 it 128 total 382
+# Every one of those 382 graded scores is exactly 1, and none are gold -1.
+# admin_de_0 has three, all at 1 in the graded file, the last-block file, and the saved probe.
+# Shared English side, exact 1 in all three files: 962. Kept (gold not -1): 166, of which 126 are s.
+other 237
+period_or_hyphen 192
+apostrophe 23
+other_context 22
+# source_text encodes untokenized text when every gold token is found there.
+# That path leaves these tokens empty. Space-joined text leaves none empty.
+untokenized_empty 6788
+untokenized_empty_de 1659
+untokenized_empty_fr 2942
+untokenized_empty_it 2187
+untokenized_empty_multi 0
+untokenized_empty_graded_1 6788
+joined_empty 0
+whitespace_tokens 405654
+exact1_all de 1659 fr 2942 it 2187
+exact1_dropped de 1450 fr 2724 it 1995
+exact1_dropped_punct de 1450 fr 2724 it 1995
+bare_apostrophe de 238 fr 1773 it 1264
+bare_apostrophe_gold_m1 de 238 fr 1773 it 1264
+bare_apostrophe_exact1 de 79 fr 1252 it 685
+# Every gold -1 token is one ASCII punctuation character. Digits and typographic dashes are kept.
+gold_m1_ascii_punct de 17476 fr 18643 it 17593
+gold_m1_other 0
+kept_single de 2258 fr 5421 it 6314
+drop_single_delta de -0.0007 fr 0.0018 it 0.0005
+only_single_spearman de 0.2707 fr 0.1292 it 0.2732
+exact1_kept_letter de 206 fr 213 it 190
+exact1_kept_punct de 3 fr 5 it 2
+exact1_multichar 0
+near1_not_exact 0
+scores_ge_0.9_below_1 de 19 fr 24 it 27

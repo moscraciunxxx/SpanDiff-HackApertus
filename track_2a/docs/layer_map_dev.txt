@@ -1,0 +1,36 @@
+Development layer map. Not a replacement for the graded hidden-state-8 files.
+Spearman uses ordinal ranks. The contest formula is average rank. Do not compare these numbers with the printed score.
+documents 504
+layer 0 n 351942 spearman 0.0496
+layer 1 n 351942 spearman 0.0497
+layer 2 n 351942 spearman 0.0517
+layer 3 n 351942 spearman 0.0753
+layer 4 n 351942 spearman 0.0830
+layer 5 n 351942 spearman 0.1025
+layer 6 n 351942 spearman 0.1058
+layer 7 n 351942 spearman 0.1177
+layer 8 n 351942 spearman 0.1281
+layer 9 n 351942 spearman 0.1278
+layer 10 n 351942 spearman 0.1315
+layer 11 n 351942 spearman 0.1357
+layer 12 n 351942 spearman 0.1351
+layer 13 n 351942 spearman 0.1290
+layer 14 n 351942 spearman 0.1408
+layer 15 n 351942 spearman 0.1403
+layer 16 n 351942 spearman 0.1396
+layer 17 n 351942 spearman 0.1399
+layer 18 n 351942 spearman 0.1324
+layer 19 n 351942 spearman 0.1281
+layer 20 n 351942 spearman 0.1208
+layer 21 n 351942 spearman 0.1211
+layer 22 n 351942 spearman 0.1091
+layer 23 n 351942 spearman 0.0997
+layer 24 n 351942 spearman 0.0847
+layer 25 n 351942 spearman 0.0746
+layer 26 n 351942 spearman 0.0687
+layer 27 n 351942 spearman 0.0486
+layer 28 n 351942 spearman 0.0336
+layer 29 n 351942 spearman 0.0206
+layer 30 n 351942 spearman 0.0165
+layer 31 n 351942 spearman -0.0010
+layer 32 n 351942 spearman -0.0358

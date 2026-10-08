@@ -1,0 +1,6 @@
+# French zero-rate match. Not a submission score.
+# Keep every French token with gold above 0. Downsample gold-0 tokens so
+# n_zero / n_positive equals the Italian ratio on the same side.
+# Twenty shuffles, numpy Generator seed 0. Spearman is average rank.
+english raw 0.1569 matched_mean 0.2051 matched_std 0.0017 italian 0.2680 keep_zero 26301 positive 5159
+translation raw 0.1665 matched_mean 0.2174 matched_std 0.0019 italian 0.2894 keep_zero 30050 positive 7454

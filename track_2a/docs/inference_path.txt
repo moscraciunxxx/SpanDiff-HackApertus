@@ -1,0 +1,1 @@
+SpanDiff does not call a participant endpoint. It loads swiss-ai/Apertus-v1.5-8B locally and reads hidden state 8. Index 0 is the embedding. Index 32, after the final norm, is not the graded state. Text is not generated. This repository does not redistribute the weights.

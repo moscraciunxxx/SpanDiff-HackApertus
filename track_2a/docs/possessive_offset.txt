@@ -1,0 +1,19 @@
+# Apertus v1.5 8B tokenizer offsets for the possessive s. Not a submission score.
+# Model weights were not loaded. Tokenizer only, local cache.
+# Constructed string with spaces: Switzerland ' s office
+# subword offset 13:15 is ' s' and overlaps the s token, so that token is filled.
+# Shifting that offset one character left makes the overlap with the apostrophe
+# equal to the overlap with s. The earlier token keeps the subword, so s is empty.
+span Switzerland subs filled
+span apostrophe subs filled
+span s subs filled
+shifted_s empty
+# Real page admin_de_0, side a. source_text uses the untokenized text.
+# The first s sits at characters 60:61. The apostrophe is the previous token, 59:60.
+# One subword covers 59:61, the two characters 's. Overlap is one character each.
+# The earlier token keeps that subword, so s is empty and the graded score is 1.
+# The same tie covers the other two s tokens on that side.
+# Space-joined gold tokens are not the encoded string. That string fills s.
+# Across the development set, untokenized text leaves 6788 tokens empty.
+# de 1659, fr 2942, it 2187. All are one character. All graded scores are 1.
+# Joined text leaves 0 of 405654 empty.

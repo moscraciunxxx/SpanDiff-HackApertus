@@ -1,0 +1,7 @@
+# per-token layer 8 vs 32 on one pass; not a submission score
+# Not the graded files paired with last_layer/. That pair: 1823 of 1828 higher at the last block, 2 higher at hidden state 8, gold-0 means 0.168 and 0.609.
+admin_de_43 n 160 mean_gap -0.384 frac_mid_higher 0.000 frac_last_higher 0.944 gold0_mid 0.191 gold0_last 0.591 goldhi_mid nan goldhi_last nan
+admin_fr_10 n 1300 mean_gap -0.454 frac_mid_higher 0.000 frac_last_higher 0.994 gold0_mid 0.168 gold0_last 0.621 goldhi_mid 0.216 goldhi_last 0.681
+admin_fr_43 n 166 mean_gap -0.439 frac_mid_higher 0.000 frac_last_higher 0.988 gold0_mid 0.186 gold0_last 0.627 goldhi_mid 0.244 goldhi_last 0.673
+admin_it_69 n 202 mean_gap -0.462 frac_mid_higher 0.000 frac_last_higher 0.995 gold0_mid 0.196 gold0_last 0.680 goldhi_mid 0.263 goldhi_last 0.665
+POOLED n 1828 mean_gap -0.447 frac_mid_higher 0.000 frac_last_higher 0.989 gold0_mid 0.173 gold0_last 0.624 goldhi_mid 0.233 goldhi_last 0.676

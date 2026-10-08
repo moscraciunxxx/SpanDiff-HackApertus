@@ -1,0 +1,9 @@
+ZurichNLP/SwissGov-RSD development split only. The sealed split is not included.
+Authors: Michelle Wastl, Jannis Vamvas, and Rico Sennrich.
+Source: https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD
+Licence: CC-BY-4.0, https://creativecommons.org/licenses/by/4.0/
+These files keep that licence. They are not Apache-2.0 and not CDLA-Permissive-2.0.
+de/dev_de.jsonl
+fr/dev_fr.jsonl
+it/dev_it.jsonl
+Printed Spearman de 0,245; fr 0,165; it 0,282. Mean of those printed values: 0.2307. The script does not print the mean.
