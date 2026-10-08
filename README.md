@@ -1,5 +1,7 @@
 # SpanDiff
 
+Repository: https://github.com/moscraciunxxx/SpanDiff-HackApertus
+
 SpanDiff scores token-level semantic drift on Swiss federal pages for Track 2A (UZH). It reads hidden state 15 of `swiss-ai/Apertus-v1.5-8B`, mean-pools subwords into whitespace tokens, and writes `clamp(1 - max cosine, 0, 1)`. No text is generated. Apertus 70B was not run.
 
 ## Results

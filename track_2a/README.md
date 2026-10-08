@@ -1,5 +1,7 @@
 # SpanDiff
 
+Repository: https://github.com/moscraciunxxx/SpanDiff-HackApertus
+
 Track 2A, UZH. Token-level difference on Swiss federal pages with Apertus v1.5 8B, hidden state 15. Mean-pool subwords to whitespace tokens. Score = clamp(1 - max cosine to the other side, 0, 1). Generated tokens: 0. 70B was not run.
 
 ## Results

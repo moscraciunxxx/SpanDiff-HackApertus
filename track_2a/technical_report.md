@@ -77,7 +77,7 @@ States are causal, so a token sees only its left context. An empty subword span 
 
 ## Reproducibility
 
-From a checkout of this tree, make run-local grades predictions/dev with --split dev and does not load the model. make predict writes a new layer-15 development run under predictions/rerun. It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker image grades the same committed development files. It was built and graded under podman on linux/amd64. Docker is not installed on this Mac, so that image has not been run here.
+The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. From a checkout of this tree, make run-local grades predictions/dev with --split dev and does not load the model. make predict writes a new layer-15 development run under predictions/rerun. It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker image grades the same committed development files. It was built and graded under podman on linux/amd64. Docker is not installed on this Mac, so that image has not been run here.
 
 ## Next steps
 

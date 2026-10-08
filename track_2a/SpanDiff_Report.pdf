@@ -154,7 +154,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 12 0 R /F2 13 0 R >> /XObject << /Im1 11 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 9184 >>
+<< /Length 9224 >>
 stream
 0.90 0.93 0.96 rg 48.00 732.00 86.00 16.00 re f
 0.45 0.50 0.55 RG 0.6 w 48.00 732.00 86.00 16.00 re S
@@ -320,25 +320,26 @@ BT /F1 10.0 Tf 48.00 179.00 Td (three languages and the official full-developmen
 BT /F1 10.0 Tf 48.00 166.00 Td (formula was not rerun. 70B was not run. No test score is reported, and the test files must not be) Tj ET
 BT /F1 10.0 Tf 48.00 153.00 Td (passed to the evaluator until the organizers say which split they score.) Tj ET
 BT /F2 13.0 Tf 48.00 125.00 Td (Reproducibility) Tj ET
-BT /F1 10.0 Tf 48.00 107.00 Td (From a checkout of this tree, make run-local grades predictions/dev with --split dev and does not load) Tj ET
-BT /F1 10.0 Tf 48.00 94.00 Td (the model. make predict writes a new layer-15 development run under predictions/rerun. It needs the) Tj ET
-BT /F1 10.0 Tf 48.00 81.00 Td (Apertus weights and a Hugging Face token only if those weights are not cached. The Docker image grades) Tj ET
-BT /F1 10.0 Tf 48.00 68.00 Td (the same committed development files. It was built and graded under podman on linux/amd64. Docker is) Tj ET
-BT /F1 10.0 Tf 48.00 55.00 Td (not installed on this Mac, so that image has not been run here.) Tj ET
+BT /F1 10.0 Tf 48.00 107.00 Td (The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. From a checkout of this tree,) Tj ET
+BT /F1 10.0 Tf 48.00 94.00 Td (make run-local grades predictions/dev with --split dev and does not load the model. make predict writes) Tj ET
+BT /F1 10.0 Tf 48.00 81.00 Td (a new layer-15 development run under predictions/rerun. It needs the Apertus weights and a Hugging Face) Tj ET
+BT /F1 10.0 Tf 48.00 68.00 Td (token only if those weights are not cached. The Docker image grades the same committed development) Tj ET
+BT /F1 10.0 Tf 48.00 55.00 Td (files. It was built and graded under podman on linux/amd64. Docker is not installed on this Mac, so) Tj ET
 endstream
 endobj
 9 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 12 0 R /F2 13 0 R >> /XObject << /Im1 11 0 R >> >> >>
 endobj
 10 0 obj
-<< /Length 577 >>
+<< /Length 650 >>
 stream
-BT /F2 13.0 Tf 48.00 727.00 Td (Next steps) Tj ET
-BT /F1 10.0 Tf 48.00 709.00 Td (The open question is which file the organizers will score. Development, the 56-document complement, and) Tj ET
-BT /F1 10.0 Tf 48.00 696.00 Td (the 224-document id order are all written. Only the development file has an official number. A 70B run) Tj ET
-BT /F1 10.0 Tf 48.00 683.00 Td (is future work on a larger machine.) Tj ET
-BT /F2 13.0 Tf 48.00 655.00 Td (License) Tj ET
-BT /F1 10.0 Tf 48.00 637.00 Td (Report CC-BY-4.0. Code Apache-2.0. SwissGov text stays CC-BY-4.0, not relicensed.) Tj ET
+BT /F1 10.0 Tf 48.00 738.00 Td (that image has not been run here.) Tj ET
+BT /F2 13.0 Tf 48.00 710.00 Td (Next steps) Tj ET
+BT /F1 10.0 Tf 48.00 692.00 Td (The open question is which file the organizers will score. Development, the 56-document complement, and) Tj ET
+BT /F1 10.0 Tf 48.00 679.00 Td (the 224-document id order are all written. Only the development file has an official number. A 70B run) Tj ET
+BT /F1 10.0 Tf 48.00 666.00 Td (is future work on a larger machine.) Tj ET
+BT /F2 13.0 Tf 48.00 638.00 Td (License) Tj ET
+BT /F1 10.0 Tf 48.00 620.00 Td (Report CC-BY-4.0. Code Apache-2.0. SwissGov text stays CC-BY-4.0, not relicensed.) Tj ET
 endstream
 endobj
 11 0 obj
@@ -816,12 +817,12 @@ xref
 0000007166 00000 n 
 0000010622 00000 n 
 0000010787 00000 n 
-0000020023 00000 n 
-0000020189 00000 n 
-0000020818 00000 n 
-0000112312 00000 n 
-0000112383 00000 n 
+0000020063 00000 n 
+0000020229 00000 n 
+0000020931 00000 n 
+0000112425 00000 n 
+0000112496 00000 n 
 trailer << /Size 14 /Root 1 0 R >>
 startxref
-112459
+112572
 %%EOF
