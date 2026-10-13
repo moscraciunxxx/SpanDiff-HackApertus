@@ -9,7 +9,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 1795 >>
+<< /Length 2580 >>
 stream
 BT
 /F1 11 Tf
@@ -25,17 +25,33 @@ T*
 T*
 (6 decimals. Generated tokens = 0. Apertus 70B was not run.) Tj
 T*
-(Development result from the official script with --split dev: Spearman de 0,296 ; fr 0,191) Tj
+(Development scores are our development evaluation. Official script, development split:) Tj
 T*
-(; it 0,324. Unweighted mean 0.270. Kendall de 0,238 ; fr 0,154 ; it 0,259. Each file has) Tj
+(Spearman de 0,296 ; fr 0,191 ; it 0,324. Unweighted mean 0.2703. Kendall de 0,238 ; fr) Tj
 T*
-(168 lines. Forward-pass tokens on that run: 564349. Scoring time: 515 seconds.) Tj
+(0,154 ; it 0,259. Each development file has 168 lines. Forward-pass tokens on that run:) Tj
+T*
+(564349. Scoring time: 515 seconds. Test predictions, 56 documents per language, and) Tj
+T*
+(full-set predictions, 224 documents per language, use the frozen hidden-state-15 method) Tj
+T*
+(and are included for the organizers to score. We never graded the test split. make run) Tj
+T*
+(grades the development files only.) Tj
 T*
 (The same command on the hidden-state-8 ablation printed de 0,245 ; fr 0,165 ; it 0,282 ;) Tj
 T*
-(mean 0.231. The final-layer clamped DiffAlign recipe printed de 0,053 ; fr 0,056 ; it) Tj
+(mean 0.2307. The final-layer clamped DiffAlign recipe printed de 0,053 ; fr 0,056 ; it) Tj
 T*
-(0,106 ; mean 0.072. Those files are not the submission.) Tj
+(0,106 ; mean 0.0717. Those files are not the submission.) Tj
+T*
+(The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That) Tj
+T*
+(baseline is the clamped final-layer row, mean 0.0717. The submitted mean is 0.2703. The) Tj
+T*
+(paper does not clamp. An unclamped rescore was not produced. The UZH FAQ says either the) Tj
+T*
+(8B or the 70B is in scope.) Tj
 T*
 (Layer 15 was chosen because the saved per-language development map peaks in the middle of) Tj
 T*
@@ -53,6 +69,10 @@ T*
 T*
 (1]. The writer rejects -1 and NaN. Label length equals the whitespace-token count.) Tj
 T*
+(LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not read. The scores come from a local forward) Tj
+T*
+(pass of Apertus v1.5 8B.) Tj
+T*
 (Code is Apache-2.0. The report is CC-BY-4.0. SwissGov text stays CC-BY-4.0.) Tj
 ET
 endstream
@@ -67,8 +87,8 @@ xref
 0000000058 00000 n 
 0000000115 00000 n 
 0000000241 00000 n 
-0000002088 00000 n 
+0000002873 00000 n 
 trailer << /Size 6 /Root 1 0 R >>
 startxref
-2158
+2943
 %%EOF

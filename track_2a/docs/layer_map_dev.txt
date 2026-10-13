@@ -1,4 +1,4 @@
-Development layer map. Not a replacement for the graded hidden-state-8 files.
+Development layer map. Not a replacement for the graded files. The submitted files are hidden state 15. This map is not the official print.
 Spearman uses ordinal ranks. The contest formula is average rank. Do not compare these numbers with the printed score.
 documents 504
 layer 0 n 351942 spearman 0.0496

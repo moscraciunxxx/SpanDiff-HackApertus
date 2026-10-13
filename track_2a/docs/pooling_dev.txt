@@ -1,5 +1,5 @@
 Hidden state 8 pooling comparison on the development split.
-Not a replacement for the graded files. The contest score stays the printed hidden-state-8 Spearman.
+Not a replacement for the graded files. The submitted print is hidden state 15, not this hidden-state-8 comparison.
 documents 504 complete true
 Spearman uses average ranks, the contest formula. Mean-pool rounded to 6 decimals is the graded dump rule.
 All three poolings use clamp(1 - max cosine, 0, 1). They are not the paper's unclamped formula.

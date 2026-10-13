@@ -1,6 +1,6 @@
 # OPUS-100 orthogonal map, layer 8. Not a submission score. Not fit on SwissGov.
 # raw is the layer-map pass, not the graded file.
-# Graded average-rank: admin_de_43 0.2708, admin_fr_43 0.3385, admin_it_69 0.3643.
+# Hidden-state-8 ablation average-rank, not the submitted files: admin_de_43 0.2708, admin_fr_43 0.3385, admin_it_69 0.3643.
 fit de pairs 40
 fit fr pairs 40
 fit it pairs 40

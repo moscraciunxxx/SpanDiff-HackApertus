@@ -1,5 +1,5 @@
 # six development documents; ordinal probe Spearman, not the contest average-rank formula; not a submission score
-# Graded-file average-rank on the same pages, hidden state 8:
+# Hidden-state-8 ablation average-rank on the same pages, not the submitted files:
 # admin_de_43 0.2708, admin_de_18 0.2152, admin_fr_43 0.3385,
 # admin_fr_10 0.1006, admin_it_43 0.3987, admin_it_69 0.3643.
 admin_de_43 layer 4 n 160 spearman 0.3103

@@ -1,4 +1,4 @@
-Per-language development layer map. Not a replacement for the graded hidden-state-8 files.
+Per-language development layer map. Not a replacement for the graded files. The submitted files are hidden state 15. This map is not the official print.
 Spearman is token-pooled inside one language and uses ordinal ranks. The average-rank pass is layer_map_by_lang_avg.txt.
 It is not the unweighted mean of the three printed contest Spearmans.
 lang de documents 168

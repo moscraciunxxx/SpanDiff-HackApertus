@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SpanDiff entrypoint. The default run is a one-document probe, not the full dev set."""
+"""SpanDiff entrypoint. A complete development set does not load the model."""
 
 from __future__ import annotations
 
@@ -75,6 +75,22 @@ def _note_weight_gate(error: str) -> None:
 
 def _has_prediction(swissgov: Path) -> bool:
     return any((swissgov / prediction_name(lang)).is_file() for lang in LANGS)
+
+
+def _visible_dev_action() -> str:
+    """The committed development files. A clean checkout has no .swissgov copy."""
+    directory = REPO / "track_2a" / "predictions" / "dev"
+    paths = [directory / f"SpanDiff_admin_{lang}.jsonl.jsonl" for lang in LANGS]
+    present = [path for path in paths if path.is_file()]
+    if not present:
+        return "score"
+    if len(present) != len(paths):
+        return "refuse"
+    for path in present:
+        lines = path.read_text(encoding="utf-8").splitlines()
+        if len(lines) != 168 or any(not line.strip() for line in lines):
+            return "refuse"
+    return "grade"
 
 
 def _run_action(complete: bool, has_file: bool) -> str:
@@ -235,7 +251,7 @@ def _commit_checkpoint(counts: dict[str, int]) -> None:
 def _keep_valid_prefix(path: Path, ids: list[str], records: dict[str, dict]) -> int:
     """Keep lines whose ids and texts match gold order.
 
-    This does not check that the labels are hidden state 8. --probe and
+    This does not check which hidden state produced the labels. --probe and
     --full return before calling it when a prediction file exists and the
     three files are not the complete development set.
     """
@@ -474,6 +490,20 @@ def _full() -> int:
     if hits:
         print("\n".join(hits), file=sys.stderr)
         return 1
+    if _visible_dev_action() == "grade":
+        print(
+            "Development prediction files are already complete. Refusing to replace them. "
+            "The model is not loaded.",
+            flush=True,
+        )
+        return 0
+    if _visible_dev_action() == "refuse":
+        print(
+            "A prediction file is present but is not the 168-line development set. "
+            "The model is not loaded.",
+            flush=True,
+        )
+        return 1
     swissgov = REPO / ".swissgov"
     action = _run_action(
         swissgov.is_dir() and _complete(swissgov),
@@ -605,6 +635,17 @@ def main(argv: list[str]) -> int:
         return 0
     if args.full:
         return _full()
+    visible = _visible_dev_action()
+    if visible == "grade":
+        print("Development prediction files are complete. The model is not loaded.")
+        print("Grade them with make run-local. make run grades them in Docker.")
+        return 0
+    if visible == "refuse":
+        print(
+            "A prediction file is present but is not the 168-line development set. "
+            "The model is not loaded."
+        )
+        return 1
     code = _probe()
     if code != 0:
         return code

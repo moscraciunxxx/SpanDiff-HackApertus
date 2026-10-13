@@ -10,6 +10,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import random
 import sys
 import time
 from pathlib import Path
@@ -71,10 +73,13 @@ def main(argv: list[str]) -> int:
     args = parser.parse_args(argv)
     if not 0 <= args.layer <= 32:
         raise SystemExit(f"refusing layer {args.layer}")
+    random.seed(0)
     score.LAYER_INDEX = args.layer
     if args.texts is None and args.order_from is None:
         raise SystemExit("pass --order-from or --texts")
-    out_dir = args.out if args.out.is_absolute() else REPO / args.out
+    override = os.environ.get("SPAN_DIFF_PREDICT_OUT", "").strip()
+    target = Path(override) if override else args.out
+    out_dir = target if target.is_absolute() else REPO / target
     text_dir = None if args.texts is None else (args.texts if args.texts.is_absolute() else REPO / args.texts)
     order_dir = None if args.order_from is None else (args.order_from if args.order_from.is_absolute() else REPO / args.order_from)
     out_dir.mkdir(parents=True, exist_ok=True)

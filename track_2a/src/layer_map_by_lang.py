@@ -3,7 +3,7 @@
 
 Same forward pass as layer_map_dev.py. Spearman is computed inside each
 language, which is the shape of the contest metric. It is still not the
-graded score: graded files are hidden state 8 only, and this script does
+graded score: the submitted files are hidden state 15, and this script does
 not write them. Does not open the sealed test split.
 """
 
@@ -33,7 +33,7 @@ SUMMARY = REPO / "track_2a" / "docs" / "layer_map_by_lang.txt"
 
 def write_summary(buckets: dict[str, list[dict]], n_states: int) -> None:
     lines = [
-        "Per-language development layer map. Not a replacement for the graded hidden-state-8 files.",
+        "Per-language development layer map. Not a replacement for the graded files. The submitted files are hidden state 15. This map is not the official print.",
         "Spearman is token-pooled inside one language and uses ordinal ranks. The average-rank pass is layer_map_by_lang_avg.txt.",
         "It is not the unweighted mean of the three printed contest Spearmans.",
     ]

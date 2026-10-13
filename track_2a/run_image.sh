@@ -2,18 +2,13 @@
 # Build and run the image. This script was not executed on the machine that graded the files.
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-docker build -t spandiff:local -f "${ROOT}/track_2a/Dockerfile" "$ROOT"
-# The graded files do not need the weight cache. Mount it only when it exists.
-if [[ -n "${HOME:-}" && -d "${HOME}/.cache/huggingface" ]]; then
-  docker run --rm \
-    -e HF_TOKEN \
-    -e HUGGING_FACE_HUB_TOKEN \
-    -v "${HOME}/.cache/huggingface:/root/.cache/huggingface:ro" \
-    spandiff:local
-else
-  docker run --rm \
-    -e HF_TOKEN \
-    -e HUGGING_FACE_HUB_TOKEN \
-    spandiff:local
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+if ! command -v docker >/dev/null 2>&1; then
+  echo "refusing: docker is not on PATH. The image was not run. Grade with make run-local." >&2
+  exit 1
 fi
+docker build -t spandiff:local -f "${ROOT}/track_2a/Dockerfile" "$ROOT"
+# Do not mount the Hugging Face cache. The grade does not load weights, and a
+# read-only cache can make the evaluator's imports fail when they try to write.
+docker run --rm spandiff:local

@@ -97,8 +97,11 @@ def _encode_window(model, tokenizer, text: str, spans: list[tuple[int, int]], de
         return_tensors="pt",
         return_offsets_mapping=True,
         add_special_tokens=True,
+        padding=False,
         truncation=False,
     )
+    if int(batch["input_ids"].shape[0]) != 1:
+        raise RuntimeError("expected batch size 1 with no padding")
     offsets = batch.pop("offset_mapping")[0].tolist()
     model_inputs = {
         key: value.to(device) if hasattr(value, "to") else value
@@ -148,8 +151,14 @@ def load_apertus(model_id: str = MODEL_ID):
         raise SystemExit(
             f"refusing model {model_id}. The submitted scorer is only {MODEL_ID}."
         )
+    import random
     import torch
     from transformers import AutoTokenizer
+
+    random.seed(0)
+    torch.manual_seed(0)
+    if hasattr(torch, "use_deterministic_algorithms"):
+        torch.use_deterministic_algorithms(True, warn_only=True)
 
     try:
         from transformers import AutoModelForMultimodalLM

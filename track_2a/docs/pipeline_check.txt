@@ -1,5 +1,7 @@
 official evaluate_predictions_admin --split dev exited 0
-The prefix was data/evaluation/encoder_predictions/dev/SpanDiff_admin_
-Spearman de 0,245; fr 0,165; it 0,282
-Kendall de 0,197; fr 0,133; it 0,224
+The prefix was track_2a/predictions/dev/SpanDiff_admin_
+Spearman de 0,296; fr 0,191; it 0,324
+Kendall de 0,238; fr 0,154; it 0,259
+Mean of those printed Spearmans: 0.2703. The official script does not print the mean.
 Each file had 168 lines. No padding count was printed.
+Hidden state 8 ablation, same command: Spearman de 0,245; fr 0,165; it 0,282. Kendall de 0,197; fr 0,133; it 0,224.

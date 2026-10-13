@@ -133,7 +133,7 @@ def done_ids() -> set[str]:
 
 def write_summary(rows: list[dict], n_states: int) -> None:
     lines = [
-        "Development layer map. Not a replacement for the graded hidden-state-8 files.",
+        "Development layer map. Not a replacement for the graded files. The submitted files are hidden state 15. This map is not the official print.",
         "Spearman uses ordinal ranks. The contest formula is average rank. Do not compare these numbers with the printed score.",
         f"documents {len(rows)}",
     ]

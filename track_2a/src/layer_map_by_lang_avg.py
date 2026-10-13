@@ -66,7 +66,7 @@ def spearman(x, y) -> float:
 def write_summary(buckets: dict[str, list[dict]], n_states: int) -> None:
     lines = [
         "Per-language development layer map, average-rank Spearman.",
-        "Not a replacement for the graded hidden-state-8 files.",
+        "Not a replacement for the graded files. The submitted files are hidden state 15. This map is not the official print.",
         "This rank formula matches the unrounded German coefficient to four decimals (0.2451). The script prints 0,245.",
     ]
     for lang in ("de", "fr", "it"):

@@ -1,6 +1,7 @@
 .PHONY: run run-local predict check
 
-# Docker path. The documented primary grade on this machine is run-local.
+# Judge command. Builds the image and grades predictions/dev.
+# make run-local is the same grade when Docker is absent.
 run:
 	bash run_image.sh
 

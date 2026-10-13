@@ -182,7 +182,7 @@ def write_summary(buckets: dict[str, dict[str, list[float]]], docs: int, complet
         raise SystemExit("refusing to write a graded prediction name")
     lines = [
         "Hidden state 8 pooling comparison on the development split.",
-        "Not a replacement for the graded files. The contest score stays the printed hidden-state-8 Spearman.",
+        "Not a replacement for the graded files. The submitted print is hidden state 15, not this hidden-state-8 comparison.",
         f"documents {docs} complete {str(complete).lower()}",
         "Spearman uses average ranks, the contest formula. Mean-pool rounded to 6 decimals is the graded dump rule.",
     ]

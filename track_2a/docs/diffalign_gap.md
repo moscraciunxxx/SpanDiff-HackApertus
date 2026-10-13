@@ -19,4 +19,4 @@ The methods differ in order as well as in the clamp. The paper takes the maximum
 
 Dropping the clamp, on the same pooled Apertus states, changes a token only when its best cosine is negative: the paper formula returns a number above 1, and SpanDiff returns 1.
 
-The graded development print is hidden state 15 after mean-pooling, with the clamp: Spearman de 0,296 ; fr 0,191 ; it 0,324 ; unweighted mean 0.270. Hidden state 8 printed 0,245 ; 0,165 ; 0,282 ; mean 0.231. The higher pooling numbers above are ablations. They were not written into the graded files.
+The graded development print is hidden state 15 after mean-pooling, with the clamp: Spearman de 0,296 ; fr 0,191 ; it 0,324 ; unweighted mean 0.2703. Hidden state 8 printed 0,245 ; 0,165 ; 0,282 ; mean 0.2307. The higher pooling numbers above are ablations. They were not written into the graded files.
