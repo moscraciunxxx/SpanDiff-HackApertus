@@ -9,7 +9,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 7 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 3494 >>
+<< /Length 3480 >>
 stream
 BT
 /F1 11 Tf
@@ -57,11 +57,11 @@ T*
 T*
 (hidden-state-8 ablation printed de 0,245 ; fr 0,165 ; it 0,282 ; mean 0.2307. As a) Tj
 T*
-(development comparison only \(never submitted\), Qwen/Qwen2.5-VL-7B-Instruct with the same) Tj
+(development comparison only, Qwen/Qwen2.5-VL-7B-Instruct with the same Tier-1 Combination) Tj
 T*
-(Tier-1 Combination printed de 0,351 ; fr 0,217 ; it 0,381 ; mean 0.3163, below Apertus) Tj
+(printed de 0,351 ; fr 0,217 ; it 0,381 ; mean 0.3163, below the Tier-1 ablation mean) Tj
 T*
-(v1.5 8B at 0.3340.) Tj
+(0.3340.) Tj
 T*
 (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That) Tj
 T*
@@ -125,10 +125,10 @@ xref
 0000000058 00000 n 
 0000000121 00000 n 
 0000000247 00000 n 
-0000003793 00000 n 
-0000003919 00000 n 
-0000004214 00000 n 
+0000003779 00000 n 
+0000003905 00000 n 
+0000004200 00000 n 
 trailer << /Size 8 /Root 1 0 R >>
 startxref
-4284
+4270
 %%EOF

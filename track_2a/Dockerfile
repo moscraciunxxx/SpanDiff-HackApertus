@@ -15,7 +15,9 @@ RUN pip install --no-cache-dir --upgrade pip \
 COPY . /opt/spandiff
 WORKDIR /opt/spandiff
 # CPU torch is installed because the official evaluator imports torch.
+# numpy and scipy in requirements.txt are the ridge stacker's apply-time dependencies.
 # This command grades track_2a/predictions/dev with --split dev.
-# It does not load model weights. If the checkout is absent at runtime,
+# It does not load model weights and it does not refit the ridge.
+# If the checkout is absent at runtime,
 # docker_grade.sh fetches the development gold and the grader over HTTPS.
 CMD ["bash", "track_2a/docker_grade.sh"]

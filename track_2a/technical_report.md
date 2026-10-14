@@ -2,7 +2,7 @@
 
 ![How SpanDiff scores one page pair](docs/pipeline.png)
 
-Each side of a page is encoded alone, in 512-token windows. Hidden state 15 is centered, compared with CSLS inside a matched sentence, pooled to whitespace tokens, and smoothed. No text is generated.
+Each side of a page is encoded alone, in 512-token windows. Hidden state 15 is centered, compared with CSLS inside a matched sentence, pooled to whitespace tokens, and smoothed. Those scores, with surprisal rank, mismatch, a sentence prior, and a few token features, enter a ridge whose weights are frozen. No text is generated.
 
 ## Summary
 
@@ -24,11 +24,12 @@ The graded development files are out-of-fold. Each document was scored by a ridg
 
 The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the final-layer DiffAlign row, mean 0.0717. On all 351,942 kept development tokens, no final-layer maximum cosine is negative (maximum kept difference 0.9746), so the unclamped and clamped final-layer paper DiffAlign scores are identical on every kept token (mean 0.0717). The Tier-1 feature mean is 0.3340 (with 0.2803 for unsmoothed subword-first L15 and 0.2703 for word-mean-pool L15 in predictions/l15). The graded out-of-fold mean is 0.3430. The mean column is that unweighted average, shown to 4 decimals. The rows use the printed coefficients. Decimal commas in the stdout are 0,373 and so on. All grades used --split dev on 168 lines per language.
 
-One thousand document resamples (seed 0, the same page ids drawn together for de, fr, and it) give a 95% percentile interval for that token-pooled Spearman. The submitted mean stays above the word-mean-pool layer-15 interval and the final-layer interval.
+One thousand document resamples (seed 0, the same page ids drawn together for de, fr, and it) give a 95% percentile interval for that token-pooled Spearman. The out-of-fold ridge mean is 0.3430, and its interval is 0.3136 to 0.3755. That interval sits above the final-layer interval and overlaps the Tier-1 interval.
 
 | System | de | fr | it | mean |
 | --- | --- | --- | --- | --- |
-| Submitted 0.3340 | 0.335-0.414 | 0.193-0.276 | 0.354-0.444 | 0.305-0.366 |
+| Out-of-fold ridge 0.3430 | pooled | pooled | pooled | 0.314-0.376 |
+| Tier-1 feature 0.3340 | 0.335-0.414 | 0.193-0.276 | 0.354-0.444 | 0.305-0.366 |
 | Word-mean L15 0.2703 | 0.265-0.327 | 0.165-0.224 | 0.291-0.358 | 0.247-0.295 |
 | Final layer 0.0717 | 0.021-0.087 | 0.032-0.084 | 0.080-0.135 | 0.052-0.093 |
 
@@ -80,7 +81,7 @@ All candidate improvements were pre-registered in docs/preregistration.md before
 | Tier 1.8: Learned non-neg layer weights (10-20: L12/14/15) | 0.2854 | 0.2597 | 0.2813 | Lost (+0.0010) |
 | Tier 1.9: Contrastive centering (doc mean 0.50 / global 1.0) | 0.2902 | 0.2692 | 0.2870 | Won (+0.0067) |
 | Tier 1.10: All-but-the-top PC1 removal (abtt1; PCA256 0.2770) | 0.2904 | 0.2689 | 0.2873 | Won (+0.0070) |
-| Tier 1 Combo (Items 1 + 2 + 7 + 9, adopted as predictions/dev) | 0.3383 | 0.3115 | 0.3340 | Adopted (+0.0537) |
+| Tier-1 Combination (Items 1 + 2 + 7 + 9, ridge frozen-score feature) | 0.3383 | 0.3115 | 0.3340 | Ablation feature (+0.0537) |
 | Tier 2.11: Translation prompt prefix (+ Tier-1 Combo) | 0.3402 | 0.3128 | 0.3357 | Lost (+0.0017 < 0.003) |
 | Tier 2.12: Paired joint context (text_a + text_b in one pass) | 0.3009 | 0.2704 | 0.2960 | Lost (-0.0380) |
 | Tier 2.13: Overlapping 256-token windows (stride 128) | 0.3332 | 0.3132 | 0.3303 | Lost (-0.0037) |
@@ -100,13 +101,13 @@ docs/error_analysis.png and docs/demo.html break down development performance ac
 | 400 to 799 | 0.401 (58) | 0.264 (54) | 0.362 (57) |
 | 800 or more | 0.364 (45) | 0.216 (60) | 0.412 (53) |
 
-French pages with 800 or more kept tokens are the weak cell. French numbers and dates (0.1788) and repeated function words on long pages (admin_fr_10, 1,300 kept tokens) are hard because shared years ("2022" in admin_de_12) and boilerplate prepositions match another clause. Running the exact same Tier-1 Combination on locally cached Qwen/Qwen2.5-VL-7B-Instruct (layer 14 of 28, development comparison only, non-submission) yields official --split dev Spearman de 0,351 ; fr 0,217 ; it 0,381 (mean 0.3163, docs/official_dev_stdout_qwen_comparison.txt; raw subword-first 0.2453), which Apertus v1.5 8B outperforms by +0.0177 mean (0.3340 vs 0.3163).
+French pages with 800 or more kept tokens are the weak cell. French numbers and dates (0.1788) and repeated function words on long pages (admin_fr_10, 1,300 kept tokens) are hard because shared years ("2022" in admin_de_12) and boilerplate prepositions match another clause. Running the exact same Tier-1 Combination on locally cached Qwen/Qwen2.5-VL-7B-Instruct (layer 14 of 28, development comparison only, non-submission) yields official --split dev Spearman de 0,351 ; fr 0,217 ; it 0,381 (mean 0.3163, docs/official_dev_stdout_qwen_comparison.txt; raw subword-first 0.2453), which the Tier-1 ablation outperforms by +0.0177 mean (0.3340 vs 0.3163). The graded out-of-fold ridge mean is 0.3430.
 
 | System | Input tokens | Generated tokens | Wall seconds (dev) | Peak RAM / VRAM | API cost | Dev mean |
 | --- | --- | --- | --- | --- | --- | --- |
 | Few-shot LLM generation (paper Table 3: GPT-4o / Llama-405B) | >564,349 | ~405,654 | >3,600s | API / multi-GPU | ~$5-$15 | 0.036 / 0.015 |
 | Qwen2.5-VL-7B-Instruct (layer 14, Tier-1 Combo, dev comparison) | 564,349 | 0 | 295.9s | ~8.5 GB MPS | $0 (local) | 0.3163 |
-| SpanDiff (Apertus v1.5 8B, layer 15 Tier-1 Combo, submitted) | 564,349 | 0 | 280.2s | ~9.2 GB MPS | $0 (local) | 0.3340 |
+| SpanDiff layer-15 Tier-1 encode (ablation feature) | 564,349 | 0 | 280.2s | ~9.2 GB MPS | $0 (local) | 0.3340 |
 
 ## Use of Apertus
 
@@ -120,7 +121,13 @@ Development inputs are the public SwissGov-RSD development pages, 168 documents 
 
 ## Negative results and robustness
 
-The development gate is train at least 0.3433, validation at least 0.3165, and a win on at least 4 of 5 folds. The out-of-fold ridge passes it (train 0.3458, val 0.3277, folds 5/5). Alpha is the pre-registered 1.0. Features are the frozen score, surprisal rank, mismatch, sentence prior, relative position, stopword, punctuation, token length, document length ratio, and side. None of them is a gold label, a document id, or a test-set statistic. Four standardized weights flip sign across folds and are flagged: relative position, punctuation, token length, and side. Each of those coefficients stays below 0.003. The frozen score, sentence prior, mismatch, length ratio, surprisal rank, and stopword keep their signs. Surprisal alone and the layer rank-average lost. Attention weights were not available from SDPA.
+The development gate is train at least 0.3433, validation at least 0.3165, and a win on at least 4 of 5 folds. The out-of-fold ridge passes it (train 0.3458, val 0.3277, folds 5/5). Alpha is the pre-registered 1.0. Features are the frozen score, surprisal rank, mismatch, sentence prior, relative position, stopword, punctuation, token length, document length ratio, and side. None of them is a gold label, a document id, or a test-set statistic. Four standardized weights flip sign across folds and are flagged: relative position, punctuation, token length, and side. Each of those coefficients stays below 0.003. The frozen score, sentence prior, mismatch, length ratio, surprisal rank, and stopword keep their signs. Surprisal alone and the layer rank-average lost. Attention weights were not available from SDPA. A ridge trained on the other two languages scores the held-out language at de 0.3951, fr 0.2328, and it 0.3912. Dropping the frozen score lowers train Spearman by 0.0691. Dropping the sentence prior lowers it by 0.0065, mismatch by 0.0045, and surprisal rank by 0.0004. Relative position, the surface flags, and length each move train by less than 0.002. The closest later learner was a pairwise logistic on the same features: train 0.3543, validation 0.3312, five folds won. Validation missed 0.3327 by 0.0015, so it was not adopted.
+
+| Step on this Mac | Time | Scope |
+| --- | --- | --- |
+| Saved ridge apply | 0.0005 s/doc | all 504 development documents |
+| Layer-15 encode after load | 0.52 s/doc | three demo pages |
+| Full development encode | 280.2 s | 504 documents |
 
 ![Per-document Spearman against the final-layer baseline](docs/sprint3_scatter.png)
 

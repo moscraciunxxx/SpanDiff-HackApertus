@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: If you use SpanDiff, cite this software, Apertus, and the SwissGov-RSD dataset.
+title: SpanDiff
+type: software
+license: Apache-2.0
+repository-code: https://github.com/moscraciunxxx/SpanDiff-HackApertus
+authors:
+  - name: SpanDiff
+references:
+  - type: dataset
+    title: SwissGov-RSD
+    url: https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD
+    license: CC-BY-4.0
+    authors:
+      - family-names: Wastl
+        given-names: Michelle
+      - family-names: Vamvas
+        given-names: Jannis
+      - family-names: Sennrich
+        given-names: Rico
+  - type: model
+    title: Apertus v1.5 8B
+    url: https://huggingface.co/swiss-ai/Apertus-v1.5-8B
+    authors:
+      - name: Swiss AI Initiative

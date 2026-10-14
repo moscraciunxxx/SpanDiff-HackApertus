@@ -2,6 +2,8 @@
 
 Repository: https://github.com/moscraciunxxx/SpanDiff-HackApertus
 
+Frozen method: out-of-fold ridge, development mean `0.3430`. Coefficients: `docs/ridge_weights.json`.
+
 Track 2A, UZH. Token-level difference on Swiss federal pages with Apertus v1.5 8B, hidden state 15. Pre-registered Tier-1 Combination (`docs/preregistration.md`): document-mean contrastive centering (`beta = 0.50`), bidirectional CSLS hubness margin (`alpha = 0.50, k = 5`), sentence-constrained alignment (`lambda = 0.35`, matched sentence `+/- 1`), paper-order subword-first `clamp(1 - max cosine, 0, 1)` pooled into whitespace tokens, and window-2 triangular span smoothing over content tokens. Generated tokens: 0. 70B was not run.
 
 ## Results
@@ -34,7 +36,7 @@ Judges run this from the repository root:
 make run
 ```
 
-That builds the Docker image and grades the committed development files. It does not load weights. `make run-local` is that same grade when Docker is not installed. `LLM_NAME`, `LLM_BASE_URL`, and `LLM_API_KEY` are not the scorer. Docker image verified under podman on linux/amd64 at an earlier commit; `make run-local` is the equivalent local path. Windows Docker Desktop verification commands are in `docs/DOCKER_CHECK.md`.
+That builds the Docker image and grades the committed development files. It does not load weights. Expect Spearman `0,393` / `0,239` / `0,397` and primary score `0.3430`. If Docker is absent, `make run-local` is that same grade. If the grader import fails, install `requirements-grade.txt` and put that `python3` first on `PATH`. `LLM_NAME`, `LLM_BASE_URL`, and `LLM_API_KEY` are not the scorer. Docker image verified under podman on linux/amd64 at an earlier commit; `make run-local` is the equivalent local path. Windows Docker Desktop verification commands are in `docs/DOCKER_CHECK.md`.
 
 ```bash
 make predict

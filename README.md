@@ -2,6 +2,8 @@
 
 Repository: https://github.com/moscraciunxxx/SpanDiff-HackApertus
 
+Frozen method: an out-of-fold ridge on Apertus hidden state 15. Development mean `0.3430`. Coefficients: `track_2a/docs/ridge_weights.json`.
+
 SpanDiff scores token-level semantic drift on Swiss federal pages for Track 2A (UZH). It reads hidden state 15 of `swiss-ai/Apertus-v1.5-8B` and applies the pre-registered Tier-1 Combination (`track_2a/docs/preregistration.md`): document-mean contrastive centering (`beta = 0.50`), bidirectional CSLS hubness margin (`alpha = 0.50, k = 5`), sentence-constrained alignment (`lambda = 0.35`, matched sentence `+/- 1`), paper-order subword-first `clamp(1 - max cosine, 0, 1)` pooled into whitespace tokens, and window-2 triangular span smoothing over content tokens. No text is generated. Apertus 70B was not run.
 
 ## Results
@@ -35,6 +37,10 @@ make run
 ```
 
 `make run-local` is that same grade when Docker is not installed. Install the grade dependencies with `pip install -r track_2a/requirements-grade.txt` (the existing pins, plus torch and transformers). `LLM_NAME`, `LLM_BASE_URL`, and `LLM_API_KEY` are not the scorer. Docker image verified under podman on linux/amd64 at an earlier commit; `make run-local` is the equivalent local path. Windows Docker Desktop instructions are in `track_2a/docs/DOCKER_CHECK.md`.
+
+## 60-second quickstart
+
+Run `make run` from this directory. The expected development table is Spearman de `0,393`, fr `0,239`, it `0,397`, then the line `Primary score, mean of those three printed Spearmans: 0.3430`. If Docker is absent, run `make run-local` with `python3` on `PATH` able to import the grader (`nlpstats`, `torch`, `transformers`). If that import fails, install `track_2a/requirements-grade.txt`. `make predict` does not replace the graded files and does not refit the ridge.
 
 `make predict` loads `track_2a/docs/ridge_weights.json` and writes that full-development fit to `track_2a/predictions/rerun`. It does not refit, and it does not replace `track_2a/predictions/dev`. The graded development files stay the out-of-fold scores. It needs a Hugging Face token only if the weights are not cached, and about 16 GB.
 
