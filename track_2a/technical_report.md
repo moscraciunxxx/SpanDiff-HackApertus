@@ -1,5 +1,9 @@
 # SpanDiff technical report
 
+![How SpanDiff scores one page pair](docs/pipeline.png)
+
+Each side of a page is encoded alone, in 512-token windows. Hidden state 15 is centered, compared with CSLS inside a matched sentence, pooled to whitespace tokens, and smoothed. No text is generated.
+
 ## Summary
 
 SpanDiff scores token-level semantic drift on Swiss federal pages in German, French, and Italian. It is a representation model, not a prompt. The submitted scorer is hidden state 15 of swiss-ai/Apertus-v1.5-8B using the pre-registered Tier-1 Combination (docs/preregistration.md): document-mean contrastive centering (beta = 0.50), bidirectional CSLS hubness margin (alpha = 0.50, k = 5), sentence-constrained alignment (lambda = 0.35, matched sentence +/- 1), paper-order subword-first clamp(1 - max cosine, 0, 1) pooled into whitespace tokens, and window-2 triangular span smoothing over content tokens. No tokens are generated. Apertus 70B was not run.
@@ -18,6 +22,14 @@ The official development script, with --split dev, printed Spearman de 0,373 ; f
 | Hidden state 15, submitted (predictions/dev, Tier-1 Combination) | 0.373 | 0.231 | 0.398 | 0.3340 |
 
 The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the final-layer DiffAlign row, mean 0.0717. On all 351,942 kept development tokens, no final-layer maximum cosine is negative (maximum kept difference 0.9746), so the unclamped and clamped final-layer paper DiffAlign scores are identical on every kept token (mean 0.0717). The submitted mean is 0.3340 (with 0.2803 for unsmoothed subword-first L15 and 0.2703 for word-mean-pool L15 in predictions/l15). The mean column is that unweighted average, shown to 4 decimals. The rows use the printed coefficients. Decimal commas in the stdout are 0,373 and so on. All grades used --split dev on 168 lines per language.
+
+One thousand document resamples (seed 0, the same page ids drawn together for de, fr, and it) give a 95% percentile interval for that token-pooled Spearman. The submitted mean stays above the word-mean-pool layer-15 interval and the final-layer interval.
+
+| System | de | fr | it | mean |
+| --- | --- | --- | --- | --- |
+| Submitted 0.3340 | 0.335-0.414 | 0.193-0.276 | 0.354-0.444 | 0.305-0.366 |
+| Word-mean L15 0.2703 | 0.265-0.327 | 0.165-0.224 | 0.291-0.358 | 0.247-0.295 |
+| Final layer 0.0717 | 0.021-0.087 | 0.032-0.084 | 0.080-0.135 | 0.052-0.093 |
 
 ## Method
 
@@ -79,7 +91,15 @@ Word-mean-pool L15 remains in predictions/l15, and hidden state 8 remains in pre
 
 ![Error analysis across token and page regimes](docs/error_analysis.png)
 
-docs/error_analysis.png and docs/demo.html break down development performance across token and page regimes. On short pages (<600 kept tokens), Spearman reaches 0.3806 (de), 0.2932 (fr), and 0.4290 (it), compared with 0.3727, 0.2131, and 0.3906 on long pages (>=600 kept tokens). French numbers/dates (0.1788) and repeated function words on long pages (admin_fr_10, 1,300 kept tokens) are the hardest slices because shared years ("2022" in admin_de_12) and boilerplate prepositions find exact matches in other clauses. Running the exact same Tier-1 Combination on locally cached Qwen/Qwen2.5-VL-7B-Instruct (layer 14 of 28, development comparison only, non-submission) yields official --split dev Spearman de 0,351 ; fr 0,217 ; it 0,381 (mean 0.3163, docs/official_dev_stdout_qwen_comparison.txt; raw subword-first 0.2453), which Apertus v1.5 8B outperforms by +0.0177 mean (0.3340 vs 0.3163).
+docs/error_analysis.png and docs/demo.html break down development performance across token and page regimes. Kept-token length, pooled inside each bin:
+
+| Kept tokens | de | fr | it |
+| --- | --- | --- | --- |
+| under 400 | 0.363 (65) | 0.277 (54) | 0.415 (58) |
+| 400 to 799 | 0.401 (58) | 0.264 (54) | 0.362 (57) |
+| 800 or more | 0.364 (45) | 0.216 (60) | 0.412 (53) |
+
+French pages with 800 or more kept tokens are the weak cell. French numbers and dates (0.1788) and repeated function words on long pages (admin_fr_10, 1,300 kept tokens) are hard because shared years ("2022" in admin_de_12) and boilerplate prepositions match another clause. Running the exact same Tier-1 Combination on locally cached Qwen/Qwen2.5-VL-7B-Instruct (layer 14 of 28, development comparison only, non-submission) yields official --split dev Spearman de 0,351 ; fr 0,217 ; it 0,381 (mean 0.3163, docs/official_dev_stdout_qwen_comparison.txt; raw subword-first 0.2453), which Apertus v1.5 8B outperforms by +0.0177 mean (0.3340 vs 0.3163).
 
 | System | Input tokens | Generated tokens | Wall seconds (dev) | Peak RAM / VRAM | API cost | Dev mean |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -96,6 +116,28 @@ Test predictions, 56 documents per language, and full-set predictions, 224 docum
 ## Data, Evaluation, and Limitations
 
 Development inputs are the public SwissGov-RSD development pages, 168 documents per language. Test predictions are 56 documents per language. Full-set predictions are 224 documents per language, in id order. Development scores are our development evaluation. The test and full-set predictions are included for the organizers to score. We never graded the test split. This repository does not contain that gold. The SwissGov text stays CC-BY-4.0 and is not relicensed. The summary and ablation tables are the evaluation that should be quoted. States are causal, so a token sees only its left context. An empty subword span scores 1 before smoothing. The final layer raises aligned tokens and different tokens together. Italian train, on the per-document map, prefers layer 14 by 0.001. 70B was not run. No test Spearman is reported. We never graded the test split.
+
+## Negative results
+
+Sprint 2 tried further representations, alignment, and post-processing on development data only. The gate was train at least 0.3433, validation at least 0.3165, and a win on at least 4 of 5 document folds. Item 16, a learned token head, was not run. None of the rows below was adopted. The closest miss is the diagonal alignment prior.
+
+| Idea | train | val | folds |
+| --- | --- | --- | --- |
+| Multi-layer rank average | 0.279 | 0.263 | 0/5 |
+| Mean subword pool | 0.336 | 0.311 | 1/5 |
+| Context prefix | 0.343 | 0.313 | 5/5 |
+| Language tags | 0.342 | 0.311 | 4/5 |
+| Paired tie-break | 0.330 | 0.287 | 0/5 |
+| Rank, then smooth | 0.290 | 0.267 | 0/5 |
+| Smooth, window 3 | 0.340 | 0.315 | 5/5 |
+| Number rule | 0.334 | 0.314 | 0/5 |
+| Length-ratio tail | 0.338 | 0.312 | 4/5 |
+| Rank ensemble of three | 0.286 | 0.266 | 0/5 |
+| Entropic optimal transport | 0.337 | 0.305 | 1/5 |
+| Diagonal prior, 0.25 | 0.341 | 0.320 | 4/5 |
+| Phrase n-grams | 0.338 | 0.310 | 3/5 |
+| Sentence dynamic program | 0.324 | 0.310 | 0/5 |
+| English-anchor max | 0.314 | 0.279 | 0/5 |
 
 ## Reproducibility and Next steps
 

@@ -49,6 +49,8 @@ make predict
 make predict-test
 ```
 
+On 14 Oct 2026 that command matched the committed test and full files byte for byte (771,424 tokens). `make run` is the one Docker grade.
+
 ## License
 
 Code: Apache-2.0. Report: CC-BY-4.0. SwissGov text stays CC-BY-4.0. See `NOTICE`.

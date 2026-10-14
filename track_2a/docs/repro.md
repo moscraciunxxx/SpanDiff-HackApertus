@@ -27,3 +27,7 @@ Word-mean-pool hidden state 15 (`0,296 / 0,191 / 0,324`, mean `0.2703`) is retai
 - Unsmoothed subword-first L15 ablation: Spearman `de 0,309 ; fr 0,199 ; it 0,333` (unweighted mean `0.2803`), Kendall's Tau-b `de 0,249 ; fr 0,161 ; it 0,266`.
 - Word-mean-pool L15 ablation (`predictions/l15`): Spearman `de 0,296 ; fr 0,191 ; it 0,324` (unweighted mean `0.2703`), Kendall's Tau-b `de 0,238 ; fr 0,154 ; it 0,259`.
 - Test gold was never opened or graded.
+
+## Public-text reproduction (`make predict-test`)
+
+On 14 Oct 2026, `make predict-test` downloaded public SwissGov-RSD text fields only, dropped label fields, scored hidden state 15 with the shipped constants, and wrote scratch copies of the test and full predictions. All six files matched the committed bytes (`full` and `test`, de/fr/it). Forward-pass tokens on that run: 771,424. Seconds: 383.5. Scratch directory: `/tmp/spandiff-predict-test`. The committed files were not replaced and were not graded.

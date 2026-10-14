@@ -164,8 +164,14 @@
 <body>
 <header>
   <h1>SpanDiff — Cross-Lingual Semantic Difference Recognition on SwissGov-RSD (Track 2A · UZH)</h1>
-  <p>Model: <code>swiss-ai/Apertus-v1.5-8B</code> (hidden state 15, pre-registered Tier-1 Combination: document-mean contrastive centering + bidirectional CSLS hubness margin + sentence-constrained alignment + window-2 triangular span smoothing). Zero generated tokens. Development forward pass: 564,349 tokens across 1,619 windows. Judge command: <code>make run</code>.</p>
+  <p>Model: <code>swiss-ai/Apertus-v1.5-8B</code> (hidden state 15, pre-registered Tier-1 Combination: document-mean contrastive centering + bidirectional CSLS hubness margin + sentence-constrained alignment + window-2 triangular span smoothing). Zero generated tokens. Development forward pass: 564,349 tokens across 1,619 windows. Judge command: <code>make run</code>. Reproduce the committed test and full files from public text fields with <code>make predict-test</code>.</p>
 </header>
+<section class="summary-wrap">
+  <div class="card">
+    <h2>How it works</h2>
+    <p>Each side is encoded alone in 512-token windows. Hidden state 15 is centered (beta 0.50), compared with bidirectional CSLS (k = 5), blended with a match inside the paired sentence plus or minus one, pooled to whitespace tokens, and smoothed with a window-2 triangle. The submitted score is that frozen pipeline. Later trials did not replace it.</p>
+  </div>
+</section>
 
 <div class="summary-wrap">
   <div class="card">

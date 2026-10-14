@@ -3,792 +3,1301 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R] /Count 5 >>
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 6 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 15 0 R /F2 16 0 R >> /XObject << /Im1 13 0 R /Im2 14 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 10367 >>
+<< /Length 8924 >>
 stream
 BT /F2 16.0 Tf 48.00 732.00 Td (SpanDiff technical report) Tj ET
-BT /F2 13.0 Tf 48.00 703.00 Td (Summary) Tj ET
-BT /F1 10.0 Tf 48.00 685.00 Td (SpanDiff scores token-level semantic drift on Swiss federal pages in German, French, and Italian. It is) Tj ET
-BT /F1 10.0 Tf 48.00 672.00 Td (a representation model, not a prompt. The submitted scorer is hidden state 15 of) Tj ET
-BT /F1 10.0 Tf 48.00 659.00 Td (swiss-ai/Apertus-v1.5-8B using the pre-registered Tier-1 Combination \(docs/preregistration.md\):) Tj ET
-BT /F1 10.0 Tf 48.00 646.00 Td (document-mean contrastive centering \(beta = 0.50\), bidirectional CSLS hubness margin \(alpha = 0.50, k =) Tj ET
-BT /F1 10.0 Tf 48.00 633.00 Td (5\), sentence-constrained alignment \(lambda = 0.35, matched sentence +/- 1\), paper-order subword-first) Tj ET
-BT /F1 10.0 Tf 48.00 620.00 Td (clamp\(1 - max cosine, 0, 1\) pooled into whitespace tokens, and window-2 triangular span smoothing over) Tj ET
-BT /F1 10.0 Tf 48.00 607.00 Td (content tokens. No tokens are generated. Apertus 70B was not run.) Tj ET
-BT /F1 10.0 Tf 48.00 590.00 Td (The official development script, with --split dev, printed Spearman de 0,373 ; fr 0,231 ; it 0,398. The) Tj ET
-BT /F1 10.0 Tf 48.00 577.00 Td (unweighted mean of those three printed numbers is 0.3340. The official script does not print that mean.) Tj ET
-BT /F1 10.0 Tf 48.00 564.00 Td (make run prints it after the table. Kendall's Tau-b printed de 0,302 ; fr 0,187 ; it 0,320. The stdout) Tj ET
-BT /F1 10.0 Tf 48.00 551.00 Td (is track_2a/docs/official_dev_stdout_tier1_combo.txt.) Tj ET
-0.90 0.93 0.96 rg 48.00 528.00 220.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 528.00 220.00 16.00 re S
+q 516.00 0 0 103.20 48.00 620.80 cm /Im1 Do Q
+BT /F1 10.0 Tf 48.00 600.80 Td (Each side of a page is encoded alone, in 512-token windows. Hidden state 15 is centered, compared with) Tj ET
+BT /F1 10.0 Tf 48.00 587.80 Td (CSLS inside a matched sentence, pooled to whitespace tokens, and smoothed. No text is generated.) Tj ET
+BT /F2 13.0 Tf 48.00 559.80 Td (Summary) Tj ET
+BT /F1 10.0 Tf 48.00 541.80 Td (SpanDiff scores token-level semantic drift on Swiss federal pages in German, French, and Italian. It is) Tj ET
+BT /F1 10.0 Tf 48.00 528.80 Td (a representation model, not a prompt. The submitted scorer is hidden state 15 of) Tj ET
+BT /F1 10.0 Tf 48.00 515.80 Td (swiss-ai/Apertus-v1.5-8B using the pre-registered Tier-1 Combination \(docs/preregistration.md\):) Tj ET
+BT /F1 10.0 Tf 48.00 502.80 Td (document-mean contrastive centering \(beta = 0.50\), bidirectional CSLS hubness margin \(alpha = 0.50, k =) Tj ET
+BT /F1 10.0 Tf 48.00 489.80 Td (5\), sentence-constrained alignment \(lambda = 0.35, matched sentence +/- 1\), paper-order subword-first) Tj ET
+BT /F1 10.0 Tf 48.00 476.80 Td (clamp\(1 - max cosine, 0, 1\) pooled into whitespace tokens, and window-2 triangular span smoothing over) Tj ET
+BT /F1 10.0 Tf 48.00 463.80 Td (content tokens. No tokens are generated. Apertus 70B was not run.) Tj ET
+BT /F1 10.0 Tf 48.00 446.80 Td (The official development script, with --split dev, printed Spearman de 0,373 ; fr 0,231 ; it 0,398. The) Tj ET
+BT /F1 10.0 Tf 48.00 433.80 Td (unweighted mean of those three printed numbers is 0.3340. The official script does not print that mean.) Tj ET
+BT /F1 10.0 Tf 48.00 420.80 Td (make run prints it after the table. Kendall's Tau-b printed de 0,302 ; fr 0,187 ; it 0,320. The stdout) Tj ET
+BT /F1 10.0 Tf 48.00 407.80 Td (is track_2a/docs/official_dev_stdout_tier1_combo.txt.) Tj ET
+0.90 0.93 0.96 rg 48.00 384.80 220.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 384.80 220.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 532.50 Td (Setup \(on swiss-ai/Apertus-v1.5-8B unless noted\)) Tj ET
-0.90 0.93 0.96 rg 268.00 528.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 268.00 528.00 74.00 16.00 re S
+BT /F2 8.5 Tf 51.00 389.30 Td (Setup \(on swiss-ai/Apertus-v1.5-8B unless noted\)) Tj ET
+0.90 0.93 0.96 rg 268.00 384.80 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 268.00 384.80 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 271.00 532.50 Td (de) Tj ET
-0.90 0.93 0.96 rg 342.00 528.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 342.00 528.00 74.00 16.00 re S
+BT /F2 8.5 Tf 271.00 389.30 Td (de) Tj ET
+0.90 0.93 0.96 rg 342.00 384.80 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 342.00 384.80 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 345.00 532.50 Td (fr) Tj ET
-0.90 0.93 0.96 rg 416.00 528.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 416.00 528.00 74.00 16.00 re S
+BT /F2 8.5 Tf 345.00 389.30 Td (fr) Tj ET
+0.90 0.93 0.96 rg 416.00 384.80 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 416.00 384.80 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 419.00 532.50 Td (it) Tj ET
-0.90 0.93 0.96 rg 490.00 528.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 490.00 528.00 74.00 16.00 re S
+BT /F2 8.5 Tf 419.00 389.30 Td (it) Tj ET
+0.90 0.93 0.96 rg 490.00 384.80 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 490.00 384.80 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 493.00 532.50 Td (mean) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 512.00 220.00 16.00 re S
+BT /F2 8.5 Tf 493.00 389.30 Td (mean) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 368.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 516.50 Td (Paper DiffAlign on this 8B, final layer, clamped & unclamped) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 512.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 373.30 Td (Paper DiffAlign on this 8B, final layer, clamped & unclamped) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 368.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 516.50 Td (0.053) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 512.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 373.30 Td (0.053) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 368.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 516.50 Td (0.056) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 512.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 373.30 Td (0.056) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 368.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 516.50 Td (0.106) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 512.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 373.30 Td (0.106) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 368.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 516.50 Td (0.0717) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 496.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 373.30 Td (0.0717) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 352.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 500.50 Td (Hidden state 8 ablation \(predictions/ablation_l8, word mean-pool\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 496.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 357.30 Td (Hidden state 8 ablation \(predictions/ablation_l8, word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 352.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 500.50 Td (0.245) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 496.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 357.30 Td (0.245) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 352.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 500.50 Td (0.165) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 496.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 357.30 Td (0.165) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 352.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 500.50 Td (0.282) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 496.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 357.30 Td (0.282) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 352.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 500.50 Td (0.2307) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 480.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 357.30 Td (0.2307) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 336.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 484.50 Td (Pre-registered \(a\): mean of hidden states 12-17 \(word mean-pool\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 480.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 341.30 Td (Pre-registered \(a\): mean of hidden states 12-17 \(word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 336.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 484.50 Td (0.285) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 480.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 341.30 Td (0.285) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 336.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 484.50 Td (0.183) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 480.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 341.30 Td (0.183) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 336.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 484.50 Td (0.316) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 480.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 341.30 Td (0.316) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 336.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 484.50 Td (0.2613) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 464.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 341.30 Td (0.2613) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 320.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 468.50 Td (Hidden state 15 ablation \(predictions/l15, word mean-pool\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 464.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 325.30 Td (Hidden state 15 ablation \(predictions/l15, word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 320.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 468.50 Td (0.296) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 464.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 325.30 Td (0.296) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 320.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 468.50 Td (0.191) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 464.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 325.30 Td (0.191) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 320.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 468.50 Td (0.324) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 464.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 325.30 Td (0.324) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 320.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 468.50 Td (0.2703) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 448.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 325.30 Td (0.2703) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 304.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 452.50 Td (Pre-registered \(c\): hidden states 12-17 + subword-first) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 448.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 309.30 Td (Pre-registered \(c\): hidden states 12-17 + subword-first) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 304.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 452.50 Td (0.298) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 448.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 309.30 Td (0.298) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 304.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 452.50 Td (0.192) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 448.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 309.30 Td (0.192) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 304.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 452.50 Td (0.325) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 448.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 309.30 Td (0.325) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 304.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 452.50 Td (0.2717) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 432.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 309.30 Td (0.2717) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 288.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 436.50 Td (Pre-registered \(b\): hidden state 15, paper-order subword-first) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 432.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 293.30 Td (Pre-registered \(b\): hidden state 15, paper-order subword-first) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 288.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 436.50 Td (0.309) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 432.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 293.30 Td (0.309) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 288.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 436.50 Td (0.199) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 432.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 293.30 Td (0.199) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 288.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 436.50 Td (0.333) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 432.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 293.30 Td (0.333) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 288.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 436.50 Td (0.2803) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 416.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 293.30 Td (0.2803) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 272.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 420.50 Td (Open-weight dev comparison: Qwen2.5-VL-7B \(layer 14/28, Tier-1 Combo\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 416.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 277.30 Td (Open-weight dev comparison: Qwen2.5-VL-7B \(layer 14/28, Tier-1 Combo\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 272.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 420.50 Td (0.351) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 416.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 277.30 Td (0.351) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 272.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 420.50 Td (0.217) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 416.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 277.30 Td (0.217) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 272.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 420.50 Td (0.381) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 416.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 277.30 Td (0.381) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 272.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 420.50 Td (0.3163) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 400.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 277.30 Td (0.3163) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 256.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 404.50 Td (Hidden state 15, submitted \(predictions/dev, Tier-1 Combination\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 400.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 261.30 Td (Hidden state 15, submitted \(predictions/dev, Tier-1 Combination\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 256.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 404.50 Td (0.373) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 400.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 261.30 Td (0.373) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 256.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 404.50 Td (0.231) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 400.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 261.30 Td (0.231) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 256.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 404.50 Td (0.398) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 400.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 261.30 Td (0.398) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 256.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 404.50 Td (0.3340) Tj ET
+BT /F1 8.5 Tf 493.00 261.30 Td (0.3340) Tj ET
 0 0 0 rg
-BT /F1 10.0 Tf 48.00 382.00 Td (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the) Tj ET
-BT /F1 10.0 Tf 48.00 369.00 Td (final-layer DiffAlign row, mean 0.0717. On all 351,942 kept development tokens, no final-layer maximum) Tj ET
-BT /F1 10.0 Tf 48.00 356.00 Td (cosine is negative \(maximum kept difference 0.9746\), so the unclamped and clamped final-layer paper) Tj ET
-BT /F1 10.0 Tf 48.00 343.00 Td (DiffAlign scores are identical on every kept token \(mean 0.0717\). The submitted mean is 0.3340 \(with) Tj ET
-BT /F1 10.0 Tf 48.00 330.00 Td (0.2803 for unsmoothed subword-first L15 and 0.2703 for word-mean-pool L15 in predictions/l15\). The mean) Tj ET
-BT /F1 10.0 Tf 48.00 317.00 Td (column is that unweighted average, shown to 4 decimals. The rows use the printed coefficients. Decimal) Tj ET
-BT /F1 10.0 Tf 48.00 304.00 Td (commas in the stdout are 0,373 and so on. All grades used --split dev on 168 lines per language.) Tj ET
-BT /F2 13.0 Tf 48.00 276.00 Td (Method) Tj ET
-BT /F1 10.0 Tf 48.00 258.00 Td (Each side of a page is encoded alone. The model is swiss-ai/Apertus-v1.5-8B. Index 0 is the embedding.) Tj ET
-BT /F1 10.0 Tf 48.00 245.00 Td (The submitted state is index 15, the residual stream after block 15. Index 32, after the final norm, is) Tj ET
-BT /F1 10.0 Tf 48.00 232.00 Td (the final-layer baseline, not the submission.) Tj ET
-BT /F1 10.0 Tf 48.00 215.00 Td (A window holds at most 512 tokenizer tokens, including the leading beginning-of-sequence token. The) Tj ET
-BT /F1 10.0 Tf 48.00 202.00 Td (development pass is 1619 such windows and 564,349 tokenizer tokens. Each of those windows has exactly) Tj ET
-BT /F1 10.0 Tf 48.00 189.00 Td (one leading BOS. That token has an empty character offset and is not pooled. EOS, PAD, UNK, and) Tj ET
-BT /F1 10.0 Tf 48.00 176.00 Td (multimodal special counts on that tokenizer-only census were 0. The census is docs/special_tokens.txt.) Tj ET
-BT /F1 10.0 Tf 48.00 163.00 Td (It did not load weights.) Tj ET
-BT /F1 10.0 Tf 48.00 146.00 Td (Each subword is assigned to the whitespace token it overlaps most. An equal overlap stays on the) Tj ET
-BT /F1 10.0 Tf 48.00 133.00 Td (earlier token. After the windows of one side are stitched, the submitted Tier-1 Combination applies) Tj ET
-BT /F1 10.0 Tf 48.00 120.00 Td (four deterministic steps: \(1\) subtract 0.50 times the document's mean subword vector to remove) Tj ET
-BT /F1 10.0 Tf 48.00 107.00 Td (causal-decoder anisotropy; \(2\) compute cross-lingual cosine similarity with bidirectional Cross-Domain) Tj ET
-BT /F1 10.0 Tf 48.00 94.00 Td (Similarity Local Scaling \(CSLS, alpha = 0.50, k = 5 nearest neighbors\) to suppress hub subwords; \(3\)) Tj ET
-BT /F1 10.0 Tf 48.00 81.00 Td (blend global best cosine \(0.65\) with sentence-constrained best cosine \(0.35\) restricted to the) Tj ET
-BT /F1 10.0 Tf 48.00 68.00 Td (best-matching sentence +/- 1 on the other side; and \(4\) pool clamp\(1 - similarity, 0, 1\) across) Tj ET
-BT /F1 10.0 Tf 48.00 55.00 Td (subwords within each whitespace token, followed by window-2 triangular span smoothing across) Tj ET
+BT /F1 10.0 Tf 48.00 238.80 Td (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the) Tj ET
+BT /F1 10.0 Tf 48.00 225.80 Td (final-layer DiffAlign row, mean 0.0717. On all 351,942 kept development tokens, no final-layer maximum) Tj ET
+BT /F1 10.0 Tf 48.00 212.80 Td (cosine is negative \(maximum kept difference 0.9746\), so the unclamped and clamped final-layer paper) Tj ET
+BT /F1 10.0 Tf 48.00 199.80 Td (DiffAlign scores are identical on every kept token \(mean 0.0717\). The submitted mean is 0.3340 \(with) Tj ET
+BT /F1 10.0 Tf 48.00 186.80 Td (0.2803 for unsmoothed subword-first L15 and 0.2703 for word-mean-pool L15 in predictions/l15\). The mean) Tj ET
+BT /F1 10.0 Tf 48.00 173.80 Td (column is that unweighted average, shown to 4 decimals. The rows use the printed coefficients. Decimal) Tj ET
+BT /F1 10.0 Tf 48.00 160.80 Td (commas in the stdout are 0,373 and so on. All grades used --split dev on 168 lines per language.) Tj ET
+BT /F1 10.0 Tf 48.00 143.80 Td (One thousand document resamples \(seed 0, the same page ids drawn together for de, fr, and it\) give a) Tj ET
+BT /F1 10.0 Tf 48.00 130.80 Td (95% percentile interval for that token-pooled Spearman. The submitted mean stays above the) Tj ET
+BT /F1 10.0 Tf 48.00 117.80 Td (word-mean-pool layer-15 interval and the final-layer interval.) Tj ET
 endstream
 endobj
 5 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 15 0 R /F2 16 0 R >> /XObject << /Im1 13 0 R /Im2 14 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
 endobj
 6 0 obj
-<< /Length 3387 >>
+<< /Length 5492 >>
 stream
-BT /F1 10.0 Tf 48.00 738.00 Td (non-punctuation tokens, rounded to 6 decimals.) Tj ET
-BT /F1 10.0 Tf 48.00 721.00 Td (Encoder lines contain only id, text_a, text_b, labels_a, and labels_b. Every label is in [0, 1]. The) Tj ET
-BT /F1 10.0 Tf 48.00 708.00 Td (writer rejects -1 and NaN. The label count equals the whitespace-token count. Generated tokens are 0,) Tj ET
-BT /F1 10.0 Tf 48.00 695.00 Td (so no output filter is applied.) Tj ET
-BT /F2 13.0 Tf 48.00 667.00 Td (Layer curve) Tj ET
-q 428.57 0 0 250.00 48.00 409.00 cm /Im1 Do Q
-BT /F1 10.0 Tf 48.00 389.00 Td (The figure plots the saved average-rank Spearman for every hidden state, separately for German, French,) Tj ET
-BT /F1 10.0 Tf 48.00 376.00 Td (and Italian. The source table is docs/layer_map_by_lang_avg.txt. It uses the same token counts as the) Tj ET
-BT /F1 10.0 Tf 48.00 363.00 Td (frozen-score tables \(German 108,945, French 124,262, Italian 118,735\) and drops gold labels of -1. It) Tj ET
-BT /F1 10.0 Tf 48.00 350.00 Td (is not a second run of the official script. Do not treat a point on the curve as the printed contest) Tj ET
-BT /F1 10.0 Tf 48.00 337.00 Td (score.) Tj ET
-BT /F1 10.0 Tf 48.00 320.00 Td (On that map, hidden state 8 reads 0.2495, 0.1662, and 0.2842. Hidden state 15 reads 0.2982, 0.1921, and) Tj ET
-BT /F1 10.0 Tf 48.00 307.00 Td (0.3241. German peaks at layer 14 \(0.2983\), a hair above layer 15. French peaks at layer 15. Italian) Tj ET
-BT /F1 10.0 Tf 48.00 294.00 Td (peaks at layer 14 \(0.3246\), again a hair above layer 15. The final state, index 32, is 0.0484, 0.0564,) Tj ET
-BT /F1 10.0 Tf 48.00 281.00 Td (and 0.0945. German is the low end of that curve. A pooled ordinal Spearman across all three languages,) Tj ET
-BT /F1 10.0 Tf 48.00 268.00 Td (in docs/layer_map_dev.txt, peaks at layer 14 \(0.1408\), with layer 15 at 0.1403, layer 8 at 0.1281, and) Tj ET
-BT /F1 10.0 Tf 48.00 255.00 Td (the last block at -0.0358. That pooled number is one Spearman on 351,942 tokens. It is not the mean of) Tj ET
-BT /F1 10.0 Tf 48.00 242.00 Td (three language scores.) Tj ET
-BT /F2 13.0 Tf 48.00 214.00 Td (Layer selection and pre-registered sprint ablations) Tj ET
-BT /F1 10.0 Tf 48.00 196.00 Td (The organizers publish a development train split of 134 documents per language and a development) Tj ET
-BT /F1 10.0 Tf 48.00 183.00 Td (validation split of 34, at gold_labels/dev/train and gold_labels/dev/val in ZurichNLP/SwissGov-RSD.) Tj ET
-BT /F1 10.0 Tf 48.00 170.00 Td (Those files are not copied into this repository. Only the id field was read. Together, train and) Tj ET
-BT /F1 10.0 Tf 48.00 157.00 Td (validation are the 168 development documents, and they share no id. The per-document Spearmans were) Tj ET
-BT /F1 10.0 Tf 48.00 144.00 Td (then taken from docs/layer_map_dev.jsonl, which stores one ordinal Spearman per hidden state and does) Tj ET
-BT /F1 10.0 Tf 48.00 131.00 Td (not store gold labels.) Tj ET
-BT /F1 10.0 Tf 48.00 114.00 Td (A document whose per-document Spearman is not finite was omitted: none of 134 German train pages, 1 of) Tj ET
-BT /F1 10.0 Tf 48.00 101.00 Td (34 German val, 2 of 134 French train, 1 of 34 French val, 1 of 134 Italian train, and 1 of 34 Italian) Tj ET
-BT /F1 10.0 Tf 48.00 88.00 Td (val. The table is the unweighted mean of the remaining per-document Spearmans. It is not the official) Tj ET
-BT /F1 10.0 Tf 48.00 75.00 Td (contest formula.) Tj ET
+0.90 0.93 0.96 rg 48.00 732.00 220.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 732.00 220.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 51.00 736.50 Td (System) Tj ET
+0.90 0.93 0.96 rg 268.00 732.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 268.00 732.00 74.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 271.00 736.50 Td (de) Tj ET
+0.90 0.93 0.96 rg 342.00 732.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 342.00 732.00 74.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 345.00 736.50 Td (fr) Tj ET
+0.90 0.93 0.96 rg 416.00 732.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 416.00 732.00 74.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 419.00 736.50 Td (it) Tj ET
+0.90 0.93 0.96 rg 490.00 732.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 490.00 732.00 74.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 493.00 736.50 Td (mean) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 716.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 720.50 Td (Submitted 0.3340) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 716.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 720.50 Td (0.335-0.414) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 716.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 720.50 Td (0.193-0.276) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 716.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 720.50 Td (0.354-0.444) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 716.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 720.50 Td (0.305-0.366) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 700.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 704.50 Td (Word-mean L15 0.2703) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 700.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 704.50 Td (0.265-0.327) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 700.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 704.50 Td (0.165-0.224) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 700.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 704.50 Td (0.291-0.358) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 700.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 704.50 Td (0.247-0.295) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 684.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 688.50 Td (Final layer 0.0717) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 684.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 688.50 Td (0.021-0.087) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 684.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 688.50 Td (0.032-0.084) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 684.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 688.50 Td (0.080-0.135) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 684.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 688.50 Td (0.052-0.093) Tj ET
+0 0 0 rg
+BT /F2 13.0 Tf 48.00 655.00 Td (Method) Tj ET
+BT /F1 10.0 Tf 48.00 637.00 Td (Each side of a page is encoded alone. The model is swiss-ai/Apertus-v1.5-8B. Index 0 is the embedding.) Tj ET
+BT /F1 10.0 Tf 48.00 624.00 Td (The submitted state is index 15, the residual stream after block 15. Index 32, after the final norm, is) Tj ET
+BT /F1 10.0 Tf 48.00 611.00 Td (the final-layer baseline, not the submission.) Tj ET
+BT /F1 10.0 Tf 48.00 594.00 Td (A window holds at most 512 tokenizer tokens, including the leading beginning-of-sequence token. The) Tj ET
+BT /F1 10.0 Tf 48.00 581.00 Td (development pass is 1619 such windows and 564,349 tokenizer tokens. Each of those windows has exactly) Tj ET
+BT /F1 10.0 Tf 48.00 568.00 Td (one leading BOS. That token has an empty character offset and is not pooled. EOS, PAD, UNK, and) Tj ET
+BT /F1 10.0 Tf 48.00 555.00 Td (multimodal special counts on that tokenizer-only census were 0. The census is docs/special_tokens.txt.) Tj ET
+BT /F1 10.0 Tf 48.00 542.00 Td (It did not load weights.) Tj ET
+BT /F1 10.0 Tf 48.00 525.00 Td (Each subword is assigned to the whitespace token it overlaps most. An equal overlap stays on the) Tj ET
+BT /F1 10.0 Tf 48.00 512.00 Td (earlier token. After the windows of one side are stitched, the submitted Tier-1 Combination applies) Tj ET
+BT /F1 10.0 Tf 48.00 499.00 Td (four deterministic steps: \(1\) subtract 0.50 times the document's mean subword vector to remove) Tj ET
+BT /F1 10.0 Tf 48.00 486.00 Td (causal-decoder anisotropy; \(2\) compute cross-lingual cosine similarity with bidirectional Cross-Domain) Tj ET
+BT /F1 10.0 Tf 48.00 473.00 Td (Similarity Local Scaling \(CSLS, alpha = 0.50, k = 5 nearest neighbors\) to suppress hub subwords; \(3\)) Tj ET
+BT /F1 10.0 Tf 48.00 460.00 Td (blend global best cosine \(0.65\) with sentence-constrained best cosine \(0.35\) restricted to the) Tj ET
+BT /F1 10.0 Tf 48.00 447.00 Td (best-matching sentence +/- 1 on the other side; and \(4\) pool clamp\(1 - similarity, 0, 1\) across) Tj ET
+BT /F1 10.0 Tf 48.00 434.00 Td (subwords within each whitespace token, followed by window-2 triangular span smoothing across) Tj ET
+BT /F1 10.0 Tf 48.00 421.00 Td (non-punctuation tokens, rounded to 6 decimals.) Tj ET
+BT /F1 10.0 Tf 48.00 404.00 Td (Encoder lines contain only id, text_a, text_b, labels_a, and labels_b. Every label is in [0, 1]. The) Tj ET
+BT /F1 10.0 Tf 48.00 391.00 Td (writer rejects -1 and NaN. The label count equals the whitespace-token count. Generated tokens are 0,) Tj ET
+BT /F1 10.0 Tf 48.00 378.00 Td (so no output filter is applied.) Tj ET
+BT /F2 13.0 Tf 48.00 350.00 Td (Layer curve) Tj ET
+q 428.57 0 0 250.00 48.00 92.00 cm /Im2 Do Q
+BT /F1 10.0 Tf 48.00 72.00 Td (The figure plots the saved average-rank Spearman for every hidden state, separately for German, French,) Tj ET
+BT /F1 10.0 Tf 48.00 59.00 Td (and Italian. The source table is docs/layer_map_by_lang_avg.txt. It uses the same token counts as the) Tj ET
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 15 0 R /F2 16 0 R >> /XObject << /Im1 13 0 R /Im2 14 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 16264 >>
+<< /Length 7766 >>
 stream
-0.90 0.93 0.96 rg 48.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 732.00 86.00 16.00 re S
+BT /F1 10.0 Tf 48.00 738.00 Td (frozen-score tables \(German 108,945, French 124,262, Italian 118,735\) and drops gold labels of -1. It) Tj ET
+BT /F1 10.0 Tf 48.00 725.00 Td (is not a second run of the official script. Do not treat a point on the curve as the printed contest) Tj ET
+BT /F1 10.0 Tf 48.00 712.00 Td (score.) Tj ET
+BT /F1 10.0 Tf 48.00 695.00 Td (On that map, hidden state 8 reads 0.2495, 0.1662, and 0.2842. Hidden state 15 reads 0.2982, 0.1921, and) Tj ET
+BT /F1 10.0 Tf 48.00 682.00 Td (0.3241. German peaks at layer 14 \(0.2983\), a hair above layer 15. French peaks at layer 15. Italian) Tj ET
+BT /F1 10.0 Tf 48.00 669.00 Td (peaks at layer 14 \(0.3246\), again a hair above layer 15. The final state, index 32, is 0.0484, 0.0564,) Tj ET
+BT /F1 10.0 Tf 48.00 656.00 Td (and 0.0945. German is the low end of that curve. A pooled ordinal Spearman across all three languages,) Tj ET
+BT /F1 10.0 Tf 48.00 643.00 Td (in docs/layer_map_dev.txt, peaks at layer 14 \(0.1408\), with layer 15 at 0.1403, layer 8 at 0.1281, and) Tj ET
+BT /F1 10.0 Tf 48.00 630.00 Td (the last block at -0.0358. That pooled number is one Spearman on 351,942 tokens. It is not the mean of) Tj ET
+BT /F1 10.0 Tf 48.00 617.00 Td (three language scores.) Tj ET
+BT /F2 13.0 Tf 48.00 589.00 Td (Layer selection and pre-registered sprint ablations) Tj ET
+BT /F1 10.0 Tf 48.00 571.00 Td (The organizers publish a development train split of 134 documents per language and a development) Tj ET
+BT /F1 10.0 Tf 48.00 558.00 Td (validation split of 34, at gold_labels/dev/train and gold_labels/dev/val in ZurichNLP/SwissGov-RSD.) Tj ET
+BT /F1 10.0 Tf 48.00 545.00 Td (Those files are not copied into this repository. Only the id field was read. Together, train and) Tj ET
+BT /F1 10.0 Tf 48.00 532.00 Td (validation are the 168 development documents, and they share no id. The per-document Spearmans were) Tj ET
+BT /F1 10.0 Tf 48.00 519.00 Td (then taken from docs/layer_map_dev.jsonl, which stores one ordinal Spearman per hidden state and does) Tj ET
+BT /F1 10.0 Tf 48.00 506.00 Td (not store gold labels.) Tj ET
+BT /F1 10.0 Tf 48.00 489.00 Td (A document whose per-document Spearman is not finite was omitted: none of 134 German train pages, 1 of) Tj ET
+BT /F1 10.0 Tf 48.00 476.00 Td (34 German val, 2 of 134 French train, 1 of 34 French val, 1 of 134 Italian train, and 1 of 34 Italian) Tj ET
+BT /F1 10.0 Tf 48.00 463.00 Td (val. The table is the unweighted mean of the remaining per-document Spearmans. It is not the official) Tj ET
+BT /F1 10.0 Tf 48.00 450.00 Td (contest formula.) Tj ET
+0.90 0.93 0.96 rg 48.00 427.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 427.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 736.50 Td (Slice) Tj ET
-0.90 0.93 0.96 rg 134.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 134.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 51.00 431.50 Td (Slice) Tj ET
+0.90 0.93 0.96 rg 134.00 427.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 134.00 427.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 137.00 736.50 Td (docs used) Tj ET
-0.90 0.93 0.96 rg 220.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 220.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 137.00 431.50 Td (docs used) Tj ET
+0.90 0.93 0.96 rg 220.00 427.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 220.00 427.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 223.00 736.50 Td (best layer) Tj ET
-0.90 0.93 0.96 rg 306.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 306.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 223.00 431.50 Td (best layer) Tj ET
+0.90 0.93 0.96 rg 306.00 427.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 306.00 427.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 309.00 736.50 Td (layer 8) Tj ET
-0.90 0.93 0.96 rg 392.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 392.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 309.00 431.50 Td (layer 8) Tj ET
+0.90 0.93 0.96 rg 392.00 427.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 392.00 427.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 395.00 736.50 Td (layer 15) Tj ET
-0.90 0.93 0.96 rg 478.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 478.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 395.00 431.50 Td (layer 15) Tj ET
+0.90 0.93 0.96 rg 478.00 427.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 478.00 427.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 481.00 736.50 Td (15 minus 8) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 716.00 86.00 16.00 re S
+BT /F2 8.5 Tf 481.00 431.50 Td (15 minus 8) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 411.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 720.50 Td (de train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 415.50 Td (de train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 411.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 720.50 Td (134/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 415.50 Td (134/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 411.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 720.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 415.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 411.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 720.50 Td (0.1623) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 415.50 Td (0.1623) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 411.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 720.50 Td (0.1899) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 415.50 Td (0.1899) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 411.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 720.50 Td (+0.0276) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 415.50 Td (+0.0276) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 395.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 704.50 Td (de val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 399.50 Td (de val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 395.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 704.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 399.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 395.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 704.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 399.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 395.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 704.50 Td (0.1636) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 399.50 Td (0.1636) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 395.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 704.50 Td (0.2003) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 399.50 Td (0.2003) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 395.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 704.50 Td (+0.0367) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 399.50 Td (+0.0367) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 379.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 688.50 Td (fr train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 383.50 Td (fr train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 379.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 688.50 Td (132/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 383.50 Td (132/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 379.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 688.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 383.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 379.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 688.50 Td (0.0430) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 383.50 Td (0.0430) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 379.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 688.50 Td (0.0798) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 383.50 Td (0.0798) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 379.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 688.50 Td (+0.0367) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 383.50 Td (+0.0367) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 363.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 672.50 Td (fr val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 367.50 Td (fr val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 363.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 672.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 367.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 363.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 672.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 367.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 363.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 672.50 Td (0.0461) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 367.50 Td (0.0461) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 363.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 672.50 Td (0.0801) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 367.50 Td (0.0801) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 363.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 672.50 Td (+0.0340) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 367.50 Td (+0.0340) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 347.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 656.50 Td (it train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 351.50 Td (it train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 347.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 656.50 Td (133/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 351.50 Td (133/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 347.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 656.50 Td (14) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 351.50 Td (14) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 347.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 656.50 Td (0.1509) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 351.50 Td (0.1509) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 347.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 656.50 Td (0.1903) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 351.50 Td (0.1903) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 347.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 656.50 Td (+0.0394) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 351.50 Td (+0.0394) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 331.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 640.50 Td (it val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 335.50 Td (it val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 331.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 640.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 335.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 331.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 640.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 335.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 331.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 640.50 Td (0.1796) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 335.50 Td (0.1796) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 331.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 640.50 Td (0.2066) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 335.50 Td (0.2066) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 331.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 640.50 Td (+0.0270) Tj ET
+BT /F1 8.5 Tf 481.00 335.50 Td (+0.0270) Tj ET
 0 0 0 rg
-BT /F1 10.0 Tf 48.00 618.00 Td (All candidate improvements were pre-registered in docs/preregistration.md before running and evaluated) Tj ET
-BT /F1 10.0 Tf 48.00 605.00 Td (on dev/train \(134/lang\) and dev/val \(34/lang\) with a >= +0.0030 official full-dev adoption threshold:) Tj ET
-0.90 0.93 0.96 rg 48.00 582.00 220.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 582.00 220.00 16.00 re S
-0 0 0 rg
-BT /F2 8.5 Tf 51.00 586.50 Td (Idea \(pre-registered in docs/preregistration.md\)) Tj ET
-0.90 0.93 0.96 rg 268.00 582.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 268.00 582.00 74.00 16.00 re S
-0 0 0 rg
-BT /F2 8.5 Tf 271.00 586.50 Td (dev/train) Tj ET
-0.90 0.93 0.96 rg 342.00 582.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 342.00 582.00 74.00 16.00 re S
-0 0 0 rg
-BT /F2 8.5 Tf 345.00 586.50 Td (dev/val) Tj ET
-0.90 0.93 0.96 rg 416.00 582.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 416.00 582.00 74.00 16.00 re S
-0 0 0 rg
-BT /F2 8.5 Tf 419.00 586.50 Td (Official mean) Tj ET
-0.90 0.93 0.96 rg 490.00 582.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 490.00 582.00 74.00 16.00 re S
-0 0 0 rg
-BT /F2 8.5 Tf 493.00 586.50 Td (Outcome) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 566.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 570.50 Td (Batch 1 \(b\): Subword-first L15 vs word-mean-pool L15 \(0.2703\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 566.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 570.50 Td (0.2843) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 566.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 570.50 Td (0.2592) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 566.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 570.50 Td (0.2803) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 566.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 570.50 Td (Won \(+0.0100\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 550.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 554.50 Td (Tier 1.1: Bidirectional CSLS margin \(alpha = 0.50, k = 5\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 550.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 554.50 Td (0.2909) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 550.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 554.50 Td (0.2659) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 550.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 554.50 Td (0.2870) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 550.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 554.50 Td (Won \(+0.0067\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 534.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 538.50 Td (Tier 1.2: Span smoothing \(w = 2 triangular, skip punct\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 534.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 538.50 Td (0.3263) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 534.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 538.50 Td (0.2973) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 534.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 538.50 Td (0.3217) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 534.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 538.50 Td (Won \(+0.0414\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 518.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 522.50 Td (Tier 1.3: Per-document calibration \(mean/z-score/quantile\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 518.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 522.50 Td (0.2836) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 518.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 522.50 Td (0.2586) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 518.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 522.50 Td (0.2797) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 518.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 522.50 Td (Lost \(-0.0006\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 502.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 506.50 Td (Tier 1.4: Inverse token frequency weighting \(dev inputs only\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 502.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 506.50 Td (0.2848) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 502.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 506.50 Td (0.2598) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 502.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 506.50 Td (0.2810) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 502.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 506.50 Td (Lost \(+0.0007\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 486.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 490.50 Td (Tier 1.5: Number / date / named-entity match scaling) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 486.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 490.50 Td (0.2861) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 486.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 490.50 Td (0.2603) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 486.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 490.50 Td (0.2820) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 486.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 490.50 Td (Lost \(+0.0017\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 470.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 474.50 Td (Tier 1.6: Top-k soft alignment \(k = 5, T = 0.02\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 470.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 474.50 Td (0.2849) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 470.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 474.50 Td (0.2601) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 470.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 474.50 Td (0.2813) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 470.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 474.50 Td (Lost \(+0.0010\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 454.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 458.50 Td (Tier 1.7: Sentence-constrained alignment \(lambda = 0.50\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 454.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 458.50 Td (0.2925) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 454.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 458.50 Td (0.2651) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 454.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 458.50 Td (0.2880) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 454.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 458.50 Td (Won \(+0.0077\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 438.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 442.50 Td (Tier 1.8: Learned non-neg layer weights \(10-20: L12/14/15\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 438.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 442.50 Td (0.2854) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 438.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 442.50 Td (0.2597) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 438.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 442.50 Td (0.2813) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 438.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 442.50 Td (Lost \(+0.0010\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 422.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 426.50 Td (Tier 1.9: Contrastive centering \(doc mean 0.50 / global 1.0\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 422.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 426.50 Td (0.2902) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 422.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 426.50 Td (0.2692) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 422.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 426.50 Td (0.2870) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 422.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 426.50 Td (Won \(+0.0067\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 406.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 410.50 Td (Tier 1.10: All-but-the-top PC1 removal \(abtt1; PCA256 0.2770\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 406.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 410.50 Td (0.2904) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 406.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 410.50 Td (0.2689) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 406.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 410.50 Td (0.2873) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 406.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 410.50 Td (Won \(+0.0070\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 390.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 394.50 Td (Tier 1 Combo \(Items 1 + 2 + 7 + 9, adopted as predictions/dev\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 390.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 394.50 Td (0.3383) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 390.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 394.50 Td (0.3115) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 390.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 394.50 Td (0.3340) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 390.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 394.50 Td (Adopted \(+0.0537\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 374.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 378.50 Td (Tier 2.11: Translation prompt prefix \(+ Tier-1 Combo\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 374.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 378.50 Td (0.3402) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 374.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 378.50 Td (0.3128) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 374.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 378.50 Td (0.3357) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 374.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 378.50 Td (Lost \(+0.0017 < 0.003\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 358.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 362.50 Td (Tier 2.12: Paired joint context \(text_a + text_b in one pass\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 358.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 362.50 Td (0.3009) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 358.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 362.50 Td (0.2704) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 358.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 362.50 Td (0.2960) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 358.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 362.50 Td (Lost \(-0.0380\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 342.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 346.50 Td (Tier 2.13: Overlapping 256-token windows \(stride 128\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 342.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 346.50 Td (0.3332) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 342.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 346.50 Td (0.3132) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 342.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 346.50 Td (0.3303) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 342.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 346.50 Td (Lost \(-0.0037\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 326.00 220.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 330.50 Td (Tier 2.14: Layer-15 cross-side attention rank blend \(0.20\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 326.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 271.00 330.50 Td (0.2661) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 326.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 345.00 330.50 Td (0.2509) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 326.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 419.00 330.50 Td (0.2630) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 326.00 74.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 493.00 330.50 Td (Lost \(-0.0710\)) Tj ET
-0 0 0 rg
-BT /F1 10.0 Tf 48.00 308.00 Td (Word-mean-pool L15 remains in predictions/l15, and hidden state 8 remains in predictions/ablation_l8.) Tj ET
-BT /F2 13.0 Tf 48.00 280.00 Td (Error analysis, Qwen comparison, and efficiency) Tj ET
-q 516.00 0 0 193.60 48.00 78.40 cm /Im2 Do Q
-BT /F1 10.0 Tf 48.00 58.40 Td (docs/error_analysis.png and docs/demo.html break down development performance across token and page) Tj ET
+BT /F1 10.0 Tf 48.00 313.00 Td (All candidate improvements were pre-registered in docs/preregistration.md before running and evaluated) Tj ET
+BT /F1 10.0 Tf 48.00 300.00 Td (on dev/train \(134/lang\) and dev/val \(34/lang\) with a >= +0.0030 official full-dev adoption threshold:) Tj ET
 endstream
 endobj
 9 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 15 0 R /F2 16 0 R >> /XObject << /Im1 13 0 R /Im2 14 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
 endobj
 10 0 obj
-<< /Length 9138 >>
+<< /Length 13888 >>
 stream
-BT /F1 10.0 Tf 48.00 738.00 Td (regimes. On short pages \(<600 kept tokens\), Spearman reaches 0.3806 \(de\), 0.2932 \(fr\), and 0.4290 \(it\),) Tj ET
-BT /F1 10.0 Tf 48.00 725.00 Td (compared with 0.3727, 0.2131, and 0.3906 on long pages \(>=600 kept tokens\). French numbers/dates) Tj ET
-BT /F1 10.0 Tf 48.00 712.00 Td (\(0.1788\) and repeated function words on long pages \(admin_fr_10, 1,300 kept tokens\) are the hardest) Tj ET
-BT /F1 10.0 Tf 48.00 699.00 Td (slices because shared years \("2022" in admin_de_12\) and boilerplate prepositions find exact matches in) Tj ET
-BT /F1 10.0 Tf 48.00 686.00 Td (other clauses. Running the exact same Tier-1 Combination on locally cached Qwen/Qwen2.5-VL-7B-Instruct) Tj ET
-BT /F1 10.0 Tf 48.00 673.00 Td (\(layer 14 of 28, development comparison only, non-submission\) yields official --split dev Spearman de) Tj ET
-BT /F1 10.0 Tf 48.00 660.00 Td (0,351 ; fr 0,217 ; it 0,381 \(mean 0.3163, docs/official_dev_stdout_qwen_comparison.txt; raw) Tj ET
-BT /F1 10.0 Tf 48.00 647.00 Td (subword-first 0.2453\), which Apertus v1.5 8B outperforms by +0.0177 mean \(0.3340 vs 0.3163\).) Tj ET
-0.90 0.93 0.96 rg 48.00 624.00 73.71 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 624.00 73.71 16.00 re S
+0.90 0.93 0.96 rg 48.00 732.00 220.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 732.00 220.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 628.50 Td (System) Tj ET
-0.90 0.93 0.96 rg 121.71 624.00 73.71 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 121.71 624.00 73.71 16.00 re S
+BT /F2 8.5 Tf 51.00 736.50 Td (Idea \(pre-registered in docs/preregistration.md\)) Tj ET
+0.90 0.93 0.96 rg 268.00 732.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 268.00 732.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 124.71 628.50 Td (Input tokens) Tj ET
-0.90 0.93 0.96 rg 195.43 624.00 73.71 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 195.43 624.00 73.71 16.00 re S
+BT /F2 8.5 Tf 271.00 736.50 Td (dev/train) Tj ET
+0.90 0.93 0.96 rg 342.00 732.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 342.00 732.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 198.43 628.50 Td (Generated tokens) Tj ET
-0.90 0.93 0.96 rg 269.14 624.00 73.71 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 269.14 624.00 73.71 16.00 re S
+BT /F2 8.5 Tf 345.00 736.50 Td (dev/val) Tj ET
+0.90 0.93 0.96 rg 416.00 732.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 416.00 732.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 272.14 628.50 Td (Wall seconds \(dev\)) Tj ET
-0.90 0.93 0.96 rg 342.86 624.00 73.71 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 342.86 624.00 73.71 16.00 re S
+BT /F2 8.5 Tf 419.00 736.50 Td (Official mean) Tj ET
+0.90 0.93 0.96 rg 490.00 732.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 490.00 732.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 345.86 628.50 Td (Peak RAM / VRAM) Tj ET
-0.90 0.93 0.96 rg 416.57 624.00 73.71 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 416.57 624.00 73.71 16.00 re S
+BT /F2 8.5 Tf 493.00 736.50 Td (Outcome) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 716.00 220.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 419.57 628.50 Td (API cost) Tj ET
-0.90 0.93 0.96 rg 490.29 624.00 73.71 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 490.29 624.00 73.71 16.00 re S
+BT /F1 8.5 Tf 51.00 720.50 Td (Batch 1 \(b\): Subword-first L15 vs word-mean-pool L15 \(0.2703\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 716.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 493.29 628.50 Td (Dev mean) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 608.00 73.71 16.00 re S
+BT /F1 8.5 Tf 271.00 720.50 Td (0.2843) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 716.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 612.50 Td (Few-shot LLM generation \(paper Table 3: GPT-4o / Llama-405B\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 121.71 608.00 73.71 16.00 re S
+BT /F1 8.5 Tf 345.00 720.50 Td (0.2592) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 716.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 124.71 612.50 Td (>564,349) Tj ET
-0.45 0.50 0.55 RG 0.6 w 195.43 608.00 73.71 16.00 re S
+BT /F1 8.5 Tf 419.00 720.50 Td (0.2803) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 716.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 198.43 612.50 Td (~405,654) Tj ET
-0.45 0.50 0.55 RG 0.6 w 269.14 608.00 73.71 16.00 re S
+BT /F1 8.5 Tf 493.00 720.50 Td (Won \(+0.0100\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 700.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 272.14 612.50 Td (>3,600s) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.86 608.00 73.71 16.00 re S
+BT /F1 8.5 Tf 51.00 704.50 Td (Tier 1.1: Bidirectional CSLS margin \(alpha = 0.50, k = 5\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 700.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.86 612.50 Td (API / multi-GPU) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.57 608.00 73.71 16.00 re S
+BT /F1 8.5 Tf 271.00 704.50 Td (0.2909) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 700.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.57 612.50 Td (~$5-$15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.29 608.00 73.71 16.00 re S
+BT /F1 8.5 Tf 345.00 704.50 Td (0.2659) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 700.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.29 612.50 Td (0.036 / 0.015) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 592.00 73.71 16.00 re S
+BT /F1 8.5 Tf 419.00 704.50 Td (0.2870) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 700.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 596.50 Td (Qwen2.5-VL-7B-Instruct \(layer 14, Tier-1 Combo, dev comparison\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 121.71 592.00 73.71 16.00 re S
+BT /F1 8.5 Tf 493.00 704.50 Td (Won \(+0.0067\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 684.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 124.71 596.50 Td (564,349) Tj ET
-0.45 0.50 0.55 RG 0.6 w 195.43 592.00 73.71 16.00 re S
+BT /F1 8.5 Tf 51.00 688.50 Td (Tier 1.2: Span smoothing \(w = 2 triangular, skip punct\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 684.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 198.43 596.50 Td (0) Tj ET
-0.45 0.50 0.55 RG 0.6 w 269.14 592.00 73.71 16.00 re S
+BT /F1 8.5 Tf 271.00 688.50 Td (0.3263) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 684.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 272.14 596.50 Td (295.9s) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.86 592.00 73.71 16.00 re S
+BT /F1 8.5 Tf 345.00 688.50 Td (0.2973) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 684.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.86 596.50 Td (~8.5 GB MPS) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.57 592.00 73.71 16.00 re S
+BT /F1 8.5 Tf 419.00 688.50 Td (0.3217) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 684.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.57 596.50 Td ($0 \(local\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.29 592.00 73.71 16.00 re S
+BT /F1 8.5 Tf 493.00 688.50 Td (Won \(+0.0414\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 668.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.29 596.50 Td (0.3163) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 576.00 73.71 16.00 re S
+BT /F1 8.5 Tf 51.00 672.50 Td (Tier 1.3: Per-document calibration \(mean/z-score/quantile\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 668.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 580.50 Td (SpanDiff \(Apertus v1.5 8B, layer 15 Tier-1 Combo, submitted\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 121.71 576.00 73.71 16.00 re S
+BT /F1 8.5 Tf 271.00 672.50 Td (0.2836) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 668.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 124.71 580.50 Td (564,349) Tj ET
-0.45 0.50 0.55 RG 0.6 w 195.43 576.00 73.71 16.00 re S
+BT /F1 8.5 Tf 345.00 672.50 Td (0.2586) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 668.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 198.43 580.50 Td (0) Tj ET
-0.45 0.50 0.55 RG 0.6 w 269.14 576.00 73.71 16.00 re S
+BT /F1 8.5 Tf 419.00 672.50 Td (0.2797) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 668.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 272.14 580.50 Td (280.2s) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.86 576.00 73.71 16.00 re S
+BT /F1 8.5 Tf 493.00 672.50 Td (Lost \(-0.0006\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 652.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.86 580.50 Td (~9.2 GB MPS) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.57 576.00 73.71 16.00 re S
+BT /F1 8.5 Tf 51.00 656.50 Td (Tier 1.4: Inverse token frequency weighting \(dev inputs only\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 652.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.57 580.50 Td ($0 \(local\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.29 576.00 73.71 16.00 re S
+BT /F1 8.5 Tf 271.00 656.50 Td (0.2848) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 652.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.29 580.50 Td (0.3340) Tj ET
+BT /F1 8.5 Tf 345.00 656.50 Td (0.2598) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 652.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 13.0 Tf 48.00 547.00 Td (Use of Apertus) Tj ET
-BT /F1 10.0 Tf 48.00 529.00 Td (One checkpoint for all submitted files: swiss-ai/Apertus-v1.5-8B. No second embedding model and no) Tj ET
-BT /F1 10.0 Tf 48.00 516.00 Td (closed API writes any submitted prediction. The development forward pass read 564,349 tokens and wrote) Tj ET
-BT /F1 10.0 Tf 48.00 503.00 Td (0 generated tokens \(280.2 seconds with the 15-layer text backbone cached on one Apple GPU\). A cold load) Tj ET
-BT /F1 10.0 Tf 48.00 490.00 Td (of the full 8B checkpoint needs about 16 GB. Apertus 70B was not run. It does not fit in 48 GB on this) Tj ET
-BT /F1 10.0 Tf 48.00 477.00 Td (machine. The Getting Started introduction says builders work with both sizes. The UZH challenge FAQ) Tj ET
-BT /F1 10.0 Tf 48.00 464.00 Td (says either size is in scope, and that efficiency can make a tuned 8B competitive. This submission is) Tj ET
-BT /F1 10.0 Tf 48.00 451.00 Td (the 8B.) Tj ET
-BT /F1 10.0 Tf 48.00 434.00 Td (Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, use) Tj ET
-BT /F1 10.0 Tf 48.00 421.00 Td (the same frozen hidden-state-15 Tier-1 Combination method \(207,075 test forward-pass tokens, 165.8) Tj ET
-BT /F1 10.0 Tf 48.00 408.00 Td (seconds\). Development scores are our development evaluation. Those test and full-set files are included) Tj ET
-BT /F1 10.0 Tf 48.00 395.00 Td (for the organizers to score. We never graded the test split. No test Spearman is claimed.) Tj ET
-BT /F2 13.0 Tf 48.00 367.00 Td (Data, Evaluation, and Limitations) Tj ET
-BT /F1 10.0 Tf 48.00 349.00 Td (Development inputs are the public SwissGov-RSD development pages, 168 documents per language. Test) Tj ET
-BT /F1 10.0 Tf 48.00 336.00 Td (predictions are 56 documents per language. Full-set predictions are 224 documents per language, in id) Tj ET
-BT /F1 10.0 Tf 48.00 323.00 Td (order. Development scores are our development evaluation. The test and full-set predictions are) Tj ET
-BT /F1 10.0 Tf 48.00 310.00 Td (included for the organizers to score. We never graded the test split. This repository does not contain) Tj ET
-BT /F1 10.0 Tf 48.00 297.00 Td (that gold. The SwissGov text stays CC-BY-4.0 and is not relicensed. The summary and ablation tables are) Tj ET
-BT /F1 10.0 Tf 48.00 284.00 Td (the evaluation that should be quoted. States are causal, so a token sees only its left context. An) Tj ET
-BT /F1 10.0 Tf 48.00 271.00 Td (empty subword span scores 1 before smoothing. The final layer raises aligned tokens and different) Tj ET
-BT /F1 10.0 Tf 48.00 258.00 Td (tokens together. Italian train, on the per-document map, prefers layer 14 by 0.001. 70B was not run. No) Tj ET
-BT /F1 10.0 Tf 48.00 245.00 Td (test Spearman is reported. We never graded the test split.) Tj ET
-BT /F2 13.0 Tf 48.00 217.00 Td (Reproducibility and Next steps) Tj ET
-BT /F1 10.0 Tf 48.00 199.00 Td (The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. Judges run make run. That) Tj ET
-BT /F1 10.0 Tf 48.00 186.00 Td (builds the Docker image and grades predictions/dev with --split dev. It does not load the model. make) Tj ET
-BT /F1 10.0 Tf 48.00 173.00 Td (run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not) Tj ET
-BT /F1 10.0 Tf 48.00 160.00 Td (the scorer. make predict writes a new deterministic layer-15 development run under predictions/rerun.) Tj ET
-BT /F1 10.0 Tf 48.00 147.00 Td (It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker) Tj ET
-BT /F1 10.0 Tf 48.00 134.00 Td (image grades the same committed development files. Docker image verified under podman on linux/amd64 at) Tj ET
-BT /F1 10.0 Tf 48.00 121.00 Td (an earlier commit; make run-local is the equivalent local path. Development scores are our development) Tj ET
-BT /F1 10.0 Tf 48.00 108.00 Td (evaluation. Test predictions, 56 documents per language, and full-set predictions, 224 documents per) Tj ET
-BT /F1 10.0 Tf 48.00 95.00 Td (language, use the frozen hidden-state-15 Tier-1 Combination method and are included for the organizers) Tj ET
-BT /F1 10.0 Tf 48.00 82.00 Td (to score. We never graded the test split. make run grades the development files only. A 70B run is) Tj ET
-BT /F1 10.0 Tf 48.00 69.00 Td (future work on a larger machine.) Tj ET
+BT /F1 8.5 Tf 419.00 656.50 Td (0.2810) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 652.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 656.50 Td (Lost \(+0.0007\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 636.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 640.50 Td (Tier 1.5: Number / date / named-entity match scaling) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 636.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 640.50 Td (0.2861) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 636.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 640.50 Td (0.2603) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 636.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 640.50 Td (0.2820) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 636.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 640.50 Td (Lost \(+0.0017\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 620.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 624.50 Td (Tier 1.6: Top-k soft alignment \(k = 5, T = 0.02\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 620.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 624.50 Td (0.2849) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 620.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 624.50 Td (0.2601) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 620.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 624.50 Td (0.2813) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 620.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 624.50 Td (Lost \(+0.0010\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 604.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 608.50 Td (Tier 1.7: Sentence-constrained alignment \(lambda = 0.50\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 604.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 608.50 Td (0.2925) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 604.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 608.50 Td (0.2651) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 604.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 608.50 Td (0.2880) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 604.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 608.50 Td (Won \(+0.0077\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 588.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 592.50 Td (Tier 1.8: Learned non-neg layer weights \(10-20: L12/14/15\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 588.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 592.50 Td (0.2854) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 588.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 592.50 Td (0.2597) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 588.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 592.50 Td (0.2813) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 588.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 592.50 Td (Lost \(+0.0010\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 572.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 576.50 Td (Tier 1.9: Contrastive centering \(doc mean 0.50 / global 1.0\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 572.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 576.50 Td (0.2902) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 572.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 576.50 Td (0.2692) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 572.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 576.50 Td (0.2870) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 572.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 576.50 Td (Won \(+0.0067\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 556.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 560.50 Td (Tier 1.10: All-but-the-top PC1 removal \(abtt1; PCA256 0.2770\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 556.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 560.50 Td (0.2904) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 556.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 560.50 Td (0.2689) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 556.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 560.50 Td (0.2873) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 556.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 560.50 Td (Won \(+0.0070\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 540.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 544.50 Td (Tier 1 Combo \(Items 1 + 2 + 7 + 9, adopted as predictions/dev\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 540.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 544.50 Td (0.3383) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 540.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 544.50 Td (0.3115) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 540.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 544.50 Td (0.3340) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 540.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 544.50 Td (Adopted \(+0.0537\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 524.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 528.50 Td (Tier 2.11: Translation prompt prefix \(+ Tier-1 Combo\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 524.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 528.50 Td (0.3402) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 524.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 528.50 Td (0.3128) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 524.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 528.50 Td (0.3357) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 524.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 528.50 Td (Lost \(+0.0017 < 0.003\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 508.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 512.50 Td (Tier 2.12: Paired joint context \(text_a + text_b in one pass\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 508.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 512.50 Td (0.3009) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 508.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 512.50 Td (0.2704) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 508.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 512.50 Td (0.2960) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 508.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 512.50 Td (Lost \(-0.0380\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 492.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 496.50 Td (Tier 2.13: Overlapping 256-token windows \(stride 128\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 492.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 496.50 Td (0.3332) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 492.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 496.50 Td (0.3132) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 492.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 496.50 Td (0.3303) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 492.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 496.50 Td (Lost \(-0.0037\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 476.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 480.50 Td (Tier 2.14: Layer-15 cross-side attention rank blend \(0.20\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 476.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 480.50 Td (0.2661) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 476.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 480.50 Td (0.2509) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 476.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 480.50 Td (0.2630) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 476.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 480.50 Td (Lost \(-0.0710\)) Tj ET
+0 0 0 rg
+BT /F1 10.0 Tf 48.00 458.00 Td (Word-mean-pool L15 remains in predictions/l15, and hidden state 8 remains in predictions/ablation_l8.) Tj ET
+BT /F2 13.0 Tf 48.00 430.00 Td (Error analysis, Qwen comparison, and efficiency) Tj ET
+q 516.00 0 0 193.60 48.00 228.40 cm /Im3 Do Q
+BT /F1 10.0 Tf 48.00 208.40 Td (docs/error_analysis.png and docs/demo.html break down development performance across token and page) Tj ET
+BT /F1 10.0 Tf 48.00 195.40 Td (regimes. Kept-token length, pooled inside each bin:) Tj ET
+0.90 0.93 0.96 rg 48.00 172.40 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 172.40 129.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 51.00 176.90 Td (Kept tokens) Tj ET
+0.90 0.93 0.96 rg 177.00 172.40 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 177.00 172.40 129.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 180.00 176.90 Td (de) Tj ET
+0.90 0.93 0.96 rg 306.00 172.40 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 306.00 172.40 129.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 309.00 176.90 Td (fr) Tj ET
+0.90 0.93 0.96 rg 435.00 172.40 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 435.00 172.40 129.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 438.00 176.90 Td (it) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 156.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 160.90 Td (under 400) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 156.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 160.90 Td (0.363 \(65\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 156.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 160.90 Td (0.277 \(54\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 156.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 160.90 Td (0.415 \(58\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 140.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 144.90 Td (400 to 799) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 140.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 144.90 Td (0.401 \(58\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 140.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 144.90 Td (0.264 \(54\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 140.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 144.90 Td (0.362 \(57\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 124.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 128.90 Td (800 or more) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 124.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 128.90 Td (0.364 \(45\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 124.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 128.90 Td (0.216 \(60\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 124.40 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 128.90 Td (0.412 \(53\)) Tj ET
+0 0 0 rg
+BT /F1 10.0 Tf 48.00 106.40 Td (French pages with 800 or more kept tokens are the weak cell. French numbers and dates \(0.1788\) and) Tj ET
+BT /F1 10.0 Tf 48.00 93.40 Td (repeated function words on long pages \(admin_fr_10, 1,300 kept tokens\) are hard because shared years) Tj ET
+BT /F1 10.0 Tf 48.00 80.40 Td (\("2022" in admin_de_12\) and boilerplate prepositions match another clause. Running the exact same) Tj ET
+BT /F1 10.0 Tf 48.00 67.40 Td (Tier-1 Combination on locally cached Qwen/Qwen2.5-VL-7B-Instruct \(layer 14 of 28, development) Tj ET
+BT /F1 10.0 Tf 48.00 54.40 Td (comparison only, non-submission\) yields official --split dev Spearman de 0,351 ; fr 0,217 ; it 0,381) Tj ET
 endstream
 endobj
 11 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 12 0 R /Resources << /Font << /F1 15 0 R /F2 16 0 R >> /XObject << /Im1 13 0 R /Im2 14 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 12 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
 endobj
 12 0 obj
-<< /Length 167 >>
+<< /Length 7249 >>
 stream
-BT /F2 13.0 Tf 48.00 727.00 Td (License) Tj ET
-BT /F1 10.0 Tf 48.00 709.00 Td (Report CC-BY-4.0. Code Apache-2.0. SwissGov text stays CC-BY-4.0, not relicensed.) Tj ET
+BT /F1 10.0 Tf 48.00 738.00 Td (\(mean 0.3163, docs/official_dev_stdout_qwen_comparison.txt; raw subword-first 0.2453\), which Apertus) Tj ET
+BT /F1 10.0 Tf 48.00 725.00 Td (v1.5 8B outperforms by +0.0177 mean \(0.3340 vs 0.3163\).) Tj ET
+0.90 0.93 0.96 rg 48.00 702.00 73.71 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 702.00 73.71 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 51.00 706.50 Td (System) Tj ET
+0.90 0.93 0.96 rg 121.71 702.00 73.71 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 121.71 702.00 73.71 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 124.71 706.50 Td (Input tokens) Tj ET
+0.90 0.93 0.96 rg 195.43 702.00 73.71 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 195.43 702.00 73.71 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 198.43 706.50 Td (Generated tokens) Tj ET
+0.90 0.93 0.96 rg 269.14 702.00 73.71 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 269.14 702.00 73.71 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 272.14 706.50 Td (Wall seconds \(dev\)) Tj ET
+0.90 0.93 0.96 rg 342.86 702.00 73.71 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 342.86 702.00 73.71 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 345.86 706.50 Td (Peak RAM / VRAM) Tj ET
+0.90 0.93 0.96 rg 416.57 702.00 73.71 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 416.57 702.00 73.71 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 419.57 706.50 Td (API cost) Tj ET
+0.90 0.93 0.96 rg 490.29 702.00 73.71 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 490.29 702.00 73.71 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 493.29 706.50 Td (Dev mean) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 686.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 690.50 Td (Few-shot LLM generation \(paper Table 3: GPT-4o / Llama-405B\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 121.71 686.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 124.71 690.50 Td (>564,349) Tj ET
+0.45 0.50 0.55 RG 0.6 w 195.43 686.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 198.43 690.50 Td (~405,654) Tj ET
+0.45 0.50 0.55 RG 0.6 w 269.14 686.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 272.14 690.50 Td (>3,600s) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.86 686.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.86 690.50 Td (API / multi-GPU) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.57 686.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.57 690.50 Td (~$5-$15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.29 686.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.29 690.50 Td (0.036 / 0.015) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 670.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 674.50 Td (Qwen2.5-VL-7B-Instruct \(layer 14, Tier-1 Combo, dev comparison\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 121.71 670.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 124.71 674.50 Td (564,349) Tj ET
+0.45 0.50 0.55 RG 0.6 w 195.43 670.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 198.43 674.50 Td (0) Tj ET
+0.45 0.50 0.55 RG 0.6 w 269.14 670.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 272.14 674.50 Td (295.9s) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.86 670.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.86 674.50 Td (~8.5 GB MPS) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.57 670.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.57 674.50 Td ($0 \(local\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.29 670.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.29 674.50 Td (0.3163) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 654.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 658.50 Td (SpanDiff \(Apertus v1.5 8B, layer 15 Tier-1 Combo, submitted\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 121.71 654.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 124.71 658.50 Td (564,349) Tj ET
+0.45 0.50 0.55 RG 0.6 w 195.43 654.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 198.43 658.50 Td (0) Tj ET
+0.45 0.50 0.55 RG 0.6 w 269.14 654.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 272.14 658.50 Td (280.2s) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.86 654.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.86 658.50 Td (~9.2 GB MPS) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.57 654.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.57 658.50 Td ($0 \(local\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.29 654.00 73.71 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.29 658.50 Td (0.3340) Tj ET
+0 0 0 rg
+BT /F2 13.0 Tf 48.00 625.00 Td (Use of Apertus) Tj ET
+BT /F1 10.0 Tf 48.00 607.00 Td (One checkpoint for all submitted files: swiss-ai/Apertus-v1.5-8B. No second embedding model and no) Tj ET
+BT /F1 10.0 Tf 48.00 594.00 Td (closed API writes any submitted prediction. The development forward pass read 564,349 tokens and wrote) Tj ET
+BT /F1 10.0 Tf 48.00 581.00 Td (0 generated tokens \(280.2 seconds with the 15-layer text backbone cached on one Apple GPU\). A cold load) Tj ET
+BT /F1 10.0 Tf 48.00 568.00 Td (of the full 8B checkpoint needs about 16 GB. Apertus 70B was not run. It does not fit in 48 GB on this) Tj ET
+BT /F1 10.0 Tf 48.00 555.00 Td (machine. The Getting Started introduction says builders work with both sizes. The UZH challenge FAQ) Tj ET
+BT /F1 10.0 Tf 48.00 542.00 Td (says either size is in scope, and that efficiency can make a tuned 8B competitive. This submission is) Tj ET
+BT /F1 10.0 Tf 48.00 529.00 Td (the 8B.) Tj ET
+BT /F1 10.0 Tf 48.00 512.00 Td (Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, use) Tj ET
+BT /F1 10.0 Tf 48.00 499.00 Td (the same frozen hidden-state-15 Tier-1 Combination method \(207,075 test forward-pass tokens, 165.8) Tj ET
+BT /F1 10.0 Tf 48.00 486.00 Td (seconds\). Development scores are our development evaluation. Those test and full-set files are included) Tj ET
+BT /F1 10.0 Tf 48.00 473.00 Td (for the organizers to score. We never graded the test split. No test Spearman is claimed.) Tj ET
+BT /F2 13.0 Tf 48.00 445.00 Td (Data, Evaluation, and Limitations) Tj ET
+BT /F1 10.0 Tf 48.00 427.00 Td (Development inputs are the public SwissGov-RSD development pages, 168 documents per language. Test) Tj ET
+BT /F1 10.0 Tf 48.00 414.00 Td (predictions are 56 documents per language. Full-set predictions are 224 documents per language, in id) Tj ET
+BT /F1 10.0 Tf 48.00 401.00 Td (order. Development scores are our development evaluation. The test and full-set predictions are) Tj ET
+BT /F1 10.0 Tf 48.00 388.00 Td (included for the organizers to score. We never graded the test split. This repository does not contain) Tj ET
+BT /F1 10.0 Tf 48.00 375.00 Td (that gold. The SwissGov text stays CC-BY-4.0 and is not relicensed. The summary and ablation tables are) Tj ET
+BT /F1 10.0 Tf 48.00 362.00 Td (the evaluation that should be quoted. States are causal, so a token sees only its left context. An) Tj ET
+BT /F1 10.0 Tf 48.00 349.00 Td (empty subword span scores 1 before smoothing. The final layer raises aligned tokens and different) Tj ET
+BT /F1 10.0 Tf 48.00 336.00 Td (tokens together. Italian train, on the per-document map, prefers layer 14 by 0.001. 70B was not run. No) Tj ET
+BT /F1 10.0 Tf 48.00 323.00 Td (test Spearman is reported. We never graded the test split.) Tj ET
+BT /F2 13.0 Tf 48.00 295.00 Td (Negative results) Tj ET
+BT /F1 10.0 Tf 48.00 277.00 Td (Sprint 2 tried further representations, alignment, and post-processing on development data only. The) Tj ET
+BT /F1 10.0 Tf 48.00 264.00 Td (gate was train at least 0.3433, validation at least 0.3165, and a win on at least 4 of 5 document) Tj ET
+BT /F1 10.0 Tf 48.00 251.00 Td (folds. Item 16, a learned token head, was not run. None of the rows below was adopted. The closest miss) Tj ET
+BT /F1 10.0 Tf 48.00 238.00 Td (is the diagonal alignment prior.) Tj ET
 endstream
 endobj
 13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 14 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
+endobj
+14 0 obj
+<< /Length 9095 >>
+stream
+0.90 0.93 0.96 rg 48.00 732.00 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 732.00 129.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 51.00 736.50 Td (Idea) Tj ET
+0.90 0.93 0.96 rg 177.00 732.00 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 177.00 732.00 129.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 180.00 736.50 Td (train) Tj ET
+0.90 0.93 0.96 rg 306.00 732.00 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 306.00 732.00 129.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 309.00 736.50 Td (val) Tj ET
+0.90 0.93 0.96 rg 435.00 732.00 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 435.00 732.00 129.00 16.00 re S
+0 0 0 rg
+BT /F2 8.5 Tf 438.00 736.50 Td (folds) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 716.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 720.50 Td (Multi-layer rank average) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 716.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 720.50 Td (0.279) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 716.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 720.50 Td (0.263) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 716.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 720.50 Td (0/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 700.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 704.50 Td (Mean subword pool) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 700.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 704.50 Td (0.336) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 700.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 704.50 Td (0.311) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 700.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 704.50 Td (1/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 684.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 688.50 Td (Context prefix) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 684.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 688.50 Td (0.343) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 684.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 688.50 Td (0.313) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 684.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 688.50 Td (5/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 668.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 672.50 Td (Language tags) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 668.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 672.50 Td (0.342) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 668.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 672.50 Td (0.311) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 668.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 672.50 Td (4/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 652.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 656.50 Td (Paired tie-break) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 652.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 656.50 Td (0.330) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 652.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 656.50 Td (0.287) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 652.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 656.50 Td (0/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 636.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 640.50 Td (Rank, then smooth) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 636.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 640.50 Td (0.290) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 636.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 640.50 Td (0.267) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 636.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 640.50 Td (0/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 620.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 624.50 Td (Smooth, window 3) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 620.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 624.50 Td (0.340) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 620.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 624.50 Td (0.315) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 620.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 624.50 Td (5/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 604.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 608.50 Td (Number rule) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 604.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 608.50 Td (0.334) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 604.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 608.50 Td (0.314) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 604.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 608.50 Td (0/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 588.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 592.50 Td (Length-ratio tail) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 588.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 592.50 Td (0.338) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 588.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 592.50 Td (0.312) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 588.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 592.50 Td (4/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 572.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 576.50 Td (Rank ensemble of three) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 572.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 576.50 Td (0.286) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 572.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 576.50 Td (0.266) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 572.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 576.50 Td (0/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 556.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 560.50 Td (Entropic optimal transport) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 556.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 560.50 Td (0.337) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 556.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 560.50 Td (0.305) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 556.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 560.50 Td (1/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 540.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 544.50 Td (Diagonal prior, 0.25) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 540.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 544.50 Td (0.341) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 540.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 544.50 Td (0.320) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 540.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 544.50 Td (4/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 524.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 528.50 Td (Phrase n-grams) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 524.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 528.50 Td (0.338) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 524.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 528.50 Td (0.310) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 524.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 528.50 Td (3/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 508.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 512.50 Td (Sentence dynamic program) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 508.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 512.50 Td (0.324) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 508.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 512.50 Td (0.310) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 508.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 512.50 Td (0/5) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 492.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 496.50 Td (English-anchor max) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 492.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 180.00 496.50 Td (0.314) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 492.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 309.00 496.50 Td (0.279) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 492.00 129.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 438.00 496.50 Td (0/5) Tj ET
+0 0 0 rg
+BT /F2 13.0 Tf 48.00 463.00 Td (Reproducibility and Next steps) Tj ET
+BT /F1 10.0 Tf 48.00 445.00 Td (The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. Judges run make run. That) Tj ET
+BT /F1 10.0 Tf 48.00 432.00 Td (builds the Docker image and grades predictions/dev with --split dev. It does not load the model. make) Tj ET
+BT /F1 10.0 Tf 48.00 419.00 Td (run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not) Tj ET
+BT /F1 10.0 Tf 48.00 406.00 Td (the scorer. make predict writes a new deterministic layer-15 development run under predictions/rerun.) Tj ET
+BT /F1 10.0 Tf 48.00 393.00 Td (It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker) Tj ET
+BT /F1 10.0 Tf 48.00 380.00 Td (image grades the same committed development files. Docker image verified under podman on linux/amd64 at) Tj ET
+BT /F1 10.0 Tf 48.00 367.00 Td (an earlier commit; make run-local is the equivalent local path. Development scores are our development) Tj ET
+BT /F1 10.0 Tf 48.00 354.00 Td (evaluation. Test predictions, 56 documents per language, and full-set predictions, 224 documents per) Tj ET
+BT /F1 10.0 Tf 48.00 341.00 Td (language, use the frozen hidden-state-15 Tier-1 Combination method and are included for the organizers) Tj ET
+BT /F1 10.0 Tf 48.00 328.00 Td (to score. We never graded the test split. make run grades the development files only. A 70B run is) Tj ET
+BT /F1 10.0 Tf 48.00 315.00 Td (future work on a larger machine.) Tj ET
+BT /F2 13.0 Tf 48.00 287.00 Td (License) Tj ET
+BT /F1 10.0 Tf 48.00 269.00 Td (Report CC-BY-4.0. Code Apache-2.0. SwissGov text stays CC-BY-4.0, not relicensed.) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /XObject /Subtype /Image /Width 1400 /Height 280 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length 51841 >>
+stream
+ÿØÿà JFIF   H H  ÿá LExif  MM *    ‡i                           x           ÿí 8Photoshop 3.0 8BIM      8BIM%     ÔŒÙ ²é€	˜ìøB~ÿÀ x" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÛ C 
+
+
+
+
+
+
+
+
+ÿÛ C	ÿİ  XÿÚ   ? ıè¢Š+C0¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿĞıè¢Š+C0¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÑıè¢Š+C0ªz‹_.ŸrÚb£ŞœÂ²!—iØÄã>Õr¹ÿ Zkú‡…µ›
+ß/[¹²¸ŠÆí‘d÷O,2”ue`Cme ãÅ4âçÂ~Étùö¸ñN¡cñĞÜÜXøƒU¼Ò'±¹ó\D¶yx­Da6˜ÀÜ; }Û x“âGì¿û.x›ÅµX>%Â÷75ÌW®f¿Ñ™Óìbêåá8¸
+ä3*È¸†nMx5·íSğ>ëÁV¿no
+½§Ä=±ß[êŞkØõ	âù~Ódöğ<[fÆğWËPÄìù@'Ìl|7¯è_°ÇÛõÑoü-àjöî÷Âš>¦_íVz\É4qÈùeBN9`X0vï’rø»ÿ V0NÛOÛ‡YÒFã|&Ö<=ğ£^m|W5Ô.İ°ÜObM»’
+ÈäR\µéÿ i?x{â%ÇÂOƒ_o>&ø¯L³†ÿ SŠë}2ÎÂ’|•–êà2ù² YP/+È'>=ø»ûEøwöøìÇğïÃš´Ÿ|Qo¦é×4útğÇ¤ˆä…å¹¸”EötXË$ˆÍUˆ8ÇøçâİKı <EàOÚƒÇ~/ğw€´;KÂh"î=\qöÇ¸’Î)YDÙPy€tª+ª3î}emûc)ø-ñâ6¯à‹½Å_œC¬xròé¬Ì£Ùw:´n¯•q8?.0Ç‘_Û‹ÅZwü#¾1ñ—Á½cÃ¿|Qwkkiâ9ïmŞEûaÓiè<Ø¡|‚Ÿ• ¨bBŸ€|qáDøû`iŞÒuJ1é766Z¹—íÿ c™_Êo<´„Ï7’F`ã÷Ïí–ŠŸ±F¨ '…€¶.ízSt¢¥knÿ D
+M«œş|+øùûxƒÃ_tOíİ7Oğ-•Ü}¦æ×dâôÇ»u´‘1ù]†	#™Å3âŸÂ-öÖ|ñ—à=İş‹áyõË-#Ä–ö{»›+ö1ı¡áädš&û§qê1€;üñ×á_À?ÛûÄ%ø³­ÿ aiº‡l­ —ì×7[ç7¦M»m£•‡ÊŒr@uÎ)¿¾,è?·µà¯ƒßmoõŸ
+Ûk¶zÇ‰<A-•Å¥…½ƒû<mp‘³M3”mêQ¸ ¹´¿Ão´×¹íÚ¿ÓBø÷ñm>ü5ÿ „ƒâáİw›ûgìŸÚ°Ë#*A²áM½¿Ù×sï2ciçù¤ÂÎĞ¿cïüQÓ¾_C{ã´†ÓTñûx©d¸¿·ŸV×û9‰x·º-³ÅØ•È?­¾ÿ “áøËÿ b¦ƒÿ µ«ã™åºıt²ÿ ÔUR•¬½Jÿ ‰úGû-ü<³økğƒOÑ-üß..n.nn´FÕ¶ĞL\ÆŞî`şlq£ápvÜd÷]kYÒü9£_ø‡\¹[=;K·–êæwá"‚/#·²¨$ı+“ñÅøKÆø{âOì ñ©»]"ÛÉšO´›Ö[Ş"4qìF÷Œ¹Î'ŠÈøíà½Sâ7ÁoxCpšˆ4[û+bÇj™çÒ0Ç²– èMq;¹]õ6é¡ò!ıº<j|>ßàø¯Éğ‘	”ø‡ívâèÙ†Á»ai‡6ÿ 3nŞsŠïş(~ØQø;Æ¾ğ_Ãß]üDŸâˆÚÆŠÚmÊDn	e1«	Slp˜KJÓ3üpPç#æ›ÛÁvŸ³l n|3­ÿ ÂÛ·ğèğÏü"£J¹3½âÚıˆ8`WHŞ~mÁ8
+O^›á_€õ_†¿´gìÿ à?í:¦ƒğÎòŞä%ÂÉ˜ªÃ …bTÔ
+étâµk¹—3î}ğƒö£—ÆzïŒ<ñkÁ×<Sà‹$Õ/í.îâ¾·:s‚MÌWPª£ªcçÂàd`±ÜÍ_öĞø‡&Šßì>k×?
+V3uı¿öÛT¼k 7´Ò›÷Æ-Ÿ¼¼Ÿ6@®Câƒu/ˆµOÆè#Ô<Eğ¬-ÙÕó®n¦=Ç²– é_øOBı„4o‡6>øğw[¼øáal–W>Y5Ø®µN #2$‘Ê`)Üo$}ÀÇj6 5QzÛ·õ¸93÷çÃ¾ ÑüY i¾(ğıÊŞézÅ´7–³¦vËè$ÆyÃ+Í|KûcxóSñßş|,ø=ã}oÀºœ–—F¥¥°´TVáç «,¬]Rİw±³nè+ëO…~¶ğ—ÃoxjÓD_E§iÖĞ-nùlJÆ3n.dù¦¯˜~ö3_›ß¿i¿‡? ¾3|}²øŸo§iÚ—‹¤–×T·±îŞkm›6hÊK€­`ƒ7#…('}.\ÇÓö¿¶oÃË¯R|iV¤.aÔ†‚şò‡ö ×L‚1§ìÈafœıÎq»å¬¯~Õm~!xgÀÿ >ß|9¶ñÃYi‰ÕmuX%»dHg[uS8RÇ=±’>2Õï~2øGà'‹~0éVºß´Š¿­ª5ŒûkKğ¥Êì{¥ŒdÅ;”RXrR#È®5ÙÒ_ßµŸƒ:§Šüdbñn¥âË%²Ûd6ª÷iy²6\â1ÂpHİÕë¡Ÿ;?J¼UûYø®Oˆ>"ğWÁ_…§Ä»_L-µíFÖòŞÊk7Iol³n¦ŒpÑ©VİÇ¡1øCöÜğo‰¾k¿.´ë[K?ÏáÍ'M„ı£QÕ®w"Ú¤p”Ëš}ù1Ş^çlW…ü4øëàßØóÅ~|pµÔ´Ë½cÅz§ˆ´K¸,'»‹Y´Ôö<kÂ¬ë·k†* ğ[ ãåØ|!¬|gı“u¿Åàë½^ÃHø½¨x›WğÔ~dWréŒ6İZ¨ˆ¬‹,k1S´†PE%F=Všjìığ×íSãËxÃ_>j?,|]xšv“©¾£mªZÉ{0&{³…6òK‚6rÜp2GÖ~+×?áğ¶±â_#í?Ù6w~Víg‘I·vní¸Î=~9ü<ğÏìã‰
+Òfß„ºŠüB5+{›û‰/µÍ>ÃnÂV¹¹{™9$”l„²7Ë¼~¶üWÿ ’[ãûjúNõh$Õ•‹ƒgÃš_íñâíWÀVí>ëWŞ9uMjèÚ¸ \ıÕÑ&¹†İ÷#OˆĞ•cÀ¯wø—ûP[xvëÂ^øIák¯‰¾(ñ¶œu6ÂÆâ+8³0¤]Ïu?Éo¼%NNGøOáÏíkà‹/ØãHø‡u‹Ÿˆº—†GÓt8tÙäÚàha»ŠeS@áÃ¹ÜË´‘Í‰ƒXø;qğ‹à×Çßx“À¿
+ôŸZÇqáŸ=E×ˆ¢m’Ú\ÜZÇ,¾RFÅU ü§Œ’»º*ûÎí¹ö§ƒ¿hû¯ˆ?şüWøwwà¿ø_D“Q¼Ñn/£ºŠóN)t¶À©F!~RF	 çWíCáÿ „?ş?¾ÜË§|A·k-/E´Ôâ{9öÖë,ñ–ŸÌ”¬eÜ¦ÀKœŠùöz»ødŸ~0Çğ¶ÇX²ğö£ğæò[+xÜ½WÉ,×ˆnóc±qò€wéŞEşÃaÀ#í3}EƒúÑ*QOoêÌjLı:ø_â_ø·ÁöÚßÄ_ŸërÉ*Ë¥5ôZ‰‰QÊ«àU·¸ 8gšèüW®Â1ámcÄ¾GÚ²lî.ü­Û<Ï"6“nì6İÛqœzçüGñCÀ¾ñ§…¾øƒSû'ˆ<jn×H¶òf“í&Æ5–ã÷ˆ{ıã.s…Éâ—â¿ü’ßÿ ØPÿ Òw®;k±©ğ…íıãCáÕŸÆ«oZÌŸR(ßQÖR¶İnÙ	9·µdYnaŠMËç~íNÒNŞqôÅÚ–ÏÁº‡…|#ğÇÂ·¿|eã;ªéÚ]Œ©j«§1usq0+LNÕ,§$qÆ|GD_ø%„Š ÿ ÑüLIüëˆµñRşÎ¿>~Ğ^8Ó¯'øâ?†ZO‡nµKKy.†—yéLégX¤\ @Élà¦º½œ^Ë¹Ÿ3î}ƒğGö’›âgŒ5Ÿ…~?ğuïÃ¿ˆ:²_M¤^OÚOe#×QI‘\…b H qè?¾4xkà?€¦ñÇˆíî5{ˆlll,Ó}ÕıõÉÛ¼+İÜ‚}”‚FÉß	üYí!û[§Ç i·±øÂ^›E‹W»¶’Ñu;ë«‘)[t”+´Q&IbÁr“ŞşÛ:ˆÇ…üñ?@Òn5ø~x·Mñ¡§Ú'™q-…¾ô™áOâ’=á€ì7€dà¹Ò3±Ì§í™ñAñüñOàÎ¡à½[ÇšÕ¦`fÔàº¶6“îÜyĞD@š1†¶p¬CîŞ6àö~1ı¨|q'uß|øOñ;ş9şÇ¬ß¦£m¥Y[İ…öĞÉpÏš5aæ"´+å/‹ÿ µoÂÿ ÿ şøoá\wÚ¬>8Óoo5¬gµ‚ÚEYm7N‰ºVÎBäb>	ç-«|6ı”>|cø¥¦~Ú¾¿ûn·â+íkÃúêXÚê~ şj[§ö|<èœ¶âËÕˆ,6Œî¨®±×·ôÈç}÷ÿ ‰ÿ mï
+èSãT>¾”ØëğøwZÑ®[êeç™²æ6P²	$ˆÈƒo˜
+‚ÈIÁáÚßÆÉñÂ¾	øÁğƒTøw§øîg¶Ğõ+‹û{Á-ÀMéÔ0¨kip™˜1ä`3|Eá_èß²Æ‹ªxá­ÏÃ=_ø¡ÜZY__\Ş]^Ú­ÂEìÑİkc2¯†`Á¯°ÿ lù¿g£ßş&ÿ ¢'©öq½­Ü«³[Æ?µ$ñ®»àÏ€ÿ 	ïş'Â'?Øõ›ôÔm´«+{°¡ŞÚ.yóF¬<ÄP6’dø“öÜğ®‡ğJŒ°xjúFµñ>Öt{†û>¡¥Ş6\£¢¤‚I"eA02ÈIóÿ Vømû(|0øÇñKLıµ|öİoÄWÚ×‡õÔ:±µÔ4ıAüÔ·OìùyÑ9mÅ—«Xmï|Cá_èÿ ²÷‡õO ü4¹øg kÿ ´9í,¯¯®o.¯mábŠöhî‹5±™WˆC0
+`ÀÕ{i§õ÷‹™Ÿeê_µg|+á{Ÿü ÔtxŸT:o†ü7¥kyw©ªÂ'k‰$@±ÛGŸŞoÜPõÉ«~ı§ş ê8›á_Äï„×ñ•î—w©è–ªÚßÚêŸcxîTŠL‘÷
+2Xyÿ í×ã?ø_Pøqaªøƒ]ğwÂ½Rîù|U­xqíöş\Hl£2Ä$QJåÃRH‚@äOú‡Áûoü3½ø0|C¨è×º~µm'ˆ<@÷ı©x-O.İ¯’!Aóa’üºLÂ”\oa¹4ísŞdŸş6ğß‚>1xïã‡'Ñ|/¡x‡[Ô.µyµXµ	c½EiÀ£Ìc ÛR‚#•P+ÖÛöÄø…á•´ñgÅß‚:Ï‚>ŞÍÛÓ_ÚİIh—.)o¬#[dÜÊ³¹Æ	À?*‰Ÿÿ iOÙ‹Ã‰;|Iµñ~¯â$Ñä‚d{>=JÚthÜ¨üà„Fªû˜• `ƒ\E…ÿ øñVŸ¤øwáŸÁ_Ä¿õ)-íåğ´—ÚõƒXÊìíwy$qB7à?A¸($®œ[m¯ëï!Iôgé‡ÅÚ{Äø•7Âƒ¯¾'ø§K´†ûVŞò:×O‚ã˜VK™Ã)šEùÖ<©ÈYûxÀx÷âßíâ¿ì»½KíkIØßÇåİZÍ•,2®HÜ’#.AÁÆGW7'Ä?~Çß´§Ä½kâÕîàß‰ph—ZF³¬÷¶ñÍ¦ZI,¦hVI™æ<ƒòòqšê¿c??~/~Ğ>1:EÎ‡­¬hÓÁky“p-ÎITi¢)SÈİƒÎk' ìº-~âï©ûsøÿ âß…<_ğgMğ…&ÖìgñU„àÅ«E`ºôBS—"8á\/œùJ€FìôÏ~Õ>.Ò<_mğ«á§Âëï|@¶ÓmusM·Ô-í-4µ u‚{ùU¢iN~P\0<às?·Vµeàë_ƒŸ5Õ™4
+øóL¾Ôîb†IşËj°ÎWX•›h$É ’òë>ı›ÿ hˆŸ~$%ä_~3ZhZÎ…â8,®.mÙ¬ü£o8Š6‘·îE+¸È¸#â´ìŞ¦‡ÆŸÚLøßû!|mÒîô;Ïø¿ÂbÓZĞïö´örJêÑ:ºádŠU£€7`œcûÇ„ÿ h·øÃÂ¾h?ğ–j~™e7‰/…×Ù¬t(Ø²È"›Íº“–ë´÷fP…¾!\j?~şÔ¿´•y¢øGÅ&—¥è­}[O¨G§`Mwå7Ì#,TFÇ¨ã‚¤Qøk ÙşÃŞ7ğeÕÅÄŸ	¾.ÚØZjİÊem3ÄÆc¹’FéèÈ~Xv¢*Õ:qå·õ²“¹ô_ŒjIã]wÁŸşßüNÿ „N±ë7é¨ÛiVV÷aC½´2\óæXyˆ m$
+Èñ?í½á]àj|j‡ÃWÒ›~ëZ5Ã}CL¼ó6\ÆÊA$‘móPY	8øVømû(|0øÇñKLıµ|öİoÄWÚ×‡õÔ:±µÔ4ıAüÔ·OìùyÑ9mÅ—«Xmï|Eá_èß²Æ‹ªxá­ÏÃ=_ø¡ÜZY__\Ş]^Ú­ÂEìÑİkc2¯†`Á§ìa¦Ÿ×ŞÌûÃµ¿“â?…|ñƒá©ğïOñÜÏm¡êWö÷‚[€›Ò+¨aPÖÒ8à#30cÈÀf	­şÖ?5/x¯Gø+ğoQø‡¢x#Q›IÕµ8õK[·Ö ˆm­¦V–vp.7œ`—~Øò9~ÏG¿ü,M;ÿ DO_|y¸ı’l~-x¯Y½×üuğ?âzŞJ´«{¤ÌË÷.¡Ka<2Ç?U>lÉ%À%‰˜S‹³°Ûk©úñàŸxKJñ_ö]öˆuKt¬u;wµ½¶f4SÂü£©È=PH ×Q_<şÊZ¯Å]sö~ğv«ñ®9cñ}Å´uöˆ„7œâİ¦Œ²VƒËgÎâsƒ‘_CW$Õ›F‰èQEHÂŠ( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ÿÒıè¢Š+C0¢Š( ¯'øçğ¿şOÂOü,şÓşÇÿ „×ìßlò~ÑäüêÛ¼­ñîû¸Æñõ¯X¢švw@ÌKşÃĞ´íÍóÿ ³í¡·ó6íßå MÛrqœg8õ­j(¤EPEPEP¯xGñ'Š<5â­RIŞo
+KsqeÉ¶ßí705±DÆZHáyR>p¢G8'i^ÊŠ)ÜŠ(¤EP^#ğ£àßü+üFñ?ö¿öŸü'úÑÖ<¯³ù?dıÒÅånóÌû¹İ„ë½ëÛ¨¦¤Ö`¢Š)ñß‹ÿ go^.ÖµÏ†Ÿµ¿
+iıÃ\Ï¦]Ø[ëInÒ,¦º`ö±wXĞa;W¸üøIáß‚^³ğ‡'¸½H¤šææòñüË«Ë»—2Oq3àeİÉ=8«Ôè«•FÕ˜”PVŠô?øIü-¬xkÏû7öµÅ§›·—çÆÑîÛ•İ·vq‘ŸQ[ôT!ağ[á¿ü*…>øcı£ı­ÿ ÕŒVkò|;Ëş?+|›3é½¾µéôQM»»°AER×¼£ø“ÅñV©$ï7…%¹¸²dÛoö›˜ØÏ"c-$p¼©8Q#œ´¯eEîER ¯-ø¿ğçTøŸáøG´/j¾Ô ¹ŠîÛRÒ&1J’Ãœ$©³BÙ!â•¸ÏA^¥E4ìî£ã¯~Ì>:oh?>;|W¾ø›qá)$ŸG³:m®‘ems"üù"¶-çJ¨HFb6“šûŠ)Êmî$¬QEHÂŠ( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ÿÓıè¢Š+C0¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÔıè¢Š+C0¢Š( ¢¿j¿ø*—ü#zÖ«ğóöoµ´Ôä´İo'‰®Ú-¼Ò’$Ÿ`·I|§(ÑÜHÍ²°ÉIàøyí¥ÿ Eÿ )Oÿ "Wd03jæ2¯U4Wò­ÿ #ı´¿è¢å#Iÿ äJ?áä¶—ıOü¤i?ü‰Wı>è_X‰ıTÑ_Ê·ü<öÒÿ ¢‰ÿ ”'ÿ ‘(ÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ÙÓîƒë?ªš+ùVÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ğò?ÛKşŠ'şR4ŸşD£û:}Ğ}b'õSE*ßğò?ÛKşŠ'şR4ŸşD£şGûiÑDÿ ÊF“ÿ È”gOº¬Dşªh¯å[şGûiÑDÿ ÊF“ÿ È”ÃÈÿ m/ú(ŸùHÒùìé÷AõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "Qı>è>±ú©¢¿•oøyí¥ÿ Eÿ )Oÿ "Qÿ #ı´¿è¢å#Iÿ äJ?³§İÖ"U4Wò­ÿ #ı´¿è¢å#Iÿ äJ?áä¶—ıOü¤i?ü‰Götû úÄOê¦ŠşU¿áä¶—ıOü¤i?ü‰Gü<öÒÿ ¢‰ÿ ”'ÿ ‘(şÎŸtX‰ıTÑ_Ê·ü<öÒÿ ¢‰ÿ ”'ÿ ‘+ëÙ¿ş
+Åâİ;SÓü+ûHÙÃ«éw,rx†Ê!İª;HZ[›HSÊ´kˆ'HÑ›lò¦e€¨•Æ«ÅŸ¾4U/TÓ5½2ÓZÑná¿ÓïáâÚæŞE–á•CÇ$r!*èêC+AqW«ˆØ(¢Š (¢¾qı¦ÿ i¿ ~ËŞ øÁşÙ©Şo‹IÒbp—:Ê J© ùpÇ¹LÓ+ i8Ş£İ›¶¬ú:Šşcş!ÿ ÁR?jø–}SÁš­§‚t¹ Óí,­o1˜ì4÷±LòM±•GmbBNxoøyí¥ÿ Eÿ )Oÿ "WbËçäcõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "SşÎŸtX‰ıTÑ_Ê·ü<öÒÿ ¢‰ÿ ”'ÿ ‘(ÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ÙÓîƒë?ªš+ùVÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ğò?ÛKşŠ'şR4ŸşD£û:}Ğ}b'õSE*ßğò?ÛKşŠ'şR4ŸşD£şGûiÑDÿ ÊF“ÿ È”gOº¬Dşªh¯å[şGûiÑDÿ ÊF“ÿ È”ÃÈÿ m/ú(ŸùHÒùìé÷AõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "Qı>è>±ú©¢¿•oøyí¥ÿ Eÿ )Oÿ "Qÿ #ı´¿è¢å#Iÿ äJ?³§İÖ"U4Wò­ÿ #ı´¿è¢å#Iÿ äJ?áä¶—ıOü¤i?ü‰Götû úÄOê¦ŠşU¿áä¶—ıOü¤i?ü‰Gü<öÒÿ ¢‰ÿ ”'ÿ ‘(şÎŸtX‰ıTÑ_Ê·ü<öÒÿ ¢‰ÿ ”'ÿ ‘(ÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ÙÓîƒë?ªš+ùVÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%}qû7ÿ ÁX¼[§jz…i8u}.âeOÙD »µGiKsi
+yS¢–qDé3mBÌ°¸Õx³÷ÆŠ£¥êšf·¦ZkZ-Ü7ú}ü1Ü[\ÛÈ²Ã<2¨xäD%]He`H ‚*õqQ@WÎ?´ßí7àÙ{Àâÿ ?Û5;Íñi:LNçQ¹@	U$.÷)šb¥cR #GÔbÛ²vÕŸGQ_ÌÄ?ø*GíQâ¿Ïªx3U´ğN7$}¥•­æ#ó‘¦ö)I¶2£²ãm ¬HIÏÿ #ı´¿è¢å#Iÿ äJìY|üŒ~±ú©¢¿•oøyí¥ÿ Eÿ )Oÿ "Qÿ #ı´¿è¢å#Iÿ äJÙÓîƒë?ªš+ùVÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ğò?ÛKşŠ'şR4ŸşD£û:}Ğ}b'õSE*ßğò?ÛKşŠ'şR4ŸşD£şGûiÑDÿ ÊF“ÿ È”gOº¬Dşªh¯å[şGûiÑDÿ ÊF“ÿ È”ÃÈÿ m/ú(ŸùHÒùìé÷AõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "Qı>è>±ú©¢¿•oøyí¥ÿ Eÿ )Oÿ "Qÿ #ı´¿è¢å#Iÿ äJ?³§İÖ"U4Wò­ÿ #ı´¿è¢å#Iÿ äJ?áä¶—ıOü¤i?ü‰Götû úÄOê¦ŠşU¿áä¶—ıOü¤i?ü‰Gü<öÒÿ ¢‰ÿ ”'ÿ ‘(şÎŸtX‰ıTÑ_Ê·ü<öÒÿ ¢‰ÿ ”'ÿ ‘(ÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ÙÓîƒë?ªš+ùVÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ğò?ÛKşŠ'şR4ŸşD£û:}Ğ}b'õSE*ßğò?ÛKşŠ'şR4ŸşD£şGûiÑDÿ ÊF“ÿ È”gOº¬Dşªh¯å[şGûiÑDÿ ÊF“ÿ È”ÃÈÿ m/ú(ŸùHÒùìé÷AõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒù¿Udø)n‹ñ¿Ä¶Ÿ~/é¶ñV¡„Óïm¤q§j7/#m¶ÌYí¦(Qb,‹3†‘Ú8Ÿ:˜)Å\q­ì~ªQEÈlQE Q_?¶Wíıá/Ù–á|á[|Uãéái$µiŠZéi$E –ğ ,îìQ–ÙJ;E—i"’éÓrvˆ¥$•ÙúE,š§ü»öÊ¿Ôîïí<o›ÌÒI­¾“§46èìJÅšŞYJ ;TÉ#¾ ÜÌrMøyí¥ÿ Eÿ )Oÿ "Wgö|û£¬Dşªh¯å[şGûiÑDÿ ÊF“ÿ È”ÃÈÿ m/ú(ŸùHÒùìé÷AõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "Qı>è>±ú©¢¿•oøyí¥ÿ Eÿ )Oÿ "Qÿ #ı´¿è¢å#Iÿ äJ?³§İÖ"U4Wò­ÿ #ı´¿è¢å#Iÿ äJ?áä¶—ıOü¤i?ü‰Götû úÄOê¦ŠşU¿áä¶—ıOü¤i?ü‰Gü<öÒÿ ¢‰ÿ ”'ÿ ‘(şÎŸtX‰ıTÑ_Ê·ü<öÒÿ ¢‰ÿ ”'ÿ ‘(ÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ÙÓîƒë?ªš+ùVÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ğò?ÛKşŠ'şR4ŸşD£û:}Ğ}b'õSE*ßğò?ÛKşŠ'şR4ŸşD£şGûiÑDÿ ÊF“ÿ È”gOº¬Dşªh¯å[şGûiÑDÿ ÊF“ÿ È”ÃÈÿ m/ú(ŸùHÒùìé÷AõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "Qı>è>±ú©¢¿•oøyí¥ÿ Eÿ )Oÿ "Wê¯ìÿ -Ñ~7ø–ÓáÅı6ÓÂ*Ô0š}í´4íFåäm¶Â9‹=´Å
+,A¥‘fpÀ2;GçS8«5¢İÕJ(¢¹‚Š( Š+óÇöÊı¿¼%û2Ü/|+cŠ¼}<-$–­1K]-$ˆ´ŞİŠ2Û)Gh²í$A¢2]:nNÑ¤’»?C¨¯å“Tÿ ‚—~ÙWúİı§áÓ`¹šI#µ·Òtæ†İ‰X£3[Ë)Dj™$wÀ™I£ÿ #ı´¿è¢å#Iÿ äJìşÏŸtcõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "Qı>è>±ú©¢¿•oøyí¥ÿ Eÿ )Oÿ "Qÿ #ı´¿è¢å#Iÿ äJ?³§İÖ"U4Wò­ÿ #ı´¿è¢å#Iÿ äJ?áä¶—ıOü¤i?ü‰Götû úÄOê¦ŠşU¿áä¶—ıOü¤i?ü‰Gü<öÒÿ ¢‰ÿ ”'ÿ ‘(şÎŸtX‰ıTÑ_Ê·ü<öÒÿ ¢‰ÿ ”'ÿ ‘(ÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ÙÓîƒë?ªš+ùVÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ğò?ÛKşŠ'şR4ŸşD£û:}Ğ}b'õSE*ßğò?ÛKşŠ'şR4ŸşD£şGûiÑDÿ ÊF“ÿ È”gOº¬Dşªh¯å[şGûiÑDÿ ÊF“ÿ È”ÃÈÿ m/ú(ŸùHÒùìé÷AõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "Qı>è>±ú©¢¿š¿„ÿ ğUÚ;ÁºÔ“üK6Ÿô‰ñ¾Şh`Ó.bÚÙî,áT]ÎÊ_Í†lªmM„–¯ßÿ ‚ÿ <ñóÀş_ı³L¼ÊI€—6w(’Úæ0[Ëš=Ã#%YJº3FÈí…l4¡¹p¨¥±ê´QEsšQ@ÊxãÇøká-SÇ^:Õ!Ñ´=ÕÔäìDÈP PYİØ…DP]Ü„@X€ ~9ÿ ÁX¾0ø·Sk¶pøE·˜˜î®"†ÿ S¹DiB™ÈöĞ¤ˆÑ³D±Èèêq;)"·£‡”ş'QGsú)¢¿•oøyí¥ÿ Eÿ )Oÿ "Qÿ #ı´¿è¢å#Iÿ äJèşÎŸtgõˆŸÕMü«ÃÈÿ m/ú(ŸùHÒùøyí¥ÿ Eÿ )Oÿ "Qı>è>±ú©¢¿•oøyí¥ÿ Eÿ )Oÿ "Qÿ #ı´¿è¢å#Iÿ äJ?³§İÖ"U4Wò­ÿ #ı´¿è¢å#Iÿ äJ?áä¶—ıOü¤i?ü‰Götû úÄOê¦ŠşU¿áä¶—ıOü¤i?ü‰Gü<öÒÿ ¢‰ÿ ”'ÿ ‘(şÎŸtX‰ıTÑ_Ê·ü<öÒÿ ¢‰ÿ ”'ÿ ‘(ÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ÙÓîƒë?ªš+ùVÿ ‡‘şÚ_ôQ?ò‘¤ÿ ò%ğò?ÛKşŠ'şR4ŸşD£û:}Ğ}b'õSE*ßğò?ÛKşŠ'şR4ŸşD£şGûiÑDÿ ÊF“ÿ È”gOº¬Dşªh¯ÀïÙ¿ş
+Åâİ;SÓü+ûHÙÃ«éw,rx†Ê!İª;HZ[›HSÊ´kˆ'HÑ›lò§÷KÕ4ÍoL´Ö´[¸oôûøc¸¶¹·‘e†xePñÉˆJº:ÊÀAW5jƒ´!5-‹ÔQEbXQEÿÕıè¢Š+C0¯•mßˆ~%øYû+üAñŸƒçû.¯¤ND’í¨lh'GI¢I™âpß,X‚ÕUğçüşL·â'ıÂ?ôígZQWšõ&{3ùV¢Š+é4(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š şœ?à–¿üKãÏÙr+OöŸøD5{­ÎViV³Š.bYGlù_h1F*¬IùrG+ò¯ş	ÿ &×â_ûo?ô‚Â¿U+ç±+÷Œôiü((¢ŠÀ°¯æ?ş
+‘ñÄ¾+ıª5_j“ãHğM¥•¦Ÿ4Xûe¬W³ÌÈÎÉçHógE]ÑÇJdÿ Nü«ÁHÿ äô¾"Ü#ÿ M6uİ—¯äaˆøO‡(¢Šö ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(úpÿ ‚ZüCñ/?eÈ¬<I?ÚáÕî´K9Y¤yZÎ(`¹‰di³å} ÅPª±$håÉı¯Ê¿ø$ü›_‰ìm¼ÿ Ò
+ıT¯Ä¯Ş3Ñ§ğ ¢Š+Â¿˜ÿ ø*GÄ?ø¯ö¨Õ|ªO#Á6–Vš|Òycí–±^Ï3#;'#ÌwGJA)“ı8Wò­ÿ #ÿ “Òø‰ÿ pı4Ù×v^½ÿ ‘†#á>¢Š+Ú8‚Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ¯iz¦§¢jvšÖ‹w5†¡a4w×6ò4SA4L9#‘dt`XA ƒš£E h¿|_©üBøEàkQC¡â]LÔîc·VXRkËXæ‘cWg`œ…˜Œ’y¯G¯ı˜¿äÚşØ¥ ÿ é5î5ó3Z³Ó[QR0¯â³âgÄ?üYñş¿ñ'Æùú¿ˆ®å»Ÿ#GóòCšò:Ã
+m$,vFª àWö§_Ãzyjø\O@¢Š+Õ9BŠ( Š( Š( Š( Š( Š( Š( Š( Š( Š( ¯iz¦§¢jvšÖ‹w5†¡a4w×6ò4SA4L9#‘dt`XA ƒš£E h¿|_©üBøEàkQC¡â]LÔîc·VXRkËXæ‘cWg`œ…˜Œ’y¯G¯ı˜¿äÚşØ¥ ÿ é5î5ó3Z³Ó[QR0¯â³âgÄ?üYñş¿ñ'Æùú¿ˆ®å»Ÿ#GóòCšò:Ã
+m$,vFª àWö§_Ãzyjø\O@¢Š+Õ9BŠ( Š( Š( Š( Š( Š( Š( Š( Š( ¿càüKoñ+ÆŸ	üÿ 3Ã÷úAÖü§i“yiq¶èW–¾tw˜ì,şT_0	ƒøå_ª¿ğH?ù9Oÿ Ø¥yÿ ¥öÏŠ_»f”~$FôQE|ùèQ@_ğXOˆ~%Ğ¼à/†Ú\şF‘â»»ë½CcH²Mı–-üˆ[k„hKÜ™[÷‘ÄÀ©N +÷ş7ÿ 4şæıÇ×áÍ{¸%û´pWø˜QEÖdQE QE QE QE QE QE QE ı8Á-~!ø—ÇŸ²äV$Ÿí?ğˆj÷Z%œ¬Ò<­g0\Ä²4Ùò¾ĞbŒ(UX’4òäÿ 1õıÁ ÿ äÚüKÿ cmçşXW=~ìßñª”QEx‡hQEÿÖıè¢Š+C0¯‡?à¤òe¿?îÿ §k:û¾ÿ ‚‘ÿ É–üDÿ ¸Gş¬ëZ}IŸÂÏåZŠ(¯£<Ğ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ú8ÿ ‚Aÿ Éµø—şÆÛÏı °¯ÕJü«ÿ ‚Aÿ Éµø—şÆÛÏı °¯ÕJùüWñèÒøPQEÎXWò­ÿ #ÿ “Òø‰ÿ pı4Ù×õS_Ê·üşOKâ'ıÂ?ôÓg]ùwÆı1	ğåQ^ÉÄQE QE QE QE QE QE QE QE QE QE QE GğH?ù6¿ÿ ØÛyÿ ¤ú©_•ğH?ù6¿ÿ ØÛyÿ ¤ú©_?Šş#=_
+
+(¢¹Ë
+şU¿à¤òz_?îÿ ¦›:şªkùVÿ ‚‘ÿ Éé|Dÿ ¸Gşšlë¿.øß¡†#á>¢Š+Ù8‚Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ìoöbÿ “køMÿ b–ƒÿ ¤×¸×‡~Ì_òm	¿ìRĞô‚÷ù©üLôÖÁET+øs¯î2¿‡:õ2ßµò9q=Š(¯På
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€?±¿Ù‹şM¯á7ıŠZşC^ã^û1Éµü&ÿ ±KAÿ ÒkÜkæ§ñ3Ó[QP0¯áÎ¿¸ÊşëÔË~×ÈåÄô
+(¢½C”(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š +õWş	ÿ ')â_û¯?ô¾Â¿*«õWş	ÿ ')â_û¯?ô¾Â°ÅšRø‘ıÑEóÇ QE ~ÿ Áfÿ æÿ ÜÁÿ ¸úü9¯Üoø,ßüÑÿ û˜?÷_‡5ï`¿„
+ß
+(¢ºŒ‚Š( Š( Š( Š( Š( Š( Š( ¿£ø$ü›_‰ìm¼ÿ Ò
+şqëú8ÿ ‚Aÿ Éµø—şÆÛÏı °®<ğÍğÿ ú©EW†v…Q@ÿ×ıè¢Š+C0¯‡?à¤òe¿?îÿ §k:û¾ÿ ‚‘ÿ É–üDÿ ¸Gş¬ëZ}IŸÂÏåZŠ(¯£<Ğ¢Š( ¢ŠúËáÿ ì7ûR|Rğ~›ãïx+ûOAÖ¤µ¹şÒÓ¡ó£cåÍr’.Hù”tô©”Òİ&ö>M¢¾‘ø¹û"şĞß|1Œ¾*øOûG¸ºK$Ÿíö79¸‘Õ6[O+Œ¬lrWrrE|İDdšº`Ó[…V†“¥ßkš¥‹¥ÅçŞêGo{•wË+EÜÄ(Ë2H¹ªŸEu4ğg‰>x¯TğGŒ,ÿ ³õ½v¶»·ó#—Ê•>òï‰ªÄ{×/B`Q]¿…şøËÆz‰<Ká­?íšo„mRóT—ÎŠ?³ÛÉ ‰_l¬ùr1îF)6EÛøïáÏŒ¾j~—ãm?û6ëT°¶Õ-“ÍŠo2ÎñwÃ&awzó´Ã¸\"Š(¦EPEPôqÿ ƒÿ “kñ/ı·ŸúAa_ª•ùWÿ ƒÿ “kñ/ı·ŸúAa]‡ü4í}ÿ D»ÿ (š§ÿ ¯„â,ú¢öÊOšÿ 
+okooSër­Œ½Œ¢¹m~f–÷Úş‡]ûiøïÅßuß‡ş$ğV¥&—¨,z¼FD
+êÑÈ-7#£†G\€pÊ@`|ÀÛ|ı®ü#ñ2[oøµ#ğï‰n$Š#ÜÏk{#'&'+û¦.X¤byEG‘‰àŸÚâGÅÿ ˆ?Øğµ¼/ÿ ×Ø>Õö?ô+«?;Íò¼ßøùvß³b}Ücw=E|Û_…æ{ˆÃfµká›tåËxÉ5´Rzt~kÊ÷Z¹åŞáñ9M*¤•HóZQiï&Ö»5äüífIü«ÁHÿ äô¾"Ü#ÿ M6uû/ûx»ãÖ§k“{cı¥à{H#ÚïPf¶òU&(VÒaµÎÕ¾[|©±SÌˆa_ñ£ş
+Gÿ '¥ñşáúi³¯ßxC9>ŠÄÆ7[5ù>«³_ø7d’ËñÃNjV{§ù®º‰ğåQ_d|ÀQE QE Q_iiğOÛ]Òlµ½/áù–ÏP‚;ˆµM22ÑL¡Ğ”{¥e%Há€#¡ ×È:¦‹ªhÚİß‡us£cq%¤Ğ©VxœÆÈ
+C>RAíš˜Î/f7·2è®ÛÇÿ |kğ»ÄÏàßirhúÔPÛÎö²2<ˆ—Q,ÑnòÙ‚±GRTÊx`^ò?a¯ÚÈøKşøVÚöX‡ÏÆè>×åã9û™ö¬ã·•Ÿjâ·aÊÏ”(¥ ©*ÃuÒ·ƒ<R¾_ˆ¦L¾{ßìÕ¾eÄ/yå™L*OŞ`ƒsc;AÆFjâ9š(®ßÂÿ |eã=Ä%ğÖŸöÍ7Â6©yªKçEÙíäD¯¶GV|¹÷#›ˆ¢Š)€QE QE QE QEıÁ ÿ äÚüKÿ cmçşXWê¥~Uÿ Á ÿ äÚüKÿ cmçşXWaÿ û_Ñ.ÿ Ê&©ÿ Çká8‹>£¨½²“æ¿Â›ÚÛÛÔúÜ‡‡ëc£/c(®[_™¥½ö¿¡×~Ú~;ñwÃwáÿ ‰<©I¥ê¯‘º´rMÈèá‘× 20vßÿ k¿üL–ÛÃ~-Hü;â[‰"‚÷3ÚŞÈÉÉ‰Êşé‹‚)QQäb@ø'ö„ø‘ñâöü-oÿ Â5öµ}ı
+êÏÎó|¯7ş>]·ìØŸwİÏQ_6×áy‡â0Ù­Zøfİ9rŞ2Mmšò½Ö‡îyw‡ø|NSJ†)%R<Ö”Z{Éµ®Íy?;YŸÒE*ßğR?ù=/ˆŸ÷ÿ ÓM~ËşÇ.øõ©ÚÇ¤ŞØÿ ixÒã¶»Ô­¼•IŠ´˜DísµC¯–ß*lTó"Wühÿ ‚‘ÿ Éé|Dÿ ¸Gşšlë÷ŞÎc¢±1ƒÖÍ~Oªì×à~Å$²üD°Óš•éşk£îŸâ|9EWÙ0QE QE Q^­ğ«à‡ÅO·zµÂİMz}Ñ¯¯9a‹ËN2ÎØŸº‹—nv©Á¤ÚZ±¤yMQLAEPEjhš&¯â]bËÃŞ³—QÔõ)£·¶¶’Í4¬d–b@ SuRğö±} k0mCL[[ˆ‰Ç4,RD%Ik8$Qp3h¢Š (¢¾†øSû(şĞ¿t)¼OğÇÁw:Æ“´fèË¬Né÷–6¹’!!^„&ì4¥$µcI½h¯bğ¯ÀŒ>4ø?ÁÃ3·-|ï7L¹x¬åO!w¾æ¹xĞa~aó|À‚¹W°x£öı®ü¢]x‡\øusö+$ie6·–W²*(Ë¬òÈp98SRêEhØÔ_cãÚ(¢¬¢Š( ¢Š( ¢Š(ûı˜¿äÚşØ¥ ÿ é5î5ò/Ãÿ xÃÂ?±?ÃÏøKşÚ×m<%á¯³ZyÜù¾e½ªIû¨JÈÛcfnÉàñ_øhÿ Úûş‰wşQ5Oş;_œg\M‡ÁVöUc&Ú¾‘mn×OCí²nÄci:´¥“¶²IìŸ_S›ø¯ñïÇ??iaOö­yôé¯4ÉqäÏ>b¬Uš)
+ãçN¥SxuPµößÁ¿~øÏ§/öÿ eÖàf¼Ó%ÏX£bª²Æ:t›Â3¯Æß‹Ş$ñ‡‹¾!êŞ!ñî—ı‹®İùi´ò%¶ò¼¸#Hÿ u1itj­Éç9^e{y¦ŞA¨éÓÉkuk"ËÑ1I#‘åteÁVRƒÈ¯Äp!bpxêÍ^Tœäù^]·§gå¶ú_S÷g‡xlnŠv…hÂ+™j’Z÷^{í­´?£úşëûı|Eñ»Ä>[ŸŒTv’y“ˆn&Í­üªvù¶K
+¢.K€û‘ˆUıÑÌoãò¿¥8wMo´šNÍYıßÒ?œ3¬°Õ	I7Õâî¾ÿ é…Q_ByEPEPEJÒµMwR¶Ñ´[I¯ïïdX ··¥šYáQAfbx š ¡E}iªşÂŸµ®‹á™<[ğÛP]>(Ì®#’Şk•@2IµV¸àu^Gzù,Œpjc4öci­ÂŠ(ªQ]7†üâŸ¦«'†tÉµô;)µ+ç‰r¶Övày“HÇ…Q9<’ É W3EÀ(¢Š (¢Š (¢Š (¢Š (¢Š şÆÿ f/ù6¿„ßö)h?úA{|‹ğÿ Ä0ğìOğóÄ>Òÿ ¶µÛO	xkìÖD·>o™oj’~ê²6ØÙ›ƒÆ2x¼Wş?ö¾ÿ ¢]ÿ ”MSÿ ×ç×ağU½•XÉ¶¯¤[[µÓĞûl›…ñÚN­)E$í¬’{'×Ôæş+ü{ñÏÁÚcÅ_ØSı«D}:kÍ2\y3ãO«fŠB¸ùÓ©TŞT-}·ğoãß¾3éËı…?Ùu¸ Y¯4ÉsçA–(ÅXª¬±†ÇÎ&ğŒÁkñ·â÷‰<aâïˆz·ˆ|{¥ÿ bë·~GÚm<‰m¼¯.Ò?İLZEİ«ryÎGWŸÙ^Şi·j:tòZİZÈ²Ã4LRHäC¹]pU”€A ò+ñ'ˆXœ:³W•'9>W£WméÙùm¾—ÔıÃáŞ¢¡Z0ŠæZ§d–½×ûkmèş¿‡:şÀÿ g_|nñ„Vçã•¤dâ‰³k*†]¾m’Â¨‹’à>äbtAóøü¯éNÆÇGÛÆ-&“³Vwôçë,5gBRMÅµx»¯¿úaEWĞ@QE Q^­ğ¯àwÅ¯º”ú_Â¿Şx†kPíªÃìíóg¤H[˜ƒŠØø»û8|oø-_â¿„®´/[d7Ñ\[;‚{w’-øíİ» œ`u{_Qò»\ñ+Ş~~Ì?~:YÜj_
+üu­ØÚ¹î·Ãmmæ’‚k—Š6p%U‰Šä>'üøğc\O|Qğí×‡¯åC$Kp ¤ÈE*E‚QˆƒG:½®{kEwŸ~øßáf§a£øóMşÌ¼Ôì-õ;tó¡›}¥Ø-™…ÜÀ”Ã¸—àßx·âˆí<#à}"ç\Öo˜¬6¶±™$l±Àèª9f8
+9$
+wV¸Xåè¯¦ş"şÆß´×ÂËâÿ ø
+òÇF·]ó\Å-½âBŸŞ›ì²Êc_Ràë_2RŒ“Õ0i­ÂŠíüWğçÆ^Ò|9®x£Oû—‹l¿´tÉ<è¤ûE®ó™¶7fO™HÚá[ÛÄSLAEô×ÂŸØëöøİáEñÇÃgDiä·úÆÛ2Åà%Ìñ¹#¸Ï ğiJIjØÒocæZ+Ò¾+| ø‰ğCÅgÁ4Ÿì]hAÉ·óà¹ıÔ¹ØÛíä‘9Úxİ‘ÜWšÓM=Pš
+(¢˜~ªÿ Á ÿ äå<Kÿ b•çş—ØWåU~ªÿ Á ÿ äå<Kÿ b•çş—ØV¯á³J_?£zùÛö®½¼Ó~x—QÓ§’ÖêÖM:Xf‰ŠI‰nÊèË‚¬¤9‘^[ñ{ã_íáˆz·‡¼à/í­
+ÓÈû5ßö]ıÏ›æAÉûØdXÛlŒËÀã<ƒ_6ü^ø×ûGø»áæ­áïøûB»ò>Ówı—måysÆñşöi5İ"ªò9Î$Wã|IÅøe‡Äá”gÍË8ß•Úök~Şgê¼3ÁØ—‰Ãbœ¡ËÍ	[™^×OnöèzOÁ?ÛwıW‡¾4ŸùìÃZ†?£$s[AûÊ$ŒpûòWèİ•í¥g£§OÕ­Ôk,3DÁã’7•Ñ—!•pG"¿œ
+ú·öVñgÆí/ÅĞh_m¤Õ4k‹¸ŸSµ™H°Eee2K>Ç6ÌQX‡_™Ê(Ù.Ñø®ñ§&1:‰èšÖK×ù¿=÷>ßŒü7Ã:sÅàä©µ«OH¿Oåü¶Ûs”ÿ ‚Íÿ Íÿ ¹ƒÿ qõøs_·¿ğX÷¼’ÏàÃê1GÓG¯£ŠC,i!våGdŒºƒ¢’9*:WâJà]éEŸÎ¸…i´QEu˜…Q@õŸ€?a¯Ú—â‡ƒôÏøÁ?Úz°%­Ïö–˜Šì„ùs\¤‹ó)2Ê¼×âïìíñ«à<–‰ñcÂ—:_–X&fŠ{yFJ¬ğ<‘»³qŠ…R-Ù=Jå{Øñj(¢¬¢Šíş |9ñŸÂÏxïOşÌÕ½½Ø‡ÎŠoÜ]F%‰·Bî¿208ÎGB¥p8Š(¢˜Q@Q@GğH?ù6¿ÿ ØÛyÿ ¤üã×ôqÿ ƒÿ “kñ/ı·ŸúAa\xÿ á›áş#õRŠ(¯í
+(¢€?ÿĞıè¢Š+C0¯‡?à¤òe¿?îÿ §k:û¾ÿ ‚‘ÿ É–üDÿ ¸Gş¬ëZ}IŸÂÏåZŠ(¯£<Ğ¢Š( ¯Ö_|ÿ …Éû(şÎ³ÂÂğ‡ÿ ²´İmvø§VşÌkŸ:ùNmÇ•'˜gÏÓ—Ö¿&«ô¦ò÷ö[øÍû=üğgş4Â¯xËS‚ê×şÍGUŞ××^jşò.1µP•Ÿ;»ŠÂµôkúĞÒŸSåŒ áOiz~§ÿ Á7şĞ™¡ò<1¬iOÕİ¾dò£Ø‡ 9<ñ_xü1ıŸ¾jö^Ğ|'ğ#Å?¬5;kV¾ñ™¾¼Ğ­ó¨3›'åŠHS#ÅO$aÅ¿şşÍ¾ğ¹×>|o5¨ç‰F”|3¥‰"có¹¸Ê £øzÕ÷'ÄO²ïÅÏi¿¼KñŸÅZNVNÿ m4ëŸ.i)¶†tu³Xädù¾\œŸ™xÆuiZÿ ‰qJç[~Ë_	ş|RøáªüQ¸Ô5o‡Ÿä´im"Å{¨Í«HÂİå m8•Ğ)ã#ŠâgÔÿ eoê>ñWÂ-óáÇ‹¬|O¦ÛÏáéï.µkkÛ™º†îTıÜ‘¸ãvPAÊƒ}—Åß´wÀ/üoøçá_j÷wŸ>2Ç¤ÈºÍ…¬¢æÂûL9 ”ÛN‘ÈÈ“oY \°nAÍxn¬?d_…qørÇáçˆ¯>"øŒëú}õÏˆç±»Ò­tÍ:ÖUy!†ÍÜ´ÒÉÕ™‘ÀQòa"»ø¯ø§Cì‰:ìã?Û#Ä_|_à­cWñ‹õÆµ¸ñ4z«Û}‡P¼Ç—µŠ/”ñFÌ¨Ï)b[qÚW¿"¼oá·ğoŒõÿ I/ú¡ubdÆ7›iZ"Øí¹¯­uO‹ßîo”øÕ­»ÁƒÆú©¿ò'èi:;Kä˜üî·fïjùâÎ·¥ø›â§Œ¼I¢Mö;UÖµ»iv²yOs$‘¶×
+Ë¹X0w ÕÑ‹_qiŸ¥^ıœ>ø[à¿€ümÿ 
+C\øÙmâ½"GT×4}fXL¸™›Í´‚ÂÔ3HöÀaŒƒilüÃ¿3øá‡Â/øsö‡×4½/QËÁšd7~:±kkû6{Åˆ‹ˆ­å1<Š¤£Ü¼gj¡|ñÀhZ/‰<-ûBø»á.­16³£.Ÿ> —wiş±­å´òíü§ÇîÖâ7+üE«CÅß´÷Âïø‹ö™ñRoĞWâ>‘§Ùè–²Àí-Ü¶rB¬ò˜ãŠI3+n`¹ln'“šæ»ßñïıl[±©x;ö[ı¼àmã/ƒ5_xÇÇz-¶¿yqiª>e¨nû:ÛF€¬Óª),³|»»àà}ñöwĞhÚÃÂŞÒî/5/	è?ôXı˜Ãö¡emŞšfXc–å¤ŒeØ*‚Ä‘Œ×ÎŞ1ı—¿høSøÑã-SÀ2ğm İGk¦>¥³ca»ìÍF@†à£f—åÏbkÑuÏÚËànŸûAÙkzU¥Ö©ğ¿Ä­<¬ÚD·–VÒE¶HĞÌ±ù’Û•E.¿+ÅœTµ.—¾£Vù¡ñöÓ|CğÓÆµ§ÁGàŞ«á].çT±¾oÛkÖÚ—Ø×Ì{kˆDÏ$RIbØ|ÍŒü_¯·<MáïØ“á×ƒ¼K}áj?üI«Û=¶‹g.w¢ÛéÊxº¹”º‰!_¸«û¶n0r¿Öô³»ş¾fu,QEnfQE GğH?ù6¿ÿ ØÛyÿ ¤ú©_•ğH?ù6¿ÿ ØÛyÿ ¤ú©_?Šş#=_
+?;oXñ£ğóHĞ,gÔ¯î?µ¼»{hšiŸbÚ³mDp8 •gàìQg£ËmâŒ;ëØdŠh4¨\Ij£fJİ’¸•ƒ‘”Cåüœ´¨åGèÙYÉy¢ğF×PG$QÌT9J3¢·P®cBÀªOAVkágÁ8Z¹LÃï7k.ŠÉ-{íéä}Å>8ÅÒË©åØou+İ­İäŞ·õó+YYYé¶piÚtÚÚÚÆ±CJ8ãAµQpT   p+ù_ÿ ‚‘ÿ Éé|Dÿ ¸Gşšlëú©¯å[ş
+Gÿ '¥ñşáúi³¯Ğ2Ô”ì»Šm«³áÊ(¢½£ˆ(¢Š +WBƒLºÖôûmnçìZt×¥ÌûYü¨YÀ‘ö f;W'
+	8àYU³áÛİ+Mñ™¨ëÚpÖ4Ë[¨eº²iu8i!2FUĞH ®å!†rh`~§üI‹ö&ı«>?êvÖ^=ñ5‡‰ü[=­†~4èbğüMÚÚ[˜eÅáÜQAfÍü#šø³Â¾2ñì›ñ#ÅúD¾Òõ?hW2é¶š…ôfê=.æÚVI.mblFò6‰Ü¼§$WÒZÁ?<ñÇã®ƒã]u­4›¨õ[/*cuÔ,%Šİõ)¡hR@:±b£ØäŸ„>&xïRøŸñÄŸuˆÖÏj7òF‡)¸¸Iäª´ÎsRMmæk7×©õÿ íïâ-_Gı°o<Ya0]RÆÓÃ÷±Jñ¤ \Eam*³G"²0Ş*ÊTô *_Ù{Wø»ñ#ö‡´Ÿ|Ssa¢øJí5x†åü›uµFÜÖ` T&ä~æ;x×£aSÇşÒ6øQñ³ö¥·ñŸ‰M¿‚uô;KÍXZÜn·†H ºu¢ó™£*ø3¸ŒƒšúcãŸ±÷Ä/Kğ'…?hôğ_Ã½Wû?Ãö¾Õ¦ŒM·]]Oº6º¹ä™]FÂó¢£nŠêÙñ‰>üQøçã|Oø[ğç^Õ<;®ëzÕ»iÚ]ÍÔ‰çi–ğFè5uAãŠûV×şYÁ<ôj?d×ü%—š2ùš­ÔRÛëÉb¡õ&„¨ùˆÄfÑ±‘œç5ñ
+üXøğ¯QÕ¼ğ{â½…m/®>Ç>›y{¤Áy}©uöE•LM2*±VË<Wºxâ?Ã~É¯ÃÏøÒç@ñî…â‹¿iâ[+‹ñ«Ë5šÄ!k„ÈŠG”1i%8»'mÎ/NÄÅ­ORñ×†ÿ bïÙ»Å°|
+ø™à}_Ç~"°†Õ|Aâ}V[!essJëci#™bWóH$ğI¯Tøqû0kŞñ'í)û>|>Ÿû~MWÃúAÑg‘–/>Öúæ)áyXáT¢16 ùIå?ñ/ì_ûIø®¿¼s«øÄWğZŸxzßI–÷í—6Ñ$.Ö7i˜¡Y œò@9ªºíoá/jŸ´?ŠÌŞ“Æ¾°Ñ¼5d«3J`³xá´+,lĞ)gŞá~fPÄc9ZMuóõºş´+CÎ¾.üøwáß‰>ı“>ioyãÕÔ­4ısÄ×­sšşù‘¶…Ö%´‡ÌÍhÌ’c*Áy¿ÓöğU¶´¿à.½y£y‚Ñüwÿ 	]„wœ¦ñ4¯?ÊòùÂó6uBÿ -|'â_ÚÂ/ğÇÂÿ WšŠÃñ¿á¡emym43•×ôı>E–ÒéçHÚ!4`yRùÆæì‹]Ç‹$ı€> üE¾øù¯xÓ[µ·Ö._UÔ|ºLÆê{ÉI–xSRÖŠYIÎ0ítãi>}7üwş¾CVá/€¿>|4ø·âOz-ß‰õ†~0E¶]>î[&ÔWkÆ°±ÜR8¤8™œ)•BíSÉSå_<	ğC]øáÚàŸ‡nü©¬]è:–‹q}&£w0D'Ia¸›÷„ûÛ°F`–Ã_Š¿äı˜~"ü?ÓUt-WÄ0³Õ´ÍÍÂÃ§Eƒh¹‘X0‹r¦d“{c8<Ö.«ñÁ—?±®ƒğ¦GwŠl¼gw«KgäÊ6ÙKb°¤¾iO(åÁC–îF9­#^ï¹«XùjŠ(®“ ¢Š( ¢Š(ú8ÿ ‚Aÿ Éµø—şÆÛÏı °¯ÕJü«ÿ ‚Aÿ Éµø—şÆÛÏı °¯ÕJùüWñèÒøQùÛûxèÚÇˆ5‡šFc>¥qı­åÛÛDÓLûÕ›j ,p “Àô«?ÿ b‹=[o|`1ß^Ã$SA¥BâKU2Vì•Ä¬Œ¢/äå¥G*?@ÊÎKÈµ‚6º‚9"b È‘ÊQº…s à•Rz
+³_>	ÂÕÌjfy»YtVIkßoO#î)ñÆ.–]O.Ã{©^ínï&ôí¿¯™ZÊÊÏM³ƒNÓ ÖÖÖ5ŠbP‘Çªˆ«€ª   _Êÿ üşOKâ'ıÂ?ôÓg_ÕM*ßğR?ù=/ˆŸ÷ÿ ÓM~–¤§eØø<Sm]ŸQEíAEPEP_­?4ÏŒ¿ ¿fïxÛáG‚5¿øƒâ‰ ×5¥é×7atöÁi3CûTŒî¹<¡<t5ùU¡Úi×úÖŸc¬_.™aqqwl"ÛÂîÊR0ÎÁ–* ±Æ 'ŠûKöŒı­|c¨üN¸ÓgÏk¾øsáë;-#C·ÓoïtèZÒÆŒJĞ«Dw;9d·h=+
+Ñr´Q¤Z‘~Òÿ 4ß‡¿µüm>X|-ã=KOÕlmæG¶qa«L¦H
+|¯ŠC$;xeÛÎ{çŠ|ûøwöƒÔ¿f{k%ş®tÑâhui—û.êîM°ÛÁfûÖXmÙÖ7–fgb°F+ÍÆ|møiğrx{ß‹~ñlVa¯æâãSÑo.c˜K%ÙVFxdÂ*É m¡ˆÎy÷Œ°~Æ~ı«<Qñ{Åş-Ö­õßëÏyuá(tÆ”ßj6$W†ü7’M"«ºI‡`¬[z'},·G+ğ'öš_øX!ñ_ƒï>(Ïà¯ÜxjËB±ÔàÑc¼–Ôošòâîy’ÅŒ—,ÜŒDÿ ¿c=ÂzO€ş'/Ãëß†j(±Ğuİkk147L.m¯`•¤ÁZ7W`áˆ* ›Ì<1ûCü*øÛá/ˆ_?iÛ¯
+Zø·ÅxÃJÖ¬mšùtİBu1I°&$’+
+»Fz“ƒƒ^â[ÏÙKáÅÿ €´O…:çŒu]7_µÔõŸ][]XD,â‘qim§³1Ú0dwhÌ™ +ÛT´ùµ×ä/vÇ×Ú~ÉŸÿ màß‚ş]jÎ•âÛh!×n5Û¸ÖÚiåÊ$vƒzºY»¢©‘ËK°ï?6kÈ|wáoƒ?5¿ÚÆ:gÿ °.ün­h?´îî³©VHn¯~fAûğÔ²²Gü>µã^$øÍàh¿n™>:i·Rj>‡Æjâx¢t’K8îÙÒ)B>í€¬ç+Ú4‰_³/‡¾-|`ğ¥ç/5‡ßôéõËm*â´›ù¯ê8¤¶”y“$YùçÈGÌTäk]vAtô>qğÃk_²—ÅO‰Zçx“Ãz®…mauçJ¾LW’H³¯–®#}áG.¤ÄWİ>:ıš~|'Ó,´Ëï^)øá)ôûk‰> h:»ÜM(š‘î Ó¢ÍºF®Ä(œ¨ÀÉ$`ŸŸ<Eã?Ù“À?³Ä/‚ü]{âÍkYÔ´[ñ¨ÜiÓiñê	[ÌŞY<”¶A-;†‘¤;T…¯Oø1ñ7öpø7©i9ğ'íã=@±xnî<>™5Ô×˜imâ3ÂFÊïò”í=Aä9¹=Uÿ  Š[–ëd—×	¦¼’Y¬!i”$­'auV`¬F2 µúÂ¾ğŒ¿fŸ‚:oíñ"OƒhñÜÉ£[Ãš‡ö­…ÍÇ›ûZÛ•kG'*³HX0ù¸ù—ñ7Å–<øâŸéö¥ZøƒT½Ô"´Lm·K©UŒcå €WÛ¾,ı—¿iü?“ãµ†^/ğ‡káÉü½&mVÓR°ÓË}™áû9)v±Ş_Œ ÖªnÄC©ö‡[_Ö¿à£ûµ‹Xìlîü<ZV¡%Ò]&¥¦®œÑA©It€+ùØffåÆŞväùì§û/ßü.øÕ¡üA°øÑà¿6„eºm#ÂZàÔu]MR&&Ò+vXüßºrØÇjÆğGíMğ?ş‡Âº›_\øká—¼7„tëûëyn®æE‚D[‰¡¶G}Ò<‡
+  ¤<ÛÀ^ıˆ¾øÓCø‹wû@ßø³ş»È5ôİ;Â·ú}ÅÄ¶²	cE¸¸sÊÎ8èËÔsò»[Ë±¥ÖçÃ^<¹š÷Ç>"¼¸ÓE–}FîG°u(ÖŒÓ102
+˜ÉØAÆ+”¯OøÕñ~-|ZñoÄ¸ì†‰5+‹Øíò	Š9\”V#‚Áq¸­“^a]ÑØÁ…QLAEPEPö7û1Éµü&ÿ ±KAÿ ÒkÜkÃ¿f/ù6¿„ßö)h?úA{|Ôş&zkcò'ã·ÃüSı¨üO¡x;N’éŒšjOpU…­ª½Œ$=Ä ‹„b3ó6@Í…?düı”¼ğ¶+mwÄ	ˆ<QåÄÏ4È²ZÚLæn´FPU”…VËü¹_,3%}I•¬·ÛA2^H%‘B´²XÃ¹³E\v¨ «5ñ9ga(âªcj®yÊR’¾Êîú.şu¶Ìøç_	OIòSŒcmİ’Z¾Ş_}Â¿‡:şã+øs¯Ñòßµò>Ğ(¢ŠõP¢Š( ¢Š( ¯¿?bÛøAüñÏã®7Š|áØ!ÑåeÖ“jÒ´u`@x•x>ŒAÈ$WÀuô§ìÉñ¿Gø5â½bÓÆú\š÷¼g¦Í¢ëö0°YÒ|bX	 	¢o™2FA $0Î¬[‹H¨;3Îüñ›âg>"YüSÑ<Ax|Gir·/s4òJ×$6æK‚[t±ÉÈucóE}‰û4|“ö¿øƒñ+ã‰ü0Úµ¾ñßËáÍx´µÔ5NW+sİË¶É$”ù›€ÀNHƒáø'ß|Eoñçâ†·ãM;M•níü.4)m®æxÎô†âòM¶ì„€hLŒàŠ©ğûöŸøyã|bğïÇ=6MÁ_¼’I¤D®ú5ÎŸ!’ÆD‰Bù‰ I…ÜåA*rÂ²œ›O•mÙì¿´Wìea¦|ñÅİ?á=÷Á­WÂjòiòëğx‚ÏS³¸”Bï«+ÍĞ³+ÁP®Bî?vŠı†şüDğçÃïü3Õ<GsâM;Hº¾¸Z¹¶‡Iûl([Fwc™ep£pUÀGËôÙÀ¯ü?ğÓÄ7¿<m¬\@aÖf²»Ñ¬ô‹X›t‹´’<Ó}Âd~eØÃæö¥øŸàoˆÿ ´ø3RşÑÒ-4­
+ÚYü™¡Û-¼i:ì•ÎÆR2±"¢1“²mÛ^ë°ÛGÛ¿|-ğ§ö{ñßíGğ«WğŒ/·ğÇ‡ïîMÌÚœÖrİè§ìÏıšâÚŒŞb³\ 
+à(Sàì¢x·áM·ÇX¾_|Nÿ „ÇP¿:g‡ ñ:5¦“§[ÎÑ!îi#¸VeeM ‚©¹ğXg
+_ß|IûRüyÕ5ßM¦øâ¯‡®4k=r->æ"YcµG´(“•'Ú	 tpóÍÆŸ³_Å?ƒz?À‹4¼ğ¥ÏÃ=KSñM¾•=í­ş™}9•Ö{8ÈØPq´`ÀÍ¥ùwìUÑî>&ı‰|áoÚàšk½Ğ<-ñ*îîÛSğ½ş¢·’Ø\Y¡&4¾²—2C*²¼dI¼`î#;GÂ´©ğøüğkÁ—:4¾¼º´¼Ö®õ)n¥Ö¤¦Ù€ŠÛ,¬ÛS<È5ï^ñÿ ì§ğŸöøKğæ{³áßM,º÷Šï¢ºê“J­‡K2a„¨0í¸ïİ´9øWÅw¶Ú—Š5FÉüË{«Ë‰cl¹Fe88# ô#5­(»ëınDÚ¶†Q]&AEPEPEPö7û1Éµü&ÿ ±KAÿ ÒkÜkÃ¿f/ù6¿„ßö)h?úA{|Ôş&zkcò'ã·ÃüSı¨üO¡x;N’éŒšjOpU…­ª½Œ$=Ä ‹„b3ó6@Í…?düı”¼ğ¶+mwÄ	ˆ<QåÄÏ4È²ZÚLæn´FPU”…VËü¹_,3%}I•¬·ÛA2^H%‘B´²XÃ¹³E\v¨ «5ñ9ga(âªcj®yÊR’¾Êîú.şu¶Ìøç_	OIòSŒcmİ’Z¾Ş_}Â¿‡:şã+øs¯Ñòßµò>Ğ(¢ŠõP¢Š(ô?öñ±ğ³öløğ‡À×réZ'Š4øIõƒjæ#¨ßjÒá—Ä*»UOÛv®>\ğÏÇßøkáWŠ>!Õ¼+â‘=µø’o±MnşbÏg‰C! n8!€ô/‚ş(|øËğcÃŸÿ hÍVÿ Áú¿€ÚtĞ<MehÚ„_b¹mïiylŸ¼`,§`W|!ñ§ìÉğ7á/ŠüğCW¹ø›âÿ @–7šıö˜Ú}Ÿ`t‰koq™|é:9Ç¹£¢åk[š¾÷:Ä_	hÙçáÿ ÁcâZ|+×üo£û&£ÇEÕÜæd¹iá;b•3µŒ òNŞ	5Í~Ñøûà€şğntO|>³Õ¦ºĞüU¤İ¶¦«$•{ºŞB@2ÚK/ÊåT¨½gãÏÙÃö…øaà¿
+|uñ6¡ğçÆŸôåÑm5«}9õ[í*-oÖğ‘2Éb ‚$’Û¶¦Å‰?¼ğşÎ?µCÆ‹«ë1kzÆ½}jÖ3Á•6–®L‰Ø»?<c,QNöK¯õ¨ÛĞ¹ÿ ÿ ’™à?ûü=ÿ ¢¸¿Ùâï‚¾x£ÅÚgµÏXxßÃ÷zëº|fk½&K†F[…EÃ²|˜qÏĞ¯Jú?ãL±ïí¨xSÅú·Çÿ øD¯´¿iZDöğŠê—û%²ˆ‡>rùJ~f#Hã œ×‘|:ñ÷À_‚)ñÇÁıCÄ—¾üEÓ--5VÃO—K¼·º·s5½Ä6×e˜›i	àœ6w ØÚÄ_¹Ëf{×=áGÂŠÿ uM_Çÿ ²çÄ_|h´šÂî-GÃâæuº¿²š6Y>Ó¤»Å#ír)}Ã 7*ß–¤%X`¯Ò†Wÿ ±‡ì×ã;_^ø«üHÖô!4ÚN‡‹>“ş“$m}®êrQ£]ß7–û¬2‡ó§XÕ.5½^ûZ»
+³ßÏ-ÄÔ+`£°ÉàUÒ½ßü13Øı€Õ?g{?‰¿~|\ø†×6ß¾xİë-d¦KÛ¶K©]m-‘yÆ7ÊØXĞî$uøOZı“¼CãOêÿ <?âo
+øzáâ:&›áíîºÁÖæmYäw%vÊybß*®Õ@7íu§øü ½ğf¤úå—ƒ<9.•â]Òd¶•.æawlÉ2¬R!ÚC®åÜ¨I;q^]{ñÛPıš~+xºãö8ñÙ_	xÃ,r¾œ*B7:ZÈš•³0kv‘Óz:à–'œ#-Wõ¹rh©ãOø`¯øE5OøWğ²ÿ á%òû?ûWûì?hş´y½òıvsé^Íÿ 	Ÿìkâ€ÿ >üMñW‰dŸÂÖº”·–Ş±<‹ıVäM#ÜÏ|dªª(€pÜâ¼gÆŸ·í]ñÂš§‚<aã·èºÔmwoı™¦ÅæÄÿ ywÅl¹õVŞºxö"øàŸÜø›ÅºÂ?hö©m­[¦w­[jòÆãêİÖG6òJ>úœF§…Œ¹©Å¥ï_å¯èJ}*ı¥>Û|ñ›e ëKâ_
+ø§L¶Öô-L'”×yÙæ'ğÈ¥HaÜa°¹Ú>w¯¦ÿ jOŒ¾øµâíMøweqaà¯èÖÑRìµKmi’gŸn@’VbH€ÎE|É[S¿*¹µô
+(¢¬¯Õ_ø$üœ§‰ìR¼ÿ Òû
+üª¯Õ_ø$üœ§‰ìR¼ÿ Òû
+Ãü6iKâGôo_6ş×òo,ÿ ·ı.‚¾’ª×vVwñ,ĞGqÉ¡dPê$…Ä‘¸#r:«)ê9¾C4Á¼F®;sÅ«öºh÷ò¬bÃb©b¿$”­ŞÍ3òoàŸìgâŸùZÿ Ä¯?Ãz#yÊ-v˜µ9Y0ª|¹P¬Q–ÉË‚Ä/	µÖAú“áOx[ÀÚ<z„4¸4›ğ|¸.ö
+©¾FûÒHUT3¹,Øä“]%äp÷
+a2ØZ„o'¼ïü—’=#âÜfg;×•¢¶ŠÙ›ógáÏüoşhÿ ıÌû¯ÃšıÆÿ ‚Íÿ Íÿ ¹ƒÿ qõøs_¡à¿„‰­ñ0¢Š+¨È(¢Š ıdñ¯ìÍñ»ö‚ı–?gk¯„^şŞ‹DÒµ„¼?l´µòš{Ğcºš"Û‚7İÎ1Î8®gâ?ƒüKğö/½øñQ¶ŸÆŞ&ñ=¥î E{ôúd ÎÆ'tˆJrU°Kdd—ÇÎ_ş&x#Æ?>ø3Ãš—Û5Ÿéº´´LÑıšK›¥’%ß"*I¹9˜‡¾S‚ym§æ),Lu§ ş¹¡NO~ÿ ©¬¤Ò¿xoö.ı›¼[À¯‰Õüwâ+mWÄ!·Õe²W71$®¶6‘â9–%q4‚OšY?do…Ÿ	<wñcÅ?¯¯|Ağßáœ]ÍŒN »ÖN»†°…¤Øª	2…9—Š<â_Ø¿ö“ñ\~%xçWğ'ˆ¯àµ> ğõ¾“-ïÛ.m¢H]¬nÓ1B²*A9ä€sJ?kŸ…_<uñkÂ¿lo|?ğÛâu¾—kc5š	î´c €¶´`á€İ2©cŸ•r¹5šæ·_?øğ
+Ğá|QàoÙããÁ|Tøá[ß‡~"øpÖ“êZ4úŒº­­îŸy/’&†yÀ‘e¾f(^ $‚0ÿ à _òpÿ Ø» éU±âşÏ¾	xÏá_ÀÏ_|DñÄcg£¬Ï§I¥ZYiörùâ`œ™ZYårr»yóÛâ7ƒ>)ü`OøPşÓÒÆ¤Z¼™aıı­¤qJ»fDo•ÔŒã¨$V”Óæò×ô&V±/ìßû?[|YÔ,<EyãïxrŞÃW·‚M/Äz¨³½½Ehİ¼‹s‰QÃl 3ekÕmÙ·Fø}ã¿xëÃŞ4ğ:i£Wu·ğÆ“¨ Õí#–M¢3§¤(±y_Æ¡°¢¾Ğµ{Ÿëz~½f¨÷mÄW1¬€”/‡PÀH$s‚;×Iñ3â³ñWÇúÿ ÄÃoo©xŠîKËˆíUÒ’S’#Ww`¾€±>õ£„¹¯}	ºµŠ(­H
+(¢€
+ş?àòm~%ÿ ±¶óÿ H,+ùÇ¯èãş	ÿ &×â_ûo?ô‚Â¸ñÿ Ã7ÃüGê¥Q^ÚQE ÿÑıè¢Š+C0¯‡?à¤òe¿?îÿ §k:û¾ÿ ‚‘ÿ É–üDÿ ¸Gş¬ëZ}IŸÂÏåZŠ(¯£<Ğ¢Š( ¢Š( ¢Š( ¢¾°µı†¿k+ß	Ûü6ÔL0ùànŒxİ‘fÒ‹’HèY>•W@øoàë¿ÙÅß/4íŞ)Ò¼W§é–÷fYTÇk5³É$~PqË w2³ö±èÊägË4WÓı?ißˆŞÇŞğíö‡<~l3´@ÓÇÙáŠiYTÿ 	D`İ³^}à¾$_kÚW‚|-w©êh—Q´P±İ[´Ó‹uSŒ²3	NÖ
+¤§%° ı¤{‹•IE{×Å¿Ù‡ãÇÀ­:ËXø«áOÔEÉ–˜L„´–òH¨äB¹@8tıÿ i¯‰^Oø/À7·úÈd†v’è?Š§‘$•Oc°=³G´¯qò½¬|ËE]Ô´İCGÔ.tZÚ[+ë)à™9b–3µÑÑ€*ÊAj•Y!EPEPEPôqÿ ƒÿ “kñ/ı·ŸúAa_ª•ùWÿ ƒÿ “kñ/ı·ŸúAa_ª•óø¯â3Ñ¥ğ ¢Š+œ°¯å[ş
+Gÿ '¥ñşáúi³¯ê¦¿•oø)ü—ÄOû„é¦Î»òïúb>áÊ(¢½“ˆ(¢Š (¢Š (®ãÃ?<gãx—ÅÓşÛ¦x>Ş­RA4HÖğO'”"wY$]ü7–­·«`sW›á'Ä4ø\Ÿ[GqàÇÔ²F¡æÅƒy°Éåù[üìmfÌü»·qK™Ìóš+ê/…ßüa§c}âo‡ğ˜Yx“ÃZ³¦Zb-5Å­º²ÿ h–I7í”²Ã S60…ğëöSı ¾-hÚ_ˆ~x:ã[Ó5‡ºŞâ)­Ò-öea#I*ˆp]B™v‡çfìO´V>V|õEzşüTø_ãX~xïÃ7šgˆî¼¿³Ù•=ÇœÛ#0K¬Áœ2Ù`W¨Å}¥ğ/öø™¦|EÓ[öˆøywoá-GLÕeF{Œ*ÜÁc,ğ	ZÎo2€„®ìAäR•X¥{‚ƒnÇæõíßgß>Øÿ 	ü's¯C`Á'^+{tr3°ÏpñÇ¿í»8ÅIsû5üq²ñ¾«ğãPğÅŸ‰4m:ãW¸³¸’\ØÚ®éf…¤uIÀ àBÎ[h$W<ok‹•Ez7‡~|Cñg€üMñ7ÃÚ;ŞxgÁæÜj·‚X”[›§ÙîİÄ’dõòÕ¶[š–Ãà÷Ä­WÃ¾ñN—¡My§ø³Q—JÒŒ-“^^Ã·Ì+uc1Û½Am›2q»<SæAfy¥ôŸÄ¯Ùö‘øCácãoˆ^ºÒôD*$ºYmîRä*™…¼²4@± 
+2@êE|ÙJ2OTÁ¦·
+(¢¨AEPEPôqÿ ƒÿ “kñ/ı·ŸúAa_ª•ùWÿ ƒÿ “kñ/ı·ŸúAa_ª•óø¯â3Ñ¥ğ ¢Š+œ°¯å[ş
+Gÿ '¥ñşáúi³¯ê¦¿•oø)ü—ÄOû„é¦Î»òïúb>áÊ(¢½“ˆ(¢Š (¯®ÿ fÏƒš/ÅŸ‡ße}m{ÄÚ‘c.…»Oæ¥åÅâÃòE)e8ÚêÃ¸æ¼÷â×ìÅñãàf™c­üTğ…Î…§ê.#†àÉÄ&B¥„löòH¨äB9V G´Wå+•ÚçƒQ_FüTøWâKŸ‹zWÃß|5ŸÂÚÆ«§éÏm¡Û_jYŞku“í"`[a™Jgƒ€{ÿ „¿cxÂ_u/ÚÀ×túGƒîµ]w¹İ
+^Ã4K¸Ig3DÎªç1HO%zN¬RÔjøIÕ/´=RÏZÒåò/tù£¸‚MªÛ%‰ƒ£m`Tá€8 ƒÜVÇ<gâOˆ~+Õ<oãÏíoZ®nî<¸âóe¼Û"TEÏ¢¨Õëÿ eOÚâç….<qğïÁºÆ‡m¼}¥LQ,¦>@²º4åH ˆƒœñ×ŠôÚWàuŸ†~)øá×ÂŸ\®¥âèwo§ÃçÜÜM©]ÂZrVwRXTaW  hö‘æ·Qr»Ñ_F|Pı’h¿ƒ^OüHğEŞ“£1Uk¥’¨â.p¢cm$¾VI y›rHN+SÁ±‡í9ñOÓuoøãQ°ÕìcÔ­nEÍ¤pIm+:!ód™Q\”oİ±c®%ûXÚ÷Wµ—è®£Æ	ñgÃ¯_x7Ç\ú.·¦¸K‹[…Û")ô*ÊC+C$k½øEû=üeøñs{kğ›Â÷ùÓ¶}¦Dx ‚"ùÚiŞ8Ã6	»$qTä’¸¬ö<jŠûáoì{ñSXı£ü9ğ;âG…ït‰'’ÍN?6dBÊ«qqÌÍW Ë’A ¬‰²—ÅİöƒÖ>x[Á÷WŒÓ\^i–VòÇtßÙ-3­¼ÒJ’:¢ì&WR7`‘Qíc{\|ŒùRŠú+â/ì—ûD|&ºÑ­~ x.ãJÿ „‚î+)|ëyà’êcˆá3Ã+Äİƒ²ğ	è	¿û[~ÇŞ)ø<	w¦h)§kš^is#İCw4¾#•K«tŠ/…8TØ› f$“ÚÆé_pägÂÔWÓş-ıŒ?jø2_ˆ)ø}}e¡Á4¡à–H"%æ·ŠFš%QËE
+>ö+æ
+¨É=˜škp¢¿E?gÙWáÎ¹àxËâ¾¿e}­Má_\Ğü9erït‰mnZ;ëæ€%UŠ˜¡fÌ„å†Õe>Gûü7ğG|iâÍcâN'Š<;à¿êZÜºlSÏl÷—lÚİe·+"¼’HíÎOb81í–¾Er=‘è¯³¾?jŸ
+tÏiÿ ³>§ğ‡ÄWí¶º¥­j×aF@–·ĞÆnşäWÆ5p•ÕìKV
+(¢¨AEPö7û1Éµü&ÿ ±KAÿ ÒkÜkÃ¿f/ù6¿„ßö)h?úA{|Ôş&zk`¢Š*ü9×÷_Ãz™oÚù¸EW¨r…Q@Q@úCñ»öø•¬xîgı¾İ\øZËFÒn&t¹îâÎ9§5äÛårÍ’‘–Û ¾ğ—ÂŸ‰:ñ¹øoá?^ê>'I$ŠM="+<O	Û'šo”ğåÊ…=H¬ãV-]2œ<şŠúâ/ì§ûAü&Ô4m7âƒ.t™<As•Œ†X&·–æc„‹íÈğ£·ew €‘ìÿ µ—ìsâßà)´]LÓlîÜÃy<Ş$™]î­£Šg;N6&Â ™‰$ö±ºWÜ9ğõ7Š¿bÚ›Á>¸ñ÷‰¾^Úh–›‰åÛË,1(ÜÏ%¼R¼Èª9bÈ6€K`_,ÕFiìÄÓ[…ú]â/şÈ?³¾¹áÿ ‚_|ªø§ÅW–VSø^·Õd³,ú„k(ÖÑ—8‚7V&^½yÎÑñ§íğ–çà_Æ_|*¹¸7‹ İl‚r i­¦EšŞF€ÍˆXÈ0ª™R…¢¿Bÿ go†?bıŸo~+xÓá÷ÆwVñ8Ğô­&ÂûP²`·³ûMÅÀÙĞ3*œÆyÆç<d¾ğGíûAø/à·Ã…—?î¯.Z×U¶ºÔ¯5;Š<ùf)|‘¼mä& cŒ‘Ö—µWzl‡ÄôWé§‡|ûü~ñV¹ğàÿ ƒõ_x®kãáÏOªÉx5‹­>'—eÕ£):FÌ\oº3 àğET'qJ6Š(«$(¢Š (¢Š şÆÿ f/ù6¿„ßö)h?úA{xwìÅÿ &×ğ›şÅ-ÿ H!¯q¯šŸÄÏMlQE@Â¿‡:şã+øs¯S-û_#—Ğ(¢ŠõP¢Š( ¢½;XøQâ-áO‡~0]\Z¾âkûİ>Úw7I-ˆC!‘J
+w¥]‰ç W˜ÒNãh(¯¥ş~Ç´·Åo	'¼à[½KC˜3ErÒÛÛ‰‚¬aIååe È¯-ğÏÂ?‰¾1ñãü0ğ×†¯¯¼U²Ã.œ°•„í—ÍCÃ /r)sÇ¸r³Î¨¯sø»û4üsøßÅÜèV·íåÃp^›v“¶yÖï$ağ	X1 œpkÑtŸØGö³×æM/áåÔñÚÅÍ'ÚlÖ7IâYÓÊvœ,¤£©+b¤í`µ¯qò¾ÇÈôWŞ?³ìiãÅ	õO]½ï„ôÛÛ->Ù®a²qâEØ"¶9™mRÌwm@Ànª|3áçì·ñ÷â¶¹­øwáÿ ƒ®uk¿ÜÉg¨2ÉVö÷1V‰®e‘ .<+’G##š^Ö:ë°r3Àh¯h½ı>4i¿ì~
+j¹±ñ¦ê–¶>~àÅZ9¤u…íl8}¹g#Úë_±Ÿí?áßOñ+Zø}káûXMÄÓ3BfŠiÙd7
+Š>bÆ0 äœsOÚG¸r¾ÇÌTW¶|"ıœ¾6|xkÏøTş¹×¢°!gZ+{xÜŒ„3Ü<qoÇ;wnÇ8Å`kŸ>*øsâ*|$Ö<-}Œ$‘"L'•¤CMÁÕ‡!”•ÆNp>u{\\¬ó*+èÏŠ²OíğkÃ‰âÿ ‰»Òtf*­t²AuEÎLm¤—ÊÉ 3nI©Å|çN2OT5¸QEÄú«ÿ ƒÿ “”ñ/ıŠWŸú_a_•Uú«ÿ ƒÿ “”ñ/ıŠWŸú_aXb¿†Í)|Hşè¢ŠùãĞ
+(¢€?à³óGÿ î`ÿ Ü}~×î7üoşhÿ ıÌû¯Ãš÷°_ÂGo‰…Q]FAE×xÀ^2ø›â{?xHŸ[Ö¯Ëmm×s°Q¹˜“€ª e™ˆ rMÈÑ^÷ñsö`øóğ+O´Õş*øBçC°½qW>d0,¥¶’TW ˆ$Á®ÇJı‡ÿ j­sû@é?®î—LŠ	¦tÔ¡[ˆâ1ùÛfsŠÅ",ëâ£ÚÆ×¹\¯±òôVû%şÑú¯ÃÛŸŠ–^Ô_ÃVi,’\0%òáÈ‘ÖÙÜ\2.Yc `œñXgß>Øÿ 	ü's¯C`Á'^+{tr3°ÏpñÇ¿í»8ÅÒ;Ü\¬ñ+Ñ<qğ—âWÃ/ÃßøróJñÅdñ—’o5¶ÆaÙ¸J¾U1–ğx¯ZñìcûOøÁ²xÿ ÅŸï¬´8#ó¦˜<IXÉy ŠGš%QË@¾)óÇ¸r³æ+ï9¿c/ØŞ×ãå¦ƒ4º¼º„—÷µí°†/Çk¹./0Ï1;—æ—
+0Š3»¯øÓû|J×|~éû9ü=º¸ğÍ¦‹¤\M ¹&»¸³I§É}8i³d¤e¶ä   V~Ş7Ü¯fÏÍÚ+GWÒ5_ê·š¹i-†£§Ìö÷ó¡XeŠº:6
+²A¡¬êØ€¢Š( ¯èãş	ÿ &×â_ûo?ô‚Â¿œzş?àòm~%ÿ ±¶óÿ H,+ü3|?Ä~ªQEá¡EPÿÒıè¢Š+C0¯?à >Ö¼WûüIÒôµ\Áik~é½Úuä—/—*?w.øÎæÆ ±èª„¹ZbjêÇğçE~¸şÕğKÏø?ZÕ|kû<ZÂGáİpº0”¶«bI$±Ä²ÇÜ)°‚»\±uË‘”Êÿ  Ã1~ÒŸôI¼[ÿ ‚ÿ ş3_C
+ğ’ºgŸ*mE{—ü3í)ÿ D›Å¿ø!¿ÿ ã4Ã1~ÒŸôI¼[ÿ ‚ÿ ş3Wí#Ü\¬ğÚ+Ü¿á˜¿iOú$Ş-ÿ Áÿ ÿ £ş‹ö”ÿ ¢Mâßüßÿ ñš=¤{‡+<6½àÿ ‡µoüXğg…ôÈ´ıOVÖtû[[™ãY¢†i®#‘ãpVEV ” †ÆÜâºÏøf/ÚSş‰7‹ğCÿ ÆjÅ§ìÛûOé÷pßØ|,ñ…µÍ³¬±K‡¨#Æèw++rG Òs·Øı\ø{?Â_ømˆ´;]Ç>(iúÃÅªøƒSºO± %g¹[kDP-åDáceÚƒ‚3òßŒ ±¶ı›¾7Û]§—gÅ¸ÒEA‚±/ =JY¾/ÁTî-,¬ÃÇb;‰ã)á©RF0°eÈ¶Aå™d,d0`H¯×|ûpx—Cñ'†õŸ‡Ş,›Mñv°uıRğÄÑLîÌùÑY>û|‘•N~írÆê×N¦Î^G±şÜŸğ¹Óöº„ø(êfÏÊÒÏ‚ÿ ³<ß'ìŸf‡ËşÏqş·víŸÅœñŠúŸâwˆ®ü-ñö³×</v4ÿ AàÍ	/ç²m^£2CÑ“_A+ÈlŸ½šø÷Á^.ÿ ‚˜ü<ğt~ğ†‹ã»ü¨`>¸à HfšÑå‰Gğ„uÛäºGÃŸÛ[C°ñn§øÆ^OâëfoŞ\Kz‚_;ç–kw1“æ,¬¬ORhäÑ&Ö‚æò;ï…z­æ§û|iÓu›©nl4ıÃ7Fì\D÷ºÌñƒœ3ªŒ‘××ÚŸµwÄ_…>øï¤i7ÿ  5O-˜|-«éş+Õ¬"ºµò#.Ÿmh†8¼¶ù6ÄrXo<¾Oç“ğ£öÇĞü¯ü7Òşø¶xkIõ_øG.›Ï’Å‹ÀŞc[abpŒ ÿ 5ì¾ñüÇá§„cğ'‚ôOXèp!ŠÃ³Ü#şä2Oi$‘(ì”Ø§8&îŸãnÀ¥¥¬xÇí£â{Äÿ ´wŠµxA<®J,ÖûJP‡Tò¦KX—s\À6wP¬à†$7Íšùb½ÿ Sı?j]kQºÖ5†2½¾¾•çy´MFIe–BYİİ¡%™‰$’rMRÿ †bı¥?è“x·ÿ 7ÿ üfº!(¤•ÌÚmÜğÚ+Ü¿á˜¿iOú$Ş-ÿ Áÿ ÿ £ş‹ö”ÿ ¢Mâßüßÿ ñš¯iâåg†Ñ^åÿ ÅûJÑ&ñoşoÿ øÍğÌ_´§ıoÿ à†ÿ ÿ ŒÑí#Ü9Yá´W¹Ã1~ÒŸôI¼[ÿ ‚ÿ ş3_\~Íÿ ğLßŸ5=?]ø£e7€<ç+\ı´y:ÅÄ*Ò,‰mhêÍîŒ.û•Œ‘eD™FÓ2­®Ø(7Ğı*ÿ ‚LøoZĞ¿eË½SU·ò-¼Eâ+ûûŞç[$6öløRJâ{iS|¹ÆÒ¤şœV†<7¢ø7ÃZOƒü7oö=#C´‚ÂÎï'•mkÅo³¶ÔP2ÌXõ$kr¾~¬ù¤äzVV
+(¢³(+ùrÿ ‚œøoZĞ¿l/jš­¿‘mâ+M.şÁ÷£yÖÉg›>’¸ÚTÃ€ß.q´©?Ôm|qûg~É/í]àm:;ßìŸxsÏ›D½vsl$œ'›osç0Ïå .ªd‰•]w(x¤éÂUPÙ•Xs-äêŠú«âìIûR|8ñ,ş¿øw«ë{74Wš%¤Ú¥œñ	5‘e¶GÙ¿fá¢9B•/îÃÿ Ã1~ÒŸôI¼[ÿ ‚ÿ ş3^â©ç+ìxmî_ğÌ_´§ıoÿ à†ÿ ÿ ŒÑÿ ÅûJÑ&ñoşoÿ øÍ?iáÊÏ¢½Ëş‹ö”ÿ ¢Mâßüßÿ ñš?á˜¿iOú$Ş-ÿ Áÿ ÿ £ÚG¸r³ÓbM^ÖOŒ—µiD:_Å-Rğ­Ã7İWÔ!?flx\¤@£<WŞ°ø+WÔ¾Üÿ Á>­í#OZøÏÄ¢D‰â#©}¾kbİ7ıšeN¸Ú:4t/Ù÷ö©ğÖ·§øBø]âûMKJ¸ŠîÖeĞo‹E<$À0•ed^¹ogûÚüd“ö€ƒÁ~0_Í»~¥ÿ ÌÇpk²`6ŸgÇ“…ËÀÀ n ×5Xİİ5ÿ Ò.ÊÍTø_Óïÿ lÏx/A—ÍÑ>ü>Õ¼'aÑèúw“/çqæ·ãø×Í¾5ñ.½¥Á=şhmôÖ¶:¿Š5¶»Š'(³‹p¦5“nP\§Œàã cÎü)ğãöÔğG‰µOxkáç‹íunŞòÖòá¼9u3M ¹Klê€œ°‡PAªzÂÛVğ‘ğËPøoâÙ|5 İ\^YZÂ9t¾T÷xóŸÍ[a+nÀáœØ
+Ö½¿PrvØıø9©Ûë+ıŒuÜ-Ö£&‰â{{Yïxk«s4V
+ÌÙ'cXın9¯ı‡ÇÇ˜ÿ i/Gâoíqÿ oş¡{æãÍû<Q¸ßÇ›ö›3ócvß—5ó®­ğ×öÓÖôO	x{Pø}ãeàE•tA‡®à’ËÏ›Ïr’Ål’3y 0gf*~é½Æÿ âGüT]55'Ç+¥$É¿†¥`Dğ½»™A³ÄÌc‘€iw²“¹Hnj\4vkQ©y¿WÅ?ğÂß[Àfãş_´ëßÛâÓw—ı­öÏÜ}³gñy[¼ÿ ÃÓµ{î—ñ^ø[àÿ ÙÆÌ«¯E©k6“}¿?j>½•-OÚüÆ1¤Â mãšùgá—üà8¼á?„¼m Á~Áç€xzêâİÜo0ÜZÉü`n» à
+â¾"|.ı´¾,ø–o|Gğµı^eg¹Ñ/ÉX×$$j 	I
+€($œrj¹SÑµm_­ÒŸx>Ø[şÅZ²Ç×Æwñ·šÒY#û.‡.ïIM©tô.3É8ù×Ä1ñÏìıñËàWÃ/xbëßô:ÿ DµIæ—S×!’óUDòFÊA2áÂ¶Í›ˆÀÅx‰tŸÛçÆ<?ñcÄñ•ïŠü,–‘é·Íá»…hÆC,ËKUö»w«oÉß»&¹ÍGáïí¹ª|K›ã×|l2ïíÍ©C¡^Á0¸é¹DVèª1ÆÕP»~\cŠ˜Ã»_ğFåÙN/„~|iğÅgöyÔümğÓÄ:.‡y«ëº>£q$Ú=õ½§ï%¶–uvvf< òO;	••úñ#ÅğR¿‹xÿ @ñÆ£¢M´Km†ç´Y‚@˜ÛZDÒŒ€päŒ€q‘_3ÿ Ã1~ÒŸôI¼[ÿ ‚ÿ ş3ZÒvİ“=vG†Ñ^åÿ ÅûJÑ&ñoşoÿ øÍğÌ_´§ıoÿ à†ÿ ÿ ŒÖŞÒ=Èåg†Ñ^åÿ ÅûJÑ&ñoşoÿ øÍğÌ_´§ıoÿ à†ÿ ÿ ŒÑí#Ü9Yá´W¹Ã1~ÒŸôI¼[ÿ ‚ÿ ş3_\~Íÿ ğLßŸ5=?]ø£e7€<ç+\ı´y:ÅÄ*Ò,‰mhêÍîŒ.û•Œ‘eD™FÓ2­®Ø(7Ğı*ÿ ‚LøoZĞ¿eË½SU·ò-¼Eâ+ûûŞç[$6öløRJâ{iS|¹ÆÒ¤şœV†<7¢ø7ÃZOƒü7oö=#C´‚ÂÎï'•mkÅo³¶ÔP2ÌXõ$kr¾~¬ù¤äzVV
+(¢³(+ùrÿ ‚œøoZĞ¿l/jš­¿‘mâ+M.şÁ÷£yÖÉg›>’¸ÚTÃ€ß.q´©?Ôm|qûg~É/í]àm:;ßìŸxsÏ›D½vsl$œ'›osç0Ïå .ªd‰•]w(x¤éÂUPÙ•Xs-äêŠú«âìIûR|8ñ,ş¿øw«ë{74Wš%¤Ú¥œñ	5‘e¶GÙ¿fá¢9B•/îÃÿ Ã1~ÒŸôI¼[ÿ ‚ÿ ş3^â©ç+ìxmî_ğÌ_´§ıoÿ à†ÿ ÿ ŒÑÿ ÅûJÑ&ñoşoÿ øÍ?iáÊÏ¡cÿ k^ø=ûFë¾¼’ÃPƒÂÖÉğ±I#ó®¼¦(Ã•m¬pG#¨æª|1Õu-Söøå¦ê7R\Úéº×†®m£‘Ë¬S\ÜH’ºĞº¨G\Wx_áGíàÍÄğ×ÃÙé¾/µÏT‹şË©>ÑR	U7IlÌ˜qœ¡SØœQ¤|(ı±ôøƒáÆ•ğßÅ°xwÅ2ÚM©Zÿ Â9tŞ|–,^ÜùldMŒÄáAş,Ö+·uº-_±úE7ö‰ı§>!§„‹?Á¸G‡¼¯øøûwØm¿ãÛùş^í˜ç­|›û,ÂÒ?iÕ¾Ş<*¾¹û@¹ó<¡«y«·øó|¿7ÌÇ?wwğ×•ëıº5ßi¿ï¼ãHüS¤Em¥ı·‡îí%†;HÄPªıÚ5ùPm$Œ°Îìä×¥xÃÅßğRßÚ_Øx¿Ãş5Ô­5=6m&âğÌ©ÙÜ2<«å¥šª»Ó2¨`c~	>K+]t*ıGşÖgÇ§AıŸfø|uøDG‚ôq£;Íò†°7ı³g•ÿ /fİøùúWŞÚaÔ“ö¿¾›ÆúSë¾<àÌ-.šÆæïWòÓí0Asï!Aæ¢ÉÌ€³•ùÕğÒóş
+1ğ{Ã>øqáÏhÚ-Ñrm—Ã÷S$m'ßhLÖ®Ğ³Iˆ©Ï=y®KYğíÙ¯xÃCøƒ¨ø/Æÿ ğ’xrÖÖÊÃP‡B½·¸†5)
+ï†İ¤†vË>NòÙ4:wVº•µ±ôß‚>2xRóÁŸtï„³5öøQƒÄ—W~2½–ÚÒB­$ĞêQˆ^â7ù£AûòAÿ xßíSâ¯Û|ı›ü3k¨Ï™…Mğ‚9Ü›†A) €YU Ry^qŒœ¿â~¹ÿ !øËá•ğwÄøßUÑC#5ªør{Xå1œ¯ökHÌ»Hy…¹ õ ×”x³áGíã+ÃšŠ>ø¶öËÂV_ÙÚdğ]Gö{]åü½ÑÛ+?ÌIÜå›ßP‚M;¯¾âmÚÇ{û{Ş]jŸ|¬ê4÷Ú—€¼9ss3œ¼³I–w'’Ç¹5kö~ø£á/|Ö¾üwøw¯kÿ 5]yoÓ[ÑZ[vµÕRİbhŒ‡d(+A·%¶¶T¯œxëáGíñ.óLÔ<mğßÅºÆ§Zé6ÿ åÔ>]•š•‚,Cl¶Færk¶øC§ÿ Á@~Ñğ›Â>6ĞbÔ
+µÄ+áë«ˆ$ua¸µ’=ØãvÜãŒâªË‘Fä«ó\úO†º…¾:şË=ğ/Œµÿ øÅšÔK£Xx”¸¾Òã²¾…$á.Î
+ÑTã9`A8ß¼4ñx·ö§ñÇŠ|A¬è¾
+ĞµmuÛÛ[¾³¨Ç{©N"†9§FkxC!32•Üœ1Ú|ÿ ãO~ŞŸüw§üLñ—„<u©x—I’)l¯C¾­^ó#0$vë[_æÜõ¯C/ÿ ‚–¯Ä7ø«‡ük‰å²N–æ?ËMk3Ç¶ëf “k;Ïaµ®Û¯é•}v=‡Å?ğ®uØâ.¡ğ³Á:ï†<4ºæŒÖ÷:íë]½ôÂ`²KxD0Vhò¶	Ê×wáÈ´?ønÙ¦O"}şèjfâ6»]2ëìØ$|í»ş=½ëåŸø‹ş
+Iñ7ÃÚ×„ü{áÏë:7ˆVİ/-&ğÌŞKY|èŒJ¶`BÁÀ%¢ØÍ€ Ÿˆ´ŸÛóÅğÏÃŸx;Æ·zƒe†m"/øG®’k9-ĞÇå-Vİ©Â!€00”4wk¯Qók±õÿ ÃŒz>›ñãWÓ¾şË øiöÑª}³Ç:‹'–ÅÉ¾mB3jÑ2çrQ‰R¹bµøá|ğK{q%´^D/#”Œ6ıŠIÂîş,3Ş¿B|Yãoø)·<7Ãÿ hş;¼Ğîbò'ˆxvâ)fˆŒ2Kq¢Ï"°áƒ¹295ò÷ü3í)ÿ D›Å¿ø!¿ÿ ã5­+Fí¿Ä‰İÕûÈİñCşÉ×‰ÿ ôBWŸşÏº§í1á¿xÿ Å_³Ì×6¶š}¸ñö?ekÈ­$‘¼¶‰dÍÈ•‹½°Ê— `Õßü(ı±şŞj—ş
+øoâİ:}kNºÒnÛşË©¼Û+Å<XšÙÂï |ÊÄTßşşÚß|K‹şøÆŞÕãCo¡ß|ñ±¤ˆĞ2H„€Jº•È‰[]P+è}áŸ|KøŸû|aÔ>?jºö‘¤]hïá}KWwèj²\;iæÌ’+ÆâY±Œœ~c×Ûÿ ¬à _~Æ¿<%ãmz^‡®­íãr0\Aom[ñÆâ»±Æq^%ÿ ÅûJÑ&ñoşoÿ øÍ:m+İ¡M6xmî_ğÌ_´§ıoÿ à†ÿ ÿ ŒÑÿ ÅûJÑ&ñoşoÿ øÍkí#ÜVxmî_ğÌ_´§ıoÿ à†ÿ ÿ Œ×ëìYÿ Ğñoƒ¼q¤|^ı¡<›ô	£½Òô;[‘4Ëo11M{4Ä"‰,qÃ#ù…—ÍeñILD"®ØãM¶~±ü	ğŞµàß‚<âK±êú‡t›È7¤UÍ­œQJ›ã,µÔŒ«=A#šõZ(¯nîç¢‚Š(¤_Ä‰ü7­x7Äº·ƒüIoö=_C»Âòé'•sk#E*oŒ²6×R2¬Tõkûp¯ÉÏÛ¿ş	é©ütñÿ ~ÜÃŒ'„.©§^ÌÉ¤-`ÙÛHÁ–+±¤;¤.6¹x™]¥îÀÖP“Rêa^­çZŠúTı”iÍ#S»Ònşø¢Iì¦’	ßH»¹…6*Æ9¡â•	+ÆÌŒ0TAª?ğÌ_´§ıoÿ à†ÿ ÿ Œ×¯í#Üäå}¢½Ëş‹ö”ÿ ¢Mâßüßÿ ñš?á˜¿iOú$Ş-ÿ Áÿ ÿ §í#Ü9Yá´W¹Ã1~ÒŸôI¼[ÿ ‚ÿ ş3Gü3í)ÿ D›Å¿ø!¿ÿ ã4{H÷V}ûo¿Ç9¾>ü>ƒÃ_ÚØ]C^hÌÆóM¾Î<ï?vò>lmÏË¶¾ÔÕo¼§üOı«õ+o
+xŠ×Jğ±Ôt7P›K¸»a_íQÍ˜3(G
+óªœ®ÆûÄ„ôÏˆÿ ğT/ãÒô[&¥Ê‰á™BªÛÂ–ñ˜—ìx…„hª^-¬Ø‰<×‡ø;á·í·ğÿ ÆŸğ±<ài$g‘Şù4mE¦•¦;¤ó‹ÂÂPç—1äƒ\~ÎêÍ­¹µ½¢5¯‹>ñì§ñ'JøYû>ÜøCÁWSéÉ«\ø²æşŞÖù.U k{mB0d˜œ¬‚Øî
+ÀËòâ½XğwŠüiû`şÎš7ƒõ¡áNO x~æI­¢»0­¥…ÄÒ4PN¯’lF	• 1Û5óOÅèÿ à¡?-¬ì~+øSÆÚí¥ƒùÛÿ Â;smn²`¯˜a¶µŠ6p	™K H“SÜIÿ ºğß„|'/†<p4ïÏÆˆÃ×)=”FbeÂÚ‰Ê¬lP#;.Ş1€1\šh×^·Ï¶e«ß‚!ø¿âèşø?Æú¦ªt½\k"ñ5ğTáuaqkˆİæ€©.s¸¯‡q¹E vpzq_¦×?àª×w–wÓiŞ7ßbX¢¯…™"}ÈP‰b[Ãx•X†0|tÿ ³'í-#³·ÂoÄ“ü} ƒè*éhÛoñõµ¥ÿ n¯ø·âínúçƒôËRÏâ¶‹{ ÉléyÖ6ğŒ ƒµĞîşèÁ8Àÿ ÁA57Yı­|qı•:ÜÃ¦›=åSÓYXÁÀû¬¨È}Åvşñü§á·‚‡ÃÏè~;Ó4VH­Ç‡îdhòJÁ4¶¯,#$#uÁä`×˜ø#á×í­ğæÿ Ä¯ƒşøÂÊïÅ:mŞ‘©Êşº¹{›+æV¸ŒöÒ`ÈQIuÃÌ2iCKj´	jM¤øïöÁøkğÃz‡…5­SÃÿ µ;ë³§ÜéC	kÄ“lé<Ö„]!,>T¸` *3_¤¾ ñv¢|}û øóã‘û/Ä}r?i×W("½¸Óî!–×K’ä`ÎÒ¨Œ·-½$œ|ğŠ/ø(OÀ‹{»/…>ñ¾‡i|şdÖßğ\ÜÛ´˜
+\Csk,jä @ p¾:øcûjüKñkøïÇ~ñÆ±¯¹B.æÑu$b3”í„ÕO*¨È§'Ğqv=wö!øsâï~Øv×~/Ó§Òí>&¯{¯O,l‘ÙÁoeqwb 
+ìÊçæ#"¿?¯'WsİØ&v}¾›q_~xßÄğR¯ˆş
+?<i¡øïRĞU%·>¹§Dä,óEj²Ì2"GlNkæÏøf/ÚSş‰7‹ğCÿ ÆkHKVäÑZYE{—ü3í)ÿ D›Å¿ø!¿ÿ ã4Ã1~ÒŸôI¼[ÿ ‚ÿ ş3ZûH÷'•E{—ü3í)ÿ D›Å¿ø!¿ÿ ã4Ã1~ÒŸôI¼[ÿ ‚ÿ ş3G´påg†Ñ^åÿ ÅûJÑ&ñoşoÿ øÍ~±~ÅŸğMø;ÇGÅïÚÉ±Ÿ@š;İ/Cµ¹L·öó×³@LA"(’Ç2?˜Y|ÖP™ÔÄB*í4ÛgëÀŸë^ø!ğóÁş$·û¯¡øwI°¼ƒzIå\ÚÙÅ©¾2ÈÛ]HÊ±SÔ9¯U¢Šùæîîz((¢Š@üGøŸÃz×ƒ|K«x?Ä–ÿ cÕô;¹ì/ Ş’yW6²4R¦øË#mu#*ÅOPHæ¿·
+üœı»ÿ àšŸÇOOñ—àíÌ0øÂxBêšuìÌêBÖ=´Œb¸ÛC±ÊBãk—‰•Ú^ìe	5.¦àÚĞşu¨¯ 5OÙGöœÒ5;½&ïáOŠ$Êi ‘­ô‹»˜Yãb¬cšŞ)P‘ò¼lÈÃI£ÿ ÅûJÑ&ñoşoÿ øÍzşÒ=ÎNWØğÚìşxËşÿ Œtßaé~$şÍgoìıjÛíš}ÆôdÄğnMànÜá† ö®ÿ ş‹ö”ÿ ¢Mâßüßÿ ñš?á˜¿iOú$Ş-ÿ Áÿ ÿ ¡Î=Ã•Ÿyø£öĞğì_³‡õ_†_ïõ™µU.|>ú*Kk§Ä«—sˆ¸ßO’F8}£+ò³YÔ¶5{í_ì°Xıºygû=ªyVğù¬[Ë‰2vÆ¹Â®N ½ƒş‹ö”ÿ ¢Mâßüßÿ ñš?á˜¿iOú$Ş-ÿ Áÿ ÿ ¬é¨GfTœçÚÚ_Ä¯ƒ:ğ§Ã?~Óñ¯ƒ<UáıÇNğö¿ y±ı¦Â/øô¸Ö`2H9ó!FòBûÇÃŸ'Áö®ğ×‰`¾øÑâm&×AšDşÓºÓõmOI¸ÍÅÎná2\«DTû•±_(xÆ_ğS/†>‡À¾	Ğüqa¢Z¡wğÜ×>JáŠK‹9$FxÀØ¯)ğß?noøúOŠ^ğw,üY<’K6¤4}Eç™¥9“Î/	Ÿ¼®<dp+ß_Çú±§7‘ïÚ×ÅŸø‹öSø“¥|,ıŸn|!à«©ôä¿Õ®|Ysok|—*Ğ5½¶¡2LNVAlw`eùqY?¶§<agûIxŞËXº·‹Ãš/†ßOHåd[w’åw@™›– ' Wñz?ø(OÇ‹k;Šşñ¶»i`şd6ÿ ğÜÛ[¬˜+æm­bœ@fRÀä×ã†¶oÄ[øÇÆ<[¨êö°ZÛG?ü#w0íŠÍ@»"¶D;@É\äš¨A'v×ŞKlû»Æ–À~Ò¿¶l±òŞ¾}¨9$ÇdÌp=É&¹}3Å_¼û|'ÔüMğªãâf&¡­.¬muëİ;OíGÊ7if¬%ia
+"i~â¨÷ùùßIoø(V…ñcSøá£øGÆV5Ö£1^ßÇá™€2¨¥ßìŸg+ˆĞãËÆT7^jo‡×_ğQO…šî¹â/ ø_ÆÚMß‰.¥½Ô|9q%´÷31g”ÛKjğ+’O+Ààp ©äÑkÛ¯ù¼®¼/ã½CÆ?ehŸá4ÿ t;kíEô9/uçÖnîì¤Q½JÜ¢İÇ8#7ÊU¿uòW‚~Ê6ñg‰¿mÏ\kÚ­Íéñ¿‰â¾ÊÎ³Ä–×$n¤à¢2.Åè   ¼¦ÿ Lı¿µ_Š–õ_xÖûÆz[+Z_Üxzê_#``«j`T˜„íÉ'9®_ÁŸ¿m‡¾5“â'„>x¶ÃÄ2‹¥k¯øFîeÈ½FİËjñüêì>ïùpqOÙ«=VÁÌîzwÄßøISöø&<n?á}GÄ_ğ’}“w—ı©öµû'Û6q»ìùò·¾+èÏÙüfoˆ6ú—Ç-*}{TµeğEŒ÷QXêw–‘Ê€AÍ¿úd/"Veıâ£3FvŒ×Êl?à _¾Ø¿	ü%ãm@‡áë«‹y0\[Iüq¸.ìqœV¹àßÛ·Äcø·¬øCÇ“øÂI"ÔÆ¨G<F0BˆŠB¢4 ‘±@\1‚iÊ7M]}O§üñ“Â—ø³§|#ı™¯´x_ÃúŒ$º»ñ•ì¶Ö:i&‡RŒB÷¿Íß’ø«òz¿@>'ëŸğRŒ¾_|Gğïõ]23Z¯‡'µSÊùßf´ŒË´€G˜[P|ãÿ ÅûJÑ&ñoşoÿ øÍ]+F÷‰3»<6Š÷/øf/ÚSş‰7‹ğCÿ Æhÿ †bı¥?è“x·ÿ 7ÿ üf¶ö‘îG+<6¿\à~Ö®¾7øÓÆ[îÒ4Ï›‰÷ Ùs}y¶é°çzZÌr¨Ù† ²ƒò¯ÂØ'ö¤ø³­I¥[ø.ïÂ–ĞcÏ¾ñ3ivÑîGdÂËmÆ=‡ÈŠMŒËælV_Ò/ìÑû<xKöcø[kğÛÂ·_»L×ºôùW¼¿•%˜G¹–$Û"F¤íE™ß|ÅŒÄEEÅ=Yµn÷>€¢Š+Æ;Š( Å_ø,Ÿ†õ«¯|.ñ„û´2ïU°¸Ÿz—7ÑÛËn›	Şw¥¬Ç!J˜b(?ƒµı¢ü\øWá/¿5Ï…¾9i4]zco!ŠhŞ9X¥Æ@x¥Du	PYISüÕüsÿ ‚tşÒ?56mB›ÇúÓí¯´dº˜†i|±qd®".0ÎBÉ
+T3W¯¯^FrW¦ït|E{—ü3í)ÿ D›Å¿ø!¿ÿ ã4Ã1~ÒŸôI¼[ÿ ‚ÿ ş3]şÒ=Ì9YáµõOìñ^øcãıw^Óü}ã­÷A¾Óµë=<N·i7F1<ë=º³A±•?xv€İÊX0â?á˜¿iOú$Ş-ÿ Áÿ ÿ ®×á÷ÂÛ7áW‰í¼gğïÀ5Ğµ›PÊ—úø;†FSWFî¬
+2*'(´ÕÇÓ¹ôÄ/ üñ¯ì×ão‰¿³wˆü_áÍÃ7štšÏ†5é	Ó®%»˜A@Ñ¹Ibc»çi/eÈÏkûBx×ÅQşÛŸtøuKˆ­´X<¤i+*D.<—›
+3&òûË…9 
+ñO‹wğQ/šm¾‹ñOÂş6Ö´ëW¥¨ğíÅ­¹‘AÚ+kX‘ØpÌ	8<šã<EàOÛoÅ~:Òş%ëÿ |[uâMX‹K¯øF®ÊhQmû´µXÛËØ¿yì|Ùæ±Œ{¾æöGØ|]â]oş
+³¯Zjš”÷òj^&ÒÚ&‘ŒfÊÒÆìC\ãËO)\c f¼âÊø§ş[àkxÜÂ+ö{û|Znòÿ µ¾Ùû¶lş/+w“¿øzv¯?Ñ¼%ûrøâÄÿ t x¶\Ü^]É¨Â3;îšı$á¼†´0ë+Œğ¹Ê€@Æ¿Â+/ø(ÀqyÂ	xÛA‚ıƒÏ ğõÕÅ»¸Şa¸µ’=øÀÜv ÀrÙ¦šÒß¨_¥½¾×oÙ|bxÓ>,şÊ:¦~ÓöAnßÙŞ™óíó6}Ÿwû;+åØ¬üvOÛ5Åÿ Ú†mú€ñ‡ö˜bû'‘/öï3äÛ¿7ñ»nŞÕá¾6øwûoüFñ’üBñ¯‚¼uªx&¢½}PY`16èÄ;!QFù”FÈ ×­øËÆ?ğS?ø:Ox³Gñİî‡<~LĞ¯‡® yâÆ
+M46‰4ªÃ†ì¾jy4z­BşFÅÿ `­:]	ÓSâ~¤!88Xœ¾X$ú®:×_ûlx÷Æ6_´w`²Ö.­¢ğÖ‡áÇÓÒ9YŞI Wt €™¹n¤ 	À¼¿Áşı¼<ğÿ Ä?
+ü)àÙxSÅK"ê:yğİÌÑMçF"©–ÕÚ6dPFU¸ğ1Îxãáí™ñ#Ä°x¿ÆŸ<[¨êö°[ZÇ?ü#wPí†Íp.È­‘ÅP2W'¹&­%{¶º‰ŞÆ§íùVÿ ¶Ä¤…B)½·r3ÚBÌI5ñí}Gñáí…ñOÆ:—¼yğ×Åº½«ºÉusÿ åÜ>c",j|¸m’5Â¨*™ë\wü3í)ÿ D›Å¿ø!¿ÿ ã5¬$”R¹M»ØğÚ+Ü¿á˜¿iOú$Ş-ÿ Áÿ ÿ £ş‹ö”ÿ ¢Mâßüßÿ ñš¿iâåg†×ô©ÿ ™ğŞµ¡~Ë—z¦«oä[x‹ÄW÷ö½Î¶HmìÙğ¤•ÄöÒ¦ùs¥IüÕı›ÿ à™¿>,jz~»ñFÊo x?ÎV¹ûhòu‹ˆU¤YÚÑÕš'İ]÷+"Ê‰2§úFğÇ†ô_økIğ†íşÇ¤hvXYÁ½äò­­cX¢MòvÚŠY‹¤“ÍyØêñk‘)´îÍÊ(¢¼£¨(¢Š ÿÓıè¢Š+C0¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÔıè¢Š+C0¢ŠÄñ+k‰áÍUü0‘É¬-¤æÉe8®DgÉOğ—Æ}¨@mÑ_Ÿşñ·†o.<5¡ë>:ñ/‚>(´¶Ÿlµñ+^[ùƒ/ÚmÒÖw[ÿ 2DmŠ2åYrFÓô†¡ñSÅwş)ñ‡~xM<G„Ú(u§ÔÇuÌ±,ÿ g´S«,‹¡c#Â€°úãiQiØÍTG¸Q_?j¼M>£âKx5µ»_ˆ×Uy¯’ÖQpĞ-ËÛZ"Ç2O4Qºïİ$i¸…zÕ+—^#ñ†•áïhjºf¥áÛ/¶¥w|l£ŠÆîy"*cLÆUT ˜3&ĞY{Ú#èê+æ½ö€Ô5/øÃQğ±ÓüâÛèltíDŞ»ÍÛ˜í&¸³ò”Eí´)Y—r—U‘î'×uMÆ;½+Ã·ş$–I}=ìã•‚|Æ7·ÑíÃ–É.2DÊ›NÌjI%Åø[Å:çˆ'-[Áú¯†V²jéÒ,¤œmO±^]0#©ÜzkƒÔ>*x®ÿ Å>!ğïÃ¯	§ˆãğ›E£4ú‚Øî¹–%ŸìöŠb•e‘ct,dxP\
+9‘îWËš'ÄEñ_Æ]RâËS×}¢¥–“¤‰®´ËBbEñÄl…æu;o’4CûH›fñ¦›¬iZtš¿„¼?qâ‹JÖQ·`û¡’o³ÄĞK¹Tba†Ü`Š¯c.‚öˆúŠùz×ã¿ÄoÃ>ÿ …}W~6ÓæÔt}ú°Ø"·<¢ü‹bmÙRT#Ê,H†ßö‹×µ{hğ_Û5ßÍ®ÚOo6 °Áau LÜ	gX$İ,ÅdTİÂ,–;Oc öˆúŠù[Ä¿uOø%ô6ÚOø»Pñ$¸ŒJ&k™ñ,ÓÃ(Uó ³İ4/µrvåAS~;_|QĞõ¯‡µH´Ÿ	'ˆü;isåÉ4šù¸¾7†I	 Ùÿ 3¼¤•l.w5EŞÌE¹õ]TrÈ°Äó0%QK “€3À“X–IEx'Â¯ŒZÿ Å84¿i¾¶ÕÒGK»mZ+››=ªYúÔÇ”ï¥"’bÃ 2Gá_º¥Ï‡>éŞğ”—×~?Óõ›xïµ‰dcOò˜ı¦òh¦šUe”şók8!WkÊëìe±ÑZÑ_*i_´wˆnô¸üIªø#û;E³×—Ãz¤Í¨¬“[_›ÁbÏK'·Y™TÈÏòHŒ“‰©xş÷U¹ğ“èM{¤F>'ßh×hu‹ŸµGmú¸c!`‘ãW[q˜ãÂ…QOØK¨½¢>Æ¢¾^ñ·í?®/µgÃğYh~ ¶÷Ú³ÕnÍXZæÓNxâJ1™ZD•H “ÆŸüA÷Å-ÇÂBïHø{bÒê¿ÚòXM2M¦}´-·“H’”,$RŸ,ˆÅ¾UJŒ‡íõñv½ñkânƒñŞè:,Z·‡ì<uÅÓ_T•g««3‚m$2O•ò”3üË—Ü”>õañWO×|YáOøj×ûBÛÄš<Úëİù»µò–İŠmmæw—
+7.1ç¢Tš4z½ç<cwğûá_‹|m§ª½Ş‰¥İİ@eLÑÄÆ=ÃºïÆ}«Æ¬m5ÿ …Ş=øghŞ"Õ5¨¼j.ôıY5¹.£{¸¬ò;˜BVÜî…Ğ¤!#Úÿ w*(Óº¸Ü¬ì}YEòÏ‡õOŠcöŸşËñ§h·^Ô®lt«ÁÃ¨YÇó»íónäì%Pœ³2Œ/p”¬}MEx·„õíKJøÁâÏ†úÌ·vÓÚ[xƒLi]¤h¡ºw·¹·Ù;#š è½eÚ0ª g~Ó>%ñw„~kº÷‚] Ô`6Ëç4ÍE“¢3FDRåà¸ÂàÁ² ©¾eàå¥Ïz¢¾-Ó¾'üWĞ|{ñzvğêë–¾]åÍ»k–Ö‹ı“ÓÛéæKsæ±`ïóGn¬H,C1Ö%øÑ¯ë‡şø}|C{u£Ûk·yyıŸµî~Ì"ÃpÍ<»[j
+åœ)º2¨z¢¾f_Úï\“À¶^ğ³jwŞ7‹VıÕåâÙ.Ÿq£<qÜErËç
+ìêYTmV•õ/†^?“â‘¨Ü^é§HÔôMFëJ¿µ‹„æÔŞ\ÁSÌ•••Š)ÁÁPE)R’WcSLôz+å‹¿ÚrÏMÑ|©hï‰¼A>}l.w1­¯ŒÓ»ùCÌU˜Ä0U2$#:ú¯Æ5sO´msgÓÃV×j2Ûù³Ee,³\IJ‘Ç*¼>DŒÈÌ»Î
+¨ØË°½¢>¢¾VŸö‹ñ¶âOKàµ_
+øK]¹Ñoï¤>ÒÂÚìZµÍ½·Ùñ"ÊÎ­,l>e]øÉµñ3âïŠæÒş"iŸ|:ú•·ƒì§ƒPÔVûì“Åvöy[(„oçIr#±i"Á;P³Qìepöˆú~ŠùÁß<Sy¢ø[Á¾Ñá*ñÒµ]RâúüÙÃ»‡ŸÊ¸y.&hä`
+–qšÔğïí¡ë—6R\éréšuÖ‰ªj5Ä€KÖ‰p-õ'Œ.İğ–92@ŒƒÚ#èÊ+æï‡ß´'ü'úGÃû«µ–¥ã;­JŞêÎKœ¶˜ºH”\»·”„H‘ ]©Ì äcÖüsám_ÅÖ6ZV¯\h«v’ß5RææÙ³oêêğor¥¤L¶ĞTcvá.;HjI«£¶¢¾uø+©ßÉã_ˆÓu;ÍkÂ:İ¶Ÿu{q%ä‰zbcl—S–T…¼¿¾ìUÙÓ<`y¯ˆ>6üBø{ã_‹šÎ¯£Ã­è^oÃgg É2FT…<´kP›¤™$İ'ÊÊ±‚Êw¥*-»!{Ek³íJ+ç­?âF±iãíoKñg†fµÕ´¯Ç«É™©\ê‰4?j¹D†O&k†ò³½cŞÅ„y*ªj¿…~=\ê?Ñ<â}"ÃL½ñµÄö±Ùêé¨]@ÖÈ%x¯­Ä1a8*Ò.å+»8¥ì¤èú6Šù[Á´_ˆ|I¡ø'Æz×‚×Gğßï!Ó­ç¸º†ê}ë{qnŠ`yª¸—~cƒQø·ö×ôO
+øƒâ/‡üıµáö]?íŸÚ+ÅÄ°OöYeßÈ}gÊ<Íø„{y§ì%{´GÕ´W‹»ø›kı—ÿ $åclùÿ ñùæiéÓgî±¿gñôİşÍy¯‡~%êzŸÄû¯Kôš\¿ôut‹V’ì‰ç¸»‘Ä¨IÙUcP3áG 	R`æªè¯œ¼+ñêçTñş‰àéeïˆ­®'µÏWMBê¶A+Å}n!ˆÀû	ÁV‘w)]ÙÅt>(x›â÷„¬|s¨øf/i¬kOôóupä;#‡ŒA¢årŒ‹)ª(•)%v
+iÕEx…>3k¾6ñõ§†<7o}¤iz¼úMÛ®«jvÆÚV†K‰l5eÜŸæ²Ë$-q:Ÿí-â=7KñŠÇ€ÚçÃñŞ¹=E>×,Éx,ã–ŞÙ¡èÎñ†4eYˆ‚î/ØË`öˆúÖŠù¯Pı ®ü)7ˆtødØëÚLz\–vV‹z5í‰ŞÖÖ8äx­öIç¡I.Õ0f~ëã»ø6ïXÓ¾.hká»3FŸ]‰¬îÿ ´ º³µ`³¢;EnÂxÙĞÊ`î\Œá{vh¡h¯±ø»âø5Eñ‡ƒãĞeñ|Sÿ c1Ô|õk¸a7Öûmº›i5b~zü¬2Nù£á÷Äÿ :ßÁË«¨¯¨kÑø¬<T’;k¥‚h<¹ïOÙÔGäé¤S6•Ár«Jƒ×¯ù	ÕGè­ó*üg‹[·ğÉÕ´)ìµOøL›ÃWvĞêR¤v×ÛÏ!—Ì…P]ÀQAÈŠ­¸3(dBÚ/Ä6Úw‰<Y/‚Õ|+á-vçE¿¼:ûKk±j×6ößgÄˆ7+:´±°ù•wã%{Ú#êš+çŸ|m×ôëÏ7ƒ<#ÿ 	™à$Æ«po–ÖFœ@·/¤^T‚g'F}ÏÉÚ»›Šî£ø¡£Ú| ƒãˆ"k4èÑk3Äç<i$sœ&öÚ¼.ãj]6>tzeáZ/Å¿GâOè^?ğ˜ğÜ^0YF—4wÂğ‰âˆÎm®ÓÉˆC1‰Y”#J„©]ùÆx¿şÑ~!ñ&‡àŸë^]Ã~7¼‡N·œjBâê©÷¬EíÅº)äBªâ]ø!ŒjW±½¢>©¢¼ãâ?ÄøA-´{k9µkÄWÉ§i¶K „K;#ÊÍ$¤7—qÆîîˆI W«üYñw†­l4ßx4Eâ}oR]7K²¶Ôc¸´¼cNó“rG1£™L–êÃ*¾EJ¦ØÜ‘îôWÌ^!ı¢o¼áÿ Éâ_
+´~&ğ|šQŸL¶¼Eum«Ü¥´3ÚÜ´Qï.
+¼Hw¦Ó€Á©<Qñ{Ç¶zŒü)}áÛmÅZw†ç×4÷‹R7Vï–‰Ù¥û*”šÁÙåº1 ÆXR£!{D}=E|©àOŒ?Ô´OxGLğå¶¿âÏøG¬µ}MåÕX ¸R–ì×hÎ÷7;Ì~PU æB0Í¤¿´5Ş¹'l¼áfÔï¼o­û«ËÅ²]>ãFxã¸Šå–)ÎÙÔ²+¨Ú¬*:2h¦h¯Œ¼mñŸâµ xbãÂZTV­oãx<=«ÚM¨2Ff…Éòxíd/o8ÚÍ&Åe\-²Àz7íâŸøfÛÀßğƒÇneÕ<K§YÜ¬×j$Yd·œùR"G  a\1 ö.é´GĞôWÌ×ÿ ´¥m£k>³ğ¡»ğ‡ï'³¼ÔÅèL¶’˜.®mìü’%‚c2;%Pñ2—~øÍñÁ:oâ{TÔô˜´=İ˜âİ´»y®g.D‹ol›šGeC¹Y5B@ê#ìÊ+À5¿Œ#MgÄúw‚ü&<Amà”û^v¿§ÏhEÃ[Ù!…Äò¤L¤ïhW,vsŠ_ğ½5x³OğÇÃÅâõOYø–Ë½Cì}šòYcXßóºÈv)P‚KÙ·->ÊAÎ£(¯˜ãı£àÕôïhğ.©ãˆ/fŠ[Pu¼§ºÅq	¸Xg2Mæ63¸)bT
+÷ÿ j:Æ­¢ZßëúKèz„¡¼ë7š;ƒ+âX‰FVrÒ7*¶T)Skq©'±»ETQE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE ÿÕıè¢Š+C0¬zËRÔ´Kı?GÔ[H¿¹‚Híï4™­åe!%Ê
+>Ãƒµ†0kZŠ3x·áÿ ÅŸŠ^áïÄ[}=5æµ’çT³¸¹’é¾Ë*J^I-‘ ‘öí³q 60vG‚>'x3Åş-Ö>ÿ cŞéş2¸ŠşDÕ&¸ìo–Ş;i$U†)~Ñ¬HÛÂCdÁ}Ekí^Är4Iğçâß†5Ây£\ZøæE½¸–ôÜ[¾Ÿ¨½´v³Ï1¤âxÜD®±<±•l‚ì9«øÿ O‰àòn#¹ğå¯ƒtï¨fau$–“ÎòHê`WIAÈ|îÈÀ ô]{VÍø'ö`»ğ³xkAox:;?]Ã1×ãÓ ›Z¿·µmÑG$SZ†gÂ‰nw~ V ­<OáM/ÅÖ1éú¬÷ğE‚PtıFóM”°pÒÙMŒ¸'å,W88Èt”RY7v8Á-/ÂŞĞü<÷MÎ«;\(V†±¨êj 9ùöâeCêTzŠó1à‰Şñ‹u†ÿ Ø÷ºŒ®"¿‘5I® {å·ÚIaŠ_´Fë6ÂğÙğA@QIM‡*>LñwÀø×â2É¨éí'‹õ-ş(˜L–×)¥ÛZÅqmwÉÃ@ë…ypŒ3¸åN-÷ÀˆšÎ­â½HÚxwÃÖZç‚µ/Ùéºl“y6·7L9^O²Ä–ŞV%(B«ä‘ömj¼‘>É#Ã]u<mğÛÄ†{o³x;FÔtëµÜşd“^%š£D6` 6ï¸±R2¸';OàÏˆŸ¾-ü>°ĞŸM¼Õ/o¼yªgšhí¦´Ô.­®'™awŠ@®¤‘€Ë˜×ŞôQÍ^¿æšgÆ¾+øcâ/	xQş%ëO£âZøÇSŠÉ]¢KhbSAo¸AbY*ÙOÊ2{Äÿ _|FÑ¼1ÿ õÕ·—§ëú6²ÒHí²K[”¸-‘_s2/ÉÑIÆXkÖh¤ê½ù«évÚŞ›q¤Ş<ñÁr»­®&´˜ö&ã•º0>õ™áïØøSJ—KÑn/$Wv>£}w©È€ë/&–]ƒä®0I5ÒQYİì]•t¯ƒ>-»ø™áßë:O‡<7}¢Ë4×ú€Ó¥Î´%…âò§ácˆ³‰y®XrÕ/Ã‚>+ğü*?í;»)áÒukï&I[Ì–ÿ ÈòÌ£]Ê<¦Ü_aœ}KEhëIÿ _×r4|·sğGÅs|7×|·vB÷Tñ›øŠ'2IåFÖ“RÇËÜ%ò”®•ßÆí¿5%§ÁÛ¶’^îÈıƒâ¡âÇÄ’scv/F¿»ÿ ^>Ğ›”á8l9ã?RÑOÛÈ=š>ñ?ìÛñ"ûÂ^0ğ~‰†ŞïÄz•Åÿ ü$Wm9Õ."–ëí)m:‹vÙ´‡ÌYœÇ^É¬|#ñ.£oñ²8®-¾$Ú4ıÏ&!q¤¥‡úF#ùGš¤ü›şNqŸ–¾Š¢‡^BT‘óºøZğw´ˆw·ZbèzO…¿±u—»¸x¼vì³›ˆ‰‰‘Ó*ÁÄUù·m¯;ı˜<&ŞğÇ‹¼r.V÷L3ÜØxv[‚ÑF<=¦K;Ùüû]„lòÊC„;£à_fQG¶v°ù5¹æwt~¶›âK7ÒÆZ K«mÅä´7öÿ :eBZ"ø¢ò9¥pø{ñ+Tñ_„5Ï‰—_‘àX.¡Óy$¾¼¸ƒì¦æeš8Äa/ˆ•¥ùœŸ3 ô=
+£Z!¸œw€¼OyãÅ¯ßX®$·ˆÒV™;k™ Tw)2 •rƒåa×©ç®|«Mñ³Oø²À4ËO^i/fóÌ÷vÓ«Û·`XX»9# Œ‘êTRæ³v»Ÿ*jšíõ—Äˆ¿ô›Ôíü#£Á XÀÒ4+}yÏuwr$r¶CÉ„lÊ¬‡$zçÆ_ê?>ë¾ÒgŠÖûQŠ?!çİå	a•%PåA`¤¦	 pzW§ÑTêjšè%‡ÏZ?ÃO»üSÔµÃ§Û^|@†ÜAµÄ³Åo,z\vN$‘àˆ•óT•`™)‚T”y¤ß³Måß‡µæğ÷…üe{má½7C¿³×ã-séÈU.m'6·net1.õw)ö…J´4|×á‚z×…µß†úŠÏ¦y³×#¿[+Hôè}Y tÖÖñ¬B41²’Ä9Y‹±c^…ğÃÁ·‚¦ñ”š¬°J<CâÍZßÉfm°\GªÉ¹Wg dtÁ=½JŠ™Toq¨$|sâÙ¯_×üMñ+QMJÖ=7Äv"_}©x-¥¸šO€†æÊ	ARÍËğ8Ï[ağ[ÄÖ¾øc£Oyi6«á}}5ıjmÒ¸¸;¶¼0™b×D¦ğ™^¤
+úfŠ¯o+X^Í-j¿|W}ğƒâÃø®ì†£âÍsSÔídi$òRÛáuÊÂ2ÁÂ0U`€Hæ§ñ7Âß‰ö|A°øms¤ÿ f|Dßq+ê2OÚuìÖ©i4‘$QH³«¤hÁY£ØÙå‡ôõ½³f—ü?ğ«âOÃ­CNñßIÔ/.|;¥hºµ¥üóÛÀn4”u†æ	â‚V`<×V£]ÃiÜ§5Êx£ödñ£ğÇÃ¾Òu«s®[êw×:ÅìªñGuk®™Æ­J¡ÈŞ³şèè»˜rkìº)ªò½Åì‘ów‚>j>øÁã?_ŞÄşÕ’A£ÚÀò$ö¨ˆ_S,Ê©³ÌšŞ6ŒÆäòySÖ×~øãNğ»è?u	£—V¸ˆjSk^ Õ&l7˜–SÜ@ÛË&vùŠƒhù°X)_¡è¥íe{‘ZÇš|1Ò<CáÍ<5©xgHğÎ—¦Çv0i:”ú‚•ù·ùu•¡SœÙrä±b-ã?¾	øëÄº÷$Ğ¦ÓN›ã'ğåÏ™s<ÑOo6‰wZA"ºI­½H|)\Ãë)*; pMYŸ;|Cø=â_ø¯ÆÆ™«Ç¤Áâ?'‡­çŸí0]-ÅÌ¦B åí™FCî?0ÀàCÂÿ üu§xóá÷ˆ[HğÇ†4_¥ìSØèÏ35Ë]Ú<ğímÊ°\FÀà3+úâŠj´­`tÕî|µ¢üñ^ğ‹á€g»²mCÁZ¶—y"É!†H¬¥gBÆ0ÌÄ7ÊTÔŠùËâŞ£ià?üğ·¤j	­Î––.nc×ãûf¡ö‰í†ğ¨hVGr/<Ï/Éù°xjı2¢ª5Úwdº}˜|_ğ·âkkÛÁé&ÃâM¬1Í5ü³Ç>Ÿ<vBÅš8¢‰ÖuhÕXn’-­œîVDŸ |asc¨X.µš÷¿´ÿ 	­Í³ÈÒÅ}jÓ—”‰˜H” C<ü«Á¯­h©U˜ıš>Gğ¿ÁiŞ<ø}âÒ<1áÁ©{ö:3ÌÍr×v†<;[B2¬°8ÄÊÄ }›à—‚5o†ß
+<1àMrX'¿ÑlÖŞg¶fhYÔ“”.¨ÄsİGÒ½JŠSªå£`‘ò—‹şxËÆŞ.ÓõCKğŞ™y¦êĞ^Çâ]8ÜA¬;y„‚ÛÈòˆ-$kåHÏtèAf…/şø®ëáŸŠ¼İ½×<^Ş Ì’ùKju˜u|½Â_*2¸
+W~ì|ÃêZ)ûihÍ0üKø¯øëÇÏ‹´ıJÛO‘¬4#¥Èáähµ-PùhÀPa1Pí}Ü·5|MğGÅŸïu}Câ¼öX¸ğıæƒcm¤Ë-ÚÂoŞ7šíå+rÏ˜c	L Y‰Èú¢Ši¦ì|ñGÅ>*ğv±ñ:}&+O¼·Q2Iæ}FùíŞÙf•fŠ!nˆ’;yjÒåˆùğ9å¾|ñ×„µïI¬M¦¾›àtñºIó<÷PêÒÃ,bxcuØË"ùŒVl¿XÑGµ{_Ö¡ìÑòÒ|ñZêÑ_›»/.?ˆRx°2\ı…ìØGş¯ı~öoÜÛüyâWàŠï¾|BøİÔ|Y®jz¬$JC{|.£YXFX8A†
+¬p	×Ô´Qí¤ÍüMñü<Ôş+x[ÂZşŞ.F¼{DİA©Åscıl!a¨‰’8ÊˆİBK¹XœCÛü0>)ıl~ø•Æ[¿Ûiw 3A2Ú¤e€Î	GÆpqŠ÷)Ê®ŠÂPÜùŞÇÀ?|Sâ¯k§Òb´ğKËuÓ$gÔoİí–iVh¢è‰#·–­.XŸœ-àŠôï„_ü=İ“j
+Õ´»ûÉI2Ee+<‚1†f!¾PÊ ¤WÔ´Rö¬|ˆòoŠ~Ö¼Vşñ….-íõÿ jCQ³[½âÚpğÉm4²dE+aÕX« v‘‘\w‰|ñgÅÒè~0½“DÓ<Iá=OíÚ]¤s=«A-´–·0\İ¼q»RV*él¾Yå~kèª)*Á3äŸüñïì¼a¯ë÷Zm·‰|O&ĞK4–Vv-ò^ûCB’K$„ÈKy(3µpZ½Æ?5ü@Õ<F—PA¦ê^½ğ÷%Œéqu8I³nÓPsóç<c×ºQOÚ±r#â(?g¥Ö‹â]sÂŞñV§…g¡ŞXêåî-Pé»–Ë[™,¤tiˆ–$…C·qôŸüÖ¼-®ü7ÔV}3Èğ•¹úÙZG§DóêÍ ¶¶·b¡”–!È
+Ì]‹úRŠn¼˜•4|¥©|ñ°ÓõK*}:mKşµñu”SM4PK×ÈšU…Ú'![•@:äãÓş.x+Ä¾4Ñ<?/‡ Õü=¬Øk	Ü²Em1´c¾#4qHè1ÃyMÈZõê*]W{•È‘.¾	üM_kÿ ôËí*øŠêòC|ÒNu;=Nv¸ºµßÊò¥;¤‘c™¦L)£$rß~Íú¥ï‰ügãßÏa¦økí#PğÍñŞd·m2Æ;V·»`›¼‰ñ":)pQ÷¸_^ÑT«ÈŸd|Iû:êw(ñ?‰¬ü-àızãÆ"™&×m¾Ó6“|-Ò	M»=¤¿j€”,n`ù·r`zÇƒ>ê>ø‹ˆã¸µ“Jµğ¦ "Å[H×wÊòx#H"–A… €¡@¯r¢“­&¬5Mn|§¤|ñ¶‰ğ¿Bø}¨hñ¥£ê{c«–&{›©'‚Hn>Ï>
+$„:µ¶K¬€›Ñ~øÅ_<¢x:VµÔaK‹Ùn›í3"XC<’M½š<r4ÑÄYbd‘ƒw¢W³ÑJU[V` QE™aEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPÿÖıè¢Š+C0¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿ×ıè¢Š+C0¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿĞıè¢Š+C0¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÙ
+endstream
+endobj
+16 0 obj
 << /Type /XObject /Subtype /Image /Width 1080 /Height 630 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length 91323 >>
 stream
 ÿØÿà JFIF   – –  ÿá €Exif  MM *           >       F(       ‡i       N       –      –                   8       v    ÿí 8Photoshop 3.0 8BIM      8BIM%     ÔŒÙ ²é€	˜ìøB~ÿÀ v8" ÿÄ           	
@@ -1246,7 +1755,7 @@ kVŞÔlu½3Vòê¹Ÿ/œ?r¬›É`>RÊ¨¯¿iÿ ƒ_¶oÆødxA¼káoø·Lñ^Š××:¬z„óiŠş\W‹¼‘lf•·
  îh¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š ÿÕıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÖıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÙ
 endstream
 endobj
-14 0 obj
+17 0 obj
 << /Type /XObject /Subtype /Image /Width 2015 /Height 756 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length 268712 >>
 stream
 ÿØÿà JFIF   ´ ´  ÿá €Exif  MM *           >       F(       ‡i       N       ´      ´                   ß       ô    ÿí 8Photoshop 3.0 8BIM      8BIM%     ÔŒÙ ²é€	˜ìøB~ÿÀ ôß" ÿÄ           	
@@ -2423,32 +2932,35 @@ fi>Í³¬pí`¸xÔ–<±\ı“¾%x§Ä>"şÍú¦¯ã©¼57‡aÕô«Ÿ[Ë§xÀ\HÖw
 Çw#İ¾§	‚Cyux±¿—’cS‰9äçîê( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÕıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÖıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÙ
 endstream
 endobj
-15 0 obj
+18 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
-16 0 obj
+19 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 xref
-0 17
+0 20
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000140 00000 n 
-0000000317 00000 n 
-0000010737 00000 n 
-0000010914 00000 n 
-0000014353 00000 n 
-0000014530 00000 n 
-0000030847 00000 n 
-0000031025 00000 n 
-0000040216 00000 n 
-0000040395 00000 n 
-0000040614 00000 n 
-0000132108 00000 n 
-0000400992 00000 n 
-0000401063 00000 n 
-trailer << /Size 17 /Root 1 0 R >>
+0000000147 00000 n 
+0000000336 00000 n 
+0000009312 00000 n 
+0000009501 00000 n 
+0000015045 00000 n 
+0000015234 00000 n 
+0000023052 00000 n 
+0000023242 00000 n 
+0000037184 00000 n 
+0000037375 00000 n 
+0000044677 00000 n 
+0000044868 00000 n 
+0000054016 00000 n 
+0000106028 00000 n 
+0000197522 00000 n 
+0000466406 00000 n 
+0000466477 00000 n 
+trailer << /Size 20 /Root 1 0 R >>
 startxref
-401139
+466553
 %%EOF
