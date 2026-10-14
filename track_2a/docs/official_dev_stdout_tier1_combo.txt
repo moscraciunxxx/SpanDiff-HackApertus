@@ -1,0 +1,20 @@
+
+=== Processing SPANDIFF_ADMIN_ ===
+=== Processing DE ===
+168
+168
+=== Processing FR ===
+168
+168
+=== Processing IT ===
+168
+168
+
+===DEV TEST RESULTS===
+Spearman:
+de	fr	it
+0,373	0,231	0,398
+
+Kendall's Tau-b:
+de	fr	it
+0,302	0,187	0,320

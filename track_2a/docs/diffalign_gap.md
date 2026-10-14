@@ -19,4 +19,4 @@ The methods differ in order as well as in the clamp. The paper takes the maximum
 
 Dropping the clamp, on the same pooled Apertus states, changes a token only when its best cosine is negative: the paper formula returns a number above 1, and SpanDiff returns 1.
 
-The graded development print is hidden state 15 with paper-order subword-first scoring and the clamp: Spearman de 0,309 ; fr 0,199 ; it 0,333 ; unweighted mean 0.2803. Word-mean-pool hidden state 15 (predictions/l15) printed de 0,296 ; fr 0,191 ; it 0,324 ; unweighted mean 0.2703. Hidden state 8 printed 0,245 ; 0,165 ; 0,282 ; mean 0.2307.
+The graded development print is hidden state 15 with the pre-registered Tier-1 Combination: Spearman de 0,373 ; fr 0,231 ; it 0,398 ; unweighted mean 0.3340. Unsmoothed subword-first hidden state 15 printed de 0,309 ; fr 0,199 ; it 0,333 ; mean 0.2803. Word-mean-pool hidden state 15 (predictions/l15) printed de 0,296 ; fr 0,191 ; it 0,324 ; unweighted mean 0.2703. Hidden state 8 printed 0,245 ; 0,165 ; 0,282 ; mean 0.2307.

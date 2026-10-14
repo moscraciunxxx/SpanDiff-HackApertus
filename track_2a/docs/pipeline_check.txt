@@ -1,8 +1,9 @@
 official evaluate_predictions_admin --split dev exited 0
 The prefix was track_2a/predictions/dev/SpanDiff_admin_
-Spearman de 0,309; fr 0,199; it 0,333
-Kendall de 0,249; fr 0,161; it 0,266
-Mean of those printed Spearmans: 0.2803. The official script does not print the mean.
+Spearman de 0,373; fr 0,231; it 0,398
+Kendall de 0,302; fr 0,187; it 0,320
+Mean of those printed Spearmans: 0.3340. The official script does not print the mean.
+Unsmoothed subword-first hidden state 15 ablation: Spearman de 0,309; fr 0,199; it 0,333; mean 0.2803.
 Word-mean-pool hidden state 15 ablation (predictions/l15): Spearman de 0,296; fr 0,191; it 0,324; mean 0.2703.
 Each file had 168 lines. No padding count was printed.
 Hidden state 8 ablation, same command: Spearman de 0,245; fr 0,165; it 0,282. Kendall de 0,197; fr 0,133; it 0,224.

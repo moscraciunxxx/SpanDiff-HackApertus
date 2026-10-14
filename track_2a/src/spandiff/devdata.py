@@ -196,7 +196,7 @@ DEV_SOURCE_NOTE = "\n".join(
         "de/dev_de.jsonl",
         "fr/dev_fr.jsonl",
         "it/dev_it.jsonl",
-        "Submitted development print, hidden state 15 (subword-first): de 0,309; fr 0,199; it 0,333. Mean of those printed values: 0.2803 (word-mean-pool L15 ablation: de 0,296; fr 0,191; it 0,324, mean 0.2703). The official script does not print the mean.",
+        "Submitted development print, hidden state 15 (Tier-1 Combination): de 0,373; fr 0,231; it 0,398. Mean of those printed values: 0.3340 (unsmoothed subword-first L15: 0.2803; word-mean-pool L15 ablation: de 0,296; fr 0,191; it 0,324, mean 0.2703). The official script does not print the mean.",
         "Hidden state 8 printed de 0,245; fr 0,165; it 0,282, mean 0.2307.",
         "",
     ]

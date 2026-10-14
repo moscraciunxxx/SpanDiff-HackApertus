@@ -3,77 +3,83 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 7 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 3343 >>
+<< /Length 3523 >>
 stream
 BT
 /F1 11 Tf
 48 740 Td
 16 TL
-(Track 2A. SpanDiff is a representation scorer, not a prompt. The model is) Tj
+(Track 2A. SpanDiff is a representation scorer, not a prompt. The submitted model is) Tj
 T*
-(swiss-ai/Apertus-v1.5-8B. The submitted state is hidden state 15 \(index 0 is the) Tj
+(swiss-ai/Apertus-v1.5-8B only, reading hidden state 15 \(index 0 is the embedding\). Each) Tj
 T*
-(embedding\). Each side is encoded alone. Following the pre-registered paper-order) Tj
+(side is encoded alone in 512-token windows. Following the pre-registered Tier-1) Tj
 T*
-(subword-first formulation \(docs/preregistration.md\), each content subword is scored by) Tj
+(Combination \(docs/preregistration.md\), subword vectors at hidden state 15 undergo) Tj
 T*
-(clamp\(1 - max cosine to the other side, 0, 1\), and subword scores are averaged inside the) Tj
+(document-mean contrastive centering \(beta = 0.50\), bidirectional CSLS hubness margin) Tj
 T*
-(whitespace token they overlap most, rounded to 6 decimals. Generated tokens = 0. Apertus) Tj
+(adjustment \(alpha = 0.50, k = 5\), and sentence-constrained alignment blending \(lambda =) Tj
 T*
-(70B was not run.) Tj
+(0.35, matched sentence +/- 1\), followed by paper-order subword-first clamp\(1 - max cosine,) Tj
+T*
+(0, 1\) pooled into whitespace tokens and window-2 triangular span smoothing over content) Tj
+T*
+(tokens, rounded to 6 decimals. Generated tokens = 0. Apertus 70B was not run.) Tj
 T*
 (Development scores are our development evaluation. Official script, development split:) Tj
 T*
-(Spearman de 0,309 ; fr 0,199 ; it 0,333. Unweighted mean 0.2803. Kendall de 0,249 ; fr) Tj
+(Spearman de 0,373 ; fr 0,231 ; it 0,398. Unweighted mean 0.3340. Kendall de 0,302 ; fr) Tj
 T*
-(0,161 ; it 0,266. Each development file has 168 lines. Forward-pass tokens on that run:) Tj
+(0,187 ; it 0,320. Each development file has 168 lines. Forward-pass tokens on that run:) Tj
 T*
-(564349. Scoring time: 549.8 seconds. Test predictions, 56 documents per language, and) Tj
+(564349. Scoring time: 280.2 seconds. Test predictions, 56 documents per language, and) Tj
 T*
-(full-set predictions, 224 documents per language, use the frozen hidden-state-15) Tj
+(full-set predictions, 224 documents per language, use the frozen Apertus hidden-state-15) Tj
 T*
-(subword-first method and are included for the organizers to score. We never graded the) Tj
+(Tier-1 Combination method and are included for the organizers to score. We never graded) Tj
 T*
-(test split. make run grades the development files only.) Tj
+(the test split. make run grades the development files only.) Tj
 T*
-(On the same official command, the word-mean-pool hidden-state-15 ablation) Tj
+(On the same official command, the unsmoothed subword-first hidden-state-15 ablation) Tj
 T*
-(\(predictions/l15\) printed de 0,296 ; fr 0,191 ; it 0,324 ; mean 0.2703. Pre-registered) Tj
+(printed de 0,309 ; fr 0,199 ; it 0,333 ; mean 0.2803. The word-mean-pool hidden-state-15) Tj
 T*
-(variant \(a\), averaging hidden states 12-17 with word mean-pooling, printed de 0,285 ; fr) Tj
+(ablation \(predictions/l15\) printed de 0,296 ; fr 0,191 ; it 0,324 ; mean 0.2703. The) Tj
 T*
-(0,183 ; it 0,316 ; mean 0.2613. Pre-registered variant \(c\), combining hidden states 12-17) Tj
+(hidden-state-8 ablation printed de 0,245 ; fr 0,165 ; it 0,282 ; mean 0.2307. As a) Tj
 T*
-(with subword-first scoring, printed de 0,298 ; fr 0,192 ; it 0,325 ; mean 0.2717. The) Tj
+(development comparison only \(never submitted\), Qwen/Qwen2.5-VL-7B-Instruct with the same) Tj
 T*
-(hidden-state-8 ablation printed de 0,245 ; fr 0,165 ; it 0,282 ; mean 0.2307. The) Tj
+(Tier-1 Combination printed de 0,351 ; fr 0,217 ; it 0,381 ; mean 0.3163, below Apertus) Tj
 T*
-(final-layer clamped DiffAlign recipe printed de 0,053 ; fr 0,056 ; it 0,106 ; mean 0.0717.) Tj
-T*
-(Those ablation files are not the primary submission.) Tj
+(v1.5 8B at 0.3340.) Tj
 T*
 (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That) Tj
 T*
-(baseline is the clamped final-layer row, mean 0.0717. The submitted mean is 0.2803 \(and) Tj
+(baseline is the final-layer DiffAlign row, mean 0.0717 \(de 0,053 ; fr 0,056 ; it 0,106\).) Tj
 T*
-(0.2703 with word-first mean-pooling\). The paper does not clamp. An unclamped rescore was) Tj
+(On kept development tokens, no final-layer maximum cosine is negative \(maximum kept) Tj
 T*
-(not produced. The UZH FAQ says either the 8B or the 70B is in scope.) Tj
+(difference 0.9746\), so the unclamped and clamped final-layer paper DiffAlign scores are) Tj
 T*
-(Layer 15 was chosen because the saved per-language development map peaks in the middle of) Tj
+(identical on all 351,942 kept tokens \(mean 0.0717\). The submitted mean is 0.3340. The UZH) Tj
 T*
-(the network, and pre-registered variant \(b\) beat word-mean-pool L15 on dev/train \(0.2843) Tj
+(FAQ says either the 8B or the 70B is in scope.) Tj
 T*
-(vs 0.2734\), dev/val \(0.2592 vs 0.2527\), and the full-development official grade \(+0.0100,) Tj
+(Layer 15 and the Tier-1 Combination were chosen via pre-registered selection on dev/train) Tj
 T*
-(exceeding the +0.0050 threshold\). The map is in docs/layer_curve.png.) Tj
+(\(134/lang, 0.3383 vs 0.2843\) and confirmation on dev/val \(34/lang, 0.3115 vs 0.2592\),) Tj
+T*
+(beating the +0.0030 full-dev adoption gate by +0.0537 \(docs/layer_curve.png,) Tj
+T*
+(docs/error_analysis.png\).) Tj
 T*
 (Windows are at most 512 tokenizer tokens. The development pass is 1619 windows. Each) Tj
 T*
@@ -88,23 +94,37 @@ T*
 (LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not read. The scores come from a local forward) Tj
 T*
 (pass of Apertus v1.5 8B.) Tj
-T*
-(Code is Apache-2.0. The report is CC-BY-4.0. SwissGov text stays CC-BY-4.0.) Tj
 ET
 endstream
 endobj
 5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 7 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 112 >>
+stream
+BT
+/F1 11 Tf
+48 740 Td
+16 TL
+(Code is Apache-2.0. The report is CC-BY-4.0. SwissGov text stays CC-BY-4.0.) Tj
+ET
+endstream
+endobj
+7 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 xref
-0 6
+0 8
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000115 00000 n 
-0000000241 00000 n 
-0000003636 00000 n 
-trailer << /Size 6 /Root 1 0 R >>
+0000000121 00000 n 
+0000000247 00000 n 
+0000003822 00000 n 
+0000003948 00000 n 
+0000004111 00000 n 
+trailer << /Size 8 /Root 1 0 R >>
 startxref
-3706
+4181
 %%EOF
