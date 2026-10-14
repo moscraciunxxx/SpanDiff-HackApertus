@@ -1,4 +1,4 @@
-.PHONY: run run-local predict check
+.PHONY: run run-local predict predict-test check
 
 # Judge command. Builds the image and grades predictions/dev.
 # make run-local is the same grade when Docker is absent.
@@ -13,3 +13,6 @@ run-local: check
 
 predict:
 	python3 src/score_split.py --layer 15 --out track_2a/predictions/rerun --order-from track_2a/predictions/dev
+
+predict-test:
+	python3 src/predict_public_texts.py

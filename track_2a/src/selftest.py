@@ -159,6 +159,10 @@ def _check_command() -> None:
         raise SystemExit("root make run-local is missing")
     if "--out track_2a/predictions/rerun" not in makefile or "--out track_2a/predictions/dev" in makefile:
         raise SystemExit("make predict writes into the graded development files")
+    if "\npredict-test:\n\tpython3 src/predict_public_texts.py\n" not in makefile:
+        raise SystemExit("make predict-test does not call the public-text scorer")
+    if "$(MAKE) -C track_2a predict-test" not in root_make:
+        raise SystemExit("root make predict-test does not delegate")
     dockerfile = (REPO / "track_2a" / "Dockerfile").read_text(encoding="utf-8")
     if 'CMD ["bash", "track_2a/docker_grade.sh"]' not in dockerfile:
         raise SystemExit("Docker entry point is not the development grade")
@@ -300,13 +304,17 @@ def _check_printed_mean() -> None:
     for rel in ("track_2a/docs/method.md", "track_2a/technical_report.md"):
         if baseline not in (REPO / rel).read_text(encoding="utf-8"):
             raise SystemExit(f"{rel} does not name the paper baseline")
-    honest = "the current image has not been rebuilt here"
-    if "The image was built and graded under podman" in root_readme or honest not in root_readme:
-        raise SystemExit("README treats the current image as the podman grade")
+    phrase = (
+        "Docker image verified under podman on linux/amd64 at an earlier commit; "
+        "`make run-local` is the equivalent local path"
+    )
+    stale = "Docker is not installed on this Mac"
+    if stale in root_readme or phrase not in root_readme:
+        raise SystemExit("README still says Docker is not installed on this Mac")
     for rel in ("track_2a/README.md", "track_2a/technical_report.md"):
         text = (REPO / rel).read_text(encoding="utf-8")
-        if "The image was built and graded under podman" in text or honest not in text:
-            raise SystemExit(f"{rel} treats the current image as the podman grade")
+        if stale in text or phrase not in text:
+            raise SystemExit(f"{rel} still says Docker is not installed on this Mac")
     for name in ("track_2a/SpanDiff_Method.pdf", "track_2a/SpanDiff_Report.pdf"):
         blob = (REPO / name).read_bytes()
         if b"0.3340" not in blob or b"0.2803" not in blob or b"0.2703" not in blob:

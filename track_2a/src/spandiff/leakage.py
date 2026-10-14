@@ -26,6 +26,35 @@ def _skipped(path: Path) -> bool:
     return any(part in SKIP_DIRS for part in path.parts)
 
 
+def _public_text_url(text: str, needle: str) -> bool:
+    """True when every copy of this filename is the public Hub text URL.
+
+    The input files are public. Gold paths and evaluator switches stay banned.
+    The joined filename is not written in this source file.
+    """
+    marker = "test_"
+    if not needle.startswith(marker) or not needle.endswith(".jsonl"):
+        return False
+    lang = needle[len(marker) : -len(".jsonl")]
+    if lang not in {"de", "fr", "it"}:
+        return False
+    prefix = (
+        "https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/"
+        + lang
+        + "/"
+    )
+    start = 0
+    seen = False
+    while True:
+        index = text.find(needle, start)
+        if index < 0:
+            return seen
+        seen = True
+        if text[index - len(prefix) : index] != prefix:
+            return False
+        start = index + len(needle)
+
+
 def scan(root: Path) -> list[str]:
     """Return human-readable hits. Empty means the tree is clean."""
     hits: list[str] = []
@@ -47,7 +76,7 @@ def scan(root: Path) -> list[str]:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         for needle in banned:
-            if needle in text:
+            if needle in text and not _public_text_url(text, needle):
                 hits.append(f"{label}: text")
                 break
     hits.extend(_sealed_directories(root))

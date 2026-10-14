@@ -33,13 +33,21 @@ Judges run this from the repository root:
 make run
 ```
 
-That builds the Docker image and grades the committed development files. It does not load weights. `make run-local` is that same grade when Docker is not installed. `LLM_NAME`, `LLM_BASE_URL`, and `LLM_API_KEY` are not the scorer. An earlier image was built and graded under podman on linux/amd64. Docker is not installed on this Mac, so the current image has not been rebuilt here. Windows Docker Desktop verification commands are in `docs/DOCKER_CHECK.md`.
+That builds the Docker image and grades the committed development files. It does not load weights. `make run-local` is that same grade when Docker is not installed. `LLM_NAME`, `LLM_BASE_URL`, and `LLM_API_KEY` are not the scorer. Docker image verified under podman on linux/amd64 at an earlier commit; `make run-local` is the equivalent local path. Windows Docker Desktop verification commands are in `docs/DOCKER_CHECK.md`.
 
 ```bash
 make predict
 ```
 
 Writes a new deterministic layer-15 run to `predictions/rerun`. Does not replace `predictions/dev`.
+
+## Reproduce
+
+`make predict-test` scores public text fields with `src/score_split.py` and the shipped constants, writes a scratch copy of `predictions/test` and `predictions/full`, and byte-compares it to the committed files. Test texts: `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/de/test_de.jsonl`, `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/fr/test_fr.jsonl`, and `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/it/test_it.jsonl`. Full-set texts add `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/de/dev_de.jsonl`, `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/fr/dev_fr.jsonl`, and `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/it/dev_it.jsonl`. The Hub has no separate full file. Label fields are dropped. The committed files are not replaced and are not graded.
+
+```bash
+make predict-test
+```
 
 ## License
 

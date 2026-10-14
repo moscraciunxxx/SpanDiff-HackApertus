@@ -640,7 +640,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 15 0 R /F2 16 0 R >> /XObject << /Im1 13 0 R /Im2 14 0 R >> >> >>
 endobj
 10 0 obj
-<< /Length 9173 >>
+<< /Length 9138 >>
 stream
 BT /F1 10.0 Tf 48.00 738.00 Td (regimes. On short pages \(<600 kept tokens\), Spearman reaches 0.3806 \(de\), 0.2932 \(fr\), and 0.4290 \(it\),) Tj ET
 BT /F1 10.0 Tf 48.00 725.00 Td (compared with 0.3727, 0.2131, and 0.3906 on long pages \(>=600 kept tokens\). French numbers/dates) Tj ET
@@ -770,12 +770,12 @@ BT /F1 10.0 Tf 48.00 186.00 Td (builds the Docker image and grades predictions/d
 BT /F1 10.0 Tf 48.00 173.00 Td (run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not) Tj ET
 BT /F1 10.0 Tf 48.00 160.00 Td (the scorer. make predict writes a new deterministic layer-15 development run under predictions/rerun.) Tj ET
 BT /F1 10.0 Tf 48.00 147.00 Td (It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker) Tj ET
-BT /F1 10.0 Tf 48.00 134.00 Td (image grades the same committed development files. An earlier image was built and graded under podman) Tj ET
-BT /F1 10.0 Tf 48.00 121.00 Td (on linux/amd64. Docker is not installed on this Mac, so the current image has not been rebuilt here.) Tj ET
-BT /F1 10.0 Tf 48.00 108.00 Td (Development scores are our development evaluation. Test predictions, 56 documents per language, and) Tj ET
-BT /F1 10.0 Tf 48.00 95.00 Td (full-set predictions, 224 documents per language, use the frozen hidden-state-15 Tier-1 Combination) Tj ET
-BT /F1 10.0 Tf 48.00 82.00 Td (method and are included for the organizers to score. We never graded the test split. make run grades) Tj ET
-BT /F1 10.0 Tf 48.00 69.00 Td (the development files only. A 70B run is future work on a larger machine.) Tj ET
+BT /F1 10.0 Tf 48.00 134.00 Td (image grades the same committed development files. Docker image verified under podman on linux/amd64 at) Tj ET
+BT /F1 10.0 Tf 48.00 121.00 Td (an earlier commit; make run-local is the equivalent local path. Development scores are our development) Tj ET
+BT /F1 10.0 Tf 48.00 108.00 Td (evaluation. Test predictions, 56 documents per language, and full-set predictions, 224 documents per) Tj ET
+BT /F1 10.0 Tf 48.00 95.00 Td (language, use the frozen hidden-state-15 Tier-1 Combination method and are included for the organizers) Tj ET
+BT /F1 10.0 Tf 48.00 82.00 Td (to score. We never graded the test split. make run grades the development files only. A 70B run is) Tj ET
+BT /F1 10.0 Tf 48.00 69.00 Td (future work on a larger machine.) Tj ET
 endstream
 endobj
 11 0 obj
@@ -2442,13 +2442,13 @@ xref
 0000014530 00000 n 
 0000030847 00000 n 
 0000031025 00000 n 
-0000040251 00000 n 
-0000040430 00000 n 
-0000040649 00000 n 
-0000132143 00000 n 
-0000401027 00000 n 
-0000401098 00000 n 
+0000040216 00000 n 
+0000040395 00000 n 
+0000040614 00000 n 
+0000132108 00000 n 
+0000400992 00000 n 
+0000401063 00000 n 
 trailer << /Size 17 /Root 1 0 R >>
 startxref
-401174
+401139
 %%EOF

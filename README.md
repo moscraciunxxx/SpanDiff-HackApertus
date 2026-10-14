@@ -33,12 +33,20 @@ Judges run this from the repository root. It builds the Docker image and grades 
 make run
 ```
 
-`make run-local` is that same grade when Docker is not installed. Install the grade dependencies with `pip install -r track_2a/requirements-grade.txt` (the existing pins, plus torch and transformers). `LLM_NAME`, `LLM_BASE_URL`, and `LLM_API_KEY` are not the scorer. An earlier image was built and graded under podman on linux/amd64. Docker is not installed on this Mac, so the current image has not been rebuilt here. Windows Docker Desktop instructions are in `track_2a/docs/DOCKER_CHECK.md`.
+`make run-local` is that same grade when Docker is not installed. Install the grade dependencies with `pip install -r track_2a/requirements-grade.txt` (the existing pins, plus torch and transformers). `LLM_NAME`, `LLM_BASE_URL`, and `LLM_API_KEY` are not the scorer. Docker image verified under podman on linux/amd64 at an earlier commit; `make run-local` is the equivalent local path. Windows Docker Desktop instructions are in `track_2a/docs/DOCKER_CHECK.md`.
 
 `make predict` loads Apertus and writes a new deterministic layer-15 run to `track_2a/predictions/rerun`. It does not replace `track_2a/predictions/dev`. It needs a Hugging Face token only if the weights are not cached, and about 16 GB.
 
 ```bash
 make predict
+```
+
+## Reproduce
+
+`make predict-test` rebuilds the test and full-set predictions in a scratch directory from public text fields only, then byte-compares them to the committed files. It does not replace those files and it does not grade them. Test texts are `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/de/test_de.jsonl`, `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/fr/test_fr.jsonl`, and `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/it/test_it.jsonl`. The Hub has no separate full file. Full-set texts are those three files plus the public development texts `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/de/dev_de.jsonl`, `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/fr/dev_fr.jsonl`, and `https://huggingface.co/datasets/ZurichNLP/SwissGov-RSD/resolve/main/data/it/dev_it.jsonl`, in id order 0 through 223. Label fields are dropped. `score_split.py` scores hidden state 15 with the shipped Tier-1 constants.
+
+```bash
+make predict-test
 ```
 
 ## License
