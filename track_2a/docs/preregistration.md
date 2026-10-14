@@ -45,3 +45,53 @@ Committed before running candidate variants. All selection uses the development 
   13. **Item 13 — Shorter-window overlapping encoding (256-token windows, stride 128):** Raw `dev/train` `0.2715`, `dev/val` `0.2560`, printed mean `0.2690`; with Tier-1 Combination `dev/train` `0.3332`, `dev/val` `0.3132`, printed mean `0.3303` (`-0.0037`) — **LOST**.
   14. **Item 14 — Apertus layer-15 cross-side attention mass feature:** Attention alone `dev/train` `-0.0251`, `dev/val` `-0.0184`, printed mean `-0.0237`; 50/50 rank average with Tier-1 Combination printed mean `0.1753`; 80/20 rank blend printed mean `0.2630` (`-0.0710`) — **LOST**.
 - **Final adopted method:** Tier-1 Combination on `swiss-ai/Apertus-v1.5-8B` hidden state 15 (`0.3340` mean Spearman).
+
+---
+
+## Batch 6 — Sprint 3 (pre-registered on `sprint3` before running)
+
+Committed before any Sprint 3 forward pass. Development documents only. The sealed split is not read or scored. Ids: `track_2a/docs/sprint2_dev_ids.json`. Folds: numeric id modulo 5. Metric: token-pooled Spearman, gold `-1` dropped, `labels_a` and `labels_b` concatenated, then the unweighted mean of de, fr, and it.
+
+- **Gate:** `dev/train >= 0.3433` and `dev/val >= 0.3165` and at least 4 of 5 folds strictly above the frozen Tier-1 scores.
+- **Superseded before any forward pass:** diagonal-0.25 plus window-3 smoothing; equal average of layers 14, 15, and 16; context prefix plus diagonal 0.25. Replaced by the tracks below. They were not run.
+
+### Track A — new Apertus signals, training-free
+
+1. **Translation surprisal.** Prompt with source: `Translate English to {German|French|Italian}:\n` + side A + `\n` + side B. Prompt without source: the same prefix plus side B only. The swap uses `Translate {German|French|Italian} to English:\n`. Each target side is scored in 512-token windows, including the leading BOS. The target chunk is never truncated. Source tokens that do not fit are dropped from the left. Token surprisal is the mean subword `(logp without source) - (logp with source)`. Rank-average with the frozen Tier-1 score (`0.5` each after `rank/(n-1)`).
+2. **Bidirectional surprisal.** Idea 1 in both directions. Map the other direction onto tokens through the greedy sentence match (best sentence, `+/- 0`). Rank-average both surprisals with the frozen score, equal thirds.
+- **Stack rule, locked before surprisal is scored.** If idea 1 or idea 2 passes the gate alone, also add the fixed mismatch bonus of `0.15` to that variant and clip to `[0, 1]`. The bonus weight is not retuned. The stack is adopted only if it passes the gate itself.
+- **One-direction variant, locked before it is scored.** Side B only: rank-average the frozen score with the English-to-target surprisal. Side A stays the frozen Tier-1 score. No swap. The same stack rule applies if this variant passes alone.
+3. **Attention alignment.** One concatenated pass, `side A + "\n" + side B`, hidden state 15. Token score is `1 - max` attention mass from that token onto the other side. If SDPA returns no weights, this idea is recorded as not runnable and is not replaced by cosine.
+4. **Multi-layer CSLS.** Full Tier-1 pipeline at hidden states 12, 15, and 18. Rank-average the three smoothed score vectors. Equal weights. No other layers.
+5. **Drop test, one extra forward per document.** Remove the single best-matching source sentence for every target sentence (union of those spans), re-encode, and take one minus the cosine of the original and ablated target-sentence means. Spread that value to the sentence's tokens. Rank-average with the frozen score.
+
+### Track B — structure-aware post-processing, constants locked
+
+6. **Mismatch bonus `0.15`.** From each token, extract digits of percents, `CHF` amounts, numeric dates, `Art.` / `Abs.` / `al.` references, and other numbers. If any digit string is absent from the other side, add `0.15` and clip to `[0, 1]`.
+7. **Sentence prior.** Sentence vector is the mean of centered hidden-state-15 subwords. Multiply the frozen token score by `1 - max` cosine to the other side's sentences, then clip to `[0, 1]`.
+8. **Function-word damping `0.5`.** Punctuation and these stopwords are multiplied by `0.5`: English `the a an of and to in for on with at by from as or`; German `der die das den dem des ein eine und zu von mit auf für im in ist`; French `le la les de des du un une et à au aux en dans pour par sur est`; Italian `il lo la i gli le di del della dei e a in per con su è`.
+9. **Length-adaptive smoothing.** If either side has at least 800 whitespace tokens, apply one extra window-2 triangular smooth to the frozen scores. Shorter documents stay unchanged. The trigger does not use gold.
+
+### Recorded after the first four
+
+- **6 mismatch bonus:** train `0.3418`, val `0.3165`, folds `5/5` — **LOST** (train below `0.3433`).
+- **7 sentence prior:** train `0.3004`, val `0.2856`, folds `0/5` — **LOST**.
+- **8 function-word damping:** train `0.2378`, val `0.2143`, folds `0/5` — **LOST**.
+- **9 length-adaptive smoothing:** train `0.3398`, val `0.3129`, folds `5/5` — **LOST**.
+- **4 multi-layer rank average (L12, L15, L18):** train `0.2814`, val `0.2644`, folds `0/5` — **LOST**.
+- **1 translation surprisal:** train `0.2106`, val `0.2018`, folds `0/5` — **LOST**. The mismatch stack was not run, because this variant did not pass alone.
+- **1 one-direction:** train `0.2243`, val `0.2173`, folds `0/5` — **LOST**. Side A stayed frozen. The mismatch stack was not run.
+- **10 ridge stacker, out of fold:** train `0.3458`, val `0.3277`, folds `5/5` — **PASSES** the development gate. Per-language out-of-fold Spearman de `0.3932`, fr `0.2392`, it `0.3971` against `0.373 / 0.231 / 0.398`. Italian drops `0.0009`, inside `0.01`. Alpha stayed `1.0`. Four near-zero weights flip sign across folds (relative position, punctuation, token length, side); each stays below `0.003` and is flagged. The graded development files are these out-of-fold scores. Test and full use the ridge fit on all development documents.
+- **2 bidirectional surprisal:** train `0.1786`, val `0.1722`, folds `0/5` — **LOST**. The mismatch stack was not run.
+- **3 attention alignment:** not runnable. SDPA returned no attention weights (`output_attentions` is empty). Cosine was not substituted.
+
+### Track C — light learning
+
+10. **Ridge stacker, `alpha = 1.0`.** At most these features: frozen score, surprisal rank, mismatch indicator, sentence prior, relative position, stopword, punctuation, token character length, document length ratio, side. Standardize inside each training fold. Doc folds are id modulo 5. Only out-of-fold scores are gated. A stack that adds a feature must pass the gate again.
+11. **Qwen silver, dev comparison only.** Run the Tier-1 pipeline on `Qwen/Qwen2.5-VL-7B-Instruct` over public non-development texts. Do not read sealed labels. Fit idea 10 on those silver scores, then apply it to Apertus features. Submitted numbers still come only from Apertus features.
+
+### Track D — robustness, done whether or not a scorer is adopted
+
+12. **Precision.** Compare the final pipeline in float32 and bfloat16. If float32 does not fit, score the first 10 development ids per language and report that subset.
+13. **Scatter.** Per-document Spearman of the submitted scores against the final-layer baseline.
+14. **Failure gallery.** The five development documents with the lowest per-document Spearman, with a short reason each.

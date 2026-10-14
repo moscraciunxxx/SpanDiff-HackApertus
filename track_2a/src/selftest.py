@@ -21,9 +21,9 @@ from spandiff.leakage import needles, scan  # noqa: E402
 LANGS = ("de", "fr", "it")
 KEYS = {"id", "text_a", "text_b", "labels_a", "labels_b"}
 GRADED_SHA = {
-    "de": "a34b70adf48e9eb2748eb1cd6b189192fd5665790e08e047ad9218954c14b018",
-    "fr": "199bc15eadb56ca290117cd04101d6d2bc37fe681577f8f5513a6c0fb4aaf0da",
-    "it": "446efc6e5cf6d851a5dbab0ea3c40f803043d19edaf98db66f03364ae2d4c965",
+    "de": "1098404f7ad70afeac8f39d42d36a5a726fd796ca4a297b056a14458f7206e68",
+    "fr": "4672894bd3bb10dee8bf3ffe8b9d4ea16df4743cac272d51718a27d8f9324271",
+    "it": "a689c9367e1e71c45b0cfe97d83444b063c7ad29b54f589399697f569b33659a",
 }
 L15_WORD_SHA = {
     "de": "bb0c1cac606d6ee8e407f968f99797640311040e1e86b506cb93f708e75952f6",

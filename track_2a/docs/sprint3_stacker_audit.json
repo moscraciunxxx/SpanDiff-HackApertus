@@ -1,0 +1,451 @@
+{
+  "alpha": 1.0,
+  "alpha_fixed_before_scoring": true,
+  "feature_names": [
+    "frozen_score",
+    "surprisal_rank",
+    "mismatch",
+    "sentence_prior",
+    "relative_position",
+    "stopword",
+    "punctuation",
+    "token_char_length",
+    "doc_length_ratio",
+    "side"
+  ],
+  "features_exclude": [
+    "gold labels",
+    "document ids",
+    "test text statistics"
+  ],
+  "standardize": "inside each training fold; prediction uses that fold's mean and std",
+  "fold_unit": "document, numeric id modulo 5, same page held out in every language",
+  "same_document_in_fit_and_heldout": false,
+  "official_train_val_disjoint": true,
+  "folds": [
+    {
+      "intercept": 0.09988557026563594,
+      "weights": {
+        "frozen_score": 0.06958308084577602,
+        "surprisal_rank": 0.006113364414601434,
+        "mismatch": 0.020936775168471457,
+        "sentence_prior": 0.05762350796726153,
+        "relative_position": 0.0009888841138292713,
+        "stopword": -0.007938754198360194,
+        "punctuation": -0.00026024394843341233,
+        "token_char_length": 4.328044135485219e-05,
+        "doc_length_ratio": 0.010477949577368898,
+        "side": 0.0007866896763651521
+      },
+      "mean": {
+        "frozen_score": 0.6114348425396207,
+        "surprisal_rank": 0.49907910789284504,
+        "mismatch": 0.004512007879718416,
+        "sentence_prior": 0.1500051406145565,
+        "relative_position": 0.4933157230704,
+        "stopword": 0.26421318694052554,
+        "punctuation": 0.0017273095976129088,
+        "token_char_length": 5.620259856890408,
+        "doc_length_ratio": 1.1873692623208487,
+        "side": 0.5145282308293982
+      },
+      "std": {
+        "frozen_score": 0.09081318271094424,
+        "surprisal_rank": 0.29242760768291765,
+        "mismatch": 0.06701977069959228,
+        "sentence_prior": 0.08822602933000792,
+        "relative_position": 0.2881591435892969,
+        "stopword": 0.44091334612109456,
+        "punctuation": 0.04152500450535662,
+        "token_char_length": 3.555435071998957,
+        "doc_length_ratio": 0.39531513853434125,
+        "side": 0.499788885939743
+      },
+      "order": [
+        "intercept",
+        "frozen_score",
+        "surprisal_rank",
+        "mismatch",
+        "sentence_prior",
+        "relative_position",
+        "stopword",
+        "punctuation",
+        "token_char_length",
+        "doc_length_ratio",
+        "side"
+      ],
+      "fold": 0,
+      "n_train_docs": 393,
+      "n_test_docs": 111,
+      "n_train_tokens": 276152
+    },
+    {
+      "intercept": 0.10547082430629519,
+      "weights": {
+        "frozen_score": 0.07465781640913415,
+        "surprisal_rank": 0.006922573243744637,
+        "mismatch": 0.024223049402664534,
+        "sentence_prior": 0.05936492612958749,
+        "relative_position": 0.0002603620824162811,
+        "stopword": -0.00831614747885801,
+        "punctuation": 0.0006879177799275843,
+        "token_char_length": -0.00047740008309907374,
+        "doc_length_ratio": 0.007684538153522887,
+        "side": 0.0017951198847183584
+      },
+      "mean": {
+        "frozen_score": 0.6109990879420537,
+        "surprisal_rank": 0.4990825376374003,
+        "mismatch": 0.004868304285185625,
+        "sentence_prior": 0.15153584433281053,
+        "relative_position": 0.4940404402176902,
+        "stopword": 0.26075428177242205,
+        "punctuation": 0.0019832501589833688,
+        "token_char_length": 5.714613176397886,
+        "doc_length_ratio": 1.1963261205345381,
+        "side": 0.5181348825678778
+      },
+      "std": {
+        "frozen_score": 0.09325490324145168,
+        "surprisal_rank": 0.29237330046906623,
+        "mismatch": 0.06960318885353987,
+        "sentence_prior": 0.09225763003839531,
+        "relative_position": 0.28820371597331756,
+        "stopword": 0.4390461095485488,
+        "punctuation": 0.04448951424547562,
+        "token_char_length": 3.6197530566798335,
+        "doc_length_ratio": 0.3934917291185324,
+        "side": 0.4996710178042192
+      },
+      "order": [
+        "intercept",
+        "frozen_score",
+        "surprisal_rank",
+        "mismatch",
+        "sentence_prior",
+        "relative_position",
+        "stopword",
+        "punctuation",
+        "token_char_length",
+        "doc_length_ratio",
+        "side"
+      ],
+      "fold": 1,
+      "n_train_docs": 411,
+      "n_test_docs": 93,
+      "n_train_tokens": 278331
+    },
+    {
+      "intercept": 0.09387092248332164,
+      "weights": {
+        "frozen_score": 0.06684170735473045,
+        "surprisal_rank": 0.007325119681738321,
+        "mismatch": 0.01959770927968007,
+        "sentence_prior": 0.04994619257204577,
+        "relative_position": -0.00022069365512575589,
+        "stopword": -0.007338782010711517,
+        "punctuation": 0.0003785731665921347,
+        "token_char_length": 0.0005062489404690328,
+        "doc_length_ratio": 0.013052174151081468,
+        "side": 0.0012755188272105984
+      },
+      "mean": {
+        "frozen_score": 0.6103864563661935,
+        "surprisal_rank": 0.49899109960790805,
+        "mismatch": 0.003809189757979656,
+        "sentence_prior": 0.14861105444754247,
+        "relative_position": 0.4937552853910016,
+        "stopword": 0.2632900736583655,
+        "punctuation": 0.0022307962118554895,
+        "token_char_length": 5.629203788144511,
+        "doc_length_ratio": 1.1558403852445376,
+        "side": 0.5120238512802525
+      },
+      "std": {
+        "frozen_score": 0.08985987048052321,
+        "surprisal_rank": 0.2926785990648765,
+        "mismatch": 0.061600972649364566,
+        "sentence_prior": 0.08681879144922018,
+        "relative_position": 0.28823351180779644,
+        "stopword": 0.44041844962627336,
+        "punctuation": 0.047178594299866275,
+        "token_char_length": 3.588984887029289,
+        "doc_length_ratio": 0.18408788438815826,
+        "side": 0.4998554060922376
+      },
+      "order": [
+        "intercept",
+        "frozen_score",
+        "surprisal_rank",
+        "mismatch",
+        "sentence_prior",
+        "relative_position",
+        "stopword",
+        "punctuation",
+        "token_char_length",
+        "doc_length_ratio",
+        "side"
+      ],
+      "fold": 2,
+      "n_train_docs": 402,
+      "n_test_docs": 102,
+      "n_train_tokens": 285100
+    },
+    {
+      "intercept": 0.10048972140366698,
+      "weights": {
+        "frozen_score": 0.06986542784835109,
+        "surprisal_rank": 0.005865503285497682,
+        "mismatch": 0.02210311698988495,
+        "sentence_prior": 0.056779589738992046,
+        "relative_position": -0.0021377577592461556,
+        "stopword": -0.006858267687824082,
+        "punctuation": 0.0005422487758410452,
+        "token_char_length": 0.0010163220126601321,
+        "doc_length_ratio": 0.010700406515833183,
+        "side": 0.0003089275569593196
+      },
+      "mean": {
+        "frozen_score": 0.6105924634860824,
+        "surprisal_rank": 0.49935238973265983,
+        "mismatch": 0.00444254710661766,
+        "sentence_prior": 0.14982217869795558,
+        "relative_position": 0.4927062035096091,
+        "stopword": 0.26163478792043676,
+        "punctuation": 0.0019644387987074966,
+        "token_char_length": 5.650385425668898,
+        "doc_length_ratio": 1.18804460131088,
+        "side": 0.5161753834299935
+      },
+      "std": {
+        "frozen_score": 0.09239636103558571,
+        "surprisal_rank": 0.2926819995543879,
+        "mismatch": 0.06650421702289035,
+        "sentence_prior": 0.08895468783501408,
+        "relative_position": 0.28805516336189924,
+        "stopword": 0.439524772533631,
+        "punctuation": 0.044278434693496814,
+        "token_char_length": 3.597341272455714,
+        "doc_length_ratio": 0.3846096012650296,
+        "side": 0.4997382884773688
+      },
+      "order": [
+        "intercept",
+        "frozen_score",
+        "surprisal_rank",
+        "mismatch",
+        "sentence_prior",
+        "relative_position",
+        "stopword",
+        "punctuation",
+        "token_char_length",
+        "doc_length_ratio",
+        "side"
+      ],
+      "fold": 3,
+      "n_train_docs": 405,
+      "n_test_docs": 99,
+      "n_train_tokens": 288123
+    },
+    {
+      "intercept": 0.0962351193663952,
+      "weights": {
+        "frozen_score": 0.0698304362908992,
+        "surprisal_rank": 0.005990032147552535,
+        "mismatch": 0.021531116882043438,
+        "sentence_prior": 0.05141391465315172,
+        "relative_position": 0.0019243751369435761,
+        "stopword": -0.007309760533467726,
+        "punctuation": 0.0006079910928765823,
+        "token_char_length": 0.0004633435054967997,
+        "doc_length_ratio": 0.009814438863858445,
+        "side": -0.0006061186820556912
+      },
+      "mean": {
+        "frozen_score": 0.6090490657140208,
+        "surprisal_rank": 0.4994153072657813,
+        "mismatch": 0.004573987188551107,
+        "sentence_prior": 0.14807606367158918,
+        "relative_position": 0.4924115416664199,
+        "stopword": 0.2638915668673365,
+        "punctuation": 0.002274496361519949,
+        "token_char_length": 5.685026886903614,
+        "doc_length_ratio": 1.1850482308669255,
+        "side": 0.5145253550999421
+      },
+      "std": {
+        "frozen_score": 0.09068692021214236,
+        "surprisal_rank": 0.29246972479821337,
+        "mismatch": 0.06747640943125968,
+        "sentence_prior": 0.08799270595434873,
+        "relative_position": 0.28799517880811776,
+        "stopword": 0.44074120275297984,
+        "punctuation": 0.04763741206040881,
+        "token_char_length": 3.6184605101769565,
+        "doc_length_ratio": 0.3730715908005994,
+        "side": 0.4997889695255452
+      },
+      "order": [
+        "intercept",
+        "frozen_score",
+        "surprisal_rank",
+        "mismatch",
+        "sentence_prior",
+        "relative_position",
+        "stopword",
+        "punctuation",
+        "token_char_length",
+        "doc_length_ratio",
+        "side"
+      ],
+      "fold": 4,
+      "n_train_docs": 405,
+      "n_test_docs": 99,
+      "n_train_tokens": 280062
+    }
+  ],
+  "weight_std_ddof1": {
+    "intercept": 0.004434122008475276,
+    "frozen_score": 0.0028182240202104815,
+    "surprisal_rank": 0.0006433247763403632,
+    "mismatch": 0.0016997498841291017,
+    "sentence_prior": 0.004107919422594937,
+    "relative_position": 0.0015194335621829332,
+    "stopword": 0.0005742181607034608,
+    "punctuation": 0.00038157376712223776,
+    "token_char_length": 0.0005594765929948025,
+    "doc_length_ratio": 0.0019256381772392757,
+    "side": 0.0009214370504276767
+  },
+  "sign_flips": [
+    "relative_position",
+    "punctuation",
+    "token_char_length",
+    "side"
+  ],
+  "per_language_oof": {
+    "de": {
+      "oof": 0.3932,
+      "baseline": 0.373,
+      "drop": -0.0202,
+      "pass": true,
+      "train": 0.3985,
+      "val": 0.3679
+    },
+    "fr": {
+      "oof": 0.2392,
+      "baseline": 0.231,
+      "drop": -0.0082,
+      "pass": true,
+      "train": 0.2273,
+      "val": 0.2903
+    },
+    "it": {
+      "oof": 0.3971,
+      "baseline": 0.398,
+      "drop": 0.0009,
+      "pass": true,
+      "train": 0.4116,
+      "val": 0.3249
+    }
+  },
+  "language_pass": true,
+  "gate": {
+    "train": 0.3458,
+    "val": 0.3277,
+    "fold_wins": 5,
+    "folds": [
+      {
+        "candidate": 0.3427,
+        "frozen": 0.3343,
+        "win": true
+      },
+      {
+        "candidate": 0.288,
+        "frozen": 0.2768,
+        "win": true
+      },
+      {
+        "candidate": 0.3918,
+        "frozen": 0.3852,
+        "win": true
+      },
+      {
+        "candidate": 0.3252,
+        "frozen": 0.3157,
+        "win": true
+      },
+      {
+        "candidate": 0.3636,
+        "frozen": 0.3514,
+        "win": true
+      }
+    ],
+    "adopt": true
+  },
+  "all_dev": {
+    "intercept": 0.09916918128554116,
+    "weights": {
+      "frozen_score": 0.0701909935206305,
+      "surprisal_rank": 0.006442873936454133,
+      "mismatch": 0.02173096300857839,
+      "sentence_prior": 0.05509349022025436,
+      "relative_position": 0.0001452209134382808,
+      "stopword": -0.007533390196930096,
+      "punctuation": 0.00039789778782417604,
+      "token_char_length": 0.00034082809354346773,
+      "doc_length_ratio": 0.010058940492118756,
+      "side": 0.000725926551292492
+    },
+    "mean": {
+      "frozen_score": 0.6104893365185093,
+      "surprisal_rank": 0.49918477792832705,
+      "mismatch": 0.004438231299475482,
+      "sentence_prior": 0.1496042305550163,
+      "relative_position": 0.4932434007908368,
+      "stopword": 0.2627506805098567,
+      "punctuation": 0.0020372675043046867,
+      "token_char_length": 5.659776326781118,
+      "doc_length_ratio": 1.1824314007090484,
+      "side": 0.5150706650527643
+    },
+    "std": {
+      "frozen_score": 0.09141368235537518,
+      "surprisal_rank": 0.29252822235216175,
+      "mismatch": 0.06647204978313677,
+      "sentence_prior": 0.0888678495027267,
+      "relative_position": 0.28812978391567223,
+      "stopword": 0.4401281181685179,
+      "punctuation": 0.04509009919491746,
+      "token_char_length": 3.5963085148696012,
+      "doc_length_ratio": 0.3553717945159988,
+      "side": 0.4997728234467081
+    },
+    "beta": [
+      0.09916918128554116,
+      0.0701909935206305,
+      0.006442873936454133,
+      0.02173096300857839,
+      0.05509349022025436,
+      0.0001452209134382808,
+      -0.007533390196930096,
+      0.00039789778782417604,
+      0.00034082809354346773,
+      0.010058940492118756,
+      0.000725926551292492
+    ],
+    "order": [
+      "intercept",
+      "frozen_score",
+      "surprisal_rank",
+      "mismatch",
+      "sentence_prior",
+      "relative_position",
+      "stopword",
+      "punctuation",
+      "token_char_length",
+      "doc_length_ratio",
+      "side"
+    ]
+  }
+}

@@ -12,7 +12,7 @@ run-local: check
 	bash grade_dev.sh
 
 predict:
-	python3 src/score_split.py --layer 15 --out track_2a/predictions/rerun --order-from track_2a/predictions/dev
+	python3 src/apply_ridge.py --out track_2a/predictions/rerun --order-from track_2a/predictions/dev
 
 predict-test:
 	python3 src/predict_public_texts.py

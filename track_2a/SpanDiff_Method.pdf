@@ -9,7 +9,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 7 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 3523 >>
+<< /Length 3494 >>
 stream
 BT
 /F1 11 Tf
@@ -33,19 +33,21 @@ T*
 T*
 (tokens, rounded to 6 decimals. Generated tokens = 0. Apertus 70B was not run.) Tj
 T*
-(Development scores are our development evaluation. Official script, development split:) Tj
+(Development scores are out-of-fold. Official script, development split: Spearman de 0,393) Tj
 T*
-(Spearman de 0,373 ; fr 0,231 ; it 0,398. Unweighted mean 0.3340. Kendall de 0,302 ; fr) Tj
+(; fr 0,239 ; it 0,397. Unweighted mean 0.3430. Kendall de 0,324 ; fr 0,196 ; it 0,322. The) Tj
 T*
-(0,187 ; it 0,320. Each development file has 168 lines. Forward-pass tokens on that run:) Tj
+(Tier-1 feature that enters the ridge printed de 0,373 ; fr 0,231 ; it 0,398, mean 0.3340,) Tj
 T*
-(564349. Scoring time: 280.2 seconds. Test predictions, 56 documents per language, and) Tj
+(Kendall de 0,302 ; fr 0,187 ; it 0,320. Each development file has 168 lines. Test) Tj
 T*
-(full-set predictions, 224 documents per language, use the frozen Apertus hidden-state-15) Tj
+(predictions, 56 documents per language, and full-set predictions, 224 documents per) Tj
 T*
-(Tier-1 Combination method and are included for the organizers to score. We never graded) Tj
+(language, apply the ridge coefficients in docs/ridge_weights.json and are included for the) Tj
 T*
-(the test split. make run grades the development files only.) Tj
+(organizers to score. We never graded the test split. make run grades the development files) Tj
+T*
+(only.) Tj
 T*
 (On the same official command, the unsmoothed subword-first hidden-state-15 ablation) Tj
 T*
@@ -69,9 +71,11 @@ T*
 T*
 (difference 0.9746\), so the unclamped and clamped final-layer paper DiffAlign scores are) Tj
 T*
-(identical on all 351,942 kept tokens \(mean 0.0717\). The submitted mean is 0.3340. The UZH) Tj
+(identical on all 351,942 kept tokens \(mean 0.0717\). The Tier-1 feature mean is 0.3340. The) Tj
 T*
-(FAQ says either the 8B or the 70B is in scope.) Tj
+(out-of-fold submitted mean is 0.3430. The UZH FAQ says either the 8B or the 70B is in) Tj
+T*
+(scope.) Tj
 T*
 (Layer 15 and the Tier-1 Combination were chosen via pre-registered selection on dev/train) Tj
 T*
@@ -90,10 +94,6 @@ T*
 (Encoder lines contain only id, text_a, text_b, labels_a, and labels_b. Labels are in [0,) Tj
 T*
 (1]. The writer rejects -1 and NaN. Label length equals the whitespace-token count.) Tj
-T*
-(LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not read. The scores come from a local forward) Tj
-T*
-(pass of Apertus v1.5 8B.) Tj
 ET
 endstream
 endobj
@@ -101,12 +101,16 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 7 0 R >> >> >>
 endobj
 6 0 obj
-<< /Length 112 >>
+<< /Length 244 >>
 stream
 BT
 /F1 11 Tf
 48 740 Td
 16 TL
+(LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not read. The scores come from a local forward) Tj
+T*
+(pass of Apertus v1.5 8B.) Tj
+T*
 (Code is Apache-2.0. The report is CC-BY-4.0. SwissGov text stays CC-BY-4.0.) Tj
 ET
 endstream
@@ -121,10 +125,10 @@ xref
 0000000058 00000 n 
 0000000121 00000 n 
 0000000247 00000 n 
-0000003822 00000 n 
-0000003948 00000 n 
-0000004111 00000 n 
+0000003793 00000 n 
+0000003919 00000 n 
+0000004214 00000 n 
 trailer << /Size 8 /Root 1 0 R >>
 startxref
-4181
+4284
 %%EOF

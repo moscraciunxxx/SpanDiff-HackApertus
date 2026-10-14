@@ -1,0 +1,55 @@
+{
+  "alpha": 1.0,
+  "fit_documents": "all development documents",
+  "fit_tokens": "development tokens whose annotation is the ignored punctuation class were excluded",
+  "standardize": "subtract the saved mean and divide by the saved std; do not recompute them on the texts being scored",
+  "feature_names": [
+    "frozen_score",
+    "surprisal_rank",
+    "mismatch",
+    "sentence_prior",
+    "relative_position",
+    "stopword",
+    "punctuation",
+    "token_char_length",
+    "doc_length_ratio",
+    "side"
+  ],
+  "intercept": 0.09916918128554116,
+  "weights": {
+    "frozen_score": 0.0701909935206305,
+    "surprisal_rank": 0.006442873936454133,
+    "mismatch": 0.02173096300857839,
+    "sentence_prior": 0.05509349022025436,
+    "relative_position": 0.0001452209134382808,
+    "stopword": -0.007533390196930096,
+    "punctuation": 0.00039789778782417604,
+    "token_char_length": 0.00034082809354346773,
+    "doc_length_ratio": 0.010058940492118756,
+    "side": 0.000725926551292492
+  },
+  "mean": {
+    "frozen_score": 0.6104893365185093,
+    "surprisal_rank": 0.49918477792832705,
+    "mismatch": 0.004438231299475482,
+    "sentence_prior": 0.1496042305550163,
+    "relative_position": 0.4932434007908368,
+    "stopword": 0.2627506805098567,
+    "punctuation": 0.0020372675043046867,
+    "token_char_length": 5.659776326781118,
+    "doc_length_ratio": 1.1824314007090484,
+    "side": 0.5150706650527643
+  },
+  "std": {
+    "frozen_score": 0.09141368235537518,
+    "surprisal_rank": 0.29252822235216175,
+    "mismatch": 0.06647204978313677,
+    "sentence_prior": 0.0888678495027267,
+    "relative_position": 0.28812978391567223,
+    "stopword": 0.4401281181685179,
+    "punctuation": 0.04509009919491746,
+    "token_char_length": 3.5963085148696012,
+    "doc_length_ratio": 0.3553717945159988,
+    "side": 0.4997728234467081
+  }
+}

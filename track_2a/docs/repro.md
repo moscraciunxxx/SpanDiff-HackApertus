@@ -1,6 +1,6 @@
 # Reproducibility check, 14 Oct 2026
 
-make predict reproduces committed files byte-for-byte on macOS 27.0.1 arm64 (Apple MPS, 48 GB RAM, Python 3.14.6, torch 2.14.1, bfloat16); cross-hardware drift noted as max |Δ| = 0.097791 on dev/full and 0.039058 on test between torch 2.13.0 and torch 2.14.1 MPS bfloat16 kernels.
+On 14 Oct 2026, `make predict` run twice produced byte-identical `predictions/rerun` files, and `make predict-test` matched the committed test and full files. Machine: macOS 27.0.1 arm64, Apple MPS, 48 GB RAM, Python 3.14.6, torch 2.14.1, bfloat16. An earlier Tier-1 cross-hardware check had max absolute drift 0.097791 on dev/full and 0.039058 on test between torch 2.13.0 and torch 2.14.1.
 
 ## Deterministic scoring settings
 
@@ -11,23 +11,24 @@ make predict reproduces committed files byte-for-byte on macOS 27.0.1 arm64 (App
 
 ## Two-run scratch verification and committed file check
 
-Running the deterministic `make predict` scorer twice into clean scratch directories (`/tmp/spandiff-sprint-win-1` and `/tmp/spandiff-sprint-win-2`), scoring the 56-document test inputs twice, and assembling the 224-document full-set files produced identical bytes across both runs (`max |Δ| = 0.0`) and matched all nine committed files (`track_2a/predictions/{dev,test,full}/SpanDiff_admin_{de,fr,it}.jsonl.jsonl`) byte-for-byte:
+The graded development files are out-of-fold ridge scores. `make predict` applies `docs/ridge_weights.json` and does not refit. Two runs on 14 Oct 2026 wrote identical bytes to `predictions/rerun`. That rerun is the full-development fit, so it matches the development ids inside `predictions/full` and it is not the graded out-of-fold file. `make predict-test` rebuilt test and full from public text with a fresh feature cache and matched those six committed files byte for byte.
 
-| Split | Docs / lang | Forward-pass tokens | Score seconds | SHA-256 (de / fr / it) |
-| --- | --- | --- | --- | --- |
-| `dev` | 168 | 564,349 | 280.2 | `a34b70adf48e...` / `199bc15eadb5...` / `446efc6e5cf6...` |
-| `test` | 56 | 207,075 | 165.8 (run 1), 182.1 (run 2) | `b468ec41702c...` / `52201cfed167...` / `010e4665f17d...` |
-| `full` | 224 | 771,424 | assembled from `dev` + `test` (`0..223`) | `187bbcfbf276...` / `104592d5dafa...` / `e914375cc35e...` |
+| Split | Docs / lang | What it is | SHA-256 (de / fr / it) |
+| --- | --- | --- | --- |
+| `dev` | 168 | out-of-fold ridge | `1098404f7ad7...` / `4672894bd3bb...` / `a689c9367e1e...` |
+| `test` | 56 | ridge fit on all development documents | `b987b965792d...` / `60101727b952...` / `1be0108f7892...` |
+| `full` | 224 | same fit, ids `0..223` | `71379467445d...` / `95cf73fdddfd...` / `bb324dd2aee1...` |
 
 Word-mean-pool hidden state 15 (`0,296 / 0,191 / 0,324`, mean `0.2703`) is retained in `track_2a/predictions/l15` (`bb0c1cac606d...` / `56b58418d67c...` / `c83223ce1293...`).
 
 ## Official development regrade (`--split dev` only)
 
-- Submitted (`predictions/dev`, L15 Tier-1 Combination): Spearman `de 0,373 ; fr 0,231 ; it 0,398` (unweighted mean `0.3340`), Kendall's Tau-b `de 0,302 ; fr 0,187 ; it 0,320`.
+- Submitted (`predictions/dev`, out-of-fold ridge): Spearman `de 0,393 ; fr 0,239 ; it 0,397` (unweighted mean `0.3430`), Kendall's Tau-b `de 0,324 ; fr 0,196 ; it 0,322`.
+- Tier-1 Combination feature: Spearman `de 0,373 ; fr 0,231 ; it 0,398` (unweighted mean `0.3340`), Kendall's Tau-b `de 0,302 ; fr 0,187 ; it 0,320`.
 - Unsmoothed subword-first L15 ablation: Spearman `de 0,309 ; fr 0,199 ; it 0,333` (unweighted mean `0.2803`), Kendall's Tau-b `de 0,249 ; fr 0,161 ; it 0,266`.
 - Word-mean-pool L15 ablation (`predictions/l15`): Spearman `de 0,296 ; fr 0,191 ; it 0,324` (unweighted mean `0.2703`), Kendall's Tau-b `de 0,238 ; fr 0,154 ; it 0,259`.
 - Test gold was never opened or graded.
 
 ## Public-text reproduction (`make predict-test`)
 
-On 14 Oct 2026, `make predict-test` downloaded public SwissGov-RSD text fields only, dropped label fields, scored hidden state 15 with the shipped constants, and wrote scratch copies of the test and full predictions. All six files matched the committed bytes (`full` and `test`, de/fr/it). Forward-pass tokens on that run: 771,424. Seconds: 383.5. Scratch directory: `/tmp/spandiff-predict-test`. The committed files were not replaced and were not graded.
+On 14 Oct 2026, `make predict-test` downloaded public SwissGov-RSD text fields only, dropped label fields, applied `docs/ridge_weights.json` without refitting, and wrote scratch copies of the test and full predictions. All six files matched the committed bytes (`full` and `test`, de/fr/it). Scratch directory: `/tmp/spandiff-predict-test`. The committed files were not replaced and were not graded.

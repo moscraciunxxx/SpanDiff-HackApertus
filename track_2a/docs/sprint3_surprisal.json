@@ -1,0 +1,68 @@
+{
+  "idea1": {
+    "train": 0.2106,
+    "val": 0.2018,
+    "fold_wins": 0,
+    "folds": [
+      {
+        "candidate": 0.2151,
+        "frozen": 0.3343,
+        "win": false
+      },
+      {
+        "candidate": 0.1813,
+        "frozen": 0.2768,
+        "win": false
+      },
+      {
+        "candidate": 0.2072,
+        "frozen": 0.3852,
+        "win": false
+      },
+      {
+        "candidate": 0.2147,
+        "frozen": 0.3157,
+        "win": false
+      },
+      {
+        "candidate": 0.2279,
+        "frozen": 0.3514,
+        "win": false
+      }
+    ],
+    "adopt": false
+  },
+  "idea2": {
+    "train": 0.1786,
+    "val": 0.1722,
+    "fold_wins": 0,
+    "folds": [
+      {
+        "candidate": 0.1748,
+        "frozen": 0.3343,
+        "win": false
+      },
+      {
+        "candidate": 0.1569,
+        "frozen": 0.2768,
+        "win": false
+      },
+      {
+        "candidate": 0.172,
+        "frozen": 0.3852,
+        "win": false
+      },
+      {
+        "candidate": 0.1896,
+        "frozen": 0.3157,
+        "win": false
+      },
+      {
+        "candidate": 0.1961,
+        "frozen": 0.3514,
+        "win": false
+      }
+    ],
+    "adopt": false
+  }
+}

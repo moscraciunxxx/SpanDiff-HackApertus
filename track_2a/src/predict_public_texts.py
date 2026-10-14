@@ -135,9 +135,7 @@ def main() -> int:
     subprocess.run(
         [
             sys.executable,
-            str(SRC / "score_split.py"),
-            "--layer",
-            "15",
+            str(SRC / "apply_ridge.py"),
             "--texts",
             str(text_dir),
             "--out",

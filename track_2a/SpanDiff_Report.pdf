@@ -6,10 +6,10 @@ endobj
 << /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 6 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 19 0 R /F2 20 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R /Im4 18 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 8924 >>
+<< /Length 9928 >>
 stream
 BT /F2 16.0 Tf 48.00 732.00 Td (SpanDiff technical report) Tj ET
 q 516.00 0 0 103.20 48.00 620.80 cm /Im1 Do Q
@@ -23,428 +23,448 @@ BT /F1 10.0 Tf 48.00 502.80 Td (document-mean contrastive centering \(beta = 0.5
 BT /F1 10.0 Tf 48.00 489.80 Td (5\), sentence-constrained alignment \(lambda = 0.35, matched sentence +/- 1\), paper-order subword-first) Tj ET
 BT /F1 10.0 Tf 48.00 476.80 Td (clamp\(1 - max cosine, 0, 1\) pooled into whitespace tokens, and window-2 triangular span smoothing over) Tj ET
 BT /F1 10.0 Tf 48.00 463.80 Td (content tokens. No tokens are generated. Apertus 70B was not run.) Tj ET
-BT /F1 10.0 Tf 48.00 446.80 Td (The official development script, with --split dev, printed Spearman de 0,373 ; fr 0,231 ; it 0,398. The) Tj ET
-BT /F1 10.0 Tf 48.00 433.80 Td (unweighted mean of those three printed numbers is 0.3340. The official script does not print that mean.) Tj ET
-BT /F1 10.0 Tf 48.00 420.80 Td (make run prints it after the table. Kendall's Tau-b printed de 0,302 ; fr 0,187 ; it 0,320. The stdout) Tj ET
-BT /F1 10.0 Tf 48.00 407.80 Td (is track_2a/docs/official_dev_stdout_tier1_combo.txt.) Tj ET
-0.90 0.93 0.96 rg 48.00 384.80 220.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 384.80 220.00 16.00 re S
+BT /F1 10.0 Tf 48.00 446.80 Td (The graded development files are out-of-fold. Each document was scored by a ridge fit on the other) Tj ET
+BT /F1 10.0 Tf 48.00 433.80 Td (documents, using the numeric id modulo 5, so no document is in both sides of its fold. The official) Tj ET
+BT /F1 10.0 Tf 48.00 420.80 Td (development script, with --split dev, prints Spearman de 0,393 ; fr 0,239 ; it 0,397. The unweighted) Tj ET
+BT /F1 10.0 Tf 48.00 407.80 Td (mean of those three printed numbers is 0.3430. The official script does not print that mean. make run) Tj ET
+BT /F1 10.0 Tf 48.00 394.80 Td (prints it after the table. Kendall's Tau-b prints de 0,324 ; fr 0,196 ; it 0,322. Italian is 0.001) Tj ET
+BT /F1 10.0 Tf 48.00 381.80 Td (below the Tier-1 print of 0,398, which is inside the 0.01 limit. The Tier-1 Combination that is the) Tj ET
+BT /F1 10.0 Tf 48.00 368.80 Td (ridge's frozen-score feature printed de 0,373 ; fr 0,231 ; it 0,398, mean 0.3340, Kendall de 0,302 ; fr) Tj ET
+BT /F1 10.0 Tf 48.00 355.80 Td (0,187 ; it 0,320. That stdout is track_2a/docs/official_dev_stdout_tier1_combo.txt.) Tj ET
+0.90 0.93 0.96 rg 48.00 332.80 220.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 332.80 220.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 389.30 Td (Setup \(on swiss-ai/Apertus-v1.5-8B unless noted\)) Tj ET
-0.90 0.93 0.96 rg 268.00 384.80 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 268.00 384.80 74.00 16.00 re S
+BT /F2 8.5 Tf 51.00 337.30 Td (Setup \(on swiss-ai/Apertus-v1.5-8B unless noted\)) Tj ET
+0.90 0.93 0.96 rg 268.00 332.80 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 268.00 332.80 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 271.00 389.30 Td (de) Tj ET
-0.90 0.93 0.96 rg 342.00 384.80 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 342.00 384.80 74.00 16.00 re S
+BT /F2 8.5 Tf 271.00 337.30 Td (de) Tj ET
+0.90 0.93 0.96 rg 342.00 332.80 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 342.00 332.80 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 345.00 389.30 Td (fr) Tj ET
-0.90 0.93 0.96 rg 416.00 384.80 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 416.00 384.80 74.00 16.00 re S
+BT /F2 8.5 Tf 345.00 337.30 Td (fr) Tj ET
+0.90 0.93 0.96 rg 416.00 332.80 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 416.00 332.80 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 419.00 389.30 Td (it) Tj ET
-0.90 0.93 0.96 rg 490.00 384.80 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 490.00 384.80 74.00 16.00 re S
+BT /F2 8.5 Tf 419.00 337.30 Td (it) Tj ET
+0.90 0.93 0.96 rg 490.00 332.80 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 490.00 332.80 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 493.00 389.30 Td (mean) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 368.80 220.00 16.00 re S
+BT /F2 8.5 Tf 493.00 337.30 Td (mean) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 316.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 373.30 Td (Paper DiffAlign on this 8B, final layer, clamped & unclamped) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 368.80 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 321.30 Td (Paper DiffAlign on this 8B, final layer, clamped & unclamped) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 316.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 373.30 Td (0.053) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 368.80 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 321.30 Td (0.053) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 316.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 373.30 Td (0.056) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 368.80 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 321.30 Td (0.056) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 316.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 373.30 Td (0.106) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 368.80 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 321.30 Td (0.106) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 316.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 373.30 Td (0.0717) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 352.80 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 321.30 Td (0.0717) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 300.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 357.30 Td (Hidden state 8 ablation \(predictions/ablation_l8, word mean-pool\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 352.80 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 305.30 Td (Hidden state 8 ablation \(predictions/ablation_l8, word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 300.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 357.30 Td (0.245) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 352.80 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 305.30 Td (0.245) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 300.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 357.30 Td (0.165) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 352.80 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 305.30 Td (0.165) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 300.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 357.30 Td (0.282) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 352.80 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 305.30 Td (0.282) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 300.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 357.30 Td (0.2307) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 336.80 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 305.30 Td (0.2307) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 284.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 341.30 Td (Pre-registered \(a\): mean of hidden states 12-17 \(word mean-pool\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 336.80 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 289.30 Td (Pre-registered \(a\): mean of hidden states 12-17 \(word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 284.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 341.30 Td (0.285) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 336.80 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 289.30 Td (0.285) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 284.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 341.30 Td (0.183) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 336.80 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 289.30 Td (0.183) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 284.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 341.30 Td (0.316) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 336.80 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 289.30 Td (0.316) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 284.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 341.30 Td (0.2613) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 320.80 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 289.30 Td (0.2613) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 268.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 325.30 Td (Hidden state 15 ablation \(predictions/l15, word mean-pool\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 320.80 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 273.30 Td (Hidden state 15 ablation \(predictions/l15, word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 268.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 325.30 Td (0.296) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 320.80 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 273.30 Td (0.296) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 268.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 325.30 Td (0.191) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 320.80 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 273.30 Td (0.191) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 268.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 325.30 Td (0.324) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 320.80 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 273.30 Td (0.324) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 268.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 325.30 Td (0.2703) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 304.80 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 273.30 Td (0.2703) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 252.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 309.30 Td (Pre-registered \(c\): hidden states 12-17 + subword-first) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 304.80 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 257.30 Td (Pre-registered \(c\): hidden states 12-17 + subword-first) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 252.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 309.30 Td (0.298) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 304.80 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 257.30 Td (0.298) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 252.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 309.30 Td (0.192) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 304.80 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 257.30 Td (0.192) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 252.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 309.30 Td (0.325) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 304.80 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 257.30 Td (0.325) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 252.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 309.30 Td (0.2717) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 288.80 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 257.30 Td (0.2717) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 236.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 293.30 Td (Pre-registered \(b\): hidden state 15, paper-order subword-first) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 288.80 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 241.30 Td (Pre-registered \(b\): hidden state 15, paper-order subword-first) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 236.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 293.30 Td (0.309) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 288.80 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 241.30 Td (0.309) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 236.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 293.30 Td (0.199) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 288.80 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 241.30 Td (0.199) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 236.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 293.30 Td (0.333) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 288.80 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 241.30 Td (0.333) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 236.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 293.30 Td (0.2803) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 272.80 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 241.30 Td (0.2803) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 220.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 277.30 Td (Open-weight dev comparison: Qwen2.5-VL-7B \(layer 14/28, Tier-1 Combo\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 272.80 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 225.30 Td (Open-weight dev comparison: Qwen2.5-VL-7B \(layer 14/28, Tier-1 Combo\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 220.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 277.30 Td (0.351) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 272.80 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 225.30 Td (0.351) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 220.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 277.30 Td (0.217) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 272.80 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 225.30 Td (0.217) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 220.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 277.30 Td (0.381) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 272.80 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 225.30 Td (0.381) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 220.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 277.30 Td (0.3163) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 256.80 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 225.30 Td (0.3163) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 204.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 261.30 Td (Hidden state 15, submitted \(predictions/dev, Tier-1 Combination\)) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 256.80 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 209.30 Td (Hidden state 15, Tier-1 Combination \(frozen feature\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 204.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 261.30 Td (0.373) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 256.80 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 209.30 Td (0.373) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 204.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 261.30 Td (0.231) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 256.80 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 209.30 Td (0.231) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 204.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 261.30 Td (0.398) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 256.80 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 209.30 Td (0.398) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 204.80 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 261.30 Td (0.3340) Tj ET
+BT /F1 8.5 Tf 493.00 209.30 Td (0.3340) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 188.80 220.00 16.00 re S
 0 0 0 rg
-BT /F1 10.0 Tf 48.00 238.80 Td (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the) Tj ET
-BT /F1 10.0 Tf 48.00 225.80 Td (final-layer DiffAlign row, mean 0.0717. On all 351,942 kept development tokens, no final-layer maximum) Tj ET
-BT /F1 10.0 Tf 48.00 212.80 Td (cosine is negative \(maximum kept difference 0.9746\), so the unclamped and clamped final-layer paper) Tj ET
-BT /F1 10.0 Tf 48.00 199.80 Td (DiffAlign scores are identical on every kept token \(mean 0.0717\). The submitted mean is 0.3340 \(with) Tj ET
-BT /F1 10.0 Tf 48.00 186.80 Td (0.2803 for unsmoothed subword-first L15 and 0.2703 for word-mean-pool L15 in predictions/l15\). The mean) Tj ET
-BT /F1 10.0 Tf 48.00 173.80 Td (column is that unweighted average, shown to 4 decimals. The rows use the printed coefficients. Decimal) Tj ET
-BT /F1 10.0 Tf 48.00 160.80 Td (commas in the stdout are 0,373 and so on. All grades used --split dev on 168 lines per language.) Tj ET
-BT /F1 10.0 Tf 48.00 143.80 Td (One thousand document resamples \(seed 0, the same page ids drawn together for de, fr, and it\) give a) Tj ET
-BT /F1 10.0 Tf 48.00 130.80 Td (95% percentile interval for that token-pooled Spearman. The submitted mean stays above the) Tj ET
-BT /F1 10.0 Tf 48.00 117.80 Td (word-mean-pool layer-15 interval and the final-layer interval.) Tj ET
+BT /F1 8.5 Tf 51.00 193.30 Td (Out-of-fold ridge, submitted \(predictions/dev\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 188.80 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 193.30 Td (0.393) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 188.80 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 193.30 Td (0.239) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 188.80 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 193.30 Td (0.397) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 188.80 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 193.30 Td (0.3430) Tj ET
+0 0 0 rg
+BT /F1 10.0 Tf 48.00 170.80 Td (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the) Tj ET
+BT /F1 10.0 Tf 48.00 157.80 Td (final-layer DiffAlign row, mean 0.0717. On all 351,942 kept development tokens, no final-layer maximum) Tj ET
+BT /F1 10.0 Tf 48.00 144.80 Td (cosine is negative \(maximum kept difference 0.9746\), so the unclamped and clamped final-layer paper) Tj ET
+BT /F1 10.0 Tf 48.00 131.80 Td (DiffAlign scores are identical on every kept token \(mean 0.0717\). The Tier-1 feature mean is 0.3340) Tj ET
+BT /F1 10.0 Tf 48.00 118.80 Td (\(with 0.2803 for unsmoothed subword-first L15 and 0.2703 for word-mean-pool L15 in predictions/l15\).) Tj ET
+BT /F1 10.0 Tf 48.00 105.80 Td (The graded out-of-fold mean is 0.3430. The mean column is that unweighted average, shown to 4 decimals.) Tj ET
+BT /F1 10.0 Tf 48.00 92.80 Td (The rows use the printed coefficients. Decimal commas in the stdout are 0,373 and so on. All grades) Tj ET
+BT /F1 10.0 Tf 48.00 79.80 Td (used --split dev on 168 lines per language.) Tj ET
+BT /F1 10.0 Tf 48.00 62.80 Td (One thousand document resamples \(seed 0, the same page ids drawn together for de, fr, and it\) give a) Tj ET
 endstream
 endobj
 5 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 19 0 R /F2 20 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R /Im4 18 0 R >> >> >>
 endobj
 6 0 obj
-<< /Length 5492 >>
+<< /Length 5442 >>
 stream
-0.90 0.93 0.96 rg 48.00 732.00 220.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 732.00 220.00 16.00 re S
+BT /F1 10.0 Tf 48.00 738.00 Td (95% percentile interval for that token-pooled Spearman. The submitted mean stays above the) Tj ET
+BT /F1 10.0 Tf 48.00 725.00 Td (word-mean-pool layer-15 interval and the final-layer interval.) Tj ET
+0.90 0.93 0.96 rg 48.00 702.00 220.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 702.00 220.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 736.50 Td (System) Tj ET
-0.90 0.93 0.96 rg 268.00 732.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 268.00 732.00 74.00 16.00 re S
+BT /F2 8.5 Tf 51.00 706.50 Td (System) Tj ET
+0.90 0.93 0.96 rg 268.00 702.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 268.00 702.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 271.00 736.50 Td (de) Tj ET
-0.90 0.93 0.96 rg 342.00 732.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 342.00 732.00 74.00 16.00 re S
+BT /F2 8.5 Tf 271.00 706.50 Td (de) Tj ET
+0.90 0.93 0.96 rg 342.00 702.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 342.00 702.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 345.00 736.50 Td (fr) Tj ET
-0.90 0.93 0.96 rg 416.00 732.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 416.00 732.00 74.00 16.00 re S
+BT /F2 8.5 Tf 345.00 706.50 Td (fr) Tj ET
+0.90 0.93 0.96 rg 416.00 702.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 416.00 702.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 419.00 736.50 Td (it) Tj ET
-0.90 0.93 0.96 rg 490.00 732.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 490.00 732.00 74.00 16.00 re S
+BT /F2 8.5 Tf 419.00 706.50 Td (it) Tj ET
+0.90 0.93 0.96 rg 490.00 702.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 490.00 702.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 493.00 736.50 Td (mean) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 716.00 220.00 16.00 re S
+BT /F2 8.5 Tf 493.00 706.50 Td (mean) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 686.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 720.50 Td (Submitted 0.3340) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 716.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 690.50 Td (Submitted 0.3340) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 686.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 720.50 Td (0.335-0.414) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 716.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 690.50 Td (0.335-0.414) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 686.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 720.50 Td (0.193-0.276) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 716.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 690.50 Td (0.193-0.276) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 686.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 720.50 Td (0.354-0.444) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 716.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 690.50 Td (0.354-0.444) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 686.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 720.50 Td (0.305-0.366) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 700.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 690.50 Td (0.305-0.366) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 670.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 704.50 Td (Word-mean L15 0.2703) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 700.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 674.50 Td (Word-mean L15 0.2703) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 670.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 704.50 Td (0.265-0.327) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 700.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 674.50 Td (0.265-0.327) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 670.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 704.50 Td (0.165-0.224) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 700.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 674.50 Td (0.165-0.224) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 670.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 704.50 Td (0.291-0.358) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 700.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 674.50 Td (0.291-0.358) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 670.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 704.50 Td (0.247-0.295) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 684.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 674.50 Td (0.247-0.295) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 654.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 688.50 Td (Final layer 0.0717) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 684.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 658.50 Td (Final layer 0.0717) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 654.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 688.50 Td (0.021-0.087) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 684.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 658.50 Td (0.021-0.087) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 654.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 688.50 Td (0.032-0.084) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 684.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 658.50 Td (0.032-0.084) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 654.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 688.50 Td (0.080-0.135) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 684.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 658.50 Td (0.080-0.135) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 654.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 688.50 Td (0.052-0.093) Tj ET
+BT /F1 8.5 Tf 493.00 658.50 Td (0.052-0.093) Tj ET
 0 0 0 rg
-BT /F2 13.0 Tf 48.00 655.00 Td (Method) Tj ET
-BT /F1 10.0 Tf 48.00 637.00 Td (Each side of a page is encoded alone. The model is swiss-ai/Apertus-v1.5-8B. Index 0 is the embedding.) Tj ET
-BT /F1 10.0 Tf 48.00 624.00 Td (The submitted state is index 15, the residual stream after block 15. Index 32, after the final norm, is) Tj ET
-BT /F1 10.0 Tf 48.00 611.00 Td (the final-layer baseline, not the submission.) Tj ET
-BT /F1 10.0 Tf 48.00 594.00 Td (A window holds at most 512 tokenizer tokens, including the leading beginning-of-sequence token. The) Tj ET
-BT /F1 10.0 Tf 48.00 581.00 Td (development pass is 1619 such windows and 564,349 tokenizer tokens. Each of those windows has exactly) Tj ET
-BT /F1 10.0 Tf 48.00 568.00 Td (one leading BOS. That token has an empty character offset and is not pooled. EOS, PAD, UNK, and) Tj ET
-BT /F1 10.0 Tf 48.00 555.00 Td (multimodal special counts on that tokenizer-only census were 0. The census is docs/special_tokens.txt.) Tj ET
-BT /F1 10.0 Tf 48.00 542.00 Td (It did not load weights.) Tj ET
-BT /F1 10.0 Tf 48.00 525.00 Td (Each subword is assigned to the whitespace token it overlaps most. An equal overlap stays on the) Tj ET
-BT /F1 10.0 Tf 48.00 512.00 Td (earlier token. After the windows of one side are stitched, the submitted Tier-1 Combination applies) Tj ET
-BT /F1 10.0 Tf 48.00 499.00 Td (four deterministic steps: \(1\) subtract 0.50 times the document's mean subword vector to remove) Tj ET
-BT /F1 10.0 Tf 48.00 486.00 Td (causal-decoder anisotropy; \(2\) compute cross-lingual cosine similarity with bidirectional Cross-Domain) Tj ET
-BT /F1 10.0 Tf 48.00 473.00 Td (Similarity Local Scaling \(CSLS, alpha = 0.50, k = 5 nearest neighbors\) to suppress hub subwords; \(3\)) Tj ET
-BT /F1 10.0 Tf 48.00 460.00 Td (blend global best cosine \(0.65\) with sentence-constrained best cosine \(0.35\) restricted to the) Tj ET
-BT /F1 10.0 Tf 48.00 447.00 Td (best-matching sentence +/- 1 on the other side; and \(4\) pool clamp\(1 - similarity, 0, 1\) across) Tj ET
-BT /F1 10.0 Tf 48.00 434.00 Td (subwords within each whitespace token, followed by window-2 triangular span smoothing across) Tj ET
-BT /F1 10.0 Tf 48.00 421.00 Td (non-punctuation tokens, rounded to 6 decimals.) Tj ET
-BT /F1 10.0 Tf 48.00 404.00 Td (Encoder lines contain only id, text_a, text_b, labels_a, and labels_b. Every label is in [0, 1]. The) Tj ET
-BT /F1 10.0 Tf 48.00 391.00 Td (writer rejects -1 and NaN. The label count equals the whitespace-token count. Generated tokens are 0,) Tj ET
-BT /F1 10.0 Tf 48.00 378.00 Td (so no output filter is applied.) Tj ET
-BT /F2 13.0 Tf 48.00 350.00 Td (Layer curve) Tj ET
-q 428.57 0 0 250.00 48.00 92.00 cm /Im2 Do Q
-BT /F1 10.0 Tf 48.00 72.00 Td (The figure plots the saved average-rank Spearman for every hidden state, separately for German, French,) Tj ET
-BT /F1 10.0 Tf 48.00 59.00 Td (and Italian. The source table is docs/layer_map_by_lang_avg.txt. It uses the same token counts as the) Tj ET
+BT /F2 13.0 Tf 48.00 625.00 Td (Method) Tj ET
+BT /F1 10.0 Tf 48.00 607.00 Td (Each side of a page is encoded alone. The model is swiss-ai/Apertus-v1.5-8B. Index 0 is the embedding.) Tj ET
+BT /F1 10.0 Tf 48.00 594.00 Td (The submitted state is index 15, the residual stream after block 15. Index 32, after the final norm, is) Tj ET
+BT /F1 10.0 Tf 48.00 581.00 Td (the final-layer baseline, not the submission.) Tj ET
+BT /F1 10.0 Tf 48.00 564.00 Td (A window holds at most 512 tokenizer tokens, including the leading beginning-of-sequence token. The) Tj ET
+BT /F1 10.0 Tf 48.00 551.00 Td (development pass is 1619 such windows and 564,349 tokenizer tokens. Each of those windows has exactly) Tj ET
+BT /F1 10.0 Tf 48.00 538.00 Td (one leading BOS. That token has an empty character offset and is not pooled. EOS, PAD, UNK, and) Tj ET
+BT /F1 10.0 Tf 48.00 525.00 Td (multimodal special counts on that tokenizer-only census were 0. The census is docs/special_tokens.txt.) Tj ET
+BT /F1 10.0 Tf 48.00 512.00 Td (It did not load weights.) Tj ET
+BT /F1 10.0 Tf 48.00 495.00 Td (Each subword is assigned to the whitespace token it overlaps most. An equal overlap stays on the) Tj ET
+BT /F1 10.0 Tf 48.00 482.00 Td (earlier token. After the windows of one side are stitched, the submitted Tier-1 Combination applies) Tj ET
+BT /F1 10.0 Tf 48.00 469.00 Td (four deterministic steps: \(1\) subtract 0.50 times the document's mean subword vector to remove) Tj ET
+BT /F1 10.0 Tf 48.00 456.00 Td (causal-decoder anisotropy; \(2\) compute cross-lingual cosine similarity with bidirectional Cross-Domain) Tj ET
+BT /F1 10.0 Tf 48.00 443.00 Td (Similarity Local Scaling \(CSLS, alpha = 0.50, k = 5 nearest neighbors\) to suppress hub subwords; \(3\)) Tj ET
+BT /F1 10.0 Tf 48.00 430.00 Td (blend global best cosine \(0.65\) with sentence-constrained best cosine \(0.35\) restricted to the) Tj ET
+BT /F1 10.0 Tf 48.00 417.00 Td (best-matching sentence +/- 1 on the other side; and \(4\) pool clamp\(1 - similarity, 0, 1\) across) Tj ET
+BT /F1 10.0 Tf 48.00 404.00 Td (subwords within each whitespace token, followed by window-2 triangular span smoothing across) Tj ET
+BT /F1 10.0 Tf 48.00 391.00 Td (non-punctuation tokens, rounded to 6 decimals.) Tj ET
+BT /F1 10.0 Tf 48.00 374.00 Td (Encoder lines contain only id, text_a, text_b, labels_a, and labels_b. Every label is in [0, 1]. The) Tj ET
+BT /F1 10.0 Tf 48.00 361.00 Td (writer rejects -1 and NaN. The label count equals the whitespace-token count. Generated tokens are 0,) Tj ET
+BT /F1 10.0 Tf 48.00 348.00 Td (so no output filter is applied.) Tj ET
+BT /F2 13.0 Tf 48.00 320.00 Td (Layer curve) Tj ET
+q 428.57 0 0 250.00 48.00 62.00 cm /Im2 Do Q
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 19 0 R /F2 20 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R /Im4 18 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 7766 >>
+<< /Length 8050 >>
 stream
-BT /F1 10.0 Tf 48.00 738.00 Td (frozen-score tables \(German 108,945, French 124,262, Italian 118,735\) and drops gold labels of -1. It) Tj ET
-BT /F1 10.0 Tf 48.00 725.00 Td (is not a second run of the official script. Do not treat a point on the curve as the printed contest) Tj ET
-BT /F1 10.0 Tf 48.00 712.00 Td (score.) Tj ET
-BT /F1 10.0 Tf 48.00 695.00 Td (On that map, hidden state 8 reads 0.2495, 0.1662, and 0.2842. Hidden state 15 reads 0.2982, 0.1921, and) Tj ET
-BT /F1 10.0 Tf 48.00 682.00 Td (0.3241. German peaks at layer 14 \(0.2983\), a hair above layer 15. French peaks at layer 15. Italian) Tj ET
-BT /F1 10.0 Tf 48.00 669.00 Td (peaks at layer 14 \(0.3246\), again a hair above layer 15. The final state, index 32, is 0.0484, 0.0564,) Tj ET
-BT /F1 10.0 Tf 48.00 656.00 Td (and 0.0945. German is the low end of that curve. A pooled ordinal Spearman across all three languages,) Tj ET
-BT /F1 10.0 Tf 48.00 643.00 Td (in docs/layer_map_dev.txt, peaks at layer 14 \(0.1408\), with layer 15 at 0.1403, layer 8 at 0.1281, and) Tj ET
-BT /F1 10.0 Tf 48.00 630.00 Td (the last block at -0.0358. That pooled number is one Spearman on 351,942 tokens. It is not the mean of) Tj ET
-BT /F1 10.0 Tf 48.00 617.00 Td (three language scores.) Tj ET
-BT /F2 13.0 Tf 48.00 589.00 Td (Layer selection and pre-registered sprint ablations) Tj ET
-BT /F1 10.0 Tf 48.00 571.00 Td (The organizers publish a development train split of 134 documents per language and a development) Tj ET
-BT /F1 10.0 Tf 48.00 558.00 Td (validation split of 34, at gold_labels/dev/train and gold_labels/dev/val in ZurichNLP/SwissGov-RSD.) Tj ET
-BT /F1 10.0 Tf 48.00 545.00 Td (Those files are not copied into this repository. Only the id field was read. Together, train and) Tj ET
-BT /F1 10.0 Tf 48.00 532.00 Td (validation are the 168 development documents, and they share no id. The per-document Spearmans were) Tj ET
-BT /F1 10.0 Tf 48.00 519.00 Td (then taken from docs/layer_map_dev.jsonl, which stores one ordinal Spearman per hidden state and does) Tj ET
-BT /F1 10.0 Tf 48.00 506.00 Td (not store gold labels.) Tj ET
-BT /F1 10.0 Tf 48.00 489.00 Td (A document whose per-document Spearman is not finite was omitted: none of 134 German train pages, 1 of) Tj ET
-BT /F1 10.0 Tf 48.00 476.00 Td (34 German val, 2 of 134 French train, 1 of 34 French val, 1 of 134 Italian train, and 1 of 34 Italian) Tj ET
-BT /F1 10.0 Tf 48.00 463.00 Td (val. The table is the unweighted mean of the remaining per-document Spearmans. It is not the official) Tj ET
-BT /F1 10.0 Tf 48.00 450.00 Td (contest formula.) Tj ET
-0.90 0.93 0.96 rg 48.00 427.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 427.00 86.00 16.00 re S
+BT /F1 10.0 Tf 48.00 738.00 Td (The figure plots the saved average-rank Spearman for every hidden state, separately for German, French,) Tj ET
+BT /F1 10.0 Tf 48.00 725.00 Td (and Italian. The source table is docs/layer_map_by_lang_avg.txt. It uses the same token counts as the) Tj ET
+BT /F1 10.0 Tf 48.00 712.00 Td (frozen-score tables \(German 108,945, French 124,262, Italian 118,735\) and drops gold labels of -1. It) Tj ET
+BT /F1 10.0 Tf 48.00 699.00 Td (is not a second run of the official script. Do not treat a point on the curve as the printed contest) Tj ET
+BT /F1 10.0 Tf 48.00 686.00 Td (score.) Tj ET
+BT /F1 10.0 Tf 48.00 669.00 Td (On that map, hidden state 8 reads 0.2495, 0.1662, and 0.2842. Hidden state 15 reads 0.2982, 0.1921, and) Tj ET
+BT /F1 10.0 Tf 48.00 656.00 Td (0.3241. German peaks at layer 14 \(0.2983\), a hair above layer 15. French peaks at layer 15. Italian) Tj ET
+BT /F1 10.0 Tf 48.00 643.00 Td (peaks at layer 14 \(0.3246\), again a hair above layer 15. The final state, index 32, is 0.0484, 0.0564,) Tj ET
+BT /F1 10.0 Tf 48.00 630.00 Td (and 0.0945. German is the low end of that curve. A pooled ordinal Spearman across all three languages,) Tj ET
+BT /F1 10.0 Tf 48.00 617.00 Td (in docs/layer_map_dev.txt, peaks at layer 14 \(0.1408\), with layer 15 at 0.1403, layer 8 at 0.1281, and) Tj ET
+BT /F1 10.0 Tf 48.00 604.00 Td (the last block at -0.0358. That pooled number is one Spearman on 351,942 tokens. It is not the mean of) Tj ET
+BT /F1 10.0 Tf 48.00 591.00 Td (three language scores.) Tj ET
+BT /F2 13.0 Tf 48.00 563.00 Td (Layer selection and pre-registered sprint ablations) Tj ET
+BT /F1 10.0 Tf 48.00 545.00 Td (The organizers publish a development train split of 134 documents per language and a development) Tj ET
+BT /F1 10.0 Tf 48.00 532.00 Td (validation split of 34, at gold_labels/dev/train and gold_labels/dev/val in ZurichNLP/SwissGov-RSD.) Tj ET
+BT /F1 10.0 Tf 48.00 519.00 Td (Those files are not copied into this repository. Only the id field was read. Together, train and) Tj ET
+BT /F1 10.0 Tf 48.00 506.00 Td (validation are the 168 development documents, and they share no id. The per-document Spearmans were) Tj ET
+BT /F1 10.0 Tf 48.00 493.00 Td (then taken from docs/layer_map_dev.jsonl, which stores one ordinal Spearman per hidden state and does) Tj ET
+BT /F1 10.0 Tf 48.00 480.00 Td (not store gold labels.) Tj ET
+BT /F1 10.0 Tf 48.00 463.00 Td (A document whose per-document Spearman is not finite was omitted: none of 134 German train pages, 1 of) Tj ET
+BT /F1 10.0 Tf 48.00 450.00 Td (34 German val, 2 of 134 French train, 1 of 34 French val, 1 of 134 Italian train, and 1 of 34 Italian) Tj ET
+BT /F1 10.0 Tf 48.00 437.00 Td (val. The table is the unweighted mean of the remaining per-document Spearmans. It is not the official) Tj ET
+BT /F1 10.0 Tf 48.00 424.00 Td (contest formula.) Tj ET
+0.90 0.93 0.96 rg 48.00 401.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 401.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 431.50 Td (Slice) Tj ET
-0.90 0.93 0.96 rg 134.00 427.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 134.00 427.00 86.00 16.00 re S
+BT /F2 8.5 Tf 51.00 405.50 Td (Slice) Tj ET
+0.90 0.93 0.96 rg 134.00 401.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 134.00 401.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 137.00 431.50 Td (docs used) Tj ET
-0.90 0.93 0.96 rg 220.00 427.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 220.00 427.00 86.00 16.00 re S
+BT /F2 8.5 Tf 137.00 405.50 Td (docs used) Tj ET
+0.90 0.93 0.96 rg 220.00 401.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 220.00 401.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 223.00 431.50 Td (best layer) Tj ET
-0.90 0.93 0.96 rg 306.00 427.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 306.00 427.00 86.00 16.00 re S
+BT /F2 8.5 Tf 223.00 405.50 Td (best layer) Tj ET
+0.90 0.93 0.96 rg 306.00 401.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 306.00 401.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 309.00 431.50 Td (layer 8) Tj ET
-0.90 0.93 0.96 rg 392.00 427.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 392.00 427.00 86.00 16.00 re S
+BT /F2 8.5 Tf 309.00 405.50 Td (layer 8) Tj ET
+0.90 0.93 0.96 rg 392.00 401.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 392.00 401.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 395.00 431.50 Td (layer 15) Tj ET
-0.90 0.93 0.96 rg 478.00 427.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 478.00 427.00 86.00 16.00 re S
+BT /F2 8.5 Tf 395.00 405.50 Td (layer 15) Tj ET
+0.90 0.93 0.96 rg 478.00 401.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 478.00 401.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 481.00 431.50 Td (15 minus 8) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 411.00 86.00 16.00 re S
+BT /F2 8.5 Tf 481.00 405.50 Td (15 minus 8) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 385.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 415.50 Td (de train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 411.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 389.50 Td (de train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 385.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 415.50 Td (134/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 411.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 389.50 Td (134/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 385.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 415.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 411.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 389.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 385.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 415.50 Td (0.1623) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 411.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 389.50 Td (0.1623) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 385.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 415.50 Td (0.1899) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 411.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 389.50 Td (0.1899) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 385.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 415.50 Td (+0.0276) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 395.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 389.50 Td (+0.0276) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 369.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 399.50 Td (de val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 395.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 373.50 Td (de val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 369.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 399.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 395.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 373.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 369.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 399.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 395.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 373.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 369.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 399.50 Td (0.1636) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 395.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 373.50 Td (0.1636) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 369.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 399.50 Td (0.2003) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 395.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 373.50 Td (0.2003) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 369.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 399.50 Td (+0.0367) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 379.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 373.50 Td (+0.0367) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 353.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 383.50 Td (fr train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 379.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 357.50 Td (fr train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 353.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 383.50 Td (132/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 379.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 357.50 Td (132/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 353.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 383.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 379.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 357.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 353.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 383.50 Td (0.0430) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 379.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 357.50 Td (0.0430) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 353.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 383.50 Td (0.0798) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 379.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 357.50 Td (0.0798) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 353.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 383.50 Td (+0.0367) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 363.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 357.50 Td (+0.0367) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 337.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 367.50 Td (fr val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 363.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 341.50 Td (fr val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 337.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 367.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 363.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 341.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 337.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 367.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 363.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 341.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 337.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 367.50 Td (0.0461) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 363.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 341.50 Td (0.0461) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 337.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 367.50 Td (0.0801) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 363.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 341.50 Td (0.0801) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 337.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 367.50 Td (+0.0340) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 347.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 341.50 Td (+0.0340) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 321.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 351.50 Td (it train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 347.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 325.50 Td (it train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 321.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 351.50 Td (133/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 347.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 325.50 Td (133/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 321.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 351.50 Td (14) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 347.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 325.50 Td (14) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 321.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 351.50 Td (0.1509) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 347.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 325.50 Td (0.1509) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 321.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 351.50 Td (0.1903) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 347.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 325.50 Td (0.1903) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 321.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 351.50 Td (+0.0394) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 331.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 325.50 Td (+0.0394) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 305.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 335.50 Td (it val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 331.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 309.50 Td (it val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 305.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 335.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 331.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 309.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 305.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 335.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 331.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 309.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 305.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 335.50 Td (0.1796) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 331.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 309.50 Td (0.1796) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 305.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 335.50 Td (0.2066) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 331.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 309.50 Td (0.2066) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 305.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 335.50 Td (+0.0270) Tj ET
+BT /F1 8.5 Tf 481.00 309.50 Td (+0.0270) Tj ET
 0 0 0 rg
-BT /F1 10.0 Tf 48.00 313.00 Td (All candidate improvements were pre-registered in docs/preregistration.md before running and evaluated) Tj ET
-BT /F1 10.0 Tf 48.00 300.00 Td (on dev/train \(134/lang\) and dev/val \(34/lang\) with a >= +0.0030 official full-dev adoption threshold:) Tj ET
+BT /F1 10.0 Tf 48.00 287.00 Td (All candidate improvements were pre-registered in docs/preregistration.md before running and evaluated) Tj ET
+BT /F1 10.0 Tf 48.00 274.00 Td (on dev/train \(134/lang\) and dev/val \(34/lang\) with a >= +0.0030 official full-dev adoption threshold:) Tj ET
 endstream
 endobj
 9 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 19 0 R /F2 20 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R /Im4 18 0 R >> >> >>
 endobj
 10 0 obj
 << /Length 13888 >>
@@ -776,10 +796,10 @@ BT /F1 10.0 Tf 48.00 54.40 Td (comparison only, non-submission\) yields official
 endstream
 endobj
 11 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 12 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 12 0 R /Resources << /Font << /F1 19 0 R /F2 20 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R /Im4 18 0 R >> >> >>
 endobj
 12 0 obj
-<< /Length 7249 >>
+<< /Length 7890 >>
 stream
 BT /F1 10.0 Tf 48.00 738.00 Td (\(mean 0.3163, docs/official_dev_stdout_qwen_comparison.txt; raw subword-first 0.2453\), which Apertus) Tj ET
 BT /F1 10.0 Tf 48.00 725.00 Td (v1.5 8B outperforms by +0.0177 mean \(0.3340 vs 0.3163\).) Tj ET
@@ -883,10 +903,10 @@ BT /F1 10.0 Tf 48.00 568.00 Td (of the full 8B checkpoint needs about 16 GB. Ape
 BT /F1 10.0 Tf 48.00 555.00 Td (machine. The Getting Started introduction says builders work with both sizes. The UZH challenge FAQ) Tj ET
 BT /F1 10.0 Tf 48.00 542.00 Td (says either size is in scope, and that efficiency can make a tuned 8B competitive. This submission is) Tj ET
 BT /F1 10.0 Tf 48.00 529.00 Td (the 8B.) Tj ET
-BT /F1 10.0 Tf 48.00 512.00 Td (Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, use) Tj ET
-BT /F1 10.0 Tf 48.00 499.00 Td (the same frozen hidden-state-15 Tier-1 Combination method \(207,075 test forward-pass tokens, 165.8) Tj ET
-BT /F1 10.0 Tf 48.00 486.00 Td (seconds\). Development scores are our development evaluation. Those test and full-set files are included) Tj ET
-BT /F1 10.0 Tf 48.00 473.00 Td (for the organizers to score. We never graded the test split. No test Spearman is claimed.) Tj ET
+BT /F1 10.0 Tf 48.00 512.00 Td (Test predictions, 56 documents per language, and full-set predictions, 224 documents per language,) Tj ET
+BT /F1 10.0 Tf 48.00 499.00 Td (apply the ridge fit on all development documents \(docs/ridge_weights.json\). Development scores are) Tj ET
+BT /F1 10.0 Tf 48.00 486.00 Td (out-of-fold. Those test and full-set files are included for the organizers to score. We never graded) Tj ET
+BT /F1 10.0 Tf 48.00 473.00 Td (the test split. No test Spearman is claimed.) Tj ET
 BT /F2 13.0 Tf 48.00 445.00 Td (Data, Evaluation, and Limitations) Tj ET
 BT /F1 10.0 Tf 48.00 427.00 Td (Development inputs are the public SwissGov-RSD development pages, 168 documents per language. Test) Tj ET
 BT /F1 10.0 Tf 48.00 414.00 Td (predictions are 56 documents per language. Full-set predictions are 224 documents per language, in id) Tj ET
@@ -897,230 +917,120 @@ BT /F1 10.0 Tf 48.00 362.00 Td (the evaluation that should be quoted. States are
 BT /F1 10.0 Tf 48.00 349.00 Td (empty subword span scores 1 before smoothing. The final layer raises aligned tokens and different) Tj ET
 BT /F1 10.0 Tf 48.00 336.00 Td (tokens together. Italian train, on the per-document map, prefers layer 14 by 0.001. 70B was not run. No) Tj ET
 BT /F1 10.0 Tf 48.00 323.00 Td (test Spearman is reported. We never graded the test split.) Tj ET
-BT /F2 13.0 Tf 48.00 295.00 Td (Negative results) Tj ET
-BT /F1 10.0 Tf 48.00 277.00 Td (Sprint 2 tried further representations, alignment, and post-processing on development data only. The) Tj ET
-BT /F1 10.0 Tf 48.00 264.00 Td (gate was train at least 0.3433, validation at least 0.3165, and a win on at least 4 of 5 document) Tj ET
-BT /F1 10.0 Tf 48.00 251.00 Td (folds. Item 16, a learned token head, was not run. None of the rows below was adopted. The closest miss) Tj ET
-BT /F1 10.0 Tf 48.00 238.00 Td (is the diagonal alignment prior.) Tj ET
+BT /F2 13.0 Tf 48.00 295.00 Td (Negative results and robustness) Tj ET
+BT /F1 10.0 Tf 48.00 277.00 Td (The development gate is train at least 0.3433, validation at least 0.3165, and a win on at least 4 of 5) Tj ET
+BT /F1 10.0 Tf 48.00 264.00 Td (folds. The out-of-fold ridge passes it \(train 0.3458, val 0.3277, folds 5/5\). Alpha is the) Tj ET
+BT /F1 10.0 Tf 48.00 251.00 Td (pre-registered 1.0. Features are the frozen score, surprisal rank, mismatch, sentence prior, relative) Tj ET
+BT /F1 10.0 Tf 48.00 238.00 Td (position, stopword, punctuation, token length, document length ratio, and side. None of them is a gold) Tj ET
+BT /F1 10.0 Tf 48.00 225.00 Td (label, a document id, or a test-set statistic. Four standardized weights flip sign across folds and are) Tj ET
+BT /F1 10.0 Tf 48.00 212.00 Td (flagged: relative position, punctuation, token length, and side. Each of those coefficients stays below) Tj ET
+BT /F1 10.0 Tf 48.00 199.00 Td (0.003. The frozen score, sentence prior, mismatch, length ratio, surprisal rank, and stopword keep) Tj ET
+BT /F1 10.0 Tf 48.00 186.00 Td (their signs. Surprisal alone and the layer rank-average lost. Attention weights were not available from) Tj ET
+BT /F1 10.0 Tf 48.00 173.00 Td (SDPA.) Tj ET
 endstream
 endobj
 13 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 14 0 R /Resources << /Font << /F1 18 0 R /F2 19 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 14 0 R /Resources << /Font << /F1 19 0 R /F2 20 0 R >> /XObject << /Im1 15 0 R /Im2 16 0 R /Im3 17 0 R /Im4 18 0 R >> >> >>
 endobj
 14 0 obj
-<< /Length 9095 >>
+<< /Length 5253 >>
 stream
-0.90 0.93 0.96 rg 48.00 732.00 129.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 732.00 129.00 16.00 re S
+q 516.00 0 0 127.77 48.00 620.23 cm /Im4 Do Q
+BT /F1 10.0 Tf 48.00 600.23 Td (On the first 10 development documents per language, float32 and bfloat16 agree to a Spearman of 0.3404) Tj ET
+BT /F1 10.0 Tf 48.00 587.23 Td (either way \(delta 0.0000\). The mean absolute token gap is 0.0008 and the maximum is 0.0384. The five) Tj ET
+BT /F1 10.0 Tf 48.00 574.23 Td (weakest development pages are below. Four are short and negative for both this scorer and the) Tj ET
+BT /F1 10.0 Tf 48.00 561.23 Td (final-layer baseline. admin_fr_142 is the long French page \(1,282 kept tokens\).) Tj ET
+0.90 0.93 0.96 rg 48.00 538.23 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 538.23 129.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 736.50 Td (Idea) Tj ET
-0.90 0.93 0.96 rg 177.00 732.00 129.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 177.00 732.00 129.00 16.00 re S
+BT /F2 8.5 Tf 51.00 542.73 Td (Page) Tj ET
+0.90 0.93 0.96 rg 177.00 538.23 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 177.00 538.23 129.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 180.00 736.50 Td (train) Tj ET
-0.90 0.93 0.96 rg 306.00 732.00 129.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 306.00 732.00 129.00 16.00 re S
+BT /F2 8.5 Tf 180.00 542.73 Td (SpanDiff) Tj ET
+0.90 0.93 0.96 rg 306.00 538.23 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 306.00 538.23 129.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 309.00 736.50 Td (val) Tj ET
-0.90 0.93 0.96 rg 435.00 732.00 129.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 435.00 732.00 129.00 16.00 re S
+BT /F2 8.5 Tf 309.00 542.73 Td (Baseline) Tj ET
+0.90 0.93 0.96 rg 435.00 538.23 129.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 435.00 538.23 129.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 438.00 736.50 Td (folds) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 716.00 129.00 16.00 re S
+BT /F2 8.5 Tf 438.00 542.73 Td (Note) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 522.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 720.50 Td (Multi-layer rank average) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 716.00 129.00 16.00 re S
+BT /F1 8.5 Tf 51.00 526.73 Td (admin_fr_38) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 522.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 180.00 720.50 Td (0.279) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 716.00 129.00 16.00 re S
+BT /F1 8.5 Tf 180.00 526.73 Td (-0.256) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 522.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 720.50 Td (0.263) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 716.00 129.00 16.00 re S
+BT /F1 8.5 Tf 309.00 526.73 Td (-0.258) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 522.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 438.00 720.50 Td (0/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 700.00 129.00 16.00 re S
+BT /F1 8.5 Tf 438.00 526.73 Td (Short page, both negative) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 506.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 704.50 Td (Mean subword pool) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 700.00 129.00 16.00 re S
+BT /F1 8.5 Tf 51.00 510.73 Td (admin_de_93) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 506.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 180.00 704.50 Td (0.336) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 700.00 129.00 16.00 re S
+BT /F1 8.5 Tf 180.00 510.73 Td (-0.233) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 506.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 704.50 Td (0.311) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 700.00 129.00 16.00 re S
+BT /F1 8.5 Tf 309.00 510.73 Td (-0.241) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 506.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 438.00 704.50 Td (1/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 684.00 129.00 16.00 re S
+BT /F1 8.5 Tf 438.00 510.73 Td (Short page, both negative) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 490.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 688.50 Td (Context prefix) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 684.00 129.00 16.00 re S
+BT /F1 8.5 Tf 51.00 494.73 Td (admin_de_38) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 490.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 180.00 688.50 Td (0.343) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 684.00 129.00 16.00 re S
+BT /F1 8.5 Tf 180.00 494.73 Td (-0.219) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 490.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 688.50 Td (0.313) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 684.00 129.00 16.00 re S
+BT /F1 8.5 Tf 309.00 494.73 Td (-0.147) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 490.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 438.00 688.50 Td (5/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 668.00 129.00 16.00 re S
+BT /F1 8.5 Tf 438.00 494.73 Td (Same English text as fr_38) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 474.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 672.50 Td (Language tags) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 668.00 129.00 16.00 re S
+BT /F1 8.5 Tf 51.00 478.73 Td (admin_fr_52) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 474.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 180.00 672.50 Td (0.342) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 668.00 129.00 16.00 re S
+BT /F1 8.5 Tf 180.00 478.73 Td (-0.198) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 474.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 672.50 Td (0.311) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 668.00 129.00 16.00 re S
+BT /F1 8.5 Tf 309.00 478.73 Td (-0.207) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 474.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 438.00 672.50 Td (4/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 652.00 129.00 16.00 re S
+BT /F1 8.5 Tf 438.00 478.73 Td (Short brochure page) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 458.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 656.50 Td (Paired tie-break) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 652.00 129.00 16.00 re S
+BT /F1 8.5 Tf 51.00 462.73 Td (admin_fr_142) Tj ET
+0.45 0.50 0.55 RG 0.6 w 177.00 458.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 180.00 656.50 Td (0.330) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 652.00 129.00 16.00 re S
+BT /F1 8.5 Tf 180.00 462.73 Td (-0.161) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 458.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 656.50 Td (0.287) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 652.00 129.00 16.00 re S
+BT /F1 8.5 Tf 309.00 462.73 Td (-0.115) Tj ET
+0.45 0.50 0.55 RG 0.6 w 435.00 458.23 129.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 438.00 656.50 Td (0/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 636.00 129.00 16.00 re S
+BT /F1 8.5 Tf 438.00 462.73 Td (Long French page) Tj ET
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 640.50 Td (Rank, then smooth) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 636.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 640.50 Td (0.290) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 636.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 640.50 Td (0.267) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 636.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 640.50 Td (0/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 620.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 624.50 Td (Smooth, window 3) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 620.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 624.50 Td (0.340) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 620.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 624.50 Td (0.315) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 620.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 624.50 Td (5/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 604.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 608.50 Td (Number rule) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 604.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 608.50 Td (0.334) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 604.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 608.50 Td (0.314) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 604.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 608.50 Td (0/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 588.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 592.50 Td (Length-ratio tail) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 588.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 592.50 Td (0.338) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 588.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 592.50 Td (0.312) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 588.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 592.50 Td (4/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 572.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 576.50 Td (Rank ensemble of three) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 572.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 576.50 Td (0.286) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 572.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 576.50 Td (0.266) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 572.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 576.50 Td (0/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 556.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 560.50 Td (Entropic optimal transport) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 556.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 560.50 Td (0.337) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 556.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 560.50 Td (0.305) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 556.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 560.50 Td (1/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 540.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 544.50 Td (Diagonal prior, 0.25) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 540.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 544.50 Td (0.341) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 540.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 544.50 Td (0.320) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 540.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 544.50 Td (4/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 524.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 528.50 Td (Phrase n-grams) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 524.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 528.50 Td (0.338) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 524.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 528.50 Td (0.310) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 524.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 528.50 Td (3/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 508.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 512.50 Td (Sentence dynamic program) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 508.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 512.50 Td (0.324) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 508.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 512.50 Td (0.310) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 508.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 512.50 Td (0/5) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 492.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 51.00 496.50 Td (English-anchor max) Tj ET
-0.45 0.50 0.55 RG 0.6 w 177.00 492.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 180.00 496.50 Td (0.314) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 492.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 309.00 496.50 Td (0.279) Tj ET
-0.45 0.50 0.55 RG 0.6 w 435.00 492.00 129.00 16.00 re S
-0 0 0 rg
-BT /F1 8.5 Tf 438.00 496.50 Td (0/5) Tj ET
-0 0 0 rg
-BT /F2 13.0 Tf 48.00 463.00 Td (Reproducibility and Next steps) Tj ET
-BT /F1 10.0 Tf 48.00 445.00 Td (The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. Judges run make run. That) Tj ET
-BT /F1 10.0 Tf 48.00 432.00 Td (builds the Docker image and grades predictions/dev with --split dev. It does not load the model. make) Tj ET
-BT /F1 10.0 Tf 48.00 419.00 Td (run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not) Tj ET
-BT /F1 10.0 Tf 48.00 406.00 Td (the scorer. make predict writes a new deterministic layer-15 development run under predictions/rerun.) Tj ET
-BT /F1 10.0 Tf 48.00 393.00 Td (It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker) Tj ET
-BT /F1 10.0 Tf 48.00 380.00 Td (image grades the same committed development files. Docker image verified under podman on linux/amd64 at) Tj ET
-BT /F1 10.0 Tf 48.00 367.00 Td (an earlier commit; make run-local is the equivalent local path. Development scores are our development) Tj ET
-BT /F1 10.0 Tf 48.00 354.00 Td (evaluation. Test predictions, 56 documents per language, and full-set predictions, 224 documents per) Tj ET
-BT /F1 10.0 Tf 48.00 341.00 Td (language, use the frozen hidden-state-15 Tier-1 Combination method and are included for the organizers) Tj ET
-BT /F1 10.0 Tf 48.00 328.00 Td (to score. We never graded the test split. make run grades the development files only. A 70B run is) Tj ET
-BT /F1 10.0 Tf 48.00 315.00 Td (future work on a larger machine.) Tj ET
-BT /F2 13.0 Tf 48.00 287.00 Td (License) Tj ET
-BT /F1 10.0 Tf 48.00 269.00 Td (Report CC-BY-4.0. Code Apache-2.0. SwissGov text stays CC-BY-4.0, not relicensed.) Tj ET
+BT /F2 13.0 Tf 48.00 429.23 Td (Reproducibility and Next steps) Tj ET
+BT /F1 10.0 Tf 48.00 411.23 Td (The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. Judges run make run. That) Tj ET
+BT /F1 10.0 Tf 48.00 398.23 Td (builds the Docker image and grades predictions/dev with --split dev. It does not load the model. make) Tj ET
+BT /F1 10.0 Tf 48.00 385.23 Td (run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not) Tj ET
+BT /F1 10.0 Tf 48.00 372.23 Td (the scorer. make predict loads docs/ridge_weights.json and writes that full-development fit under) Tj ET
+BT /F1 10.0 Tf 48.00 359.23 Td (predictions/rerun. It does not refit. It needs the Apertus weights and a Hugging Face token only if) Tj ET
+BT /F1 10.0 Tf 48.00 346.23 Td (those weights are not cached. The Docker image grades the same committed development files. Docker) Tj ET
+BT /F1 10.0 Tf 48.00 333.23 Td (image verified under podman on linux/amd64 at an earlier commit; make run-local is the equivalent local) Tj ET
+BT /F1 10.0 Tf 48.00 320.23 Td (path. Development scores are out-of-fold. Test predictions, 56 documents per language, and full-set) Tj ET
+BT /F1 10.0 Tf 48.00 307.23 Td (predictions, 224 documents per language, apply the saved ridge and are included for the organizers to) Tj ET
+BT /F1 10.0 Tf 48.00 294.23 Td (score. We never graded the test split. make run grades the development files only. A 70B run is future) Tj ET
+BT /F1 10.0 Tf 48.00 281.23 Td (work on a larger machine.) Tj ET
+BT /F2 13.0 Tf 48.00 253.23 Td (License) Tj ET
+BT /F1 10.0 Tf 48.00 235.23 Td (Report CC-BY-4.0. Code Apache-2.0. SwissGov text stays CC-BY-4.0, not relicensed.) Tj ET
 endstream
 endobj
 15 0 obj
@@ -2933,34 +2843,328 @@ fi>Í³¬pí`¸xÔ–<±\ı“¾%x§Ä>"şÍú¦¯ã©¼57‡aÕô«Ÿ[Ë§xÀ\HÖw
 endstream
 endobj
 18 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<< /Type /XObject /Subtype /Image /Width 1260 /Height 312 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length 67691 >>
+stream
+ÿØÿà JFIF   x x  ÿá €Exif  MM *           >       F(       ‡i       N       x      x                   ì       8    ÿí 8Photoshop 3.0 8BIM      8BIM%     ÔŒÙ ²é€	˜ìøB~ÿÀ 8ì" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÛ C 
+
+
+
+
+
+
+
+
+ÿÛ C	ÿİ  OÿÚ   ? ıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿĞıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¯™?kmÅŞøMk?‚5ëŸjz‡ˆ¼7¦}ºÑ!yâƒRÕ­­&Ø'XóåÊØÜ„g¨Çôİ|«ûbÿ É*Ñìsğgş¤4 Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU^ñã‚ş	iVZ‡Š…ÅÄú”­­ªšSØ*¡W#$ã ÖïÂßŠ^ø½áXü]á$6ÆG‚X§M“C2`´r($‚Fæ½9dØ¨áV5Ó~É»)[KœëIÔtT—7cÆÿ áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠóƒå_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¯Æÿ ‰ÿ ÿ hKÚSÓ´ıOT·ÔíõO'LÓ!ßöYmwâÜ’D‘9f=zšúÎá:™µJ”éÔŒ9#}¯½ô<¼Ó41”¢İİ´>æÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êxŒ†42€®@ÜÈ¾)õòlõ•áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ªª†«ªXhšeŞ³ªÌ¶ÖV¼óÊßu#K3 Ğ)I%v|Éÿ ÷ñWşÆøáÿ şUQÿ ÷ñWşÆøáÿ şUVŸÂÿ Ú³á—ÅoŸèi{e}*Èö¦ò.–1¹¼²®Ç;Al0{ñ_KÓjÇ&0¡‰‡´¡5%µÑò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQHì>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *ªÙ’ÿ Ç)â/‹¾ñ¯‹ïüf<#âh4û+ÍF;Xçòi67eH´†ÿ ÖNıqùÏÖò¯ìùÿ %Wö…ÿ ±Î×ÿ Qı*€>ª¢Š(ÿÑıü¢Š( ¢Š( ¢Šù‡öÍñ¯‰>~Ì~<ñ7„/MÖÖ;{¸Î$¶mBæ+32ÍÌ]Obí@OQ_)øQàÙ‹âÇÀıgàí“hŸğ”k²x_\Š9doí{k>æt¸½ÜÇÎ¸†kuLß?ÌÀ§ö×~øâ†¾ø‘áëé)2\]B¸„L€…}Ü¹ ÖŠüßı‘~|4oÚâÿ ÆŸ†ŞÓ¼7á½&uğF‰m´S9„º­É€¯æ]•\uXqŸOøQğ»Iı”tokŸ¾è­µ”‚_Ø]Ûßj6Wš•ûıŠ{¨Ú7DGš(Œ‘\JW ãµ ~Ã×Ê¿¶/ü’­şÇ?êAc_UWçí5ûAøÆ>Ğü	¥i¾"ƒQ>6ğ’y·¾Õl¬³o¯Y³ÿ ¦\[%¾S°ïÃœÉ"€?G(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢¾RøıûQX|×l</e¡¾½ª]À.å_<[ÇŠ/ÌUòÌTà`c®i¥s‡1Ì¨á):Ø‰Z+úé©õmÁ|1øƒ¤üRğ6—ã­7‚ÛRF>T˜ß‘±GC»YHÏqÍw´š¡R©tÕÓòaEPjQE QE QE QE |ëûAşÏšwÇ];Kÿ ‰£èº®Šò5½ÀŒL…&
+$GŒ•È;A=ó]?ÀïƒšWÁ/Ÿ
+é÷²jSÜ\=ÕÕÔŠË3€¤ªv¨U Ÿ\ó^ÇE{Sâ,l°QË¥S÷IİGO]í{]Ş×µÎ8à(ªÏ£ï>¡EWŠv9ñã‚ş	iVZ‡Š…ÅÄú”­­ªšSØ*¡W#$ã ÖïÂßŠ^ø½áXü]á$6ÆG‚X§M“C2`´r($‚Fæ¼ïöƒıŸ4ïºv—ÿ GÑu]äk{™
+LH+v‚<{æºß4¯‚^>ÓïdÔ§¸¸{««©!–gITíPª >¹æ¾¶µ£û"„åõ®mV¶µß•­ku½úXòá<WÖši{+húßúùÇEWÉ QExÖ¯ûA|Ğ¼j¿µ_Á¶dXš"®cI_î£ÊÆ¬}wÅ4|F.•Y¨§¢»¶½µ=–Š(¤tQ@Q@Q@Q@Q@Q@1ä!ºF	$ã“ÒŸ_ŸŸ¶ƒ¾#x‡Äú5î‘§_jş×ËXl•äò®Ë¶ætNrÊT<qŠò3ÌÎXL;¯
+nm[Eÿ ÿ #ØÈ²¸ã1*„ê('}_ü:üÏĞ:+É¾é~.Ñ¾xMñË9Ö!…„‚Vİ"!v1#ì©´LcµzÍwá+º´£QÆ×IÙî¯Ğóñt*³¦¥t›W[;uAEËxËÆ¾ø} \x£Æ:„zf™m€òÉ“ó7EUPY˜ö
+	®Ê4gRj4Ü‰-[~G,æ¢œ¤ì‘ÔÑ\Ãß‰şø©¤É­øUMNÚò¥Â´rDøÎ+.{0{f»ê¼N¥•h¸Énš³_&*u#8©Aİ0¢Š+ÂŠüı´>*üiğoÅ©í´ÍcQĞô«d¶m/ì²<0H2Hvádo3*Cg•õ'ì]ñ£âÅ^´ñü«¨M¢½·•|±¬FO=X´N*M£3Ï=«ØÃäuªájã!nZv¿ÍÙ~=7>WÅ”kãª`T”[W{;Ãiä}µEW}QCUÕ,4M2ïYÕf[k+^yåoº‘Æ¥™Ğkç…ÿ µgÃ/ŠŞ->ĞÒöÊúU‘íMä+],csye]v‚Ø`8÷â½÷ÄšŸâ¯ê^Õ”µ–«o-¬ÁNË™J6cƒÁõ¯’~şÇzWÂ¿Cã{ßK­¶š²­„&Ü@#óT¡i;o!	Ï>ÕJÖÔùüÒ¦`±4V)Ó¿¿~ßm­}w>Ğ¢Š*O 
+(¢€
+(¢€
++Ëş"ügøkğ Ú'5¤Óe¾É†=’K#*œÙ±
+=HÒ»½\Ò<I¤ZkÚÜwÚ}ôbXfˆîGFèAşc¨<iØç†.”ª:Qšr[«ê½Q«EÉ%%İ+„–8=4ôQE WœüRø¥á_„>“ÅŞ.’Al$H"Šß4Ó>JÇ’$y `kàçÇümÒ¯u
+‹‹yôÙ;«[¤	4F@J1
+YJ¶=@¯N96*XWTß²NÎVÒç;ÅÒU%ÍØö:(¢¼Ã (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š )†(Ì‚R€º‚cQš}\Š( Š( Š( Š)®é—‘‚ªòI8€L–EŠ7•²BÇ'8FG ÒĞæ¿ÿ mßø—â™¢_èVqxo[ÔÂÌ7‘y¯åÆìÛŠ1–P£˜¯ÒŠñ­#ö}ø=¡xÕ¾ é^‚lÈÒ¬¡œÆ’¿Ştˆ±Xú…íŠöZ©5Ğğ8£	¬uU6Ş–í÷/» QE'¾QE QE QE QE QE QE QE ‹âMOñW‡õ/êÊZËU·–Ö`§åÌ¥±ÁàúÖÕ8)'-ñÁ¿ØïJøWãÈ|o{â)u¶ÓVU°„Ûˆ~j”-#mä! p9çÚ¾Ğ¢Šmßs‡,Ê°ø:~ËU{õßçp¢Š)€QE QE WÊ¿³çü•_ÚşÇ;_ıGôªúª¾UıŸ?äªşĞ¿ö9Úÿ ê?¥PÕTQE ÿÒıü¢Š( ¢Š( ®âoÃ¿üZø¯ü5ñ|O.â;9lî<¶Û"¬ƒãb×FÃ!ÁÃ pkº¢€>TğŸì÷ãƒã¯
+x×ãÄFñßü QÜİ4¸ôÕ[›˜~Ì÷—¬³Mö›‘	dVQ)faã‘ë¾ğ·Ä/áÍç†üEãe×|Y2_ˆuÖÓ"¶XšáäkRl¡uFÊÈ„oS.Ì’¥=:Š ò‚Ÿ´ÿ ‚?|=ğ—@¾kì;3ß´ad¸»”´—lŒ\–wyJ–lÁ'­xÎ³û9|Wøt}ãgÅXüOá*şÓQ›LÓô´©u¬%YíÒòãíW¢¢»$1E¸È¯±( ¾Uı±ä•h¿ö9ø3ÿ Rúª¾Uı±ä•h¿ö9ø3ÿ R úªŠ( Š( Š( Š( Š( Š( Š( Š( Š( Š)’:D,‡j $“Ø¦€^ñ‹öqğÆ«ë_ÄR]Øj6˜VæÊEŞÛ¼·Ş®’×‰xKöãğçŠ>$Yø@øv{MT¼Vš‹N¬í#¶ÈÚH6ªíÇŞ%zó_u×µœğş7.œaŒ§Êä®¶z|›ù­Ñäóa3
+Rƒ´ã}Wõùœ¿‚ü |?ğ¾Ÿàÿ Aöm7LË‰IÜÇ$³3ìÌKêk¨¢ŠñON8Â*VKDQE…Q@Q@Q@Q@Q@Q@Q@Q@~køãö"ño‰~(êzİ†»g†õ½Aïçi†ò/5üÉT)F ğ¬Xq×úQE5&¶<Œã#Ãã£bÒwZØdQ¬Q¤K’98riôQHõÂŠ( Š( Š( Š( Š( Š( Š( Š( ¾ı¤~ßülğ~Ò/£°Ô¬.ã½¶iÃãVM’m€Cœ	WĞWvY˜ÕÂb!‰ í(»£F5`éÏf|Ÿû-şÏúïÁ+v÷Å:„z¦¼ğnŠĞ±‚íÃùœ)f;ÎN01Å}aE®s›×Çâg‹Ä»Î[ôÙY~Œ&)ªTöA_ŸµïÇ¿‰Ÿ¼c£øOÁw©¡ÚMeöÇ»hc•§ÈÉåƒ(*‚@äç+ô¹¿ø;Â~0†èÖzÄví¾%»&İÊïÇ8ë^t]§{€¯‰Ã:Xzœ’v×ôÓSÌ~ø‚oŒß4=â“oq6«‹ˆf…Z¼¹1 Áp¡±ŒsÇ¯WĞ<5áï
+iË¤øgM¶Ò¬”–ÚÄ°Ç¸õ;P“Üõ­[{x- ÖÖ5†T"" ªª£ ( @*j¿o>WM7Ë½º}ÇváN
+£æ’I7ÕùüÂŠ++[×4ézö½wŸc–i¥;Qz’êOšÈè””SmèjÑ^_ğëã?Ã_Šæí<­&¥-Ñì’)Xà6ÉISêµêXÏ‰§V
+¥))EõNè(¢Š‚Š( ¸ˆ_üğ¯I[ñÖªše´ïåE•i$•ñœ" flw `wÅwÕòíIû?ë¿l4+ßjZjšÏ¶+²Â	£¸
+æ@ÅXl8ÁÏ5ípî	[N–:§%'»]4vèíwe{i¹Ç«Ve*¼º#Êş4ü?´õŞ‹ñkàçˆì/-Ú×ì­Ñ•lr3†\!ep\†FQÆzúÓàÇÃ£ğ£á®‹à7»ûtºr?›0U¤–F‘öƒÑAb°ÏZãÿ fïƒwÿ ü'‡5{èïõ+û¹/nZ ÂySd{€$ ƒ$€I5ôcœÒÃÓÅT¥„Ÿ54ß+î/+ÉiB«ÇJ«5ïk§KÙyÙy$2HÁy$œø×æÏí¹àŠ'ñfƒ¨hzeş¹á¨ìü´†ÁQá‘‹;Ç9d*cµzí¿á?ˆş(ğï‡O„lîõMÖyÛQ´²ò3²¯‘#FŸ3ªá»pO=kĞdøÿ Ã?	OñôW®×“IcmvOŸ›ÚŒ•ùƒ§½yñÓSÈÎfóDò™Ó”cdùÖİÖµºoº=ö}Ò<k¡|ğÖ•ñ¤:Ü0•emò¤eØÄİÙc*¦1Ú½–Š*>¿	‡TiB’wQIk¾ÏøãğsJøÛà±á]BöM6{{„ºµºC˜¦@TBFå*Ä‘ë+˜ıŸ?gÍ;àVªÄÑõ­WZxÚâàÆ!@†¢F`Ä’O>Ø¯¢«å/ßµ‡ÁMvÃÂöZëÚ¥ÜîUóÅ¼q@X¢üÅ_,ÅN:æ½ª|AX'—F§î›»»ïk«Úö¹ææRÁá_×±5¥õôÙ‘õmÁ|1øƒ¤üRğ6—ã­7‚ÛRF>T˜ß‘±GC»YHÏqÍwI$rÑ°p	<µâ3Õ¡Z5 ªSwM]?&>Š( Ô(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š :rk–ĞüsàÏŞİi¾×luK»/õñ[\G3Çƒ™Q‰<g×Š<s¡ŞøŸÁšï‡4Û¯±]ê–7ÑOÈòŞhÙ¸ç qÏ¥~uşÌÿ ³?ÅÏü\°ñOŠl#Ñtí;„’D¸SzeŒÆª«'nNò_=j’V>4Í14q4hÑ¢å=_oë}wÙ§´QEIô7ã+rÏÂZÕß†bóµhlç{DÆíÓ¬dÆ1ÜîÆ~•ùÙû2xóâÎ·ñn?PÕ5VÂxçmV;Æw¨J°Ämæa@G+ôŞ˜±Æ…™)s– c'Ş¼Ï&#F¼j¸¨=—_Çä÷Ğ÷òÌê|5l<©)9­Şëğù­µ_şØ~ñ÷ˆô-ø^ÖëQÒm¦˜ßÛY†y¾K²',«†úgµëŸ~+^ü"ğLzö—f—·÷·QÙÀ³dBêÍ¾M¸$ §€A&¹oÙËãv³ñvËY´ñ”6Ú–Šğî’Ø0†Tœ1^±VNyçµrçX¬.*o)œÚœ×O¿ôÛ±×’áqXX,ŞN}_Ëõß¹7ì± øßÃ¿ÖÇÆÑOlíw+ÙÛÜçÎ†Ô…Ú¬•ùƒ§½}#EíåØ%†¡
+m¨«]cxšó¯$““½–ÁEWiÄ! IÀÔ‘%A$l[AÈ?|¹û_øwÇş&øHÚ€b¸ºu¼†KëkLùóÙ¨mÈ¡yo˜©*9 {WŸ~ÄøáøˆøºÎïKÑ®§´ëKĞÉ"º«yî±¿ÌŠÙ^Ü‘ÇJ®].|ıLêqÌ#‚ö.Í_›§_/–ûô>ç¢Š*O 
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
++Î|{ñká÷Ã#j4ÕÒÂKÜ˜£ØòÈÊ8-¶5bz‘Ší4}cKñ—m­h·)ycx‚HfŒå]OqıGPx5Ï])Tt£$ä·WÕz£¢xJ±¦ªÊEìí£ôf•Q]8QE WÊ¿³çü•_ÚşÇ;_ıGôªúª¾UıŸ?äªşĞ¿ö9Úÿ ê?¥PÕTQE ÿÓıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¯•l_ù%Z/ı~ÿ Ô‚Æ¾ª¯•l_ù%Z/ı~ÿ Ô‚Æ€>ª¢Š( ¢Š( ¢Š¡ªê–—w­j³-µ•„2O<­÷R(”³±ú MTbäÔbµbnÚ²ıó/ÂïÚ¿áÅhi{e}*Èö†ò;¥Œno,«±ÈP[üWÓUß™å8œOcŠ¦á+^Ï±†N´yéJè(¢Šó€¢¼¯Æ_şøZƒÃŞ,×#²¿œ+y[$¢·İi
++¶ìzôæ½>	áº‚;›iX¥PèêAVVÁt5ÏKJr”!$ÜwIê½{p•aÎpiKfÖÓ¹-Q]8QE QE R ŒƒKE |¯áÏØ÷á†> Eãı=/í.İµŒ“³‚|î‹´?ÊyPX€}kêŠ(¯O3ÎqXÙFXªn*Êîúøl%*)ªQJı‚Š(¯0è
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¬Oëúw…<=©x›Wb¶ZU´·So..ØÎÖ®9NJWlR’JìÛ¢¾,ø3ûcé_¼{ï¼9.ˆÚšÊÖ›8“ÊRådP‹±ŠG'=ëí:õ3¬‡—UT1å“Wİ==ShåÁã©b!ÏIİQ^AÖQE QE QE QE Wæ¿?mßøkâ§¢XhVrxoDÔÂd“Ì’ùOåÈêÁ‚)'•R§µúK‹,i*ä†F<Š§+ÏpØÉT…wg§¯ù1ôWç§íñ÷âoÃ_hşğUòhV“Y}µîÚåiä22y`ÊB PHœóÅ}UğÇZ÷ÄŸ„ñŸ‰­Å¶¥ù¡WbÈc‘£*Â†ÇNxãôØşÅa²ê9F¹*;$½m}<ÍÛ­¨f´ªb'†ù£÷ZÃEWËQE QE QE W—|gøt~+ü5Ö¼—a—QD1LAeY"‘dMÀuRTìsÖ½FŠ'
+´åJ¢¼dš~Œø“ödı™<Uğ‹ÅZ—Œüg©ZOw=¡±‚ì›ÕÙİPç*6®\õ¯¶è¢›w92¬ªŠ¡Ai÷îQE#Ñ
+(¯ı¡4kß|K¥|=i¹qˆ–Ù+ÆL¨Ùš0Àzçë¯…UëÓ£)(©4®öWv»òFUê8BSJöW·sÙ#–9WtNFTäduSëóKöğ7Å/ø·^¿Öô½CDğÔ¶b'‚ı/:ôH¥Y#“’UaÇ8¯ÒÚõ¸§#†]Œ–UQ+j¼ÖÛ½W©Ë–ãeˆ¢ªÊ<¾AEWÏáEPEP^ñ‹öqğÆ«ë_ÄR]Øj6˜VæÊEŞÛ¼·Ş®’×¿QM;¸Ì,E7J¼T¢ú3çï|:Ô<3ğPø{ğ~-f³µX­£ÿ }"yæÿ ç¤Š_>¤àuòÏìáeñál>3ñÎ¿¤jÒ´™ç’Öé^&¸ºƒ÷‹å£óªÀ¾03Í~Œjº¥†‰¦]ë:¬ËmeaÏ<­÷R8Ô³1ú M|ãğßö¤øWñ‡Ä²øM‚î	îã—È[èa¼‰T™aŸ?&NÖ+ùWW!¥W0£©'îtOF¿KßS×¥Å”°8)e+–>Óá¾ı‹ÊÊßâ? ¿l|Jø›cà¯èöPÚk©3Z=—˜$¢ŒÊ›Ùƒ©UÁ zWè]x÷~ü$øm¯\x›Á‹OÔ®C)—|’ÕùeŒHÌû@ãœW°×è[Ë±8¥S,¢éÂÉY÷×]ßK-õµúUCNŸ.&|Ò¿áøQ_.zAEPEÊÚøçÁwŞ —Â–ZíŒúÔó,’â6¸]¿xÃnÈî1ÇzXÆÊN×:ydX£y[$ ,p2p9àWæ×ÿ mßø—â™¢_èVqxo[ÔÂÌ7‘y¯åÆìÛŠ1–P£˜¯ÒŠñ­#ö}ø=¡xÕ¾ é^‚lÈÒ¬¡œÆ’¿Ştˆ±Xú…íŠ¨µÔğ³¬:¬è¼%UŸ½æ´òõÓM÷=–Š¡ªjºf‰a6«¬İÅaen»¥wXãAÓ,Ì@‰ªš‰<?â­=uoêVú­“¢kYVh÷£r2;µ'»ícÍÉ}{TQE…|÷ñö–øyğÓÄãÂzÂ^]ŞD¨÷&Ö%t¶YWÌ,ËÎÒ ?*ú¾Jø±û*i¿|k7Œ,õé4ƒ¨,k{€L$òÔ hÉeØJ€}«ÄÏçğNw[öùµåò=Î†UÚÌ$Ô,öïòM÷ùŸTiº–±§ZêÚl¢{KØ’hd^ŠX}AÍ]¬è–>Ğôÿ iŠVÓM‚;xƒ¶È”(Éîp95¯^Å>nUÏ¿SÆ«ËÌù6èQEY9â¿øsÇ$ŞñUŠj}ÆFù2ôee!•‡b5›ào‡~øo¦I¤x7MM>Şgó$Ã3¼Ó.îKvçµvµå~2ø×ğÇÀÔñf¹•üá[ÊÙ$…¾ëHQX =·c×§5Á‰XZRXšÜ±{s;/•Ùß…xª±xj<ÒO^Uv½lT¢¢‚xn æÚE–)T::U•†ApAK]éœQ@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@ ~Ğÿ ³Ç‰~(ø—Oño„õXnaµsCx]Sb»:º2+åFOZ÷Ÿ„¾?şi{¯¶É`æJ¤•ÚFÚ;(-í^EylK<d¿-õôüì{œ÷[ß¹´õëåvQEzçQE ò¯ìùÿ %Wö…ÿ ±Î×ÿ Qı*¾ª¯•gÏù*¿´/ıv¿úéTõUQ@ÿÔıü¢Š( ¢Š( ¤$ I8–¾Iı»uSCı’ş"İé2YË=œ’ÍÚñÚŞİCmtÁ‡LA#äöĞ¾øOâ‡ÃOŞßi¾ñn‘â+½0âî:şŞîKsœbT…Ø§<|ÀsZ~.ñ§ƒ¼¢ÉâOkÖÒ!dG¼Ô®¢³¶WíE2ÌÈ€±ày=+ãoŒşğ—Âÿ ‹?³~£ğßHµÑ/£ñŞÙD°ùš-Æ•tóÂá ßmR Ù
+À0Áæ½¯ö—øEâ/?¬<+ámBËLÔl5½'W]B)'¶?Ù—Is±â‘œ9@¤\‚~a@‡ào‹_
+¾'µê|4ñ‹âÖÓDfèiµù€K»Ëó~Ï#ìß±¶îÆvœt5<_~ÜxÁşAâí"OF	m!oíÎ  Ä›PşhÀçîôæ¾lğ7Å‰~ø™â¯‚tm	üKoá–ñ>“©xrŞk[[ëXæ6­ö³É4‘MÅq‰¤WVÈÚAñö¥áé?ğKıâ¦‘køÊÎÓIñ\¸E7íâõg’s><Æ–I¤h˜“’­³¦ ~ÇWÊ¿¶/ü’­şÇ?êAc_UWçí5ñcÇ>!ğî‡á}Wá7ˆ¼=§xI¶/gÒÈµë2¶Şú[ŒJ@	û¬‚ÃpQœ ~QE QE V'‰t;Å~Ô¼3«©k-VÚ[Y‚œ7—2”lÇƒë[tUÓ©(IN.Í
+QMYŸ|ı4¯…>=‡ÇŞ#—[m1e[¸€Gæ©BÒ0vŞÁ	Ï>ÕöW©gØ¼Æª¯ŒŸ4’¶Éiè’G.KJJÈ(¢Šò³áŸ²×ŠüñóÅŞÕm"µÖV%ºK¿0<&4“Õ`À¨ÈŒ:WØşĞ"ğ¯†4ŸÁ+O•kªÈßyÄ(qôÎ3Õ¿Ey‡­SI{Óß_Ÿæ{ì÷‰¡OUû°ÛO—äQEzçQE QE QE QE QE QE QE QE QE QE WÍ´oÆígá–iáË(nu-iæÛ%ÈcI RÜ)RÌwsÇzê~|V½ø»à™5íRÍ,¯ì®¤³aÉ…İ[|{²@!‡’yÏ0òÅ¼
+~úWÛç¿£=‰äX˜àÖ9¯İ·mş[z£Û¨¢ŠõÏ(¢Š (¢Š (¢Š *†«¥Økš]Ş‹ªÂ·6WğÉñ7İx¥R®§ê	~Š¨ÉÅ©Eê„ÕôgÌ¿¿e†?
+<\|g¡½ííôK"ZÉ–HíVAµ¼°¨§%I\±<{ó_MQEwæy¶'SÛbª9ÊÖ»ìa†ÂÓ£JQ²
+æ¼eâH|á-gÅ—µÄz=œ÷m}ç!} öÎ1ÕÒÔ7ğ]ÛÉkuÍÊÈèà2²°ÁRÁÇFQS‹šº¾«º6šm>]ÏÏ¯€_¶Œ¾%|M±ğW‹t{(m5Ô™­ËÌ@ÑFeMìÁÔªà=+ô.¼wÀß>ü5×n|OàïÅ§ê7
+Êfß$Z7,±‰„`÷Û8éÅ~m~ÓµN£âÏ[hŸ5ıKJğîĞµ¿Ú¯Èg‡s B98¯¥â¼n]ŠÅ)å”]:vI§ß]mwÒË}m~§Èc3·•ayñÒç“z%×nöÛşúñªê–—w­j³-µ•„2O<­÷R(”³±ú M|½àŸÛ7à·ŒõÙt9/'Ğ8f·¸Õ;k{…Sü¼€{€ØÈ÷â¼+Á?µ§‚5Ï‡ö_>5BMKR¶—MÕ/ÖGç­»pqRä!ÃuÉÍx÷Ä_ØGâ'‡u[=KÀ×ã;"­‰ÌV’Àİ-æ9W8$÷"»#’ağ¸	ÔÌiÊ5ggOtšêöw¶š;hÑeÄx™Q†#.‡:Ó™uWî–¿wSöŞâ¸#ºµ‘f†e„2²°È*GĞŠš¼ƒà/µß†ÿ 	¼?àßÜFÂ'óv¶õC$ Xõ.zqÇ¯_¯Šg×á*Ît¡9Ç•´›]ŸoW~ĞZ¿t/ƒŞ$Õ~,‡[‚14K¾TŒº‰]»,eˆôÆ{W²Ó$–8—t®XàdôĞ·]V”é©rİ5uº¿Uè~| ×<% ëúÿ Åÿ ‹:UÇŠ4ı.’)®L$Ú»È¾L{˜…veÍ¼0Kr@ô_ösı¬´zÎ£á©tI4-RÊrˆf¤°†
+ß6Ô!”°ã#œö¯Xø×ğcAøÕài<ªLÚx-ÄÄ¼¹”’¹r2=s^û;~Ë~øÚ†­üºÖ¹© …î¥AÇ !¼¸ĞŒ°‰$œcœóûj«‹»Ñÿ ZŞşV±ò™Wbp”põS†®wVmİù=-k{×½ï¥~ñ'ƒ|%ãa·ñfg¬GnÛâ[¸pÜ®ğqœsµ¿oooiv¶±¬0Â¡BªªŒ  p  ©¨®ÉV›Šƒ“²ÙtGØ¨$î–¡E29c•wDáÀ$eNFGQÅ>²(cÈ‘!’V«É$à©¯øßñ“Hø)àÅñUı£êSİN–¶–±¸C4Î¹j…RIÁíÇ5óÇíÇá/‰(ğç‡O„,ï5MÒyÛQ´²ò3²¯‘#FŸ3ªáº}Òyë_úßÁÚ…—gâë·¶óG·IŒ¬’ı’2íò2óäß6ô¯Òò/©c°Å¬d#7qÙm}/}ô¾Ûj|†}bi{J8jošÚK¥ßÉÿ ÃŸ¦şı±üâ?jş(ñ>>‹y¢ÏYÆÂå§kÆ/%°™$#dmÇZöï…_|'ñ{M»¾ğØ	´÷T¸¶¹@’Æ\‡
+Xl{•àı|)ağj	êRØx†ìÚßŞêË1KØc+³*˜“{¨s“^»ğ7à}‡ÁËDIµ}GWhÚ{ƒ‰DÄD°âIÏ?…~5Šúüs%N):w~zí×{tµºÈiPşÅRÇMınû-­Km¿Ÿ‘ïQE{G QE QEÅÄ–ò]]H°Ã
+³»¹
+ªª2X“À rMy'¾>ü$ø‘®ÜøkÁ¾!Šÿ Q¶VsÉ#.‰Ã4fEPàwÚOôæ»ÏxnøKYğÄÍo±g=£JŸyèSpñœã½~v|?ı‰¼}á}[RÕõÏÙÂ¶zn¡k§½šdyn­Şy2«±T6H\’xõ¹]–UÁbjã+¸UŠ÷woG{½7VÜñóV*H*ù£×úè}}ñ/ã÷ƒ|à/x§Ã:•ˆµ5¥µÌr’Y%2l$ªa¸ûc9¯…</ÿ ñ…åÕ¯ü-m$şûN• eçÙ/˜æ grñÏ5òÏÀ+ø­~-øni‘\h:”í¥]Bıò^)ƒç9
+ä9î1Aæ¿D|uû~Ì>çÆ!º½Ğ´0 –İ.‹@îßwnä’bsÈUcœz\YLº–!TÍ?‚µ–ûvÑ«zİ%Ôø,«3ÍóŠ‘­’+åpŞ÷Ùí­ïo–›•û?~Ô¶uËÿ ŞhO ê–°}®%óÅÄs@#|ÁS¥†FG9¯¬+äŸÙ‹á—ÀïÅ©x»áV­s¯İ\k5Åãæh#?•³deA JüØàõ¯Qı ´ë¿¼I¥|>i·<
+"X›d¯u2¢7fhÃëœw¨â,VW_êäÿ Ái[[úÚí»z³ô5^?®Eº‘MµmtÕ/SòWã·Çï~øû¯‹ŞéGH¿t²³ÏÙM²·î³ú¹Ó’ìóÍ~Òø\¾ñ?‚ôê–¿b¼Õ,m®fƒ‘åÉ4jì£<àÆyõ¯Í¿ÙàŸˆ_Æú–¹ãÿ <:¥®È“X´Ë}·ÌR¯
+Îªs3ø¯Ôîœ
+ñª[cãø	Šµ\eyÊÕ´]ôÕë¯İ¢AEÄ|JñŞø}â/ÚÍ½Æ›aq4O1ª„¦sÁË`Üàw¬*O–.VØı)7fÒóz%êû½ù_û'ü\øão‹0XE¯ßk¶Ï.©Ó»Ç
+„%$Pü'ï6¨Û×8¯¡¿l?øûÃš‚</uu§i73L/îlË$€_%Ó•VË}qÏJùµÄÉ`ªc'FQävqk^Ÿ†¿-O¢£B¶.–ˆ„ã5u(»Ç­öë£0¿mÿ |Gğ¿‡|:<#yw¥è×SÎºİ‘d‘]U|„iæEl·~Hç¥zìâ/ø›á"j>–âéÖòhìnnÁóç³P»]‹rß1`ò@ö«Ÿ³ˆü]¯|*ûoÄ	e»ÿ J™,æ»Ísjª¤»—ù· O$jùÃÀß¶ç‹<IñCKĞït8¼5­_¥„	™öÈD¯åÆìÛŠ1–P£˜¯{-Æ¬N£)+ë¹ùá)å9Ó'ß7º¢®Ö–Wôù^ìıñ&§ø«Ãú—†ue-eªÛËk0S†òæRƒØàğ}käŸƒ±Ş•ğ¯ÇøŞ÷ÄRëm¦¬«a	·üÕ(ZFÛÈB@àsÏµ}¡__niüªøÂş	ğ÷ÚdÒd’ÈjSÌ6%Ê6Çq S½Q³Œ·=qŒŠìöEñL¶ƒ§‹Ç-bıİï}ö[üôGè­ùïû ü|ø™ñ'Æ:¿…<i|šå¤6_mKµ†8š*ydÄ•pÄ€yãŒ×èEL•´=<›7¥ ±SIß}ôûÂŠ++[×4ézö½wŸc–i¥;Qz’êOšG§)(¦ÛĞÕ¢¼¿á×Æ†¿ÍÚxZMJ[£Ù$R*±Àm’*’§Ô=kÔ(±N¬JRR‹êĞÉQ¤ÑX¡`@aÔÜ}+ò{áßìŸñŸÃÿ tOT‚+m7FÔÖú]anÄQÉ¼í\ù›¤Ã¿úÉL‘Th¤•ÁàõQ•#8áúÙÒfïugé¿Ü¶ÔùkÃŸ¶Â/ü@‹À{Ş+İÜKké!g<ùÚq˜ğ¤¨úW¿xæëÄ>×o<)Ÿ­AcröQãvë…Œ`/s»úWÇŞı‡<9á‰~/>"ïFÒïí¦œĞ*ºÈ¾5’}Çr£s÷AnœWİuõ|YK(…JÙ”£Ëï^ûüÒ×½´ìm—ıntçV¥¿¯¸üÒ!øùñÆşØê:§ˆdÜoo­/§qI 8e!#$’ª¼p+ôWö;ø7ãÏ…z_ˆ¯|o
+é­­Ëna°YV_,@®F(Jû‡ ç{WÙ©hÌÈKœ±ŸSëO¯•”ï¡óù'ÓÂW*¥YNjûí®o«ëmv
+(¢ ûp¢Šñ¯ÚWñ®…ğ{Äš¯Ãåëp@¦&‰wÊ‘—Q+¢÷eŒ±˜Ïjiø¼B£JuZºŠoMôì{-E<ğÚÁ%ÍÌ‹Q)wv *ªŒ’Ià :šüÍış&øöç]ñ$ş4×î¯<eeçO{«LÆ+k³"…i±·r–%sıkïÛÉ¼3ñWÀú¥‡‡õˆ/´í^Ú{3ug*Ì¨dB‡	\ä‚~µU¨UTåR1º_uû\ááìæ–>”+YÅ7×{'f×t`xSã—Â¯êwz?‡<AÅÕš<® cïº´ŠªÊ½IàsÓšî´øcÅQK?†uk]V8lk2L½a8Ïlõ¯Îˆÿ bÏˆ±Ùêm6µcçZÛ¼vnÒpÍ€VRÊ¡“#‚y<ñÍz‡ìµğSâ€<Wªø›ÅÖk£ZËiöDµYRC3ùŠŞa’ (R<œñÅ|Yæ’­N–+e+İ«Ù/Æß7¯CõÓ!Ê£F¥\.*î6²v»…şKN§ÜÕù_ûex÷@ø…Š4û”•|_ªÙ…­#HÛĞ†RxÆ+ëoŠ?µÃ….×ööú%îÍœ+$v« Ü¾agS’¤6=ø¯Uñ'ƒş|dğÅƒë¶‘ë:UÊGwi(fF*†WGR¬7)ç¸¯ªãNÅâ2èº”ÜTõ„Òvÿ 4ÿ Ÿ=ÂOKö‰İ+©%kÛşKî±ç²÷[Æ¿
+,ašÛìÓxx)ÈbÉ'Ù£M®¤óÊ‘‘Øûb¾‰®sÂğçôH|;á[Óôû|•2~fêÌÌK3ä’k££+ÃÔ¥†§J´¯$’läÍq«bjU£E¶ÒaL”È#sà œ{fŸEw£€üoøañ?ö„¿ı¡4Í;PÔõKNãTòu=2mÿ eŠ×~&ıÉù#HÓ•aÓ¨¯Ù
+`Š1!” ÀØäĞfŸ_YÅ¼KO3©N¥,<irÆÖ]§eø^W—KFSr»¾¡EWÉ QE QE QE QE QE QE QE QE QE QE QE WÊ¿³çü•_ÚşÇ;_ıGôªúª¾UıŸ?äªşĞ¿ö9Úÿ ê?¥PÕTQE ÿÕıü¯ÌÉ~&ş×^øÙ†<-á4øáynügqÅ¶½k¶£jöö÷Ë}’m(I% €·ï2Øÿ Tqúg_”¿şéşøÇ§|Iğ§í?£|5ğåİ×‹ÌPêo£K-®©¨ŞÚK«[Y}±6L¦ê&7++ù–Î|ï€·~üAøíâ¿Üißş/€ô¨í^X¯—_´Õ|Ë€è«“hË¹Ûy81Œ°¯}¯Œÿ go¾³ã[Ûfı§´¯[tùûÆ
+9mñ4Cí„éŸ¾Ú™òÈo“2üÛkìÊ +ño…<=ã¯j¾ñe’jZ6·m-å´™Û,©GRFÈ<AAæº(æï şÌğO‹4oj~'ñŒï¼/k5†ºõìW1éPÜ _³¬PÂZGŒÌ³eÙ•ß‚s¸~N¿,¼kñÅğOa5úkCR]YÌÒLşD³MÅ,&Ø‘<D*¤cª^ëE xoÃ€økâm_Çsk:¿‹ü]­ÁÎ³®ÜÇqv,àbñÛD°ÅÂ‹”Š%Çsd?²ı~XßÚZ¦µ¯Iàí?TÕ·„^ö3 C|³•e„B'1$çÍXs ~Dxâ¾²¢€
+ùWöÅÿ ’U¢ÿ ØçàÏıH,kêªùWöÅÿ ’U¢ÿ ØçàÏıH,hêª(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¯”¾?~ÔV5ÛÙho¯j—p¹WÏñÅb‹ó|³8ëši\áÌs*8JN¶"VŠşºj}[Ep_~ é?¼¥øëEà¶Ô‘•&7Å$lQĞã®ÖR3Üs]í#¦…hT„jAİ5tü˜QE…Q@%~Õ<kğ×MĞlü2éçW’q5ëF²yb¤F¡ÁP_qäŒñÇzìfŸˆŞ'ø—ğñõ–òÒò[Qrˆ#[”EVm\üÄ£}kÛu¿è~%±m3Ä:|•£Æ+ˆÖTÜ:0##±«Zv›§höQiºM¬VV±Ã
+,q ôUP ü+Á§–bVa,S¬ı›VåéÓåç}õ=ú™åñÂª+Ú'~~¶×çåm´.ÑEïÅxçáßƒ~$i‘é2ÓSP·…üÈòÌôÊ:Ã=ùÁïZ^ğ‡<¢Cáß
+Ø¦Ÿ§Ûä¬i“ó7VfbY˜÷$“]r¾:ºñ‚µëß	ÅçëPXÜ½”xİºáccÜîÆ~•|9×SQJr²æÓñ}ªcjª>ÍÉò-mwkúw:ª+ò[öKøñŸ_øÓo¦jZ¾©¬é×\6±óHñ[•BQ€~"o4z:WëM}_ğ½L£°µ&¤ÚNëÎûıßu™ãåY”qTı¤bÖ¶Ô+óããßí{ã†ÿ /|á=ÊkM!k·¼ó“´±‰Hc(E
+Øƒ“ÏJı¯ ñÏÀ_„ß5ÛøËÃñ_ê6áWÍß$eÕ>êÈ#emÀñÇN+æb×S—ˆ0˜ÊÔ059%u«í÷?ëC»ğwˆáñ‡„ôoÛÂÖñëp]¬O÷Lö“Æqœg½t•½¼GkkÃ* UUQ€  €*j“Ù¤¤¢”ØQE~üXı¢¾?i´¸l5Ëû)´^[[=-şÎaŠR‘!€|²	Ivsé_»Ï,¶ÑI:yRº)dÎv±Œûæ®¼	à›ïÃâÛİÆ}nß]ëÛF×·¦$#p#±Ï««¯ºã)Âf4p´ğØeIÓ›V×nÉh¬Şºêş~&S–UÃÎ¤ªTææw^_×èQE|)í…ğ§‹n?x_âEç„‡g»Ñ´»Ãew¨¬ê®²#l‘£ƒiÜ¨Ü}à[¯÷Dn’¢ËÜ®w¡¯k6áÜnçŠ§Ê¦¯µÛ³Ñê´vzœx\Âg%JWåÜ¡¬ê:n‘¤^êºÌ«…œMq#ıÔŠ5,äû¿#şø7àoŒ¾9ÚC¢ëÚ ´±¹mCJÓï¬£ˆ\´Êª.W,°QK(í_¬ş%Ğ4ïø{RğÎ®¥¬µ[imf
+pŞ\ÊQ°{­|ğgö8Ò¾øö_x]m´Å•l 6âš¥HÁÛ{$<ûW©‘ÓÊ^ñ³’¬—¸•ìİŸ“ëkŞÚm©âg™T±8ŠÓRŒ]îúmæ¾íuÜÇñoì9áÏ|H¼ñxñöš6©xonôåYÚGmò,sîUÛŸºJôæ¾è$X£U  ÀtçŸ¼z~ü>Õüh–¿m’ÁËˆœ+I+¬k¸öP['Ú¼öxı¡üKñGÄº‡„¼Y§ÚÃs©¼†k0ê›Õ]˜ç,0r:z×ÊgÜ{S^†UÊIZ*Û-µiní»»Ğû<³„æ°Õq¸x%ıíO+ş'×ôQEAÆù¥ûpxâ—‰¼[ ßèš^¡­øj+3A`/“zdbÌñÇÈ,…B±ãŒWé=ÅÄIuu"Ã*]İÈUUQ’Ä ’kÉ¼ñëá7ÄvãÃ^ñWú¸fò¶IuO¼Ñ™Cßi<sÓšú.â	åxÈã)ÁI¤ÕŸšüäfôèV‚ÃU¨¢å¶ªîİ—R¿ì÷¤xÛAø;á­+âHuËxJ³6ùR2ìbGnì±•Óí^ÏEäcñ^¥y$œ›v[+»éäzT)*pŒ½•[\ñÏƒ<1{k¦ø]±ÒîïÔEsq/&N>UvŒñŸ^+óö‹ı­~!êş/øyá;H4İ&ÖâM1¦A~şT$dpÁS~nv“Şº¯Úcögø¹ã¯‹—ş)ğµ„zÖ­Gn‘È÷ÄlŒQˆÙYd íÈŞ
+g¯­uÿ ¬fß:‡„fø• Kâ?Ccjò½š´c[(í3Fò$m–S´°,Ä|Ã<×F[–VÅUTpĞs›èÎs¼Ve‹ö´#û˜EÛ™ßŞNëGm{éèÙ‹ûø'â‡‡<W®j:Î™¨h¾šÌFĞß£Åç^yŠU’99%P0fsõúS\·‚¼e |Ağ¶ŸãÜ}§LÔãó"r6°Á*ÊÃ³+¤zŠêk‹Jpœ¡QZIÙ®©®‡ØğşU4)Ï™o]tò
+à¾ üNğ7ÂÍ&=oÇZ¢i–Ó?—U¤’GÆpˆ™°:0;×’şÑ´¯‡ÿ gû2;‹«êú¹sªÊ"x$µˆ (ÛóúğOhÒşÛ¿´/øHô]cÃ—W6ÓY_;<$Ê±—XÔJ¶ÑœqŠÊ6os›6Ï}Ÿ´Ãá=êé]G_/Dôwµî|ÏûF~Ò÷Ÿ.ôŸxGM»‡Ãp]Èˆ±ÊZ[ù_<( íL“óWèì{áÏˆøDšâ¸´v¼šKk²|ø,Ø.Ô`Ü¯Î…<€}ëÏş~Äøqy¦x³Å÷ÒjÚıŒæé`…¶éğÎÈÊ¬¡Ü§ gµ}ñ{ãOƒ~èöú¯ŠÌÒ½ë2Aon¡å ˆÜU@\Œ’{Šú,o:yGöuUN2æækUåóo}úlqpnE™Ö¬ëã5«-¢­µºÛ·n›¶zÙ IÀòÏ‡¿l„^$ñô^±{´k«ƒim$J¶sÏ¡U÷nÃ• ŸJè¾~Ñÿ ~9]j&Õ–¡g›%­ê"´°ºwR Aw¯Íïß²/‹<	âÛ[ÏZj>%ğÍÑi!KX³ZÌ\‘Y$Œ¶LôãàªzE½¤“Oºz¦‹ãÇ0Á(ÏNê2ji­V©[ºë—CõòëÇ^
+±ñ>½×¬`Ö§Ç—d÷1­Ãnû FNìÃö¯¿n?üHğ¿‡<:<!yy¥è×sÎºİ‘d‘]U|ˆÚDù‘[-ÓïÏJø'Å³Oí èx¿RĞæ¸•!ıïÊIun«ƒµ—w›æF à?Yvÿ ~;ÉáÛËh<K®Üxeæí—ló9vV?<‚È’Êkö,¿…ğ¹~–‡«Ñ‚NpvŞVVÒökšêëtxy§Ôú´Õz2ƒi5mşw·Íö?Scßü@ñ?Â$Ô<-ÅÛ­äÑØÜİƒçÏf¡v»å¾rÀ1äí_TWË²ˆ¼{âO„I¨xúYîZ;¹£±¹»ÎÍUv»å€mÀ1äí_R£¤Š6­È äü¯:ÇÇ‹©ˆŒ›|«d}¦E[Ú`éTWÕ-÷_%|Xıªôß†Ş5›Áözš¹ÓÖ6½˜N!ùŠ,`«o!H'‘Ïõ©û\|Yñ_Áß…_ğ’x=U/®¯"´ûC [¬Šì\+eK¡FàG>¸¯†?gGÑj¯k..‡ˆm­ã¸6m{m²N6ïL  ¤ç|}G,:ú„’Öı¾w]¾G~MÅYEÙeù’“æÕ¶¿K´ÓÙ?+Øæ?hÈ~	xÏÄº¡ğ2Ø]jšƒË.¥ggâG–eFËŒşì²ÛÖ.‡Ö¾˜øuğâo¿fÈ|#â¹åÒ5+MY¯ô›}Gy1[*lX¦²YÙF	_¡¬şÄ&ğ¿Å-/Qº×ì¤ğæ}üVñ{"ÄûâGM¡S$a˜1ã¦kôº¾ë1Ï~³‘ÿ aÖ¥îä´“ÿ ƒ®ı¬–àªX¬>2yŒ©*RRÑ+[çß×®çã'ößÅoÙÃÆšŞgªÁazE´³¤q¬°Ü¨BÈ•A#TÎ}}¥cûkü0‹RÒü?âo-¯gİ/®#„;K©UKÆÌ[~…8÷®»öŠñÿ >.‹¨kşµñ>·vò%8ÿ tà»]¨† ŸLWË¾
+ı|ûBëWŸ¬5{­L¼Ô¤“SÑš%•Òç+$‰ÈeıÜ›fFqÏZü“†p´°8Ê¸/¬suP×E¾û_^›îÏÓ|EÇf˜Ì€Â¥+Úsv×Kmtíu»Ûd}¯«~Ğt?'ÃıSÄ°A­3¬F2®cIî£ÊÆ¬sĞ°Ç|W³WåÅÙAl>$]ëÚÏt}Â!ÔZì½üŞMÚ<‘D­ò9áNî'ú‹g%´ÖpKg*Ïnè¦9ƒ«¡+G9ï_y$ºŸdy2µZÔñtÔy^–{­wÕùk¥îM$±Ä»¥p€2Ç' æ¿:¿n‹:­¢üÒl¢Û¬ZE}uu1n'Ìi\wGó‘ƒŒf²¿n|Rñ7‹tıKÔ5¿EfbH,åòoLŒY8ù¨V<qŠ÷?üÑükğsÁÚí¤C_Ò d4Î—1Dò1Š%•›T$àñ×5õ˜ş¥‡Ë(f+JnÎu¿ŸKk¢µÖçvñXØVÀa×+¶ïfº­´ºõ<‡öøK©ZZ7ÆÍVò-ºÅ¤¶VÖ°†ÈTŸ<ŒÀwGò‘ƒœçŠıtI¤Š[‚È5™¢hzG†ô‹MA´ÇO±ŒE1¨ˆ½ Ìõ'“Í~X~Ö?>3h?.4Í7WÔô}:Ş+vÑâ±i+‚È±	Ä­æåHlàqÒ¾RÜÌ‰V¥åÔÓ‹–©;uow®ËM>H?k‡_ußŒóêZf‘©ëtñ[®%ŠÈñ[@~N"a ,IÆG=+ío†³ŸÃï
+Æº¶ü&°ÚÂ×wİĞ^˜ÀšDŒ±Œ9lüÊ£F+ó'Æ_?hÍâö—ŠµKG×,]?æŠÌÅµOÍ ıÛ+Œ–'©÷¯Ó?~ÓñƒâKLµ»‚ûÃ¶êÙÜ G–(”’Ñ•fg ç‘•íqn[K(ú´+â åVé'ª_å½ŸVŸcnáe‹­ˆÌiÑ”—2ø’´[};5’±ñ¿ÄOˆŸl¾8ê6:†¥¡¥åiÚ|[şÍ-¶üEû¡ò:ºrÌzõ5õˆ?d„¾*ñÔ=Õ£»Io&Wz|se=Æw32•İ†nX ûW”|0ı°®µ¯Úi_`Òô}3TY>Ív®bû;*ï#ÊÄ2¶1‘˜úWßŞÙÍmäSÆöóhäV?İ*İ=±Ö¿2àøFQ«ˆ¥ZSŒåÕ5oêû¯-Ô8÷F¼¨à±xx)SIèÓß¯–ÏGİîyÆ³¦øwá€¼K¯øÃÖv2XÙ\Şù°$4FÎ»ü°¹~¥~Zxöïø¥¤ø‰¥ñø²ÖııËK?³¸R’¢ghèC‘ïÍ~½ø¯@‹Å^Õ¼3<­z­¬Ö­"ıä!MÃ×Î;×ço†`I.u—ê–ö¶Áü‰4œ¥Ì®F9’=ª1Ô`äñï_AˆÆÕ§^Õ'(Ëy+iê|qÃxŠô=¾©JĞÕ)zZêı,ÕºŸh|øÃ¥ülğañNŸfúlö÷kuk#1L€1
+àÊUÓVÆ‡Gâ¿Ã]kÀiwöuCÄU’)DÜU%@>Ç=iğ¾ø
+ãLÑİít<M}wsrûärt“JÀª:ÀàWœü.ı«şüWñqğf†—¶WÒ¬ho!XãºXÆæòÊ»…°ÀqïÅ}&'ÅW¥SB›”!¬šZ/_ëaÂIá¡†Ì$œæ¬üï£ş´×cò¾æçâ·ìËñ[S‚NßOÖtûxâ&(üØ. —lØr‚T û×îõÛßx/Bñ&©mö­NÆŞêhNG–òÆ—p	ïÏ­.¹àoxö×Rñ…cª]Ù¨–æŞ9<ü¬êHç¼×Lè’#Fà`Aˆ=«Îœ®yÜ5ÃSËêUJ«tÛÒ=¿àôÓsçö§ø_â/Åà›»W¹ŸìÖ÷³M¡U·ù
+JŒŸJúF¾5ğÇìy¡xsÇÖ¾(:ô×:Nt/-¬ 0‘z+Í¸îU?ìŒôâ¾Ê¯È*cå	ı~);énß{ùuî~™ŸÓËã8gÉµmoßî_>‚Š¥¨êZve.¥«]Eei İ$Ó:ÇVf Æªè ĞüKbºŸ‡µ5+F%D¶ò,©¸uRFGq^ß´7%õìx~Ê\¼öÓ¹âÿ ÿ hÿ  |¾±Ò|Gİö£}¶öQ¬Ûæ>ö@ É$ŠõøÇ@øá}?ÆŸí:n§™‘µ†	VV™XG¨¯Ïÿ ÛÓàwŠ|my x÷ÁºmÎ¢öñ=–¡¢¤«oü¥ùˆœ18Í{—ì]àßøàÊhŞ5¶šÅöy¬í®FÙâ¶)Ã¯UÜûÛiägŞ¾ärX¯9Ç–öµÕÛ¾Ö½ôßT´·sä0Y=æ•põ¡û¤½×÷uûïç±õµ!  ¥¯›¿j}Æş"ø^Ö>	Š{—[¸òŞÛ>tÖ 6åP¼·ÌT•=«ås[¡Bu£'{.§ÜåØE^¼(ÊJ*N×}£ÑÒEVär|·û_ø‹ÇşøHÚ‡€e¸µv¼†;ë›@|ø,Ø6çR¼¯Î€}ë›ı<1ãïhZññE­Ö¤ÜÍ	°¶¼’¼çT~U[+õÇ+ì’k<Ÿ0–'
+òƒ‹}õóG?ä¼®¶
+^–æ^k×¦Ï_™øùà¿|pøõğ7_Ğ-®®5k='U³»°û|…MæQqÍ&7,Œ7 ñŞ¾±ı>ø÷áV•â;ïBºckrÛ˜,U—Ë+†‘ŠŸpàñÏjûA#HG„Uà 0áO¯º‡b£–K)I{9;í®éÚ÷¶ét¿•Êxjog9ÍÊqV»ùúí{-BŠ(¯–>”ø³ã7ìq¥|VñìŞ8±ñº#jkßÀ-ÄâO)B‹®Æ( <yö¯©-£ğÇÃÛÛÏrº~…áË8âó§n ,İÉ°É=N+¯¯.øÏğèüWøk­x.şÃ.¢ˆb˜‚Ê²E"È›€ê¤¨Øç­{xş!Æb¨RÂâ*^ôŠÓNŞš+ßCË©ƒÕ­†…ê4ß«è¼®ÅøuñŸá¯ÅsvÖ“R–ÇhöIŠ¬pdŠ¤©õ Zõ
+ø“ödı™<Uğ‹ÅZ—Œüg©ZOw=¡±‚ì›ÕÙİPç*6®\õ¯¶ëÆ’WĞÏ"Äâ«a”ñåº~]í÷…W“jŸ¾hŞ._j^ †`ºÄc*åFè(]ŠÇĞ°Ç|W.#J’N¬”o¦®ÚŸA‡ÂU¬Ú¥&µÑ_O‘ë4QEtáEPEPEPEPEPEPEPEPEPEPEPEP_*şÏŸòUh_ûíõÒ«êªùWö|ÿ ’«ûBÿ Øçkÿ ¨ş•@UQEÿÖıü¯¼iâ_‹¼iâ	üøqàËíÁ:„ö7zçŒ„¦ÚãU,·±Y[ZDò²‰¦r¡äÜJ~ù¯‚<#gû_|(¹ñg‡ü'ğãÃ!ÑõøƒX´½¹ñ–sÉo«jSŞD$…l¥Ê’ª‘¼ô ãö}ñ>©mã­oá‡Å‡z¾ éV_Guáğ²iÚ¾—<¾[Mk)Š9G2–FàLmÈa¯ëãŸ‡íâoÚÃâÅßèŞÒôjš<K¦êï©É=Åıí…ÂmÅEµ~yå«ìj (¢Š (¢Š (¢Š +å_ÛşIV‹ÿ cŸƒ?õ ±¯ª«å_ÛşIV‹ÿ cŸƒ?õ ± ª¨¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š +À~1~Î>øÕ}c«øŠK»FÂ3
+ÜÙH±»Â[w–ûÕÁ ’AÀ š÷ê)§c—‚¥ˆ¦éWŠ”_Frşğvğÿ Âúƒü1Ù´İ2?.%'s’ÌÌ{³1,O©®¢Š)Ó§EB
+Éh‚Š( °¢Š( ¤$ I8–¾lñ7í=ğ¢%ñ‡<7­A«ø“L´»xl‚ÉåÜOlŞJK´#’F0¬Iè¹5èeùV#'=7+oe{.ï²óg>#N’½I%ú™^ı°¾xŸâ^ ÓŞñ^îàÚ[_I[9çÎĞ¨Û‹üÇ…%@'Ò¾¨¯ÁÙkÃiâ~²Ô¤{ÛKó (‚Kdi£.y;€3Ó­~ó×Üx™Ã<§K„oXİİß«^]µéØñ¸s2­Š¥*•m½QEù¹ô#(ãfd@¥ÎX‚O©õ®âÄÿ |+ÒcÖüuª¦™m;ùQeZI%|gˆ›Èñ]õ~u~Ñ­ğóöŠñ6‰à¿ øÒÅ<a Osv×Beµ¹2…F“ªó ÆÒwgíğî	_N:£…'»]4Ó£µİ•í¡åæØÿ «Ò¼ZçzE7k¿-¯è}Ùàßø[âoâjêzeÎBKGÌ½U•€eaÜ0¼Ä¶Â/|@—ÀƒŞ3Ú\K›èágùÚUÛp”ğÄ) ú×Qû7|¿ø'à	<9«ßG©_İÉ{rĞ#Èª›#Ü $I¯ñoì9áÏ|H¼ñxñöš6©xonôåYÚGmò,sîUÛŸºJôæ¾“+ÁdÇâ)c+IÑWä’½ßÜ·í¢O­lMls¡NT ¹Şë·õ÷ŸuƒKL$X£U  Àtúø{¡EP^AãŸ_	¾ë¶şñ—ˆ"°Ôn·•²I
++ıÖÆ¬Ûˆãœ×¯×ç§íû#x¿âÄCÇ>Õìá³Öcˆ^Gwæyc“EmàªäG<tª‚Mêx\C‹ÆQ §‚§Ï+­nû¯ëSí|AÑ|àkßŞæòÆÖ$’1çHXÂ7L1aÏLsÍ|ËáOÛoáíË\CñÙü+"mhH/x’«br•ï‘Œwí_0xö’¼ñsè?üS Û]øT6º{ZA¨ R±C;>â…Ã¨r¡xÆwb^ÎÄëÿ 	µGÔ'µ·›Î´Ô[t²m“ÈhĞİ¶°=ùÀöqÜ˜à³¼-,ÊjI¹Y¦ô¾‰Ùë²]/¾‡¹‚Ïòú™=z±¦åˆ_¯e·š¿_7Ğ÷Éÿ eŸ<SÅÛ‹‹Ë-fEÔŞÚuûÜŒweÛ¼nn]C}:WÒw>8ğU†¿„îõÛ}flyvOqÜ6ïºe·sØcÕùOûkÿ tï‰zo‚¬®ï®¼??Úv“‡û=¦™YU¸‰üì>öNzÖ÷ÄOÙ7ãF½ñ›VÔ´È"¸ÓµM¯¢ÖáÛÅ$›Àd'Íİù@QƒÛŠy¾k[%
+µe(BêÛ¥Óçd®~s„âYË	VÜ¥+I|¯}:kkìî~²QL‰8Ñ‹• =IÏÖ¹Zø‚ûÁZõ—„åò5©ìnRÊLíÛpÑ°Œ†ìwc·Zò(ÓSœ`İ®íw²ó?Eœ­ìjêÚfâ=6óCÕàŠúÊåLSÂøee=˜võÇQ\w€¾ü>ødnŸÁzBXI{,›ŞYG!wHÌB@q_›Ÿ²_ÃŸŒúÆ›}ORÒ5MN·Šáu‰o–DŠà²Šñ+y¤0+ĞsÒºŠ?·Ï‹|ñOTğŞ‘áÛ;­F¼’ÒHçiæo%Ê;‰Ú…ˆ;AC×5îñáòüta
+‘ªÔSRI]^úníß}š>v|u.›åN•­«Nİmåè~¤ÕSUÒô;	µ]jî+eİ,óÈ±D‹Ó,ì@‰®Gá‡Ä-'âŸ´¯h±¼Úš1ò¤Æø£¡Çk)î9¯”ÿ o-[A?ôÿ ]k°Xêo}äV2&ò(UÕ”ìVÚ`A|)#ÍcÃ™?×ñÔ°m´¤ìÚW²êíı%»ĞôñYŒ!†x˜;«]yßcê­Høcâß€µ}+@Ö!½Óu«[‹#we*Ì¨eB‡7.ì•'ë_üı¼cğÛâe—<Y¬YMi¡¤Ëh–~a’v–32oU¡[$rxé]ì=ğÓÄşğ®³â­jXc±ñC[KemÉ:âWRÑ’Ÿv0Fß˜f¾çªâLº–W‡©Ï»_åªù=>G—®;Øã10´ãªÕ÷ºÿ 3Éş$|pøYğ–kK_kğé—7Ãt0íyedÎ7”Y‚g#q  Šèü'ñ#À;Ü<âeÑGKiÒI¡drõÁÈ<kòOöúøIâı+âÇÅiäK­[û=¬,dà–8qål'8ùòsYÿ °…õüWƒ]Óîc³ƒÂ¶ò½ÚùƒÎ¹[¥xÑUTrÄä/	ëÊ2
+uğõ±êr(Å¸·ozKì¥»¾×W³Üğ(qv-æÒÀU¢”oh÷k¿g¦º-6?lkó«ãO‡~şÑ_¬tüAHñ…š=Ô[4ö÷+³yhí²3"ØÚçwA_ ZÎ¥¤é]Î£®ŞE§ØB„Ë<Ò,1Æ§Œ—bõëšü°ğ?ìå¢xkÇz//¾"è2x+NÔÖêÒê;µù‹	ÎX<Âà×“•gu²ê¿[ÃÔä’ë¥µï{¯¼öø‰âjT£…ÃQU9Ÿ¼º¥¦ªÍ>úë·™õ6§ñ7á_ìƒáO|.¸û~­q(KhÖIŠ<Œ^y72*‡rÛ@$ñÙ¯8øÏûf^h-áÔøMik¨[ëVRk«õ“hC+Åå*#)­$:ZŸöÖøU¡ëÖ:›ÛŞèöÛí‰hná–`"ù· ›ZBwòãã?³%¯€¾3Ckğgâ_„ío†,¥¼°¾·’h¥1¼àÍÌ®	Üòdt^ Öñ¯9Wªù¥&Û}ÛÕ³åólË0†6Ye9*i¥Èÿ KëkÙî·^dôÏüuøyàïšöµkáYomÚÂK[£+fX&3[ùQÈì¹É#n ÆNkéÿ ÙÅ4Û|.ømâXõV%åÓ43[½ÌÏ1ĞL‰¸ @í\‘Ô×Ëß·>·ğŸMoü/Ğî[MÔ¼/‘ıš7YÁox‰Ã°mÁÀ¾UbAùk³ı’?e]sÂ$Ñ>,j>"Óµ="8d¹°:kË'ÚÌF<±’8Êª©9\nÜ0@¢¯
+â06­9Fu‹wå~»ş(îyŞ>Y•<<hB|ª1D½ç¢M·~š­¯¢]µş>xë^ømğ“Ä>3ğÍ¸¹Ô¬"O(2ïXÌ’,fFQÔ bØéÇ<f¿4şÿ Âsû_k7^ñæ½çÉ£ÚI}k©Çk!2I4,^Z²¿¼î]¼pM~²xÛÄ~ğ—…u/x±”i6‘p<Àêÿ &Í‡†.HP<ñ_ßş7ÚÏ¯Zi¿-î¼áñ4V­„·{Ûç•­‰,vìà×u<÷(yul›B2­WXÉ½RVÛª³M«5}o±õ¹¦#–¥Ğrötİ–—zk},ï­öÓ¹Æk1xãöVøÁ¬Xøg\Q§[ÅÏ%ªº‚eIˆÈ_å,’§9ºWºiÿ ğPˆ²kÖ·—ú4bÑ¬ö¨²‹§ÊÊ_ºã+Äw¯?´Å=SÄZç-,5›ıà·K=GL‚[‰×#ĞÌÁÎTyæ½·Åÿ fÿ |r¹»“á£\Ã¦êUåğ»u.Ññ$‰eÌn¨ùã 7\
+äÀğÆi˜Õ¡K-ãJÜÊëàVÑ_{ëe{¶ï{ñ~¥|~/0©)ºŸ
+ká“»¾Km¢Ùjyı·¼-ñÅŞğÔŞ³¼ÔôKy¦}BÒÍ]¥,ê¾C¼ió2¯Í>Ryë_8ü(ı¦üIğÃOğÓÆ^ºÕÒå§’+™ü™lí'Dd‡c£İ_i#ÇSÇê‡|Awáßk~(Ò-şßs§X\]ÁÉ¼Q—Uãœ;s•ø=qãÍ#Ç"ñ‡Æ‰nõH5e?lHX­ço)1mÀR£œ6Üóšı7ƒøŸ	[O$ÌpüôîíË~g&ô½šîÕ×’z\òøŸ2„ÚM:Y-¿;t}YúÁû@ÿ ÂKñ/àn«ü1K‹»MM­of··n&±’2Û¯$‚T²Ojçÿ cÿ xïÃñ¾,¶ºÓ4y¥‰ì­ï#©Uo:EGåU¾_®8é^ñğcÇ¾ø…àSáâ½¾“bŠÛH›$µ6êª!uË`ªíèNA×ª Œƒ_ˆæ¼.©fòÅIÊ2…ãÊúnµûı/©úş‰$òÏ¨¨Å©;ó}Ïôß¶‡âí=ûNju„ğÎ˜—zg‚@hÖ%~oeI2²Ì táv!'nêk‘ı–üw¯|3ø££"¹:ôĞiw(ño*âU\¡e*ØnÌF~£ø{ö?øEá¿EãÛ¼vµ¸7vÖJ­gùÜSnâò ± ú×Ï?ş%üø!ñºæo|9MO\ÓŠO}x·‚Y×Ì&X:ÚÙ$Áà`ó^¾u˜ãkÒÃPÂrÅSníÅ]§m»­½íİõßD~sÃ±ÁeşßÄÑS¨ô§%wGµ­nëFÒO»>yĞ<'ñ÷À?&ñŞ³£êÿ nğıÌú«~ûşÏsié&Q1ùeAµ@ş•õgÀOÚ÷Æ?~&Yx/Åš=”6šâLÖgæ	 h£2&ö`êUpH•õ÷ü-†—Ú.‘s«ëv6vş(µkk{é¢‰ç†árÛœƒ´Fx¬oüøEğÏYºñW„ttëù‘ÃM¾I<¸Û–‰‚ßhqÓŠú+âÊ™µJu*ÒQq*·õ÷.‡,›
+ôå‚Ä~í;É>©ÛËªïnåÏŠ¿¼'ñ{M´±ñ!	´÷g·¹¶p’Æ\ ã,l‚;•ã^:ñßÂÿ Øãá‹éK‰õYÃÏgg;—¸¼ÈF–VEùPq“….Õæ¼<ÁFü8|wıÿ ¤ßğı§ìÿ oûHóöîÛæù^1ßnüã¾x¯™><üøïãïÚ¼±è÷Ú«j×­ö+ÂÖBÅÛ0;”#B)<}k·€¸.ÄæÒ«™¸ÓäWwi9$ö¿nï{iæ½<wÎ¶Xl¾£šŒ­ml›¾¶¶½mÒåkÄ_?kA-¾‘i«_Øé¹ŞÍÄ0$o/û÷#;œ)9Éô5úíğÀÚïÃ„Şğo‰nÆ£aù»[z¡’FF¬z„=8ãŒW?û?~Ïşøá8tİ:î5ÛˆÀÔ5 tï¸¶ÕÜNØ×8 c8Œ×¿×•ÅØœ\}G–Ç–—O?4º'Ñ~[,8‡>¯VXÚÒn¬Öºè¶ütÿ  ¯ÏÏÛÁß¼Câ}÷HÓ¯µÇkå¬6JòyWeÛs:'9e*8Å~ÑÓ“_åÇaŞRi;mä~‰‘æòÀâ"Rjú?3É¾é~.Ñ¾xMñË9Ö!…„‚Vİ"!v1#ì©´Lcµz³Å²³ b‡*HÉÔzWÉÚÇí£ğSFñëøîî.¼‰…¼ú„’YC);Hg¸ª•H¦kë0A ƒkè«ğî+.£FŠrŠq\®[´’×üıOy¥<]j• ÕîÛKdÛ8ˆ¾Ñş$øGQğ–°Z(ïã
+&Œ2&V¬¹ôeãŠüìñî—uûÉi}¥KŠ¼CâØ®lÒKØvvöqliA‰™$²¼  äkö±ø‰ñ›AøÑq¦iº¾§£éÖñ[¶‹H‘\@]ˆN%o7*Cg•÷íÏÃ­ãÃ_ØüfÑRóQû%µÅÂÑIÛD¾nÖŒ«!İœ¨8ìsS“`2¸æt1ù•itù;it›½™ãàøÏˆ§ŠÊ°rp³ÖéYëm÷W·Íj~SÛü!ñ?Ç*ßâ/Ã[FÖòK¦j60\m‰.‰<ø~ÒçºH ¨bTƒØŠì>2üø×áïøÂ÷6×¾$Óô5ã’ßMßp-of¸’Bæâ6DW<|¸+õÂ^	ğ×Ãÿ ÅáoØE¥X[†1Æ™a½º³%˜“Ô’Iõ¯Å„W5“öšÑì¿¶øŒkL·÷mtˆ’Cç “vÙ !Tuà
+ıC‚'¥ÄcğNiÓMÂÒ÷OEªµ­Óš×µ™ñÙÎ[Nu_9J­k&ùºéµÕİôß·Cõ³ö{Ò<m üğÖ•ñ	¤:å¼%Y›|©v1#·vXÊƒéŒv¯g®WÇW^ ±ğV½{á8¼ıj—²·\,lc{ØÀïÒ¿0?d¿ˆßõÿ 6úf¥«êšÎqÃk_4¹T%â&ó@P¨ã¥|î‡«fÔq™¢œaÈÜœvŞîË²è¯»Ğû¸øaeGfï¥ÿ øs¡ø»û`ë²øÇÄß§ğı¬ş†{õ¤[é£$Ã4‘¾íˆÜ’€¡Ç|×¹|ı4Ÿ…ş9¶ñíßˆæÖÿ ³ÒA§ÀÖâßÊó¦éNöŞÁ€09çÚ½«_øğ[Sñs|L×ü=lÚ­¹2ÜHî–ˆgÍ–=Â&*Ie÷9¯6Õ?m?‚6Z¢éºeÕŞ°¡ˆ–{[såFàœÊP°r Œs]<AÇXl.[e±ti´£U»ZRkE}uiK][«-+)áÌF+ÕEí&µŠ[¤ºôòïgê}kERÓu-cNµÕ´ÙDö—±$ĞÈ½92°úƒš»_ÆI«£Ø”ZvaESóßí-ğçÄÿ ş&á2²ŞZ^EtmÄkrˆ¬¦=ÇŸ˜¸ã¥qß²§Âü5ÓuëÏBºyÕä€Ãd²,X„021BTÜ8<sÚ¾µ¢¼Iä%=·Î•·Óªı{Ø÷!Äã–^’änûkÑş®QE{g†ğÏÆ¿Ú—Å~ ø‡yáéV’ÚèË]=ß˜^c"	k(PàO=+îjò¿|øcãıjø³Cöş «æï’2ê¿udÊÛ³éÓŠñ3ü.2µNI]jû}Ì÷8ƒ£]ÏO6z.ÿ z;_
+kñx«ÃO‰ ‰ Uµ†éco¼‚d´úã8Ïzß¨ ‚X#¶¶bŠ%ˆ UQ€  AR×±MIE);³ÆªâäÜUQEdQ@Q@Q@~~xÇö>ñ?ˆ~#j:½–µk¬_5ìÍ&ów˜ûİv•c–u¯Ğ:+ÉÍòL>:1!]'}ìzùFyˆÀÊSÃ»6¬ô¸ÈĞGÆ¹Â NOôú(¯XòŠ( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ¾UıŸ?äªşĞ¿ö9Úÿ ê?¥WÕUò¯ìùÿ %Wö…ÿ ±Î×ÿ Qı*€>ª¢Š(ÿ×ıü¯ÏÛoÆ¿
+|5ã/…:/Ç¿Üè?µ©5‘iiywf×—pEoöG¬JÎÖĞ—pê­2H™@ÅB+ä_ÚËãÏ~x} øa¥éÚˆEñˆ]õc1´‡Oğå²Or<¸$’Y^h£C ™™°¸ /ì¹}ûÜøÿ Pöe×"ÔüP4ÉMÌqêz¥é|>cywÒÉ_(npÎÁ5÷¥|ağWâOí%uñ•şüv“ÂO¦ê>m{H—Ã¶—ÑKrâeóêêeO#ÎPé°îóce“‡Qö} Ïx·Å~ğ/†5_ø²õ4İD¶–òòæLíŠ»± p Iàx®†¾Iı»4}S\ı’ş"ÚiÒ^KœrÃÜòZÙ]Csr¡G\Áñß¥ tı§<-ãohŞÔü1âßø¢ÖkÍµë(í£Õa·Q$¿gh¦˜¬‰	S¥Ù–Ù€qêß<x¿tHu jş%šæá-b²Ñm>×tÎêÌ	’8ãé$u@p	ÉògÆøKâÅŸÙ¿Nøq«ÚëwÒxŠo	,¥Y¼½ßJºIær„ìF(ÁlbsÅ}ã_¿	|ğÎóâæ¥â;Kï[;Áú|©znîÖF„Z[Y„·*˜ÄjrØÚÄ SøgñßÃŸüK«ø}Vğ‹tKxo.t}rŞ8.¾ÇpÌ‘ÜÄĞK<B]G+maµ°qá_íMÿ †#WğÂÏë7[Å¬Ü&–H!™à’W©µÀB[…5“ğÃzö½ã_~Ò?&µÓ¼WâM:-ˆå]@¶‘§ŞyâK™$s-ËıÕl"|«“óo<7à_Ù§Â~×¿f¿‰:­Ş©sâ.ËNğé×ŸVÓu¸5;å¥‹;Ãîå–o6İ#(FsÍ ~©×Ê¿¶/ü’­şÇ?êAc_UWçí5 ~Ñ6~Ğï¼iã/ê~ÿ „ÛÂDØÙhW6—»^³òGÚŸP™2„©säüÀç ôrŠ( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ŠÀ×üWá
+Åş&Õ­t¨çm±µÔÉvô]ägñÒ¶ ¨c¹¶‘eŠU„2²‘AGCPªEÉÅ=Qn””TšÑ’ÑEdQ@Q@–5–7‰²‚§~jøöño†¾)išÖ¡®ÙËá­PKø1 ½›Ê28ÙJ„ROÁ3_¥´WĞä|SŒË¡VVU‰÷Û³Õıç7-£ˆ”eU_—c•Ğ¼à¿_]j~Ğlt»»ßõó[[G’dçæd ‘qëÍuUãZ¿íğ{Bñªü>Õ|KÙ‘bhŠ¹%º(S±ô,1ßìµáÖ­9Ëš£mùšá±gÍ2O•ÙÙ­¶
+(¢²:†KËÄÙÁSƒƒƒÇ¿6¼ûx·Ã_tÍjÿ ]³“Ãz& —ğ4bAy/”şdhÊT"’xfxéšûúëÇ^
+±ñ>½×¬`Ö§Ç—d÷1­Ãnû FNìÃö®ª¶*”ÒrM_Uuºî2Ép¸ÙÂU•Ü–~š?¹QXÑòíûRX|×tÿ YhO¯j—p¹WÏñÃb‹ó|³8æ¤Ÿö¾øgmá/xšK{Ù¦ñ8²‚5y Xäh¤2e\Fƒóc8Ö|dı›¼ñ²şÇWñ—v•„f¹²‘cw€±o-÷«‚$ƒ€A?…yÿ d	ë¶—ƒ5ğàĞí~Äˆ\¬°ïi70,§ÌŞìÅ³Îq€+ÖâÜFdt–SMıq?y½­­íwnÖÛKß]ï†è§˜ËûJv¡m-½úl¯ëò>ğŠôOxrÇÅ^›í~ ›ãb6·«+Ì¬#ÔWG\WÃ¿iŸü¦ø7H‘æ·ÓÑ‡™'ß‘İ‹»œtËÇaÅvµàáGJ.²÷¬¯m¯Ô×©ª³T_»wkïn—ù‘ânÇÃZ¡âMŠÚi°Iq)Q–Ù–8Î¾aøOûUé¿|kƒï44ƒ¨,e1œL$òÔ¹Y UØJ‚G'=ë—›á¨U…³´§²ş¶ùXLŸ^”ëÒ…ãßoóù¤~Ït/7Ä-+ÃP[ë†F™eæ4•şó¤EŒjÇÔ(ÇlW²	#.b¨É\òö®+Ç¿<#ğãH·‹µ4ÓbŒp–V‘Lg
+ˆ6;à`w5ùğSEø¡â‹G‹´Q{u»Qóoµ\¹µ’ß~f!À;“€œØÍÄœgZ8š4*9U›Óâ»Œt¶š»k¢Ñnz	Æ¾®"êœc­í¤½t]5İí¡úê‘FŒÌˆ¹Ë0Iõ>´®ë4vª‚I=€¯Éˆßµ§ÆãF¯¦é—[éÚ6¨Ö1hínŒn"M€³•2î”|À©ÀíÅ~£xŸÄ1økÂz§Š.­ÚTÓlåºxGŞa)Üdã¯Ğ8—…q9U5ñN6©%g{Y&ï§f¶ºó>7+Ìa‹©*TSºvûÏ–<1ûaè^#ñõ¯…Îƒ5¶“¨İ;kó0,dvØŒğíUûGy¯²«ò3öx>×ş;i“êú(Š+éf»Óííæs¤ñ©™K#n,>lç§úç_”pViˆÅáçW5/zÊÊİ¼—Ë¯sô>6Ê°Ø<D)aàãî¦îïú¿ŸNÇÂ-ı¸ü9á‰ïFÒï•Ş¢³ªºÈ²F§r£q÷n¼WÌµ•ŸÀß‰õ·<w_FÒ®¯$àyó´E(Y‚¤˜!ƒ2Üå²0kè¿ÚKöTğ…Ş—âoŠ^‚øërâî[$m$¬ëæÍåí.X)g 6	Æ8? øOàÄÿ ‰“Éqá=µ˜4E.èÎ"RdÂ…V›j—¹è+ê<BÎğ3Æ`²Ì2§ÏÔ›½ù¼µk£»ÚÍh‘Âd/ûšcèÇéÉrSv³½•Ş—ÑJêÚèÏÕØ×DÖ4/‚Ö–úƒ Mu4ÚrW)jøêT7I½±Û>õğÏíÏâGãBÃ ,“^èztV—æLyJX™ÓÊç$…“æíÛ­u!Ğ¾/şÏ?t=VÔ¥Ğ­uRîæóìssi¾8Äæd<nÚìBô5à?ãÑüSğşÇÆzÆ«qqãëá¸³İiÇµ'›å9uqå«¨û§¯¦ğ‹òü«>'¨´ªI¥'gï6Ö–oçc“9È±YOvœc9Yº1ø£u¤R¾–í±İ^üsø›ğZÃBøàu-t]#Oµ¾…åµùÔínÄH„)Œ*ŒdüÕĞêŸ¶oÇVñ¼WÑ˜tø!–ÿ °²Ÿ48\‚Ì¦mÒg ƒÇnõ½ğWÅ×:/ÁOxÿ â‡"ñv›àÓg‡¦Õ-ÖWIËhc–E-äÄÅÂô^NkÔ?jø§Túÿ Ãú™âxİ^-j${”A57fa³:Wíœ_å¹V˜ãp©^ì¦œo9Ï•è¬®ß2r{Æï—DÏ‘áÜ›˜bi`ğÕÜe=Rw´To»í¦ô¾§+âÿ Šß?hïÛü6ñ-ÜB×\Õ#†ßO[tS§Ê¢8`¾nc‡ÜNTœö5Â|:Õ|û7|WÔ—,M«é×M¥ÜÚ2¸ÄªFàT*ï_hü ı©~XkÜ|FĞa‹Å“Ü4x†ÒÂFI
+óÈ›\1ÉUHÆ9§~ĞŸ´<>øÕq‡¼¡ß^øm kFşß}ÜŒñ‰ ŠU*P*NzqÅ~_Ä¹İ,Â†„Â:§¥²–¾Zi}÷{¾‡Îq—Çˆuq¯ßSŸ+jï»ÿ 7ÛtTÿ ‚‘jzƒøsÁÚl:‚ÅlòÜ\\iáñ+°UÊÈ:ª|ê@Iü?8¼=íÅÌ&ê LQg;qÕ€äsÓ×ŠúCö«ø¯á_Œ~&ğÿ ‹|q4w/¥Çm}ÌxŠ#Ÿ4$lyb¥Ù\í
+v‚¹Í|ÿ ½¡hš‘a¥Ú¥–¹\ıªõİä†æqåŒƒ±Ü¤©
+@g$ü.}…–i×£†ŒdàãÓI¦æŞ©õÑ¥ÒË«W>(ÅÇ%âzyæq	B+p•›S¼yU¾R»Z[Kî~“|2ı£¾
+èŸ´Oƒ7krÒx~Ï}tm÷ØBn\¸…ÙØIˆ·,å#*qƒ_9ülĞµßŸõ/á‚_xZÂhíŸM62LßkŠNd%Œ˜—+°œ˜ï\ßŠşÙZ|Ğ~5ø^úå,u©Ö«¢Y<›…gY$‚3¼yQ³Àd÷û3ö<øßñâGˆµ?
+øÖeÖ-l-EÌFÑà`ê3¨!ƒg=3_1Cˆ0Ø:ô2©'Îâ—’Ó«ùt¹ì×àœÓˆ°˜œê´£
+j|Ôä¾'İímRÕ=\]úGÆ_ØËÇ_nt?‰úv£m¥ø“XÓ¬†·gz4[¤…äŒÆ­´œa¯	ÎÔÚ%Ç…?dO€Ú>™âëù/aÒ¿p	ºK›«‡yLp¡#Œ–ÆHàdóÅlüdı¤|ğNşÃGñwwú•üfu¶²d‘ WÌ}ì€A d’ESñïƒüûVü"Ó®4VK[;§KûÕ@Z¢İ	#b3Œ²ºäsßvy¶aˆÁàğùÇ2Á)+I.‰4µµİ•íå{^Ç,
+5*ËïZÚİÿ [îüÏ	ñ¿íYğ?â¯îü#«Zk6°ê@$ì-ãó,Ù4rŞa†àr3Ò¢_‡+û;|,ñ'Æ¯ê‹âÍZkVÂV·	o½Ä±Ÿ8Ç¹‹|œc#¯ÎïÚcáßüW¦hÛ[¶Ô,VëíkŠ'—Í‘U˜|W?6y¯¡õ‹o‰ŸdŸ†÷úWÚ5F}BRR]Õ!­³LŠrR8Áë÷AğA¯Í3n’Ì*fS§z*MS•¤­¾]]®Ú×Tšw±Xÿ ªÃˆÊp´ç(^NéŞME6—/º“wV“¼V§¯~Éÿ µ_Š_õ#ñÇMñí•’ŞA¬=¼w6Ò¬Š‹šˆ26S?0Çf¾ı¢nn´2–şİ­5õynÔ(û+#8’'u?{ÌL9şökÓ<b–zl~‰ƒ[ÀòJ)òö³• ¹¡$à]§€¼gûAêr'„Jë!²´\BfPòÃXU‰•€ŠUzàŒwÎ|Ü“cO4­€“&’å’½›ºµík-Úzê­Ôñ3NÄ×á>i†Ä*•œœS\Şk{ÊQÑµºOcôCö;ı ~#|Oñn­áOßÇ¯YCcöÄºHc‰­ÜH©å7”J°b@##qšµû`ü+ø-§ø!¼OÍƒüCfó½§ÙmĞ6¡;¦LGr@ÃœµòÇÂıÆ²mˆüCñßAÕ¼C¥Ï§éz}´±\İI;•+râ7*‘ÂW‡'9?(85ò½¯‚>!xãQºñ›cwqmîfÔ¥Wû,`·9ùP¨aNyr+ìhâe–fkÂMÂ×s‹^ëz8İ¦®“»¿İ{Û’ÅC"ƒÅS•JÒ•”Z|Ê÷³şn–^{µ¢UşÄ^:×´_Šº_…tİi¤Ñõ±pú…½Ã…ˆÊ">[¢·Iwª¨Û’Ã•ûã/Càï	k>,¸…®#Ñìç»h“ï8í¶qŒö¯æÓÄpêú‰fÂÿ Íû#«Åwgæ$NF˜…ÕsÓr‚+õïIı¹>èZW‰ş×­êw6®°m­3R¼afŞ%)¸’B\Â¾{	˜ËYâ*{Ğné§w%~¯kµÚöùkÛ–cp™OµÊëÖ’œ»šå×kE]»_]wZé{,Ÿ€_¶Œ¾%|M±ğW‹t{(m5Ô™­ËÌ@ÑFeMìÁÔªà=+İ>(~Ê¾+x´xË\{Û+éV4ºs,it±«æF9ÚåHãßšùwÃ_?g¯…®uO‡^ÿ @‘ü‰5„¹weIŞÖğK»l|ö*HôWÕ¿´í¦|Òô™LmoR×O³@²ˆPGRò<„6 Ü0 çÛôØ¬Ó-Ï³?«ğå&¬’qÛŞWmêík-ïm>«Ãu°ØË:Š”eï'º¶–Û®¾ºØøûöƒı•>&ëßdÔ<¥C©h7–¶–¶ ÜGÓã¶…a•‘Ú6îsÿ 5zŸíñâOÀ_†Ş ğo‡/Ö;Ë‹aiyª¼k7Ígkµ<ÀT	',3Ç9¯ñ§íµñ'Äú¤|¦Ûx~"ò7iï!‘°ÒO•23òüœuê¯4|añw‹-ô+WSñFë¤û>Ÿ|ò_A4…Æ —rÀ’r:æº¸†£Ä°õãaİ¤¤Ÿ·Ú×O]vok_æø³…'“GÚÓæŒ±Jé¦´Õ6’Vk•ôìuß¦ıšOŠ­5‹Íª¥âß–qj±d°yUGœª[;•2:cƒû›â¯ø;ÀŞøŸT†ÃEQ…Á;‘ƒıÀ2\°èzWâ'í+ğ·@ğÇÆOÚøx®Ÿ¦#Á<¶¥B¤RÏÊñÁ´«ÉùFk¿ı¢¾ økãÃ¯‡şê³ê²èp,wzh†a9¹Hc>
++'Î>Bq’FEy<ñrğ.O–ö’³÷R¿[Zí«_kµ¹¾‡1ù[<N2œS›\–jóÒ÷vwµši;=ôGÒÿ ÿ m[±Óôßºúæ’O¶\Éjèğª±Qn)ŞIÉÁÆ8ë\·‡nïèzÃâŸ&½uo#ÃöÈ§[_=‡(Lb6QîFì+–ı‘ÿ coXë6Ÿş,YÅk§"Kåi7Q–bèQZxÜad°æÈƒ_[xÃö5øEâíZãSÿ MÒ#¹ùšÚÂHâdÆ7¢4m·Ü=…x>$ğL|ŞGŒö”=ÔÔµKù–ŠÏUvâ“³²wGê|!ÄÙZ¥šayjjù–ï·[­¬ÛZ_©óßˆoíBçÃ6ÑxWÃQØøš[‡d¼Ïk*¡ƒ¡O-Ÿ$ÆÜsšú/áGÄ}sö“øâ!,Qèzì©{¤<°òíÛ,då‚şğdd‘ƒíV|=ûüÑ|)sáMCK“[[ÉÖæ[«ÉOÚŒ‘‚©¶H¼²Š œ(àçœñxğo‚¼-ğû@·ğ¿ƒ´øôÍ2Û%"'æn¬ÌÄ³1îX“_§gùÖB°şÏ+Ã¸ÔŒÓR{Yz¶íÑ&¶Ö÷?;ÀàñŞÓ›Q8µk/øoÄüB¾ı~,ø2ÛWñ§‹tÕ°Ò´5Wp“Ç1¹f‘Sä±aÍ½‹€ëÓïßÙ[ãGÄx£Sğ§Š®ÓW³·²ûTw)
+D``ê‚3å€¥X6@<ŒqÅ}É<]C%µÌk,R©WG•”ŒAà‚:ŠÅĞ<)á
+Å,Òmt¨çmÒ-¬)võm€g³Ò¾8‡6Ïs*ÜE~ZtÕ¹#u7k»·¥ÛÚÊÇÖğõ,/­…j“wSvºÛË¦»o}O—?h¯ÚÄ?|O¦øWÂÚm¥ÅÛÛÙ'½Wd
+ÎÈ©B§?)Ëg¡ÇZ÷Ï„¾=?>i4{_±I~æDUd‰Ú6Ú{©+‘í_µÏÆkø'ƒn<!§êĞxY"3OxóÇ<¾z	Y#x$jm8ù·ÜŠıøs¨h7Ÿ<9ªhVK£éw¶6Ó[Úğ¢™„í’3×¹ç½rb8+:ÀÔaŒ’ú½eî$õZ&®ºiæï}lÍgŸå˜Œ4p¸jmVƒ÷ŸG¿ºÛ¢µŞXÖXŞ&È
+œ85ù³àØÅø¡¦kš†½g'†´;õ¿…ãóä¢'ó#GR¡ç†`Ç™¯Òšdˆ’£G Ü® ÷­%&—Í2,>2Tç]]Áİknßä—<=û`|#ñ/¢ğƒŞ#]\[kù!g<ùÚ[q`ğ¤¨úWÔ‹rÖáH—æ,¸ù½ò:×äÿ ÆÏØ‹]ğÆ•uâO‡·÷:ıœk*éIúR[±bÛdVÌ¥8
+	Õïÿ ±„ş#ø_Ã¾">.³»Òôk©àm:Òô2H®ªŞ{¬oó"¶W·$qÒ©¥k¦|ŞKæ_\ú>†®íIl—â­Ó{ít}…ã/Ãã	k>¸™­ãÖ,ç´iSï 
+n¾3œw¯Í_şÀ4ZfñW‰lmtû’7²I%šTÆŞUÄj„¯»sÚ¿S%2ÜÄ8h' Ù¯Ç†?¿h+ïÚMÓõKT¸Ô®5O'SÓ&ßöX­wâoÜŸ’49V:Š¼D–#<¾¼T©É©Yî¤“WMY­O£Lú<gË(ÆP¯IKwÕš³kF[5×CõÏÃú%†´=?ÃÚb•´Ó`Ş Ç-²%
+2{œMk×ÍµgÅü)ødšçƒBÅ}{{™ºxÄ‹j’+±“keIÊ…†9úWûüdñçÅM/ÄV^7™u&Ñ%·ß¬K˜'W-	M£3Ï=«RQŠQÙ
+·ÑşĞX]Ô’½úu§kyŸhQEĞQE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE WÊ¿³çü•_ÚşÇ;_ıGôªúª¾UıŸ?äªşĞ¿ö9Úÿ ê?¥PÕTQE ÿĞıü¯—hï|0ğ½ç†Å¾Ô¼uâ­^=SLÑt]"35İİ½Ü
+šŠº4‘B-„A<ç™¶¯ÈGÍŠúŠ¾.ı¡l¾#x‡Ä~ø¯ğÄ¶»ø^úÕ®½uâ¹Íµ´Û=Å¤ßdWacI¥ŞÑ¼{" ìgÄ~ÈúgÃ-â±¡>‡ãO|BÓôh¢‚ÃÆ÷¦şX<>³ ±és$³BÖ‰0E}­¼8@İ¯ĞŠüø=ñö”øíñ3Uø¿ğÓÅÿ 	¼a¨èzoöÛZÜëQ¦Ÿks2ÜJÆ6·±¹’ÿ xÄ¡9o×
+ )FA¥¢€8_	ü/øià+ÛíKÀŞÒ<;w©œİÍ¦Ø[ÙÉpsœÊğ¢—çŸ˜k?Rø3ğXğ¬>Õü¡_xjÚåï"ÒçÓ-e±êFvy–İ£1,ŒÒ9.q.ÄŸ˜çÒ¨ /ğgÁ‚ÿ oî5_‡¾ ğÿ …ïnáki§Òô«K)e˜3DïHÌ…•IRpH
+w†>	üğN¶Ş&ğg€´XpÁ¯l4»K[’†X£Wç¿<×§Q@|«ûbÿ É*Ñìsğgş¤5õU|«ûbÿ É*Ñìsğgş¤4õUQ@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@şÔ¿>!xÿ ÅzW‰¼#fºÍ¬VŸd{V•#0¿˜Íæ!
+C ‘ÈÇ<WÒ_<­xá‡á?N'¿²üİ­¹PÉ#8[¸@ÛsíÇ¯T¢¼L.AB2¦6óOG®?È÷1|A^¶
+irÃU¦½wûÿ Ìa–1 ˆ¸À¹äÔâŸ_ÿ ş~Ğ—ÿ ´&§¨éúf©q©Üjv™©Ã¿ì±ZïÌ?¾$ipÊzt5ûF‚RÀˆ÷Å~‘Ä¼5K/¥‡©OÒ7i}¼ŞšèôÙè|~]˜Ê¼ªFTÜy]µê>¿?<cû`øŸÃßµ"ËEµ“@ÑïšÊe“x»—Ë}êÛ‚©Ï*
+:×èy6©ğ7áV³âåñÎ¥áøfÖ¬¦BÎä^ñØÌ=Jœ÷Í~iŸàñµ¡‚¨ ÓÖı¾ç÷u>Ï Æ`¨ÎoIÍ5¥º?½}ıVÄ‘¬‹œ8d`óíO¢Š÷ ÍÖ5/Ãú]Îµ­\¥š&šC…EÏôIàWà/‹_¾&›¤ğ^®—òY`ËÇŠESÀm²*’§ÔQñkÀGâgÃí_Áiuö)/Ñ<¹HÊ¬‘:È»‡u%p}«Á¿gÙãÄ¿¼K¨x·Åš…¬×3Z›8a³.É±]ÙÕNr£¯­x8Ìf68Út©SN“^ô»oçéÓ[ş–­ZµZªŸ»ûyzõÒÇ‹xãö"ño‰~(êzİ†»g†õ½Aïçi†ò/5üÉT)F ğ¬Xq×úKkiä„FNNš}ï¹6|FW‘a°r©:
+Înï__ógÍ¿hÛ/„ZÍ—†í4gÖµ+˜~Ó"ùÂŠÅGÌU²ÌTñµì_üs¦|Hğn›ã-"7†ßPF>\Ÿ~7F(èq×=Ç5ä_´?ÁÏ
+xëÃ÷¾3¿Šèk…ÃÂläó¤jÒœl®ìã#'•òßì£ñsÆ‹ãá§›ç‡î!Ÿl	
+©³Ø­.ğê7[†ŞNIõ¯…«âp¹¯°Å;Ó©¤,¶wK^½ï¿Ü~§K#Ãb²¯o…V©OYİ½U›ÓuÚÛ}çñöLøÑ®ügÕõM6§ÓuM¯£Ö^åÛDòoù°”4C€`öâ¾ÁğÇíyğ—Ä~:·ø}c-é–â±ÛêÂ«iq8;@V[çn• ŸJúšDIQ£nW{ƒÖ¾ğŸìAáßüG³ñqñ÷Z6—v/m4æUÖDmñ«Ï¸îToöA=8¯Øøƒ‹q9:4ñ)%IYYZûjõ}–Ö^GâX¼»…«	eÊêr÷îÖ‹Ëm5}ŞÇÜõäÚ§Ç/…Z7‹—ÀÚ—ˆ!‡X.±Ê¹D‘º#Êb±ô,1ßë5ùùãØûÄş!ø¨êöZÕ¬z±|×³4›ÍÜ^cïtUÚUxRXqÖ¿7Ïñ˜Ú0ƒÁSSmë~ßzûú¨ä<iÍcj¸$´·W÷?»©ú\Ş³ã/	xvòÛO×õ«=:êïıLWÇÉÎ>Ub	ãëÅt1 5s„ œ=ëó³ö„ış(xËâ…ï‰<7e¯a«Ç#¼é´1Æ« íÈÜ
+ç¯­V˜â0ÔL5.y]++íßM|¾dpş]‡ÅWtñ5}œlİİ·í®#ô[¯"Šæü£^xwÂZ.¨\}®ëN³‚ŞY¹ıãÅVnyÁ#¿>µÒW³NMÅ6¬û5X¥&¢î»™Ú–›«Ù\èšš$ö÷ğÉ°±ÿ Y®1×WËÖ¿>şÍ°j¿¯î/e‡D‚GŒ\H²ù'É²
+™wİ±wıGZø‡âÃÚÿ ö„Ôõ?LÕ.5;SÎÓ58wı–+]ù‡÷Ãä#NON†¿Q¾+|<Òş)|7Õüâ+“k¥ V¸@•,d:H ® HÈÈÈë_GÅ¼ƒÂ,.%ÕYIsi¼v}Ş›¶©èy¸#Ç:šdáº³ÚO[_õògäÆOÚr_ÚZÒ£Ó´±áèôaqäù³yÍ(—nK¡W„èëŒ+ôö<ğôÚ/Á‹MFéœÜk—W®¬6ªüŞRì…cœsŸLWæ×ìÑàß…š?Ç›m+ÆZ¢k–‚ilì$û)kË†Ìq†ó9 “•ÊXÓšıeø·ñ§Àß´]>Å+›Ö0ÙÙYF­#ˆ€İµIUT@FyÈÀ¯Í0™óZ¹“VRVK^ËUw¶–×SÔËøõO‡iá1S4æ’jÉ]Ù;]]Şú;mmn—swà¯^ø’_hš|úì ®ä·‰®T' ¬„où{ñÚ¹/ô…^}oV±:¯Û%pÚLò«®Ì	´œLs_Œ><ñgÄøÃ]øÛ¡EªË:“Ki¨…‘c³dQ.êJDcªPã’5ö_ş+j_µVâ_…ll¬o-¬U°Ô-Å¼°¥Ï€òr]ÃÁ¯Ò¸ï$©„ÁÓx\J«9SºíËv»öÕj˜á®0Ëªæ4°ø˜µ5·UŞëÓş	åºíàêÛ|a¡kd?Úæ»¸–ò4F#	l.İßÅÀâ¾¾Ôÿ jÏ·ìíñZ	ã³Ö’-#´¼)©²·”»OU;|ÀOAÉ$_’Şø}â¿ø²øfÈêŒò˜×Ê;¢Âœ4…şèŒKtÅ~•øö'û_Ã_Ã1Ö#µÕu›k›y,”É«Z¬ˆ¹WÙæo°aÇlüGÂŒV*¾aIã×.M©8¤­n©%¾ÉÙkwØıóÅ»O8açşÓeËvÛié»oMÚ»ÒŞgÈß²ßí9ãäøÍcüY,º¬.ój7$ÁXÑÁíŒïUQ·Î+£ø©ûj|[Ğ~%êCÁWöi¢Z^Í­šÁÖóÁaeiÎæ_¼
+8†¾RøµáxV½ğ×…¤ŸR¸Ñ¯g¶¾Ôdå‘MÁ–*±°a¼±/‘Ââ½ö|ñ·Â«[Ïüiğ ×t›«„–Úş/–îÉ°C…u)#FNÒT8 ä…$‘_Ñœo€Ê2YR©^¬¹]›n)+7£J÷¾ÏV¼í©üqà³|exä˜*’u.åtßE{o¶ºmÛª>ø·â¿~Ñ¿´oŠPÚØÉáFêÇQ³ó¼¸'’Tˆ¤Ğy„î`8ØIaÎ;×5ğwöeñ7Ä/oÃ>!Ò™.æd½¶v—Í±ìª@L1+’=\}ßãÏ^ñÁ}'Â_dµÑ4ûy¡Ô´òKy‹¡ÇšÇ.K«çqËg¼ÿ Ã>Ö¿d¯…3øâ‡XÕ®E¶Û[bâİ
+¿•ç`¤üÒåÎ ó_“q{Y–g,5=°r|ÉßU½µ¿á®s÷L‡,Áeêgõ1bâ¬âõ¬“vµöWŞ×[\ğ¿ÛOø"×Â_-/o ğL<VæHC*^]DJ:ÌTª¬ääWš|:ı•ş+ø‹IÑnO‡ÒÎÏXXæ7w"bİÕâcæTn Aô—ÁïÛvË]×.¼9ñ©,4È³ZİZÇ)„6à<¹Tù„rÏ­}{ñsâ…·Ão…z§Ä:Õ’ÖÙQó¦áÕ#bë‘³.y5õ<QŒÁfÙN#•5Aó7jîšÖ6êº»½4kSƒ…8š¦ÖÏ¨Êğ¨š¼¢ôåÕÛÓ²Ó]n|‡ñ/ö´ÖuMo_ğV¾Ö0İ¤×1ifİı¯i+JDq³ã¿(àq_-|ı—<kãïˆ'Mñ×†õ+NŠŞí5ËÔ’1ç<L±23æ°”«€ñYÚíµûAk>#Ÿf­“'mik‹ ÷3,sêZ¿]¾	øËZñÿ ÃÅ!€[ßßDşhUÚ®cvA"¯`áwcß1_OGÅ|T!S#¯RĞ\­ÅZ)$´îÕÖ­n´m->ÁæX*yÌ5§)´Óß™7º~g³è~\Ş~Í>øAâ/ø^Ş6Ó´ı-Ø›h,£âæíã-ŒyI­ószò7öcø‘ñCÆ–ÃB±?ÙÚ“‡mE£a`°29PldÚ>T^r6àb¾ıı¯?gÏøöğ|PğÜq£é’Csgq¿/æ	@Ùo˜‚§ àsšñ¿Ùâï‰|5â?ü%ÔuX/4Kå'	[ÌÁ¦†;Ÿ+µºçšü“9­…£˜S«Nğ©VZÆ*éİömÙ_kmwecè(`ó,ò†'™PSÂÑŠp“v’qZY¯Šñn÷]İìp_¶G‰¼Uğª_	|
+ğ½ü¶¾Ò´+béc[¹wº3JïdÆi$Iä×Ó_>%i~ılş"Iai¤ëWñ\ÛÂm­R6»½I%ŠİQ@s„É'Œô¯%øïñgÃ8ø.—âÿ ØêÚ'†oÇt<7î©&É
+Ë  Uøœ×Ø_üğ¢ûá™àoY³ğNŸk$m¥¼+‘©BHË¼ms¸g<äœÖ‘Ì£˜Â´2ØóW…ÒÓ[»í÷?»S§ƒ1¹Fh±Yka*%h¦ÚIrî¶VZuv}ÏÂ?k>-ñ§‹ç×5ËëGS¼›‹™İ¶çå$à(à(à}Ç¨?µÙ?†ş½DÕVgMŠE‹P¾ÓmäI iŸ!@%€àµôÃ¿Ø‹Ã¾ñV‘ãkÆ	«éZ|±^ÃvëRÈ§tE¥2¸hóƒÀù½«Éş"|ñ-ïÇ{İ_LûV»¨ı²Úâ]BîbW£È.&Üƒ…
+¼ÿ Û„Ìs\¢y~?^¤5%r¦œÚ»¾TÒ´[~ó=¼Ÿ…òyÏ1ÃºÎªïÉ«õºŠ²ë&µw’KD|—àÙ÷ÇzÅ…Åÿ Œg¶ğV™nßècÄÎÖ1]\9Pë
+Ê7e˜. &¾˜Õ¼wáO¼Oğ'C×S^ñv¾Ò=åÍ‚îÓ­MÊÇÇ+½„*FUNàF+köÎÓáñ‡Å½ÇÃÚµ¶±}ofšl¶Ê"û=Á‘˜1’@!Ã ÃvàG<WÄ¿şê¿¼D|®İA}E,«	lC$¨²´ESv22~Ûâw‰Ì2jXœ&”ªº‘½gk]´õ¾]ß–é¶¶>?†øk	ƒÄUşØ§8PPoÚY«¦ÒMYu½—-õ²êr:…çM×5{íN8?³-UíÃ°s+Ë^R*Ä¬lÎv†À^jÇÁ¿‰ÇÂZxÏCËÜÚÅsPØW3Bñ®î¡‚³ÚG$­W™†µh×Û°Œa>l¤0ßJÙğÃÍ[ğö¿wªë"ÃTÓ-Òkb€GxÛÇ›”Ÿ•ÕTm;ºdcŸÎr#È³L-Ol–¨µ9û²MoÛNW«½’RİŸ?ÄşcpñÂcx~£ÄRøâÒzm¼]õvJİyZiX‡Ç>0ñ_Œ¼Q.¯©ê3ßÜKrn˜³P|İ 'GĞWêt^ğwÃ_Øãû3_½¹²¸ñ\v×ò±|¯¨\,r¤+GÈapO@XóÅ|9ğ;ÅÚg€|U.«©øRX­¸Xí/|²"™]H™‹&Ö ã®sÚµ~;~Ñş9ø½q{ÚWLÑ,îwXéÂ42!@P;Iìä1èvú
+ùŒÃ-Àá#‰ÉòœT+7Í%~Y]_V¯ÍfÛÒNÍôØúºÙÎg–b)ç<@ª*sŸ¹µƒ]#5Ê¬¬••Ò½™¥ÂoüEø[â-{ÁW'QÔìæ¶¶¼Ò­c´}“.ò§ïæDBª¹àÚ¶şşÄ^;ñÅµæ¿ãK©üg½!Š)­I¸¸Œó#vCI98éÏÍş(xïá7Äk]kÂò8¹–AÅ£‚ËwbuêI<©ƒ‚}ßûT|]ø“áO‹SiÑêú†imom>Ÿ¤†4dtËI RŸ02œç¡+Ç§Z&[—>»¯=o»·ßØórì³Çyå\mxºr‚³„–Z+4¢÷½Õ•ºß­ïÚ»à€>øOñ‡†ZîÕZêÖÆ[q(dp±6$U*˜ŞX,wc98¯‘</ã_|qñg„üãN÷V²mI-¢BÁ¯-’é‚ÈñLÁ›hP	•ÀíÖ¾ÇøåñÇáGÅoÙ÷OµÕ5)nü[²š8m¢hÙuY	ó!ˆeÃ`œcŒÚı4 Ïcâ=U,KxÆÒh…ÌÓÇòíäVı”eCa¼ÎçŒ×ßğD°u_` İ5Ì›Œ•¹œ\u[èä›Ó~§©ÅŞo,D8{ª)-×¼¬ï£vfË§-Ï¤¼!û)|ğwötÖº+_ŞiÇx¸»šI^YÜDFÄŸ&=«èt¶¶ƒÇ+à… üÜŸÏ½~NşÖŸ¾3èn4Í7WÕ4m:Ş+vÑâ±i+‚È±	Ä­æ’¤7AÇJı?ğ-×ˆ/¼ Şø²/#ZÆÙïcÆİ·™^Çvr;t¯k<á	à°ô³9N-â/'mÛzİ÷zêú=†ÎŞ&oïjZ+ê’ÚË·—‘àÿ ´ìß¦|hÑ¾ß¡˜4ßÛ2®å²hÓ Ã6ÌğsÃm,0Jù'àÇìñÁÿ 4øÃZÓ—NÓ/ ¿ag$²NïnÛÒ1¾4'ï6ztÍ~¬QYdY‰Ë0õ°ø(Â>×â|«™úËwn—½®VcX¹S–"R’‡Â¹—¢Ù|‚Š(¯™;O‘ÿ k¯Wüe†¯ µñ³:Ç‘D¯°É8ŒänÉ=ÅbşÇ<uñgGñ·Œç]SûK#PX–/4N¬Ll,›G g{UÚ‡ö^ñ?ÆOiŞ0ğ†¡gÌV‚ÆâŞÿ xŒÆ²3«£"¿9c¹H29¯¡ş|.¶ø;ğ×Iğ$3%ÌÖaä¸`–yX»:àgjçœô¯¤Ì2ì<ôkóT—Åk¯á·­Ï†<ÙÖ”Ú£·Gøüïk«Xõªå|uuâk×¾‹ÏÖ ±¹{(ñ»uÂÆÆ0¹İŒı+ª¢¼
+5'µ{;Ùìü­œnš¹øƒğÂúŸÆŸ:{|F³»ñTa&}Y¯ÌÃÉòù{Ø#€¡	 1Šú3öØø}ñ/[ñ7‡eğÖ}ªøRÒÄ[Ãk¦Æî¶÷AÛ%¢‹¦Sb«c`t¯ÒôŠ8Ù™)s– `“ê}kò{â'íeñ£AøÍ«iºdñ[éÚ>¦Ö1hínŒn"M€³‘æî”|À©ÀíÅ~¡‰ñ:µLÊ–>•£N<ª¶•ïv´V}4[$ÏózXl»	ìñ2o[¥¯Îïoû~şÏzG´ƒ¾Ò¾!4‡\·„«3o•#.Æ$vîËP}1ÕìôÈ¤”¡`	SÔØı)õù®?ñêW’IÉ·e²»¾GŞáé*pŒ½•‚Š(®CP¦£B ì -H³O¢€(jšV™­ØM¥k6‘_Ù\.Ù`HÜuÃ+â*¦á¿øWO]'Ã:m¾•d¤°†Ö%†=Ç©Ú€ç­mQAÊ<Üö×¸QEQE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE ò¯ìùÿ %Wö…ÿ ±Î×ÿ Qı*¾ª¯•gÏù*¿´/ıv¿úéTõUQ@ÿÑıü¯ÊOˆ¾ø«¬h6ı’ì|­?ü,/Üjw'Š4şÅÔõ4Ôn^K¯08Z
+nl¤‚+õnŠ ù‚ÓÁmaûYXëşĞMÑtßO§\ŞEmäÚM,Ú»Y[#…Ím£î,£ a_OÑE QE QE QE ò¯í‹ÿ $«Eÿ ±ÏÁŸúX×ÕUò¯í‹ÿ $«Eÿ ±ÏÁŸúXĞÕTQE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE x5øãüZğí­Eán4miµS…ŒU½Í©“÷[£E*HŸ33u<köÆ˜bŒÈ%(¨ 69 õ¯©á^ ¡—UZØhÕº²æ¶jéï³Úë©çfX:•à¡N«‚¾¶ëø¯Dd1¡”rà@=ñBI£tlFAÏ#­yGÇM7Åº¿Âéşg¼°,DÛdt¦TCıæŒ0½;×æWì»ñ_Ä
+ø•k§5¼¡øŠx¬%€»²Èác™A',§†ãHë_–gU2–¤,ş×E­»knºét}îMÂ“Æàêâ©MsCìõz_¾m¦¶gì}|•ûUüXñ¯Ã]7A³ğ|Ë§^IÄ×­ÉåˆB‘‡A}Ç’3ÇëëZÈÖü?¡ø–Å´ÏéğjVŒC®#YSpèpÀŒÆ½Œß	V¾t¨O’OgÛşcÅÉñt¨baV¼9â·]ôı7<Köiøâ‰Xñ`Yo-/%µ(‚5¹DUa&Ñ…ÏÌAÚ1ÇÖ¨şÑ¿´n‘û>éeÅÆ˜úÆ¥¬<‹on²”,Aw»¾ÖÆ7  ûb¾‚±°Òô->;6ŞeÂG¬QF¾Ê0 ¯øûğÂÿ ü5k¥k72i÷úl-•ì ;D\ êÊp‘r®tÀĞ©Gu%Ï$µ}Ùåq-Z˜k<TÜŸºº%N×ék‹ğã÷†ş>øbãZÒ-dÓoôé7¶R°v‰˜e\ ƒ€r#¡>õ_(ü*øgO†ş)O]¾·â[ëi&I^0¦†7òQcËgæ=ÏÌp8¯¿fO|YÖş-Á§ê¦£ªØOíªÇxÎñÀU	Vø¼Ì(¨ã¥y®!ú½j4+S|ÕZ[Ml¯ù»l{¹/Ö¯‚yÕ‹tâ¹¼İ®í¢ôZ+³ôŞ¾4ı±</ãßh:ü#—Z–“o4ÆşÖĞ3»3*ù.Èœ²¯ÍôÏ=kìº+ÔÍ²èâğóÃÊM)u^·9òŒÉá1ÄF)¸ô~–?1?fÿ ØçR¶¾Ò|ãË»>:÷ívzD‘˜ùD4M3–ÊÜìÛ’$f¾³ı gí;ã¦¥ÿ ÄÑômSFy½ÀŒL…& :<e— íx÷ÍzÅ/Š^øCáY<]âé$ÂD‚( MóM3ä¬q© @'’æ¿<î¿à¡:ıßŒ^}ÃÖËákYÒ)`¹Ş5B@g¯å«g;Fìs_qÂÜ	šcğüØh¹F*ÜÎÊíté¯ôÏƒÍ(åuRƒ¦£î*ïÓ«i.šúmü+øáO‡®ş_7ü$Ú´’M¨=ÌaVáå
+§	Ú (Ú$œæ§ÑgŸ†ğÏˆ|9à­)tcâ;Ymn.Şi‚H¥@+1Ú¹ÎĞ@8æ½¶)XÒUÈŒyúùz°RNÙî{¸L»AÓ•($áğ»j½Ôøgà§ìµâ¿ |C³ñw‰µ[Imte•mRÓÌ/1‘`É¹T(
+r@''•÷5ù±ûsxßâ†µİ
+ÃAÔ/4ŸOl_Í´‘áİmÊò!•P¤)8ç?O’ÄË‘`gR”Šw·[»-ßCï0ÑÅgØøS«4¤Õ¯²²»Û«;ß?±O…>!'ˆ¼Uàû‹‹êy¹[S*­Œ×[ƒ;0*YL˜=ˆ<
+ùÃá?ì9ñXº–ˆRÚZ•T]Ñ]Ï9ÏÌG”áTĞ“œóŠú£ö.ø±âˆ^Õ4?Ï-ıöƒ,^]ÜÄ´’Á8mªìy,¥’rA•ö}…~(‡dÔ¨c©ª°ZÁÊüğÙ5&´v³NéØñVæU~­QÂ{K–Ü²[¦ÓO½×cóö½øYñûCÂZo„t­GYğ†‘¦Geo’¼Æ˜Ø©yR>w:lÈÇ­mkã†¡ğoá…şüQğÓø·Ä˜òßÚİÎa²y]`W*å¤ ÀÁ\r+ô¦¿,ÿ nïü7Õ5­#NÒÒ¼ce¾Şæxe)½¸ùÄS ¤;bT)yİÔ
+×N©OÍs;.i(«ôWm#ó\×†qœøœ~^å:³Z«siu},ÿ d›?84{âÚéÓQf×.’Ş‰!å}ˆœ r~µûÿ ğ«ásh´¿†>=Hµ`¶ÒCwşò"²»?–p€t# ô¯›¿cü!ñW†­ş"Ùx:3ÄšËØ<«4ÓBf‰ùñ,®Ê¬ÁÆxÈl‘+_ö¥ø×ñÀ+Ò¼3áÅÑ­e´û[İ4I!™üÆ_,P($Nyâ¾gˆrl>A‹­ŠÄÅûEî;;ß_7¯Mo±öÜG4Ì0Ê«N¹E$’JÚ«(­oİK¯İê2ü
+ıœ>x{Uñ]ç…4øìì#k™æ¼_µ:¬c!Q®±Š Œœ
+ø/âoíW¯øóRÓí|+s?„tXˆ‚+œ3ºŸ”»D\N€×ÓŸü?ñö˜ı˜tİ>]q®î{BŞDw©KÊX€»ò!søWåø]Ğu=SL¾³<3µ«£È®!•ÆÉLçİ:âÍèPÇBƒ©ŒXzuo&›ÑÙëo{E­®•÷ij½>Æb²ìÒyu·ÚÆš“N.ÑŒ’{}Z·ó;İ'³ıKøkûhøKMÓ4O|L7Í­§ú5ö¡ä)·‰Ë•Î;ƒnÙ·Ì!N^s	ñÿ ìñz÷âÎ«y Y@Ú&¥©=ü¢Mkk’y˜òŒp.n+…ø‹ğÓà×Ãˆ:g‡¼[â­SQÆµocf“•‘ZCö‡•VSóà#SÜ×ìæ¨éº¾‘eªèÒ¬ú}äÍo"}ÖŠE„{"¿¢1¡Ãt0˜œ®.£œ,çR/V’´£{Y½^¦­¹ğò¯S2«^qs_–/dÛÑ÷Kï¿cò7Âß<3ã¿Z>·â?iÒÚk”V‘È­?Ú„Œş\SÌ¡ü™\y|ıkŞl€_~%xËGño‚¬S]´†ËìOhÓGA ‘ŸÌRªUÃ Häc+êm#ö}ø=¡xÕ¾ é^‚lÈÒ¬¡œÆ’¿Ştˆ±Xú…íŠá¾+~Ö_şx¨ø7X†ûRÔ¡D’ál£–"îEv’HÆâ8àşù÷æ’Ê1Ìptâ¹S”ÛVVÙ¹4×}ï{´ºÙ¼W˜â©}O2®êÉÉ(%v×’Óğµ’>ø×ğCãw†|àOŞ¿§i62$ñX¬—)ou,òHU•2HTt@äcå uà<û%ü|×o4û§ĞI·¾š9’öîdŠ[HĞ¹â-ç)Ê®ÜóÒ¿[~üiğoÆ}"çTğ›MÙ:¥Ä
+XË‚Tü¥VÁÁ±Î+Öë—„¸¢®1Äç¸9©ËïğêÓm$Ö©­/{+«j}Ğ•\ŸO‘QküZ&µõO[o£?=üaûø›Yø¨jğk¶©áıRñ¯g–mÿ kÌ}ò(]»çî’ÃŞ¸Ú[öNñïÄ_Š>'ğÕ ÔlµU·Ù2ÜG·h¢XˆIÉ@r¹Èã­{¯í‡áxBĞO…ínµ&Úiıµ˜g±ä»"rÊ¸o¦yë_øöœø½ğ:Ù¾6“Ç¤Éö‰!ÕDßiÑ]!\:ì~ap[Ò¾‡8"Y¦oS+ÀQ”eüN~k-=SI{î>®ÇÔgyâQ^>¤*AşïÙ¸Şêéëf×*—KY=Ï,Ô~xÓáÿ eêúÕ°óÚÒyçGûÈ”G™÷\:Œ®ŞxÈäW¦|ø	/ÅÍ/_‹OÔÒÇXğó[µ¬o-dó·Ş:åÂcîûóÍzWíiñÏÄšö•áOé–ñéz‰t{}fF¹…%w’bH‰YÆÊ’¸c¸5õÏì›i¥‚z¹c¢E£\êÊò\ˆ÷şıã‘£“!fÃ…Ü88¯·†õ#oSšİÓo››nšog{ôØåÊü_ÁºrÊğ4}ZiZÉrr«mw~¶µºî~Sx‡àÇÄÿ \^MâP·k)±sx‘9·X‰Û¹fkãV/Š|Ogcğëş…µ‚ãP:„-g)†1zlÖ9MÄ~v<Ï,ÈÑíş`Zû;öàÕu<{¡éÓÏ-ÎıæÇiÇ)•Õ¤e}à ÛóN‡û*ü[øªúV¿emÎ—®2N5v»CäFÇYŸ0´{HÚóÒºü*á¼=>!¯
+uÔ9.~^Y»¤âï¦ÒºVwqèz,ç8ìWB¥*iÔ©(Ú×÷mwu¾º5}¿]Ï{ı>hş"»Ö~(ëÚ\rI¤Ï¦çaŞÂo™ö‘Á#SE}GûA~Ë:ÆırÃÅzãèZ¥¬d•Œâ) ]A]èU”±ç<+Àÿ hïkß³×Ã/øGá-Íş—áë›«™umBoµKrU<¿:XÀ*q€vÛŸ¡?dOüBñ/ÂíÉ=äÉw:i÷™\Z*®Æva–Ë Ç’µ~›…Æ¼,İLU4ÓVŠÒÍYèîµüö¶–üCU­ŠXrr¬’”§ÑËG}-ß~®èğ?şÂWovö5h_F¶IÙÎës$÷d-"a6qódñÓšûàçÀïüÒ¯tÿ 
+›‹‰õ)K««§4¦0B)*B®N ÎI¯‚~üDøã{ñÇO±¾Ô5)õ	õ/+QÓåßöh­·â_İ‘•aÓ¨¯ÕšøîÏ¿á>®Í
+Nw”[ŞZjşå§K#õ®7Ë«,e<F.Qœùtk¢×OÅëÖã(äeg@ÅT‘’¨ô®{ÆZÍç‡|%­kú}¿Úî´ë9î"‡ŸŞ<Q–Uãœ;sé]%x5îÕ‹”\S³ü—¥%&Õ×nççOì÷ûB|Pñ—Å/ø’ö=^ÃWwtH3hcŒ¸e(Û‘´†Ï_ZúÓãÆÿ |Òìõ‰î'Ô£µµµ@óJPìP«‘’OqŒ×}£x7Â^¼¹Ô4ÏNº»ÿ ]-¼ÄòsŸ™”Fyúó^7û@şÏÚwÇM;Kÿ ‰£èÚ¦Œò{™
+L txË.AÚ ñïšò8{.¯†£ìñU\İÛ¾»v×_?™¿fUÊ¨¨JÉ%¥›¾¯¢½¶ôÔô?…ÿ <+ñwÂ±ø·ÂRHmŒ±L»&†dÁhäPHŒÍz-xïÁƒÚ_Á?i÷©Oqp÷WWR(C,Î’¨	Ú¡T 2}sÍ{{oÈò2ÙWt ñ))Û[w
+(¢‘ÚQE ÊİxÁwŞ ‹ÅwºŒúÔòï^Ş6¸]¿t‰
+îÈìsÇjê¨ ‰ÒŒ´’¸QEQE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE ò¯ìùÿ %Wö…ÿ ±Î×ÿ Qı*¾ª¯•gÏù*¿´/ıv¿úéTõUQ@ÿÒıü¢Š( ¢Š( ¯,øÛñOLø%ğŸÄÿ 5kW¾ƒÃ¶m:ÛFv½ÄÌDpB­ƒ´Ë+*gÎJõ:ùëö­øiâ‹ÿ ³ß<á ®_ZÇ=‚HÁR[»ã»†&c€¢G„&I g$â€8#âÏÇüCğ…¾=Øøyôß‰=¤úİDú^«³]¥¥É¹–U¹IcEI£|ëÌ{Xê´ÅOá'ƒôËŸé±jş'ñV±aáíÖâFŠÙõEÊ£Ü:‚ËQ«Ë&Ñ’¨@Á9>êš÷Ši/Šb±ğ/ˆ|)¥xU“ÄºíÆ»§Ë§¤7PØÏkmelÒ€.¥¸%ä‡tA;É VÏÆÉ¼Uñ‹áo¾,ø3Ášİ¾£ğûÆV~ oêv«e«İZés\Xİ,P;•-$¼Öà¸óf9`(³ğ?Å¿‰zÅÙşüuMKÛÍ_éZ¾‰Å­¤öö“$–ó[İK;¤°™#pË++£g
+TŠñˆ?jOü/ÓjM[DĞ¡øG©^[³iª·C_¶Ñ.î–ÖEî†Ùß³½¸„b2G›¸ê´kgöı¡àø|5­xgÁğ§¢E6·a6—w{¨ksBfÚÜªÍåA22¨gpp×Ï“hŸüAû'é_°õß€õÛ¢XøjóTk	@L³ºÌÔÓR?¸t{H÷$JÆo1‚ø&€?Z«å_ÛşIV‹ÿ cŸƒ?õ ±¯ª«óƒöı|áh¾8Òõ/Í¨øM¼»¿ê×vy¸×¬Õÿ Ñ'¹x0ƒgÈpW ?Gè¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹ª²¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µ“ı‹gÿ =.ğ*ş.ì[?ùésÿ Sÿ ñtY¦µÉx€è¾Ğõês]-¦›—•¹œ¶È”±Àó98
+ù‡á?í#¡|Iñ¬>¼Ñotƒ¨,e1Ôf˜Iå©r² Wa*	x÷¯7›ahU…
+³´§²·õo™éa2ŒUzS¯JŒ7wÛüşGÙt„€2x²¿±lÿ ç¥ÏşOÿ ÅÓ[C±u(ïpÊÃ©È ÿ ÀëÒ²<İOĞj…ş"ñ¼^	±kµ{™şÍoxñk4ÙÚ[qo˜ğ¤¨Éô¯¤kå}öd´Ò<k½6¯o>k7ŸŠi6PÊ¬P˜Ğ8Øy¡XúƒÍ}%ı‹gÿ =.ğ*ş.¼l–X·	}s{é¢Z|¤ş]{Öuœ~¥µµÕ½~q_>j+'ûÏşz\ÿ àTÿ ü]Ø¶óÒçÿ §ÿ âëÙ²<]Mja–1 ˆ¸À¹äß™ı‹gÿ =.ğ*ş.¿,~ øwö–oíô[«¹5t½Ti¶Ó$Veÿ tMëÄÌ¢4àî}Ã×5QŠ}O;Î^
+—²”îíîëıy¬•äÚ_Àß…Z7‹›Ç:o‡á‡X.Ò‰9D‘ººD[b±õ
+1Ûèh¶â4ËpÎ ÜEÔàß=?ûÏşz\ÿ àTÿ ü]r×ÂQ¨âêE;j®“³ò>Š†.µ5%NMshìÚºìÍj+'ûÏşz\ÿ àTÿ ü]Ø¶óÒçÿ §ÿ âë¢ÈÃSâïÛÂüQáßŸÙİêš5¬ó¶£idäge_"F>gUÃvàz× şÈñÿ †~&Ÿãè®-]¯&’ÆÚìŸ>6µ7+ó!O zúCûÏşz\ÿ àTÿ ü]Ø¶óÒçÿ §ÿ âê®­cçéäa,Ãİ«[§OòÛ¾¦µ1c2(Rç,@ÆO½fbÙÿ ÏKŸü
+Ÿÿ ‹£ûÏşz\ÿ àTÿ ü]M¢}Ùù9ûBşĞßõ¯Øj³hšV}-ªÛZşæR¶Uıáó<6ßJÒı¿l?ˆòø‡Ãşñ|1ë>©|–\J\ê	ç>ÈÙ¤Î$
+Çœ®Hï_¥×<«.¿}£Åq©¦6İHYçxÃ¹¯ø§ğ/Ã–>Ö5ß…Óàñlj%¶•-aiKo]…Ôåİ7›9ú×Èå¹=\\F3VU½–º%wd¯k½-ÿ õ8§[2	—rĞŒ_¾İ½æì®İ¯e­ûß]ßãÂ+ã‡ÛÃ­eqk:İZ\Äùw†Q¹r)A½«ñ·à·Ãıv×ã¿‡´}CG“PÖ-µxÅıÍ¹òãŠ7ıëÈ¤`\°cÇµ~„şËšÅñ«7‰ô¹ô/­¾ÓµM5¥¼Ş6°$LÛWp$äsµöÈĞtñ!”Ã° ·ÚgÉ¶w×Úd<e‹­€Œ)Îp…ÛQÛW£zkgş}õùN5àHËNÕ•àÓn:§³·“_=Íš+'ûÏşz\ÿ àTÿ ü]xÿ Ç©<YáŸ„¾ ×~§×¬âG„¬ÒÌÈ‚Eó]cfeb±î8 3ŠÉ%ÜïÅb})U’ºŠoMôìd|aı¨ş|Ö-¼;â{‰îµ[„YZÚÎ1#Ã•å,Ê«»°ÎO\ A>‹ü?øçğşÚê{xõŸk(%E ©#¨!‘Ñ#q_ÿ ¼ñ¯öñ}ıÎ™q¥ÍQÆ×º­¢ØÉ†È@cZ3Hûy
+OAÔ
+ı~ğ/Ã½3ÁÓ</ÒIö‚<¡G$‡—u‚Ø¤Q†bNÕ^=Ï'’®Ên3wƒZ¦—õŞ÷¹äğÇTÆFU¡MÅ'îËgÖı]ÚÒÍZÛkÒï¾ø7á¾™&‘àÍ54ûyŸÌ“Îò?L»¹,qÛœÕç¿~8Øü±ÓâZÚ¶¥«4‚‚$	İÜ†À†9ü+½¹Ö<g®Eá›½y!Õ¦ÆËGÔ¤YÛwLFeİ“ØcÕ™ã„şñİ”6ú u¸¶$Ápâ;¹"İ÷‚‹´™ lØPN5Å‹¢ş­*X	(Éh¬–Ÿ-¯nçÚá*¯­F®>.Qz»·¯g}í~Åoƒßtß‹Ş>$±´}>h'{k›w`æ9P8på!ô¯‘¼uûk^.ø¨êkØZ¥ëßLdßöØDÍºDUkw
+K:×ÚøqáïèŸØú
+¼,ï$mö6V2:[£Üp! WÀğ÷íÿ ~ÊSIšÚå/Ôu3cI%¨Ş‘v‘«0tàm}Ç×5ó™å8:Xj8êr©&÷ŠµÚÙõ¿àÏ¥ÈjÎ5q5°#N)m'}<®º[ñ[Ÿ¢ğO…şø~ßÂşÓãÓtÛl•‰2rÍÕ™˜–f=É$×œ|eñïÀßG§Züb’ÅÌì^Ö›cvã3„Tr«êØ ãô¯[şÅ³ÿ —?ø?ÿ _(~Ğ?³ÿ |}®éŞ#øy}¥,ĞÛı–âfÒ+³´9exçšäæ9!{I¯Õò\.ŒPÌêZ»m½ß›j[¾­3ó|Uzô)saW¼¶·ü:üÏªü9ªèZæ…c«xbxnt›˜U­¤·Ç”bÆhÀ1˜á÷ì±ğ¿Ä^7—Æ×Ëv¯s?Ún,ÒP-f›;‹2í-óX>•ß|1øoÿ /tŸj7Ÿj»²¼é-±·i‹·—¿—(-…õ<“]ïö-Ÿüô¹ÿ À©ÿ øºùìç)ÁÖ©*m)Â2|­®‹gÓuä½W-Í1T=98ÊK[3ä/Œ¿±¾“ñSÇ³xŞÃÄrègRX’şn³	<¥&,»	@àŒóí^ƒñ3âû7øCÃ~Ò4É5IL"ÒÊÜÊ#DU/$›O8#·'=+ß?±lÿ ç¥ÏşOÿ Å×ã„şñİ”6ú u¸¶$Ápâ;¹"İ÷‚‹´™ lØPN5ßÄ™öeŒÀC	ßÃV†‹M—•İ´W½ŒrL†/ÛV§xËâÕëşZêìVø=ñWMø½á3âKGÓæ‚w¶¹·vc• c‡ nRp?Jù›ö†ıî>(x²ëÇşÕ¢²ÔïÖ!ukt­äÈÑ @é"d©Ú *T‚yÈé_:|kñ_Åoÿ o|à[ËG+Úp·²¶m–HÔI)) V¿Èv…À {×è½–½aáo†:G‹ş*ŞË£İ}ŠÕïËÜÜ·RF EbwnÏÊ ãÂ¼)ĞrËç‡ÇOIÆÓèšMKåf“õ]Œ2+§S8¨²ÊrR¥'Ëu}ï.®êöº»Lã¿f¿€_ğ£|=}¥|š†³«º=ËÄ†4ˆ‘Ç»ãq%ˆÎ1ÆOÒ•æñW€¾$i’jşÕ¦Ô-á.L\Ü£Æıpèìg·=«µşÅ³ÿ —?ø?ÿ O(Âá¨á¡O
+ıÅµµüo©êæø¬MlLêb×ïÖú~45«Ç¼uğá'ÄzßÄŞ3ğôZ†¥lD»äŒÈ©Ê¬‚6PàvÜtâ½/ûÏşz\ÿ àTÿ ü]Ø¶óÒçÿ §ÿ âëÜÁãªá§í0õ%µÓiıéMj1¨¹jE5æeë~ğ_‰l­4ßèV:•¥>ÏÅ¼r¤!@ "²£ ÜWIoo¤ÚÚÆ°Ã
+„D@UT`€ ègÿ bÙÿ ÏKŸü
+Ÿÿ ‹£ûÏşz\ÿ àTÿ ü]r»=ØãM)9(«³çïß³•—ÅİfËÄ–šËèº•´?f‘¼‘:KbÃå,¸e,yÉÏJö/‡~Ó>ø7Mğn‘#Ío§£2O¿#»w8é–'ÃŠßşÅ³ÿ —?ø?ÿ Gö-Ÿüô¹ÿ À©ÿ øºó(døZx‰â¡N[¿éØõ«çª¸xag+Â;/é\ÓxÒT1È¡Õ¸ ŒƒøS€   ¬¯ì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¯JÈó54Äq‡2…Ø`¶9 {Óë'ûÏşz\ÿ àTÿ ü]Ø¶óÒçÿ §ÿ âè´GvkQY?Ø¶óÒçÿ §ÿ âèşÅ³ÿ —?ø?ÿ EjkQY?Ø¶óÒçÿ §ÿ âèşÅ³ÿ —?ø?ÿ EjkQY?Ø¶óÒçÿ §ÿ âèşÅ³ÿ —?ø?ÿ EjkQ\æ£…£ÙK©j×ÒYZ@7I4×³GVføÕ]oø–Åu?j‡R´bTKo,©¸uYÈî*=¤9¹/¯bıœùyí§s­¢²±lÿ ç¥ÏşOÿ ÅÑı‹gÿ =.ğ*ş.®ÈMj+'ûÏşz\ÿ àTÿ ü]Ø¶óÒçÿ §ÿ âè²Mj+'ûÏşz\ÿ àTÿ ü]Ø¶óÒçÿ §ÿ âè²Mj+'ûÏşz\ÿ àTÿ ü]yOÆh_|&<I}æ¡4ó¥µµº^L†I\rçj€¤“ƒô¬1XšTiÊ­YZ+VÍğ¸ZµêF•(ŞODl¢¾røñ_EøËc© İé:–’Ñ‰à7ÓJ…%££†\ƒ´äcÆ½ßûÏşz\ÿ àTÿ ü]FGIV£+Åìì^;[VTkFÒ[£ZŠÉşÅ³ÿ —?ø?ÿ Gö-Ÿüô¹ÿ À©ÿ øºê²9u5¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55¨¬Ÿì[?ùésÿ Sÿ ñtbÙÿ ÏKŸü
+Ÿÿ ‹¢È55«å_ÙóşJ¯íÿ c¯ş£úU})ı‹gÿ =.ğ*ş.¾eıaKŠ?´(XªøÎ×Ù¿ä¥õf$ŸÄÒvè
+çÖQE!ŸÿÓıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¯•l_ù%Z/ı~ÿ Ô‚Æ¾ª¯•l_ù%Z/ı~ÿ Ô‚Æ€>ª¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(–¥§YkuÖ“©D'´½‰áš6èñÈ¥YOÔW„|9ıš~|4ñ9ñf÷—w‘+¥°º•]-–A†òÂªó´•É'Î¾„¢¸±u
+µ!V¤”v}Ü>c^•9Ò§6£-×p¢Š+´â
+(¢€
+(¢€
+ø¿ã'í‰¥|+ñäŞ²ğìºÛi«_Ì.?5C…J6ò‚yñï_hWÍ?e?†_¼Z<e®=í•ô«]9–4ºXÆÕó#ír¤qïÍTmÔğø‚:TËä”î·¶ß4×o‘ï¾×ôÿ xMñ6’Å¬µ[x®¡,0Ş\Êr;G­mU+K°Ñ4ËMJ…m¬¬"H ‰z$q¨UQô 
+¿R{4¹¹W>ıBŠ( °¢Š( ¢Š( ¢ŠbI£tlFAÏ#­ >Š( Š( Gq.Ø $œ(ÀÉêx§ÑE ~Tü[øãKŠ—ú¾«cc¦ëš›\Ûê×—°Áå£¸|mvYD0£œWêu¤±MkĞL.#tVY†ázäWÄ?µ/ÁOˆ^?ñ^•âoÙ®³k§ÙÕ¥HÌ/æ3y€HBÁ€$r1Ïô—ÁOë^ øc¡øOÄ‰ïì£7knT2HÎ#Vî6ÜûqÆ+áxw,6a‰¥RPzó7£òZy¾ïMO¼âLlqY~¬ªÅÍiÊ–«Íëä»-t=RŠ(¯º>(¢Š (¢Š (¢Š cÅ²³ b‡*HÉÔzWŠ|}øS{ñwÁ1è:]âY_Ù]GyM“º+.É6ä€C@$öê+—ƒ§ˆ¥*5Uã%fu`±•0õc^“´¢îš?g/‚:ÏÂ+-fïÄw°ÜêZÓÃº;bÆ’ Áy`¥˜î9ãÕô½TeÙ},-Ğ¢­ÿ i˜æqU¥ˆ¬ï'ÿ QEvœ!EPEPEPEPEPEPEPÏ´·ÃŸüKøxš?„ÊËyiyÑ¶w­Ê"²˜÷.~`Fã>•ù½­øwã?ÁUßSšÿ Âö:Ş'T±œíiaÊ€ï	 >í¹î3_´´Ç9FÙ8GJøüûƒéãjıb5'k]m÷höó>Ë ã*¸*_W•5:w½ÿ ~«}v<§àn©âígáW‡õ/«bhXÈe]²:a¸ìÌ›IõÎ{×¬ÑE}Fƒ¥J4Ü¯d•ŞîİO•Å×UjÎ¢“mÙl¯ÑQ]8QEù{ûM~Ó_|	ñvÿ Â¾¿DÓtHíŞ8ŞŞ9Mé–1#34ŠNÜ’€!=kíËßi>h±øêÊK'Õmm/ÊDÛ%µ¹xÃf2ÀàÄ|Àğy®ó]ğ/‚üO}k©ø“A±Õ.ì¿ÔMsmÒGƒŸ•œyÇ¯5ÕtàWÓñi—ãrú:xUEZoO{KkŞûë¶ÈàÊébpØ™â=«Şñòş¶ĞòŸ…_¼'ğ‡M»±ğÙyµW¸¹¹pòÈPƒ*\œ ;µêÔQ_#…ÂÓ£MR¥El‘ëâ±U+ÔujÊò{¶QEns…Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@|«û>ÉUı¡ìsµÿ ÔJ¯ª«å_ÙóşJ¯íÿ c¯ş£úU }UEPÿÔıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¯•l_ù%Z/ı~ÿ Ô‚Æ¾ª¯•l_ù%Z/ı~ÿ Ô‚Æ€>ª¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Šù+ö«ø±ã_†ºnƒgàù—O:¼“‰¯Z5“Ë…"5
+‚û$g;×ŸšfTğ”%ˆ«{G¶ûØô2¬¶¦3=+^]öÚçÖ´WÏ³OÄoüKøxúÇ‹Ëyiy-¨¹D­Ê"«	6Œ.~bÑ>µô%k€ÆÃFéí%}LóğÕ§B¦ñvv
+(¢ºÎ0¢Š( ¢Š( ¢Šñ#ö„ø;®øÙ¾é^%‚ã\4+W¼©÷‘%*#f{fºğ¹}zêR£MÉE]Ù7eİÛdeR¼ Òœ’¾×ê{=Q\†¡X+×âğ¯†5oOO•k5ÓF¿yÄ(_hôÎ1Õ¿QO7PImsËªQÑ€*ÊÃx ¢¢¢“‹QveÒqRNJèø{à§íKâ¿üC³ğ‰´«H­u••­^ÓÌ	€I¹˜0*0H•÷5y_ƒ~
+|1ğµ?ˆ|'¡Çe8eówÉ!Eo¼±‡f}¸ôéÅz¥xùFƒ†6§<®õ]¾ä{<A‹ÁÖ®§‚§É-½…Q^ÙáMñËKñv³ğ«Äo™Æ±4*#6Ù©•öfMÀzçëå_ØûÁß¼=â}f÷WÓ¯´Ékå´7ªñù·a×k"?9U9Å~Ñ^3 …lm<k›N
+Öé×üõî{ø<ştpUpJ	©»ß¯OòÓ°QEï QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE|¯ûaxâ†>>¡à	n-¯!úæĞ>6¹Ô¯+ó…‡ zôòl²XÜU<,d“›JïmN|^%Q¥*­^ÊçÕWÂŸ°ç‹~$x£Ã"/¼¼Õ4kIà]:îô³ÈÎÊŞ|k#üÎ«…ë÷Iã­}×[ñK,»S9)8õ[j“ıu]±cY+\(¢™ ÆÂ"È;IäÛ5â‡ÍŸ?j/‡üã=jÇVÒ|GâŸØ=ôŞU‚AÕ
+ä<cÍ–1†ÉcãµzÏ‹¾*|0øyg§ø÷Æ?†îµøö‡SÔ-ìäŸœ~íft/Ï(<×á¿ÄwàÆ‘ÿ óñGÂé‘ŸšOÚ¥Ö,d³fÖSXæKJY¶nò^2_í%ü·…„aBW½øóTğÇŸŒÉñWÄğÃx»Sì'ñ¿‡¯5%Ô´#gpAgx—ö°¢a"Ilª]dÜÍë€Ø„t‘HØ2°r=4êù÷öUğÁğ_ì÷àŸ
+¯ˆÿ á,ƒM²1[êbÚkEØJæÜ,3³H©E#]ÌrªpE}@Q@Q@ù‘ûMøóâÎ‰ñn}?OÕ5*Âàm*;6trÈ1	ÄæeH=+ôOÁ·:åç„´[¿EäêÓYÀ÷i»ghÁc±İœİ+ÁË3øbq5°ÑƒN›µß^ŸğİÖ§¿™äÂá¨âe4ÕE{-×_ø~ÏC¤¢Š+Ş<å¯ÚOö¦ğìî¾Ò/&ÒîüKâ«Ôµ´²Ôµ‹}¡)#½åİÄË!†Ù<²`‰³#*“]÷…~;ü2Ö´½û[Æµ×5™"²VZåµò6¤ñÆíim/îšáÀ•%fWVØ
+ñ/ÚšÂÆïâÇìæn­ã›eFŞ²ŸÙÇiÈägœzÖìƒàÿ Âsû@øµô‹WÖÄJĞ]4(Ò¥½­¥”ÆŒFUQäv w9ô ¼è¢Š (¢Š (¢¹_İx‚ÇÁzíç…"óõ¨,n^Ê<nİp±±Œîwc¿J«>X¹>‡UE~N~Éß>3kß-ôÍKWÔõ:â+†Ö"¾i+r¨J0ÄMæá@\dqÒ¿Xê¥7çÌ(:ğ‹Š»Zÿ _Ó
+(¢¤÷“ş%şÖøAs^<¾Ñm£¼ñe·†b0kvï$MRMw|’¬_eû0”4Ñû#hä.€¤<-âÏ
+øçBµñO‚µ›/h·»ü‹í>â;»Y¼·hßËšdm®¬­‚pÀƒÈ5ùñ	l,µø·Y„cxcö€ğö£ª\¼{ã´ÓãÓôåiHlK¹w“Àkõ¯À¾*ğO¼+câ‡:•–¯áëß7ì·Z{¤–²yr4rymÊvÈ¬­âh­¯•gÏù*¿´/ıv¿úéUõU|«û>ÉUı¡ìsµÿ ÔJ ª¨¢Š ÿÕıü¢Š( ¢Š(ÆüIûE~Ï¾Öî¼3âÿ ‰ŞĞõ‹qe}­XÛ\ÂÌ¡€’)fWRT‚‚Jñ¿ŸµG‚4ÿ Ùÿ â~x×Añ_ˆ4Kx¡:n¡k¨­Î¥:YÛM2@ò I7€ã°Fkêïø3T»’ÿ SĞ4û»™ˆ/,Ö±I#073)'kÎ~+üğWÄß…>,ø[¤‹Åfİ®¬­ãá™™o6.ó¡\)#8ÆFs@;jšŠ¿fßŠ%²ñ×ˆ|W¥xóU—ÃZí¾»¨K¨$×SXÏum{l²’-]e·!ã‡lE ×Ù¾4ğÔŞ0ğÍï†àÖoü>×¡íÚ\‹äJ®¬ŞT¸mÈvØ#æM#á7ÇüBğŠ~=Şøy4ß†òO}i„÷R¾©ªËlÖ‰wr.b‰m’(ä‘’Ì¿;s&ÕÁôÏCûJÜø#ÇöŞ›Âö¾*šòXü#3›Ákƒˆ‚I©f9IºBelD"0FP‚øb-[áçíg |(øsã{Åz$ºı÷‹¬u­J}a4³˜†—:\]3Ë÷.e_ >ÖŒo€¡«Ânï/¼	ãˆ¾1ı£-¾*Ùxu<_¨Ëc®išî£a¢#[c%¥¦¢’¤
+ÛÉe´dFN:}5û3ü/øßğ‚(¼;âŸx`ÙêrÍ{¯kÖúış£­jz„ˆI¹™gÒ­’Fy6®Ó*¬qğƒ
+Ÿ|	ûVü\ğ·‰¾ŞËàİÂŞ)K:ãX·›P¸ÔSJ¹-„°’„\İÆè¨bX‚€>É‚x. æÚE–”::ÊÊÃ ‚8 A¯ÏoÚö‡øã?h~ğ—ÄXñ!ñ¯„iÖš„]î·×¬ÚQå#ÊbÜpÏJûã@Ñl¼7¡iŞÓCM.ÚXwÍåÀ'¹À5òçí¥é–ÿ 4K˜-!oøLüó¬jŸXç3Í }sEPEPEPEPEPEPEPEP\ç‹¼W¢xÃ—Ş*ñßgÓôôß#¹¹!UTwfb ¦º:â¾"xLø‘àİKÁº¼¾ Š<ÈşünŒg®;+Ÿê*RtW½gkí~‡FSu`«?vêöŞİmò8o…?<ñvöóKĞcº²¿²O9 ¼QŞvïM¬À€Hœ‚kÛ«æ‚?³•—Â-f÷Ä—zËëZ•Ì?f¼‘E	`ÇåÙf*9ÈÇJú^¸29âå‡O’»~]†{q-`[tôßñŞÌüÒı¸<sñKÃ>-Ğl4MSPÑ<5-™•'°w‹Î½0ey#ä•@¥TñÎkìoÙïWñ¶½ğwÃZ¯Ä%k—1•¦]’¼aØDî½™£
+O®sŞ½’H£•vÊÀ á†FGCÍ>¿DÌx–•|²†_<c(;¹­Şş]o®®ö['‡Ë¥Lëº©tìQE|‘êdk~ĞüKbÚgˆtø5+F!ŒW¬©¸t8`FGcZôTÎ
+K–Jè¨MÅ©EÙ”´í7NÑì¢Ót›X¬­ c†XãAèª øUÚ(§¤¬…)6îÂŠ(¦ ¢Š( ¢Š(’Æ²Æñ6@pTàààñÁ¯Í_~Ãş-ğÏÅ-3[¿×¬åğÖ‰¨%ü^Íå?™2•¤ƒ:f¿Kh¯¡Èø§—B­<,¬ª+=ï·g«ûÎn[G(Êª¿.ÁEWÏáEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPH@ ‚2- Ä"AJW€ ÀAO¢Š (¢Š (¢Š (¢Š (¢Š (¢Š cG•gPÅT‘œj}PEPEPEPEPEP(Ñ™‘—9b	>§ÖŸE QE QE WÊ¿³çü•_ÚşÇ;_ıGôªúª¾UıŸ?äªşĞ¿ö9Úÿ ê?¥PÕTQE ÿÖıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¯$øÙğšÛãO¿á
+¹Ö¯<<Rÿ OÔb½°µÄSé·QİÂTO‘œIŸ™ö#Šõº(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *¨ÿ †{ø«ÿ Gã?üğÿ ÿ *«êª(å_øg¿Š¿ôp¾3ÿ À_ÿ òªøg¿Š¿ôp¾3ÿ À_ÿ òª¾ª¢€>Uÿ †{ø«ÿ Gã?üğÿ ÿ *«Æ>xãgÅ?ê$Öş>x²ÖâÓ_×ô•K{M!‡IÔî,¢c¿Lc½’gç‰À }‰ñ+ãÃŸ„VútŞ=ÕŒºÄ¯´××—rF»ÜAiiÓË±yr‘ ‚ØÈ­†Ş2ø}ãï	ÁâŸ†W¶×Úä³‘%ªy@Oæ7²FU9D›¼ÅuWÃ4â?ğÏèá|gÿ €¾ÿ åUğÏèá|gÿ €¾ÿ åUzGÄ?Ÿ>ëVşñ©q­uoö´´²Ó¯µ;³–dóš;'dr°ÜÀƒÏÛx#Ç^ø“á‹/øVƒ[Ñu Æ«fÜŒQŠº…Ye`XÀE xü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •Uôö£¨éú>Ÿu«j×1ÙØÙDóÏ<Î#Š(£RÎîí€ªª	$œ 2kÆ~~Ò_¾+k£Ã^ñÛ5)mšòg³»±7vªB´ö†î–æ HÌQs‚(æ†øÙã|PğŞ¥ñóÅ[ø_‡I´x­4 òÃ&™gzZ]Úa÷Ü²¡FĞ8ÎIöøg¿Š¿ôp¾3ÿ À_ÿ òª½ãÅ~%ğ7Ãë;ñeİ¦¤ÛbçP½”Ô¶%g eİ¾DQË1Úª	À®ká¯Æÿ †?fÔ¬ü	«µÕö‘åË;«K­>òœk{3ä ì}›[àĞ–Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •Uã>6jŸ<[ğo,]3Ãú‹«C2Úh^{Í©\_Ã"¹:a]Š-P®–É<cé?~Ô¼aâëoxwÅqİêWÓÍkfÿ fºÊöâÛ>lV—ÒD¶—2&ÖÊÃ+ôÏx“Á_tmKâ‹ç·Òl­"‰.ï<¿—æl‰	E.ÿ ¼“ ™°M x?ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU^‡ğûöƒøIñC^ŸÂŞÖämnŞßífÂúÊóL»kmÛ<øà¾†	$ˆ1 ÈŠÊ	<Šöz ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ ÊªúªŠ ùWşïâ¯ı/Œÿ ğÃÿ üª£şïâ¯ı/Œÿ ğÃÿ üª¯ª¨ •áş*ÿ ÑÂøÏÿ |?ÿ Êª?áş*ÿ ÑÂøÏÿ |?ÿ Êªúª¼Qı¨şi>4—À:‡Šã‹U‚ù4ÉŸì×Mcü„´›PXœw<§˜>ânx ›5Ï|lÒş>xKá<?<XÚgˆ4kVšf´Ğ¼ô›M¸°†5B4À»]9l©9‚9Ï³ÿ Ã=üUÿ £…ñŸşøÿ •UôûØXÉ{¥%¼mw<qÌP$ º«ã!Xª’ÁÀÏA^mª|lø]£|WÑ¾ê:ìqøãÄ²ŞÙé«Ò;ÛÂ²;;ÈˆÑD6ÄåD¥¶ Ğ”ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •TÃ=üUÿ £…ñŸşøÿ •UõUò¯ü3ßÅ_ú8_ÿ à/‡ÿ ùUGü3ßÅ_ú8_ÿ à/‡ÿ ùU_UQ@*ÿ Ã=üUÿ £…ñŸşøÿ •Uİ|ø*ßÛÅww~+Ôüa©xÃSMRö÷TKT˜Ì–°Ú(iãË:zäŸp¢€
+(¢€?ÿ×ıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(Ä·šöŸáıB÷ÂÚlZÆ¯ö–sÜı’+‰€ù#yü¹| Ç‚ş[c®|Õÿ /öÁÿ ¢ álùO_XÑ@i·zÕÿ íÁáKßiÑiŒÿ .^ÖÍn>×½ûjB;yÊEæ²Çä‚á²s´ŠÛı˜¶ÂÚı£±±ıÿ 	¤>NÏõÚÙ6_Ú8Ç¼ï¿şÖsÍ{ïÄ¯ƒ¿~.ÛéĞø÷I7²èò¼Ö70\ÜXŞZI"ìsİ¤ÏõáÂH Xó~ÏŸføK{ğ0øn(ü¨£¥ÎŸÓÄfó$;É:H³´ Üò7±ûÌh øÓñŸÃß4kû»Iu¿k“D²Ã_j×Äe „º‹ÒÊß$I–cĞ{öføSâ…/-üi<x£ÅzÆ¥âMa,ò,íïµiŒÒ[ÛgŸ*!„ybñ»×Ä?Ù—àßÅ/é~;ñ†—|úş‹dtë;ËgTÓ$†Ô±v~Áu ù‹Ä‚Ì0	  =Àü3ğËD“Ãş7ÆÎYÚá¿´5;íVo1ÕTâ{ùî%…@áAÉ I î(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š ùöøûgü2Ä²oÙö;µyyİöµÁöÎœãìŞfïlÖGíıÿ göfÿ „WÊşÓÿ „ªçìŸgÛÿ  ìk¿¶ù{xòvyYÇË÷}«ì­GNÓõ>ëIÕ­£¼±½‰à	I±H¥]!•”A à×Œü:ı›~|)×G‰|áß±êq[5œ\^]ßKV!šAw4«m f8)ÀÀäß¶VÏ²üû~?±¿áeøsûGú¯+ı#ÈósÆßµùxÎ)|G³şÛÁ?ØØû_ü :ßö¶Ş¿cşĞ³û™íçy»3şŞ;×µéß>éŸî¾Ûøn|z÷2M¦ÜI-Ìl÷wu+o™Ş@Ş{†Ê6
+mÚ1cá¯Á†?æÔo<	¤=­ö®"w—WwZäé "(ŞêöY¦1Ç“±7í\œ“@¯EPEPEPEPEPEPEPEPEPEPEPEPEP^]ñÃûoş·ÿ áßı¯ÿ ş«ö?/;şÓöI<­¸çvücŞ½FŠ ü»ñ÷ü#ÿ ğÁß?áò¾Ûöß‡ØV7ÿ h}®Ï>^9ó<¿;¿»½~œßŞXiÖ3ê:¤ñÛYÚ#M4Ó2¤qGÜÎìØ
+ªI'¯ğ×ì¹ğÂ.¶ñ¿‡|)®¥c<×Vhnn¤²²¸¸Ï›-¥Œ’µ¥´¹²ĞÄ‡“Ï&´5oÙËàŞ¹áOx'RĞMâ> Ú¦¿ŞŞFonßÊÜşbL²DC)"Û†l€xoÃÙoÿ iOÚí§Z¾›ğëÀVZŸá›™PÇs¯Üj~\wWÁX–‘·7JÄËÂíî
+ğoşÍŸ
+~kV:ÿ „#Öá¹ÓQ¢·ëÄšİıª#FbÛö[»Ù­Ø8]Ñ§p@#Şh ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¯ÈíhŸğêÿ ÂK³ûCû?Å_Ú>f<ßíïí;­¾f~o;í~^ÜüÙÙÕúã^¨şËŸµoKãíCÂ‘ËªÏ|šœÉö›¥±šş2
+İÍ§¬¢ÎIÁPŞkÂ_p»<ĞS©x»XğÁY<m®i—šŞ­¡hbòâÆÒ3-åÕÔáŞĞLà¨àòkòsÂÿ |¥~Ğ?|gâfÖï<k®ßø—Qñ=ËøkZ·ÿ L¿ÓŞÚÖÑ'³I$µ³@°&ÀÁ#S,›w³Ø#áÇƒ4ø‡âN•§ù#ñT6Vú•×+yñiêël¾[96	”U-Ÿ˜œK­ü>ğ‡ˆü]á¯ë6h×< o•qæÊŸg7ñy"8÷Æ6şñ[oUÁæ€;*(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€?ÿĞıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÅZ¥Æ‡ácZ´Uyôû;‹ˆÕÁ(^(ÙÔ0ds‚>µòwÀ~Óß<à¯‹~*ñƒ-´iÖÚ­Í…¦…¨¥ÜpÜD%1¥Ãê²&åÏŞ0q÷kê_[Ü]ø#Ä6–‘4óÍ§]¤q¢–wv…‚ª¨ä’x u¯?d¿Ù—áwşü:ñ•ÏÃ]?BøiáËµ]Ë¦­¾­äÖf++2,Ë+upØc’Z õ/öøU¡ü7ğŒ¾ øÎÅ×Ç°3i×Öº}õ¥¦¡,P´ïä[Ê&šÈ§ËgŞí„]ÎÊ§¼ğOÇ…_ô-{Ä~ÖÌÖ¾,5T¸µ¹²º²Ùœ|û[¨¢¸LÇó.c‡İÍ|ğ·á§ağŸìQe­ø[Q‰¼&oßW{)”é4k•„İ« ò±WÌÛóàp+Ô<qáÿ _Å?ÚKÄßô«ˆ5í[Á~]íàÛou©Ú®¤
+Ã$ C$ñA‚HRÉ¼m4ô§‚?h¯„¼Kƒü7¬ÎšÔñI<º†}¥ÉsX2=°¾‚<  ±‹v'j§ÀßŠÿ ÄË¿‰PkÖö°/ƒ¼a¨ø~ÏìÈêdµ´‚ÚDy·»æRfmÅv® ÂIøCğÆ±«|søâ?ho­t}^éõíSÆsjÍ«Ï¥]DZ]¹†=ÌÌ²OI%#Go3m}5ğoá×Ä«m¶±«ü;»Õ~$jº¡•³MqdöÖŠ¯
+j6ÓÃ$2 H¨rT…n {ÄŠÿ …>7ü(øk§[ÚÉ¦xëûwíÒJgû2Ñ.!ò]Uw3û•²:m<ÔZí?ğGGñDÕõù¬/"½:sÏq¦ßÃ§-à“ÉòN¢öâÌ?™ò få¸×™x·ÀŞ6²øõû<Ïyu©ø¾//Š†§­Ïim76*°µÑ³†hKŸİ¦mÀËdŸş8økâïş|KĞ<aáÿ ‰Ş$øµsqª*ZXË©AáU²K·kW´ÕÒÆæ!fl;eI¸eêÀöCNøáSÇÇÃ{+ıŞ$Ğmm/nìŞ)ce¶½2,£º*JŒÑ:“6Ö_iÀ<MçíğgOğ¦³ã{ïCo¢h:´úÍÌ‘N¡µ;wò¤¶·Sû—|ƒÈY0eRJ°.~Ù~8øN<ûEü.´[ßÅ–ÉØ#ß¦¾¡lW÷ŞÛRXe	Œ”izrG7ñgömñ—Ãß†¬¾]ê·ü%Ô$ºÕäÑ-íouY¥½´š+JŞÚş9¡as3ÊÈci6Èæ1¼- }‰á_Ú#à÷Œü?â_è:ó5¯ƒ kb‹;»;Û&›ÌšÊæî•Z4fCå|ø;7Sü3øığ§ãÉƒá®¯.·µ[Ár–7‘Y´O´a.¥… i°¹’3ê¤>&Ò¼¨xºÓâÏÄEÔ> ø§Ä·Ş Ô¼?ñ/‡-ô8çGY&†{x,l¦u°Så°ÃHöÇìç Üx_ö~øiáËËÒ®tßiOi,F`š;8„‰$l+«ä8aÙÏ9 ~!~Ñ¾øÛÁ^9×½}bÚµŒvwww6ë(„˜ÚL²?ê“t›C>İŠÌ44?<Eğâ÷âæ™â›?øD´Ã2Ş_NZÙm$·;eŠâ9Õ$†U$Š¯’ŞF~Dø³âßøA¿o¯
+ø_ê>%¶µøu¨¬ãJµkëË4“U~Ò–ÑæiFìDÂ%gBÛv†#É<Uğ_âçÅO‡ÿ ş$xo@Õ<0¾*ñæƒâ}7@šx5K?AKX®&6· K›¦…§•!™H¸lPèOÃÚáÅ}jãÃ~	ÖŞ}^ÚÜ^;Ë+Í6åíKlE},;ˆday—ğëöø%ñkV´Ñ¾ëòë·‚l4uğ‚&·İæG<ïÅŸ!+®ÊU•J²“óWÂoİøïã‡„|yâo|I×5/Ûjkl|Ká{-OoáM³E§Ù4ÅŠ£"ÆÒ.ô¦Iée…¾9±ı¼'à¸u=[áˆRóT¹¹–+a~¾f§w&Ù Ô­§@%FFcİ·nÒP§¾&ücøoğzÏN»øƒ«ÿ g¶±9¶±·†Ş{Û»¹‚îe‚ÖÒ9g”ªòÛ…œdWü&ı§tˆş,ø»q&©¦Åà_‡­¦=¶§‰-™a¸°7†õ§` ”:2”ŒÇ´«À×üDğç>|kø[ñƒ_·×~)hÚ‰­h:íŸŞ©iu¨MğŞı‡O†0ÊÉ[¹·‡*»K’OÏšçÃ‰ßü9ûXÉ øQğäŞ8¾ğÅşc«@lN«™¼³G–ıØk±#©lÆÒì›k‡ ôá×í/ğOâ¶¼ğGˆÎ«=±¼··º²¼ÓŞîÕH{_¶C¹ˆdeáŞ sŠ­wûQ|´ñ•Ç€ÇˆïV²¼]>äÙé÷×––×ÁD¶ğIk˜Y%R§†¼RÖµÿ ÚãgÁ­[Âşñ…,~^ßêÚ¾£¯éré_gIì%´]>ßÎí4’/˜aİDÎóÀ¨?f_ë¿ <eğÇ~ñ<Ş!ÒµkøÆ©§ißiz¤w×òÏÿ Ûâ÷$ Ê'tt!^ }¡ |BğŠ5/i¡ö›¿]‹U<©Sì×-w!2è¡ÿ u*6c,¼ã92Ô?jo€ºW†|ãGÅIo¤|AŠYt)ŞÒì}µa‹ÎeTòw£•ûˆê¯#ˆ¬ä)ğM?ZñÁ‹?tÛøƒÄMãıF×XğıÎ•`÷6WLú]½›Á=ÒşæÑ£š¸Ü2.ÂÒ¼«áÃOÛi?±4ç…µáµÖN®·S'öd­£Lı¬2!Œ»U<Í¤¾ ù±@Zÿ Ãc~Î_Ø²ë‹â·t¶šh.-SLÔ[Q¶{eG˜Üiëlná5‘I$*€2’ÜŠôoüqøMáOé5¿ÚÇá½p[ÿ g]E¾àß5Òï…-b…^YŞEåR4f <gáƒu=/ö¯ı ¼[¨h“ÚXëÑxM-/¥·t†ğ[XL“fe/–ÅV@¤í8Î+â/üøË¤|	ı™¼gkkâOÏğÛş5kM+M·¸×l“TgŠŞâ-;R‚UD©±•b2ˆ¦-84úU£~Ñßuÿ x£â›âèŞ
+ŠYµ¿:ÒîŞóOŒÌg±š»Cå‚ÊYp>Pj—ƒ¿iÿ ~>ñVŸàÏ
+xo5M^9e°iw½òÀ»å—3B\4k’ëŒÊÜ>#Ôşj¾+ø_ûBxßK¸ñ÷ŠüSâoÏ¢¨ñ‡¡ÑøÅÑ¶ŠÒÎÚÊÎi¦F‘—q„’UIè=Ûâ7‚uÿ øF?eûMAº-áèmx–öÒ§ÙG¢ßA+LsJÌ‘¹}ªªHĞ|ı®¼1ñsÇ/ğÖŸ¨Xê7‰o´m8¦ª‹yím-¡œKsu%¨·¶”³H<©dFÀB÷‰»¶ı¥>4ê¿<7á™<?mc.¯ã-~ÏÃÖw¬Ío¦ÙMv’Éö‹·O˜Æ« ŠT»•PÃ9¯-ø}ªü6ø»ñoáç‹<5®A?Œüo}¯ézŒZUÔúDÖ7:u Rú„Qµ¼.İÔ¬®‡vd+İ~;ŞøJ7Ç¾ø‰áıVá-¯,,tÕÕŒIµ¤Yåµ'{¢2˜•İY”…ê@ğù¾=YêWS|XÔ|/ªh_e2Ás¡ÚŞÙÜ,ÁÚñ\OtÍÇzÈ@ù0I7†ÿ mÙŸÅ×:â/É7/c}œ—ŒÇn÷rÀ–ñ\6F!’E“$¹"¾cøğöüy¾Õÿ gÿ x“À	O‡/cÖ¬µÈ/të½YäSjÖ~ ŞrHˆÌ‘cHöü£“ó|õğÒÿ Äßÿ àşı™ü%ğç]%ñ=•­½¦ º{ÿ aÃ—âëûQõ%ıÂyj¦2Â8mxbú³ñö‡øAğ§Z‡Ã~4×^^kswö+++ÍJê;PJùòÃcï9y’BAçƒZZ¿Ç…º7´‰koğî¾c}Î›mq©£"4Š"ŠÊ9¥sµœ' àŠøkÇ^ø¥ğÓö‘ø“ãÅ×üm£øÇé£Ïe{áÃÄ ¶Ÿf-$µ¼Š[Û˜L‘•Q	[$8lÖºğGŒ>| øe øAş ‡—zöµ{âaiöOGã\Mo¶ÛM&‚ÙîØÈémÈ±²Œ'* >ãÑ¾?ü#ñ<Iñ'K×Ãè^†æ}eÚæ­=-!7ı¢ÎH–éD7„1na‚ äW?lOÙÌè’ø ø°¦…¶p¶¦ú}úiæKéD0…»kqşğí«‘>i@|5á_ øÚo~Ø¿Ùñ¾•â¿ÙÛøu|H÷ú†©ªJºf«ˆÚíç™¥i[î2"´A‘‚}øÑğë[Ôÿ eO„~Ò|7uw&›ªøn´èm$‘à¶´¹µûO›
+©dH‘[ÍÜ @ì hÛ-kïÙâğj	Š™nôß$µ”ºv¡üëq»ÊkK9-Öâí#ÖñÈ¤)9ÀÍw:_Ço…:×Ãi~.éè¼ğ´b’æ+{†–9–ana{aÚa)b1–¼ƒ[ğv«wûtxWÆçE]*ÇÀ:µ¡Ô¾ÎæÚ+¹5+C&}»VˆÊU7n+¸Œ×Îòèü/ğßã{x/K×t·Ôş-M}9Ó-Œz¼ş¸Ûî4*$‚_-ã$>Â\Pİ_¾8ü1ø«}¤ø/V’mOLD–æÆòÎïM½		)µ¾†	ŒlA@…IÎkÎ<?ûfşÍ^)›FCñ’ÜE¯\Gikplo£´ûT¯²;ynd·X`Ûb™ÑÛ*BÊOÌŸ|-ª'í‡§xÃÃ^ñì>
+Ôì[Uñœú­ÃÍz×öRùJšœ’Il»W(¬"2!T*›3¥|0ñ½—üêËáüÔañJ,3(XÌ58×Öä¹¶Ùæî
+<ÜíÎß›§4úÃEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPÿÑıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÌüAğ{áçŠü}¢|Lñ™&£¯xq@Óšk»–µ¶uó6Ì–^oÙ|ñæ¸˜Œ áTL¢Š (¢Š ã_á÷„$ø…ÅW°ÏŠ`ÒäÑRóÍ—>YÒåáò·ùG2Æ­¼¦ñŒÁ"»*( Š( Š( Š( Š( Š( Š( Š( æŠ9âx%’E*Ã¦A=+•ğ<)ğÇÁÚO€<cı› hP-µ·›$ŞTKÈ_2fy¯Vb}ë®¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€?ÿÒıü¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š(ÿÙ
+endstream
 endobj
 19 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+20 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 xref
-0 20
+0 21
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
 0000000147 00000 n 
-0000000336 00000 n 
-0000009312 00000 n 
-0000009501 00000 n 
-0000015045 00000 n 
-0000015234 00000 n 
-0000023052 00000 n 
-0000023242 00000 n 
-0000037184 00000 n 
-0000037375 00000 n 
-0000044677 00000 n 
-0000044868 00000 n 
-0000054016 00000 n 
-0000106028 00000 n 
-0000197522 00000 n 
-0000466406 00000 n 
-0000466477 00000 n 
-trailer << /Size 20 /Root 1 0 R >>
+0000000348 00000 n 
+0000010328 00000 n 
+0000010529 00000 n 
+0000016023 00000 n 
+0000016224 00000 n 
+0000024326 00000 n 
+0000024528 00000 n 
+0000038470 00000 n 
+0000038673 00000 n 
+0000046616 00000 n 
+0000046819 00000 n 
+0000052125 00000 n 
+0000104137 00000 n 
+0000195631 00000 n 
+0000464515 00000 n 
+0000532377 00000 n 
+0000532448 00000 n 
+trailer << /Size 21 /Root 1 0 R >>
 startxref
-466553
+532524
 %%EOF

@@ -1,0 +1,33 @@
+{
+  "train": 0.2243,
+  "val": 0.2173,
+  "fold_wins": 0,
+  "folds": [
+    {
+      "candidate": 0.2377,
+      "frozen": 0.3343,
+      "win": false
+    },
+    {
+      "candidate": 0.1976,
+      "frozen": 0.2768,
+      "win": false
+    },
+    {
+      "candidate": 0.231,
+      "frozen": 0.3852,
+      "win": false
+    },
+    {
+      "candidate": 0.2197,
+      "frozen": 0.3157,
+      "win": false
+    },
+    {
+      "candidate": 0.2317,
+      "frozen": 0.3514,
+      "win": false
+    }
+  ],
+  "adopt": false
+}

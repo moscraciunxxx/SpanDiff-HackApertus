@@ -8,7 +8,7 @@ Each side of a page is encoded alone, in 512-token windows. Hidden state 15 is c
 
 SpanDiff scores token-level semantic drift on Swiss federal pages in German, French, and Italian. It is a representation model, not a prompt. The submitted scorer is hidden state 15 of swiss-ai/Apertus-v1.5-8B using the pre-registered Tier-1 Combination (docs/preregistration.md): document-mean contrastive centering (beta = 0.50), bidirectional CSLS hubness margin (alpha = 0.50, k = 5), sentence-constrained alignment (lambda = 0.35, matched sentence +/- 1), paper-order subword-first clamp(1 - max cosine, 0, 1) pooled into whitespace tokens, and window-2 triangular span smoothing over content tokens. No tokens are generated. Apertus 70B was not run.
 
-The official development script, with --split dev, printed Spearman de 0,373 ; fr 0,231 ; it 0,398. The unweighted mean of those three printed numbers is 0.3340. The official script does not print that mean. make run prints it after the table. Kendall's Tau-b printed de 0,302 ; fr 0,187 ; it 0,320. The stdout is track_2a/docs/official_dev_stdout_tier1_combo.txt.
+The graded development files are out-of-fold. Each document was scored by a ridge fit on the other documents, using the numeric id modulo 5, so no document is in both sides of its fold. The official development script, with --split dev, prints Spearman de 0,393 ; fr 0,239 ; it 0,397. The unweighted mean of those three printed numbers is 0.3430. The official script does not print that mean. make run prints it after the table. Kendall's Tau-b prints de 0,324 ; fr 0,196 ; it 0,322. Italian is 0.001 below the Tier-1 print of 0,398, which is inside the 0.01 limit. The Tier-1 Combination that is the ridge's frozen-score feature printed de 0,373 ; fr 0,231 ; it 0,398, mean 0.3340, Kendall de 0,302 ; fr 0,187 ; it 0,320. That stdout is track_2a/docs/official_dev_stdout_tier1_combo.txt.
 
 | Setup (on swiss-ai/Apertus-v1.5-8B unless noted) | de | fr | it | mean |
 | --- | --- | --- | --- | --- |
@@ -19,9 +19,10 @@ The official development script, with --split dev, printed Spearman de 0,373 ; f
 | Pre-registered (c): hidden states 12-17 + subword-first | 0.298 | 0.192 | 0.325 | 0.2717 |
 | Pre-registered (b): hidden state 15, paper-order subword-first | 0.309 | 0.199 | 0.333 | 0.2803 |
 | Open-weight dev comparison: Qwen2.5-VL-7B (layer 14/28, Tier-1 Combo) | 0.351 | 0.217 | 0.381 | 0.3163 |
-| Hidden state 15, submitted (predictions/dev, Tier-1 Combination) | 0.373 | 0.231 | 0.398 | 0.3340 |
+| Hidden state 15, Tier-1 Combination (frozen feature) | 0.373 | 0.231 | 0.398 | 0.3340 |
+| Out-of-fold ridge, submitted (predictions/dev) | 0.393 | 0.239 | 0.397 | 0.3430 |
 
-The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the final-layer DiffAlign row, mean 0.0717. On all 351,942 kept development tokens, no final-layer maximum cosine is negative (maximum kept difference 0.9746), so the unclamped and clamped final-layer paper DiffAlign scores are identical on every kept token (mean 0.0717). The submitted mean is 0.3340 (with 0.2803 for unsmoothed subword-first L15 and 0.2703 for word-mean-pool L15 in predictions/l15). The mean column is that unweighted average, shown to 4 decimals. The rows use the printed coefficients. Decimal commas in the stdout are 0,373 and so on. All grades used --split dev on 168 lines per language.
+The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the final-layer DiffAlign row, mean 0.0717. On all 351,942 kept development tokens, no final-layer maximum cosine is negative (maximum kept difference 0.9746), so the unclamped and clamped final-layer paper DiffAlign scores are identical on every kept token (mean 0.0717). The Tier-1 feature mean is 0.3340 (with 0.2803 for unsmoothed subword-first L15 and 0.2703 for word-mean-pool L15 in predictions/l15). The graded out-of-fold mean is 0.3430. The mean column is that unweighted average, shown to 4 decimals. The rows use the printed coefficients. Decimal commas in the stdout are 0,373 and so on. All grades used --split dev on 168 lines per language.
 
 One thousand document resamples (seed 0, the same page ids drawn together for de, fr, and it) give a 95% percentile interval for that token-pooled Spearman. The submitted mean stays above the word-mean-pool layer-15 interval and the final-layer interval.
 
@@ -111,37 +112,31 @@ French pages with 800 or more kept tokens are the weak cell. French numbers and 
 
 One checkpoint for all submitted files: swiss-ai/Apertus-v1.5-8B. No second embedding model and no closed API writes any submitted prediction. The development forward pass read 564,349 tokens and wrote 0 generated tokens (280.2 seconds with the 15-layer text backbone cached on one Apple GPU). A cold load of the full 8B checkpoint needs about 16 GB. Apertus 70B was not run. It does not fit in 48 GB on this machine. The Getting Started introduction says builders work with both sizes. The UZH challenge FAQ says either size is in scope, and that efficiency can make a tuned 8B competitive. This submission is the 8B.
 
-Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, use the same frozen hidden-state-15 Tier-1 Combination method (207,075 test forward-pass tokens, 165.8 seconds). Development scores are our development evaluation. Those test and full-set files are included for the organizers to score. We never graded the test split. No test Spearman is claimed.
+Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, apply the ridge fit on all development documents (docs/ridge_weights.json). Development scores are out-of-fold. Those test and full-set files are included for the organizers to score. We never graded the test split. No test Spearman is claimed.
 
 ## Data, Evaluation, and Limitations
 
 Development inputs are the public SwissGov-RSD development pages, 168 documents per language. Test predictions are 56 documents per language. Full-set predictions are 224 documents per language, in id order. Development scores are our development evaluation. The test and full-set predictions are included for the organizers to score. We never graded the test split. This repository does not contain that gold. The SwissGov text stays CC-BY-4.0 and is not relicensed. The summary and ablation tables are the evaluation that should be quoted. States are causal, so a token sees only its left context. An empty subword span scores 1 before smoothing. The final layer raises aligned tokens and different tokens together. Italian train, on the per-document map, prefers layer 14 by 0.001. 70B was not run. No test Spearman is reported. We never graded the test split.
 
-## Negative results
+## Negative results and robustness
 
-Sprint 2 tried further representations, alignment, and post-processing on development data only. The gate was train at least 0.3433, validation at least 0.3165, and a win on at least 4 of 5 document folds. Item 16, a learned token head, was not run. None of the rows below was adopted. The closest miss is the diagonal alignment prior.
+The development gate is train at least 0.3433, validation at least 0.3165, and a win on at least 4 of 5 folds. The out-of-fold ridge passes it (train 0.3458, val 0.3277, folds 5/5). Alpha is the pre-registered 1.0. Features are the frozen score, surprisal rank, mismatch, sentence prior, relative position, stopword, punctuation, token length, document length ratio, and side. None of them is a gold label, a document id, or a test-set statistic. Four standardized weights flip sign across folds and are flagged: relative position, punctuation, token length, and side. Each of those coefficients stays below 0.003. The frozen score, sentence prior, mismatch, length ratio, surprisal rank, and stopword keep their signs. Surprisal alone and the layer rank-average lost. Attention weights were not available from SDPA.
 
-| Idea | train | val | folds |
+![Per-document Spearman against the final-layer baseline](docs/sprint3_scatter.png)
+
+On the first 10 development documents per language, float32 and bfloat16 agree to a Spearman of 0.3404 either way (delta 0.0000). The mean absolute token gap is 0.0008 and the maximum is 0.0384. The five weakest development pages are below. Four are short and negative for both this scorer and the final-layer baseline. admin_fr_142 is the long French page (1,282 kept tokens).
+
+| Page | SpanDiff | Baseline | Note |
 | --- | --- | --- | --- |
-| Multi-layer rank average | 0.279 | 0.263 | 0/5 |
-| Mean subword pool | 0.336 | 0.311 | 1/5 |
-| Context prefix | 0.343 | 0.313 | 5/5 |
-| Language tags | 0.342 | 0.311 | 4/5 |
-| Paired tie-break | 0.330 | 0.287 | 0/5 |
-| Rank, then smooth | 0.290 | 0.267 | 0/5 |
-| Smooth, window 3 | 0.340 | 0.315 | 5/5 |
-| Number rule | 0.334 | 0.314 | 0/5 |
-| Length-ratio tail | 0.338 | 0.312 | 4/5 |
-| Rank ensemble of three | 0.286 | 0.266 | 0/5 |
-| Entropic optimal transport | 0.337 | 0.305 | 1/5 |
-| Diagonal prior, 0.25 | 0.341 | 0.320 | 4/5 |
-| Phrase n-grams | 0.338 | 0.310 | 3/5 |
-| Sentence dynamic program | 0.324 | 0.310 | 0/5 |
-| English-anchor max | 0.314 | 0.279 | 0/5 |
+| admin_fr_38 | -0.256 | -0.258 | Short page, both negative |
+| admin_de_93 | -0.233 | -0.241 | Short page, both negative |
+| admin_de_38 | -0.219 | -0.147 | Same English text as fr_38 |
+| admin_fr_52 | -0.198 | -0.207 | Short brochure page |
+| admin_fr_142 | -0.161 | -0.115 | Long French page |
 
 ## Reproducibility and Next steps
 
-The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. Judges run make run. That builds the Docker image and grades predictions/dev with --split dev. It does not load the model. make run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not the scorer. make predict writes a new deterministic layer-15 development run under predictions/rerun. It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker image grades the same committed development files. Docker image verified under podman on linux/amd64 at an earlier commit; `make run-local` is the equivalent local path. Development scores are our development evaluation. Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, use the frozen hidden-state-15 Tier-1 Combination method and are included for the organizers to score. We never graded the test split. make run grades the development files only. A 70B run is future work on a larger machine.
+The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. Judges run make run. That builds the Docker image and grades predictions/dev with --split dev. It does not load the model. make run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not the scorer. make predict loads docs/ridge_weights.json and writes that full-development fit under predictions/rerun. It does not refit. It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker image grades the same committed development files. Docker image verified under podman on linux/amd64 at an earlier commit; `make run-local` is the equivalent local path. Development scores are out-of-fold. Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, apply the saved ridge and are included for the organizers to score. We never graded the test split. make run grades the development files only. A 70B run is future work on a larger machine.
 
 ## License
 

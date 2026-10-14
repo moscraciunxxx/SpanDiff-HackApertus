@@ -1,0 +1,5 @@
+{
+  "idea": 3,
+  "runnable": false,
+  "reason": "sdpa attention does not support output_attentions; the returned attention tuple is empty. Cosine was not substituted."
+}

@@ -1,0 +1,101 @@
+{
+  "mismatch": {
+    "train": 0.3418,
+    "val": 0.3165,
+    "fold_wins": 5,
+    "folds": [
+      {
+        "candidate": 0.3392,
+        "frozen": 0.3343,
+        "win": true
+      },
+      {
+        "candidate": 0.2779,
+        "frozen": 0.2768,
+        "win": true
+      },
+      {
+        "candidate": 0.3897,
+        "frozen": 0.3852,
+        "win": true
+      },
+      {
+        "candidate": 0.3195,
+        "frozen": 0.3157,
+        "win": true
+      },
+      {
+        "candidate": 0.3552,
+        "frozen": 0.3514,
+        "win": true
+      }
+    ],
+    "adopt": false
+  },
+  "damping": {
+    "train": 0.2378,
+    "val": 0.2143,
+    "fold_wins": 0,
+    "folds": [
+      {
+        "candidate": 0.2318,
+        "frozen": 0.3343,
+        "win": false
+      },
+      {
+        "candidate": 0.1914,
+        "frozen": 0.2768,
+        "win": false
+      },
+      {
+        "candidate": 0.2692,
+        "frozen": 0.3852,
+        "win": false
+      },
+      {
+        "candidate": 0.2311,
+        "frozen": 0.3157,
+        "win": false
+      },
+      {
+        "candidate": 0.2417,
+        "frozen": 0.3514,
+        "win": false
+      }
+    ],
+    "adopt": false
+  },
+  "adaptive": {
+    "train": 0.3398,
+    "val": 0.3129,
+    "fold_wins": 5,
+    "folds": [
+      {
+        "candidate": 0.3354,
+        "frozen": 0.3343,
+        "win": true
+      },
+      {
+        "candidate": 0.2792,
+        "frozen": 0.2768,
+        "win": true
+      },
+      {
+        "candidate": 0.3862,
+        "frozen": 0.3852,
+        "win": true
+      },
+      {
+        "candidate": 0.317,
+        "frozen": 0.3157,
+        "win": true
+      },
+      {
+        "candidate": 0.3528,
+        "frozen": 0.3514,
+        "win": true
+      }
+    ],
+    "adopt": false
+  }
+}
