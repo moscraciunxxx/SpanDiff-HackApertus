@@ -26,9 +26,9 @@ from spandiff.schema import dumps_encoder  # noqa: E402
 from spandiff.score import dumps_line  # noqa: E402
 
 GRADED_SHA = {
-    "de": "bb0c1cac606d6ee8e407f968f99797640311040e1e86b506cb93f708e75952f6",
-    "fr": "56b58418d67c22e7114cc8457647f02d65aeae117d974f64edf6c13a74f0cee9",
-    "it": "c83223ce12938f255615e3b8c491d79449987b057024e152c1ebe9083fc70ddb",
+    "de": "cf296400041926f87ea4fa0cc68547b2cfbc43b0437583d637fcc5a74cffd163",
+    "fr": "ef2f1fa6293bcbf164118682ecf7646c4dc0ad92342abfeb77e334d726316ae1",
+    "it": "3a170ac7d1a1f1dfdfeef55804c2e753c5718bda033c0d121daac0d7c7b8beff",
 }
 
 

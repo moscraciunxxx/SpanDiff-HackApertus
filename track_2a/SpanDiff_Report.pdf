@@ -9,348 +9,405 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 12 0 R /F2 13 0 R >> /XObject << /Im1 11 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 7003 >>
+<< /Length 9214 >>
 stream
 BT /F2 16.0 Tf 48.00 732.00 Td (SpanDiff technical report) Tj ET
 BT /F2 13.0 Tf 48.00 703.00 Td (Summary) Tj ET
 BT /F1 10.0 Tf 48.00 685.00 Td (SpanDiff scores token-level semantic drift on Swiss federal pages in German, French, and Italian. It is) Tj ET
 BT /F1 10.0 Tf 48.00 672.00 Td (a representation model, not a prompt. The submitted scorer is hidden state 15 of) Tj ET
-BT /F1 10.0 Tf 48.00 659.00 Td (swiss-ai/Apertus-v1.5-8B. Subword states are mean-pooled onto whitespace tokens. The score is clamp\(1 -) Tj ET
-BT /F1 10.0 Tf 48.00 646.00 Td (max cosine to the other side, 0, 1\). No tokens are generated. Apertus 70B was not run.) Tj ET
-BT /F1 10.0 Tf 48.00 629.00 Td (The official development script, with --split dev, printed Spearman de 0,296 ; fr 0,191 ; it 0,324. The) Tj ET
-BT /F1 10.0 Tf 48.00 616.00 Td (unweighted mean of those three printed numbers is 0.2703. The official script does not print that mean.) Tj ET
-BT /F1 10.0 Tf 48.00 603.00 Td (make run prints it after the table. Kendall's Tau-b printed de 0,238 ; fr 0,154 ; it 0,259. The stdout) Tj ET
-BT /F1 10.0 Tf 48.00 590.00 Td (is track_2a/docs/official_dev_stdout_L15.txt.) Tj ET
-0.90 0.93 0.96 rg 48.00 567.00 220.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 567.00 220.00 16.00 re S
+BT /F1 10.0 Tf 48.00 659.00 Td (swiss-ai/Apertus-v1.5-8B using the pre-registered paper-order subword-first formulation) Tj ET
+BT /F1 10.0 Tf 48.00 646.00 Td (\(docs/preregistration.md\): each content subword is scored by clamp\(1 - max cosine to the other side, 0,) Tj ET
+BT /F1 10.0 Tf 48.00 633.00 Td (1\), and subword scores are averaged inside the whitespace token they overlap most. No tokens are) Tj ET
+BT /F1 10.0 Tf 48.00 620.00 Td (generated. Apertus 70B was not run.) Tj ET
+BT /F1 10.0 Tf 48.00 603.00 Td (The official development script, with --split dev, printed Spearman de 0,309 ; fr 0,199 ; it 0,333. The) Tj ET
+BT /F1 10.0 Tf 48.00 590.00 Td (unweighted mean of those three printed numbers is 0.2803. The official script does not print that mean.) Tj ET
+BT /F1 10.0 Tf 48.00 577.00 Td (make run prints it after the table. Kendall's Tau-b printed de 0,249 ; fr 0,161 ; it 0,266. The stdout) Tj ET
+BT /F1 10.0 Tf 48.00 564.00 Td (is track_2a/docs/official_dev_stdout_subword_l15.txt.) Tj ET
+0.90 0.93 0.96 rg 48.00 541.00 220.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 541.00 220.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 571.50 Td (Setup) Tj ET
-0.90 0.93 0.96 rg 268.00 567.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 268.00 567.00 74.00 16.00 re S
+BT /F2 8.5 Tf 51.00 545.50 Td (Setup) Tj ET
+0.90 0.93 0.96 rg 268.00 541.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 268.00 541.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 271.00 571.50 Td (de) Tj ET
-0.90 0.93 0.96 rg 342.00 567.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 342.00 567.00 74.00 16.00 re S
+BT /F2 8.5 Tf 271.00 545.50 Td (de) Tj ET
+0.90 0.93 0.96 rg 342.00 541.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 342.00 541.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 345.00 571.50 Td (fr) Tj ET
-0.90 0.93 0.96 rg 416.00 567.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 416.00 567.00 74.00 16.00 re S
+BT /F2 8.5 Tf 345.00 545.50 Td (fr) Tj ET
+0.90 0.93 0.96 rg 416.00 541.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 416.00 541.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 419.00 571.50 Td (it) Tj ET
-0.90 0.93 0.96 rg 490.00 567.00 74.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 490.00 567.00 74.00 16.00 re S
+BT /F2 8.5 Tf 419.00 545.50 Td (it) Tj ET
+0.90 0.93 0.96 rg 490.00 541.00 74.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 490.00 541.00 74.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 493.00 571.50 Td (mean) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 551.00 220.00 16.00 re S
+BT /F2 8.5 Tf 493.00 545.50 Td (mean) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 525.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 555.50 Td (Paper DiffAlign on this 8B, final layer, clamped) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 551.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 529.50 Td (Paper DiffAlign on this 8B, final layer, clamped) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 525.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 555.50 Td (0.053) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 551.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 529.50 Td (0.053) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 525.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 555.50 Td (0.056) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 551.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 529.50 Td (0.056) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 525.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 555.50 Td (0.106) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 551.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 529.50 Td (0.106) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 525.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 555.50 Td (0.0717) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 535.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 529.50 Td (0.0717) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 509.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 539.50 Td (Hidden state 8 ablation) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 535.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 513.50 Td (Hidden state 8 ablation \(word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 509.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 539.50 Td (0.245) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 535.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 513.50 Td (0.245) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 509.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 539.50 Td (0.165) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 535.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 513.50 Td (0.165) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 509.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 539.50 Td (0.282) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 535.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 513.50 Td (0.282) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 509.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 539.50 Td (0.2307) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 519.00 220.00 16.00 re S
+BT /F1 8.5 Tf 493.00 513.50 Td (0.2307) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 493.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 523.50 Td (Hidden state 15, submitted) Tj ET
-0.45 0.50 0.55 RG 0.6 w 268.00 519.00 74.00 16.00 re S
+BT /F1 8.5 Tf 51.00 497.50 Td (Pre-registered \(a\): mean of hidden states 12-17 \(word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 493.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 271.00 523.50 Td (0.296) Tj ET
-0.45 0.50 0.55 RG 0.6 w 342.00 519.00 74.00 16.00 re S
+BT /F1 8.5 Tf 271.00 497.50 Td (0.285) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 493.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 345.00 523.50 Td (0.191) Tj ET
-0.45 0.50 0.55 RG 0.6 w 416.00 519.00 74.00 16.00 re S
+BT /F1 8.5 Tf 345.00 497.50 Td (0.183) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 493.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 419.00 523.50 Td (0.324) Tj ET
-0.45 0.50 0.55 RG 0.6 w 490.00 519.00 74.00 16.00 re S
+BT /F1 8.5 Tf 419.00 497.50 Td (0.316) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 493.00 74.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 493.00 523.50 Td (0.2703) Tj ET
+BT /F1 8.5 Tf 493.00 497.50 Td (0.2613) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 477.00 220.00 16.00 re S
 0 0 0 rg
-BT /F1 10.0 Tf 48.00 501.00 Td (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the) Tj ET
-BT /F1 10.0 Tf 48.00 488.00 Td (clamped final-layer row, mean 0.0717. The submitted mean is 0.2703. The mean column is that unweighted) Tj ET
-BT /F1 10.0 Tf 48.00 475.00 Td (average, shown to 4 decimals. The rows use the printed coefficients. Decimal commas in the stdout are) Tj ET
-BT /F1 10.0 Tf 48.00 462.00 Td (0,296 and so on. Hidden state 8 is docs/official_dev_stdout.txt. The final layer is) Tj ET
-BT /F1 10.0 Tf 48.00 449.00 Td (docs/official_dev_stdout_last.txt. All three grades used --split dev on 168 lines per language.) Tj ET
-BT /F2 13.0 Tf 48.00 421.00 Td (Method) Tj ET
-BT /F1 10.0 Tf 48.00 403.00 Td (Each side of a page is encoded alone. The model is swiss-ai/Apertus-v1.5-8B. Index 0 is the embedding.) Tj ET
-BT /F1 10.0 Tf 48.00 390.00 Td (The submitted state is index 15, the residual stream after block 15. Index 32, after the final norm, is) Tj ET
-BT /F1 10.0 Tf 48.00 377.00 Td (the final-layer baseline, not the submission.) Tj ET
-BT /F1 10.0 Tf 48.00 360.00 Td (A window holds at most 512 tokenizer tokens, including the leading beginning-of-sequence token. The) Tj ET
-BT /F1 10.0 Tf 48.00 347.00 Td (development pass is 1619 such windows and 564,349 tokenizer tokens. Each of those windows has exactly) Tj ET
-BT /F1 10.0 Tf 48.00 334.00 Td (one leading BOS. That token has an empty character offset and is not pooled. EOS, PAD, UNK, and) Tj ET
-BT /F1 10.0 Tf 48.00 321.00 Td (multimodal special counts on that tokenizer-only census were 0. The census is docs/special_tokens.txt.) Tj ET
-BT /F1 10.0 Tf 48.00 308.00 Td (It did not load weights.) Tj ET
-BT /F1 10.0 Tf 48.00 291.00 Td (Subwords are mean-pooled into the whitespace token they overlap most. An equal overlap stays on the) Tj ET
-BT /F1 10.0 Tf 48.00 278.00 Td (earlier token. A whitespace token with no subword becomes a zero vector. Its cosine is defined as 0, so) Tj ET
-BT /F1 10.0 Tf 48.00 265.00 Td (its score is 1. After the windows of one side are stitched, each token is scored against the other) Tj ET
-BT /F1 10.0 Tf 48.00 252.00 Td (side's full sequence. The written score is clamp\(1 - max cosine, 0, 1\), rounded to 6 decimals.) Tj ET
-BT /F1 10.0 Tf 48.00 235.00 Td (The paper's DiffAlign takes the final hidden state and does not clamp, so a negative cosine can score) Tj ET
-BT /F1 10.0 Tf 48.00 222.00 Td (above 1. SpanDiff clamps. The final-layer row in the table is the clamped version of that recipe on) Tj ET
-BT /F1 10.0 Tf 48.00 209.00 Td (this 8B model. An unclamped rescore of the saved final-layer states was not produced. The paper also) Tj ET
-BT /F1 10.0 Tf 48.00 196.00 Td (takes the maximum at subword level and then averages inside the word. SpanDiff pools the states first) Tj ET
-BT /F1 10.0 Tf 48.00 183.00 Td (and then takes the maximum. The graded files keep that order.) Tj ET
-BT /F1 10.0 Tf 48.00 166.00 Td (Encoder lines contain only id, text_a, text_b, labels_a, and labels_b. Every label is in [0, 1]. The) Tj ET
-BT /F1 10.0 Tf 48.00 153.00 Td (writer rejects -1 and NaN. The label count equals the whitespace-token count. Generated tokens are 0,) Tj ET
-BT /F1 10.0 Tf 48.00 140.00 Td (so no output filter is applied.) Tj ET
-BT /F2 13.0 Tf 48.00 112.00 Td (Layer curve) Tj ET
+BT /F1 8.5 Tf 51.00 481.50 Td (Hidden state 15 ablation \(predictions/l15, word mean-pool\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 477.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 481.50 Td (0.296) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 477.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 481.50 Td (0.191) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 477.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 481.50 Td (0.324) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 477.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 481.50 Td (0.2703) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 461.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 465.50 Td (Pre-registered \(c\): hidden states 12-17 + subword-first) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 461.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 465.50 Td (0.298) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 461.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 465.50 Td (0.192) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 461.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 465.50 Td (0.325) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 461.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 465.50 Td (0.2717) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 445.00 220.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 51.00 449.50 Td (Hidden state 15, submitted \(paper-order subword-first\)) Tj ET
+0.45 0.50 0.55 RG 0.6 w 268.00 445.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 271.00 449.50 Td (0.309) Tj ET
+0.45 0.50 0.55 RG 0.6 w 342.00 445.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 345.00 449.50 Td (0.199) Tj ET
+0.45 0.50 0.55 RG 0.6 w 416.00 445.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 419.00 449.50 Td (0.333) Tj ET
+0.45 0.50 0.55 RG 0.6 w 490.00 445.00 74.00 16.00 re S
+0 0 0 rg
+BT /F1 8.5 Tf 493.00 449.50 Td (0.2803) Tj ET
+0 0 0 rg
+BT /F1 10.0 Tf 48.00 427.00 Td (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That baseline is the) Tj ET
+BT /F1 10.0 Tf 48.00 414.00 Td (clamped final-layer row, mean 0.0717. The submitted mean is 0.2803 \(and 0.2703 for the word-mean-pool) Tj ET
+BT /F1 10.0 Tf 48.00 401.00 Td (hidden-state-15 ablation in predictions/l15\). The mean column is that unweighted average, shown to 4) Tj ET
+BT /F1 10.0 Tf 48.00 388.00 Td (decimals. The rows use the printed coefficients. Decimal commas in the stdout are 0,309 and so on.) Tj ET
+BT /F1 10.0 Tf 48.00 375.00 Td (Hidden state 15 word mean-pool is docs/official_dev_stdout_L15.txt. Pre-registered variants \(a\), \(b\),) Tj ET
+BT /F1 10.0 Tf 48.00 362.00 Td (and \(c\) are docs/official_dev_stdout_l12_17.txt, docs/official_dev_stdout_subword_l15.txt, and) Tj ET
+BT /F1 10.0 Tf 48.00 349.00 Td (docs/official_dev_stdout_combined.txt. Hidden state 8 is docs/official_dev_stdout.txt. The final layer) Tj ET
+BT /F1 10.0 Tf 48.00 336.00 Td (is docs/official_dev_stdout_last.txt. All grades used --split dev on 168 lines per language.) Tj ET
+BT /F2 13.0 Tf 48.00 308.00 Td (Method) Tj ET
+BT /F1 10.0 Tf 48.00 290.00 Td (Each side of a page is encoded alone. The model is swiss-ai/Apertus-v1.5-8B. Index 0 is the embedding.) Tj ET
+BT /F1 10.0 Tf 48.00 277.00 Td (The submitted state is index 15, the residual stream after block 15. Index 32, after the final norm, is) Tj ET
+BT /F1 10.0 Tf 48.00 264.00 Td (the final-layer baseline, not the submission.) Tj ET
+BT /F1 10.0 Tf 48.00 247.00 Td (A window holds at most 512 tokenizer tokens, including the leading beginning-of-sequence token. The) Tj ET
+BT /F1 10.0 Tf 48.00 234.00 Td (development pass is 1619 such windows and 564,349 tokenizer tokens. Each of those windows has exactly) Tj ET
+BT /F1 10.0 Tf 48.00 221.00 Td (one leading BOS. That token has an empty character offset and is not pooled. EOS, PAD, UNK, and) Tj ET
+BT /F1 10.0 Tf 48.00 208.00 Td (multimodal special counts on that tokenizer-only census were 0. The census is docs/special_tokens.txt.) Tj ET
+BT /F1 10.0 Tf 48.00 195.00 Td (It did not load weights.) Tj ET
+BT /F1 10.0 Tf 48.00 178.00 Td (Each subword is assigned to the whitespace token it overlaps most. An equal overlap stays on the) Tj ET
+BT /F1 10.0 Tf 48.00 165.00 Td (earlier token. In the submitted subword-first method \(pre-registered variant \(b\)\), after the windows of) Tj ET
+BT /F1 10.0 Tf 48.00 152.00 Td (one side are stitched, each content subword is scored against all content subwords on the other side by) Tj ET
+BT /F1 10.0 Tf 48.00 139.00 Td (clamp\(1 - max cosine, 0, 1\), and the subword scores inside each whitespace token are averaged and) Tj ET
+BT /F1 10.0 Tf 48.00 126.00 Td (rounded to 6 decimals. A whitespace token with no subword scores 1. In the word-mean-pool ablation) Tj ET
+BT /F1 10.0 Tf 48.00 113.00 Td (\(predictions/l15\), subword hidden states are averaged into the whitespace token first and then scored) Tj ET
+BT /F1 10.0 Tf 48.00 100.00 Td (by clamp\(1 - max cosine, 0, 1\).) Tj ET
+BT /F1 10.0 Tf 48.00 83.00 Td (The paper's DiffAlign takes the final hidden state and does not clamp, so a negative cosine can score) Tj ET
+BT /F1 10.0 Tf 48.00 70.00 Td (above 1. SpanDiff clamps. The final-layer row in the table is the clamped version of that recipe on) Tj ET
+BT /F1 10.0 Tf 48.00 57.00 Td (this 8B model. An unclamped rescore of the saved final-layer states was not produced.) Tj ET
 endstream
 endobj
 5 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 12 0 R /F2 13 0 R >> /XObject << /Im1 11 0 R >> >> >>
 endobj
 6 0 obj
-<< /Length 3596 >>
+<< /Length 3646 >>
 stream
-q 428.57 0 0 250.00 48.00 498.00 cm /Im1 Do Q
-BT /F1 10.0 Tf 48.00 478.00 Td (The figure plots the saved average-rank Spearman for every hidden state, separately for German, French,) Tj ET
-BT /F1 10.0 Tf 48.00 465.00 Td (and Italian. The source table is docs/layer_map_by_lang_avg.txt. It uses the same token counts as the) Tj ET
-BT /F1 10.0 Tf 48.00 452.00 Td (frozen-score tables \(German 108,945, French 124,262, Italian 118,735\) and drops gold labels of -1. It) Tj ET
-BT /F1 10.0 Tf 48.00 439.00 Td (is not a second run of the official script. Do not treat a point on the curve as the printed contest) Tj ET
-BT /F1 10.0 Tf 48.00 426.00 Td (score.) Tj ET
-BT /F1 10.0 Tf 48.00 409.00 Td (On that map, hidden state 8 reads 0.2495, 0.1662, and 0.2842. Hidden state 15 reads 0.2982, 0.1921, and) Tj ET
-BT /F1 10.0 Tf 48.00 396.00 Td (0.3241. German peaks at layer 14 \(0.2983\), a hair above layer 15. French peaks at layer 15. Italian) Tj ET
-BT /F1 10.0 Tf 48.00 383.00 Td (peaks at layer 14 \(0.3246\), again a hair above layer 15. The final state, index 32, is 0.0484, 0.0564,) Tj ET
-BT /F1 10.0 Tf 48.00 370.00 Td (and 0.0945. German is the low end of that curve. A pooled ordinal Spearman across all three languages,) Tj ET
-BT /F1 10.0 Tf 48.00 357.00 Td (in docs/layer_map_dev.txt, peaks at layer 14 \(0.1408\), with layer 15 at 0.1403, layer 8 at 0.1281, and) Tj ET
-BT /F1 10.0 Tf 48.00 344.00 Td (the last block at -0.0358. That pooled number is one Spearman on 351,942 tokens. It is not the mean of) Tj ET
-BT /F1 10.0 Tf 48.00 331.00 Td (three language scores.) Tj ET
-BT /F1 10.0 Tf 48.00 314.00 Td (The official prints sit next to this map, not on top of it. Hidden state 15 printed 0,296 ; 0,191 ;) Tj ET
-BT /F1 10.0 Tf 48.00 301.00 Td (0,324. Hidden state 8 printed 0,245 ; 0,165 ; 0,282. The final layer printed 0,053 ; 0,056 ; 0,106. The) Tj ET
-BT /F1 10.0 Tf 48.00 288.00 Td (shape agrees: the middle of the network carries the signal, and the final state does not.) Tj ET
-BT /F1 10.0 Tf 48.00 271.00 Td (docs/token_heatmap.png shows one short development pair, admin_de_105, from the submitted layer-15) Tj ET
-BT /F1 10.0 Tf 48.00 258.00 Td (file. English and German tokens are colored by the clamped difference. It is an illustration, not a) Tj ET
-BT /F1 10.0 Tf 48.00 245.00 Td (score.) Tj ET
-BT /F2 13.0 Tf 48.00 217.00 Td (Layer selection) Tj ET
-BT /F1 10.0 Tf 48.00 199.00 Td (The organizers publish a development train split of 134 documents per language and a development) Tj ET
-BT /F1 10.0 Tf 48.00 186.00 Td (validation split of 34, at gold_labels/dev/train and gold_labels/dev/val in ZurichNLP/SwissGov-RSD.) Tj ET
-BT /F1 10.0 Tf 48.00 173.00 Td (Those files are not copied into this repository. Only the id field was read. Together, train and) Tj ET
-BT /F1 10.0 Tf 48.00 160.00 Td (validation are the 168 development documents, and they share no id. The per-document Spearmans were) Tj ET
-BT /F1 10.0 Tf 48.00 147.00 Td (then taken from docs/layer_map_dev.jsonl, which stores one ordinal Spearman per hidden state and does) Tj ET
-BT /F1 10.0 Tf 48.00 134.00 Td (not store gold labels.) Tj ET
-BT /F1 10.0 Tf 48.00 117.00 Td (A document whose per-document Spearman is not finite was omitted: none of 134 German train pages, 1 of) Tj ET
-BT /F1 10.0 Tf 48.00 104.00 Td (34 German val, 2 of 134 French train, 1 of 34 French val, 1 of 134 Italian train, and 1 of 34 Italian) Tj ET
-BT /F1 10.0 Tf 48.00 91.00 Td (val. The table is the unweighted mean of the remaining per-document Spearmans. It is not the official) Tj ET
-BT /F1 10.0 Tf 48.00 78.00 Td (contest formula.) Tj ET
+BT /F1 10.0 Tf 48.00 738.00 Td (Encoder lines contain only id, text_a, text_b, labels_a, and labels_b. Every label is in [0, 1]. The) Tj ET
+BT /F1 10.0 Tf 48.00 725.00 Td (writer rejects -1 and NaN. The label count equals the whitespace-token count. Generated tokens are 0,) Tj ET
+BT /F1 10.0 Tf 48.00 712.00 Td (so no output filter is applied.) Tj ET
+BT /F2 13.0 Tf 48.00 684.00 Td (Layer curve) Tj ET
+q 428.57 0 0 250.00 48.00 426.00 cm /Im1 Do Q
+BT /F1 10.0 Tf 48.00 406.00 Td (The figure plots the saved average-rank Spearman for every hidden state, separately for German, French,) Tj ET
+BT /F1 10.0 Tf 48.00 393.00 Td (and Italian. The source table is docs/layer_map_by_lang_avg.txt. It uses the same token counts as the) Tj ET
+BT /F1 10.0 Tf 48.00 380.00 Td (frozen-score tables \(German 108,945, French 124,262, Italian 118,735\) and drops gold labels of -1. It) Tj ET
+BT /F1 10.0 Tf 48.00 367.00 Td (is not a second run of the official script. Do not treat a point on the curve as the printed contest) Tj ET
+BT /F1 10.0 Tf 48.00 354.00 Td (score.) Tj ET
+BT /F1 10.0 Tf 48.00 337.00 Td (On that map, hidden state 8 reads 0.2495, 0.1662, and 0.2842. Hidden state 15 reads 0.2982, 0.1921, and) Tj ET
+BT /F1 10.0 Tf 48.00 324.00 Td (0.3241. German peaks at layer 14 \(0.2983\), a hair above layer 15. French peaks at layer 15. Italian) Tj ET
+BT /F1 10.0 Tf 48.00 311.00 Td (peaks at layer 14 \(0.3246\), again a hair above layer 15. The final state, index 32, is 0.0484, 0.0564,) Tj ET
+BT /F1 10.0 Tf 48.00 298.00 Td (and 0.0945. German is the low end of that curve. A pooled ordinal Spearman across all three languages,) Tj ET
+BT /F1 10.0 Tf 48.00 285.00 Td (in docs/layer_map_dev.txt, peaks at layer 14 \(0.1408\), with layer 15 at 0.1403, layer 8 at 0.1281, and) Tj ET
+BT /F1 10.0 Tf 48.00 272.00 Td (the last block at -0.0358. That pooled number is one Spearman on 351,942 tokens. It is not the mean of) Tj ET
+BT /F1 10.0 Tf 48.00 259.00 Td (three language scores.) Tj ET
+BT /F1 10.0 Tf 48.00 242.00 Td (The official prints sit next to this map, not on top of it. Submitted subword-first hidden state 15) Tj ET
+BT /F1 10.0 Tf 48.00 229.00 Td (printed 0,309 ; 0,199 ; 0,333 \(mean 0.2803\). Word-mean-pool hidden state 15 printed 0,296 ; 0,191 ;) Tj ET
+BT /F1 10.0 Tf 48.00 216.00 Td (0,324 \(mean 0.2703\). Hidden state 8 printed 0,245 ; 0,165 ; 0,282 \(mean 0.2307\). The final layer) Tj ET
+BT /F1 10.0 Tf 48.00 203.00 Td (printed 0,053 ; 0,056 ; 0,106 \(mean 0.0717\). The shape agrees: the middle of the network carries the) Tj ET
+BT /F1 10.0 Tf 48.00 190.00 Td (signal, and the final state does not.) Tj ET
+BT /F1 10.0 Tf 48.00 173.00 Td (docs/token_heatmap.png and docs/demo.html show development pairs \(admin_de_105, admin_fr_141,) Tj ET
+BT /F1 10.0 Tf 48.00 160.00 Td (admin_it_101\) colored by the clamped difference alongside gold labels.) Tj ET
+BT /F2 13.0 Tf 48.00 132.00 Td (Layer selection and pre-registered representation study) Tj ET
+BT /F1 10.0 Tf 48.00 114.00 Td (The organizers publish a development train split of 134 documents per language and a development) Tj ET
+BT /F1 10.0 Tf 48.00 101.00 Td (validation split of 34, at gold_labels/dev/train and gold_labels/dev/val in ZurichNLP/SwissGov-RSD.) Tj ET
+BT /F1 10.0 Tf 48.00 88.00 Td (Those files are not copied into this repository. Only the id field was read. Together, train and) Tj ET
+BT /F1 10.0 Tf 48.00 75.00 Td (validation are the 168 development documents, and they share no id. The per-document Spearmans were) Tj ET
+BT /F1 10.0 Tf 48.00 62.00 Td (then taken from docs/layer_map_dev.jsonl, which stores one ordinal Spearman per hidden state and does) Tj ET
 endstream
 endobj
 7 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 12 0 R /F2 13 0 R >> /XObject << /Im1 11 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 9220 >>
+<< /Length 9615 >>
 stream
-0.90 0.93 0.96 rg 48.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 48.00 732.00 86.00 16.00 re S
+BT /F1 10.0 Tf 48.00 738.00 Td (not store gold labels.) Tj ET
+BT /F1 10.0 Tf 48.00 721.00 Td (A document whose per-document Spearman is not finite was omitted: none of 134 German train pages, 1 of) Tj ET
+BT /F1 10.0 Tf 48.00 708.00 Td (34 German val, 2 of 134 French train, 1 of 34 French val, 1 of 134 Italian train, and 1 of 34 Italian) Tj ET
+BT /F1 10.0 Tf 48.00 695.00 Td (val. The table is the unweighted mean of the remaining per-document Spearmans. It is not the official) Tj ET
+BT /F1 10.0 Tf 48.00 682.00 Td (contest formula.) Tj ET
+0.90 0.93 0.96 rg 48.00 659.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 48.00 659.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 51.00 736.50 Td (Slice) Tj ET
-0.90 0.93 0.96 rg 134.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 134.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 51.00 663.50 Td (Slice) Tj ET
+0.90 0.93 0.96 rg 134.00 659.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 134.00 659.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 137.00 736.50 Td (docs used) Tj ET
-0.90 0.93 0.96 rg 220.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 220.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 137.00 663.50 Td (docs used) Tj ET
+0.90 0.93 0.96 rg 220.00 659.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 220.00 659.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 223.00 736.50 Td (best layer) Tj ET
-0.90 0.93 0.96 rg 306.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 306.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 223.00 663.50 Td (best layer) Tj ET
+0.90 0.93 0.96 rg 306.00 659.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 306.00 659.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 309.00 736.50 Td (layer 8) Tj ET
-0.90 0.93 0.96 rg 392.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 392.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 309.00 663.50 Td (layer 8) Tj ET
+0.90 0.93 0.96 rg 392.00 659.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 392.00 659.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 395.00 736.50 Td (layer 15) Tj ET
-0.90 0.93 0.96 rg 478.00 732.00 86.00 16.00 re f
-0.45 0.50 0.55 RG 0.6 w 478.00 732.00 86.00 16.00 re S
+BT /F2 8.5 Tf 395.00 663.50 Td (layer 15) Tj ET
+0.90 0.93 0.96 rg 478.00 659.00 86.00 16.00 re f
+0.45 0.50 0.55 RG 0.6 w 478.00 659.00 86.00 16.00 re S
 0 0 0 rg
-BT /F2 8.5 Tf 481.00 736.50 Td (15 minus 8) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 716.00 86.00 16.00 re S
+BT /F2 8.5 Tf 481.00 663.50 Td (15 minus 8) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 643.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 720.50 Td (de train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 647.50 Td (de train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 643.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 720.50 Td (134/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 647.50 Td (134/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 643.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 720.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 647.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 643.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 720.50 Td (0.1623) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 647.50 Td (0.1623) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 643.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 720.50 Td (0.1899) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 716.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 647.50 Td (0.1899) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 643.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 720.50 Td (+0.0276) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 647.50 Td (+0.0276) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 627.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 704.50 Td (de val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 631.50 Td (de val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 627.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 704.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 631.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 627.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 704.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 631.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 627.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 704.50 Td (0.1636) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 631.50 Td (0.1636) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 627.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 704.50 Td (0.2003) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 700.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 631.50 Td (0.2003) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 627.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 704.50 Td (+0.0367) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 631.50 Td (+0.0367) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 611.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 688.50 Td (fr train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 615.50 Td (fr train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 611.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 688.50 Td (132/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 615.50 Td (132/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 611.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 688.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 615.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 611.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 688.50 Td (0.0430) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 615.50 Td (0.0430) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 611.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 688.50 Td (0.0798) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 684.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 615.50 Td (0.0798) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 611.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 688.50 Td (+0.0367) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 615.50 Td (+0.0367) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 595.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 672.50 Td (fr val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 599.50 Td (fr val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 595.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 672.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 599.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 595.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 672.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 599.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 595.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 672.50 Td (0.0461) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 599.50 Td (0.0461) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 595.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 672.50 Td (0.0801) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 668.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 599.50 Td (0.0801) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 595.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 672.50 Td (+0.0340) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 599.50 Td (+0.0340) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 579.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 656.50 Td (it train) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 583.50 Td (it train) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 579.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 656.50 Td (133/134) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 583.50 Td (133/134) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 579.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 656.50 Td (14) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 583.50 Td (14) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 579.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 656.50 Td (0.1509) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 583.50 Td (0.1509) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 579.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 656.50 Td (0.1903) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 652.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 583.50 Td (0.1903) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 579.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 656.50 Td (+0.0394) Tj ET
-0.45 0.50 0.55 RG 0.6 w 48.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 481.00 583.50 Td (+0.0394) Tj ET
+0.45 0.50 0.55 RG 0.6 w 48.00 563.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 51.00 640.50 Td (it val) Tj ET
-0.45 0.50 0.55 RG 0.6 w 134.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 51.00 567.50 Td (it val) Tj ET
+0.45 0.50 0.55 RG 0.6 w 134.00 563.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 137.00 640.50 Td (33/34) Tj ET
-0.45 0.50 0.55 RG 0.6 w 220.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 137.00 567.50 Td (33/34) Tj ET
+0.45 0.50 0.55 RG 0.6 w 220.00 563.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 223.00 640.50 Td (15) Tj ET
-0.45 0.50 0.55 RG 0.6 w 306.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 223.00 567.50 Td (15) Tj ET
+0.45 0.50 0.55 RG 0.6 w 306.00 563.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 309.00 640.50 Td (0.1796) Tj ET
-0.45 0.50 0.55 RG 0.6 w 392.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 309.00 567.50 Td (0.1796) Tj ET
+0.45 0.50 0.55 RG 0.6 w 392.00 563.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 395.00 640.50 Td (0.2066) Tj ET
-0.45 0.50 0.55 RG 0.6 w 478.00 636.00 86.00 16.00 re S
+BT /F1 8.5 Tf 395.00 567.50 Td (0.2066) Tj ET
+0.45 0.50 0.55 RG 0.6 w 478.00 563.00 86.00 16.00 re S
 0 0 0 rg
-BT /F1 8.5 Tf 481.00 640.50 Td (+0.0270) Tj ET
+BT /F1 8.5 Tf 481.00 567.50 Td (+0.0270) Tj ET
 0 0 0 rg
-BT /F1 10.0 Tf 48.00 618.00 Td (Italian train is the exception. Its best layer is 14, at 0.1913, and layer 15 is 0.1903. An n-weighted) Tj ET
-BT /F1 10.0 Tf 48.00 605.00 Td (mean of the same per-document values picks the same best layer in every row, including Italian train at) Tj ET
-BT /F1 10.0 Tf 48.00 592.00 Td (layer 14. Layer 15 beats layer 8 by about 0.03 on every slice.) Tj ET
-BT /F1 10.0 Tf 48.00 575.00 Td (Layer 15 was then re-scored on all 168 development documents per language and graded with the official) Tj ET
-BT /F1 10.0 Tf 48.00 562.00 Td (script. That grade, not the per-document map, is the submission. predictions/l15 is a byte-identical) Tj ET
-BT /F1 10.0 Tf 48.00 549.00 Td (copy of predictions/dev. The grade uses predictions/dev only. Hidden state 8 remains in) Tj ET
-BT /F1 10.0 Tf 48.00 536.00 Td (predictions/ablation_l8.) Tj ET
-BT /F2 13.0 Tf 48.00 508.00 Td (Use of Apertus) Tj ET
-BT /F1 10.0 Tf 48.00 490.00 Td (One checkpoint: swiss-ai/Apertus-v1.5-8B. No second embedding model and no closed API. The development) Tj ET
-BT /F1 10.0 Tf 48.00 477.00 Td (forward pass read 564,349 tokens and wrote 0 generated tokens. With the weights already cached,) Tj ET
-BT /F1 10.0 Tf 48.00 464.00 Td (layer-15 scoring took 515 seconds on one Apple GPU. A cold load of the 8B weights needs about 16 GB.) Tj ET
-BT /F1 10.0 Tf 48.00 451.00 Td (Apertus 70B was not run. It does not fit in 48 GB on this machine. The Getting Started introduction) Tj ET
-BT /F1 10.0 Tf 48.00 438.00 Td (says builders work with both sizes. The UZH challenge FAQ says either size is in scope, and that) Tj ET
-BT /F1 10.0 Tf 48.00 425.00 Td (efficiency can make a tuned 8B competitive. This submission is the 8B.) Tj ET
-BT /F1 10.0 Tf 48.00 408.00 Td (Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, use) Tj ET
-BT /F1 10.0 Tf 48.00 395.00 Td (the same frozen hidden-state-15 method. The test forward pass was 207,075 tokens and 273 seconds.) Tj ET
-BT /F1 10.0 Tf 48.00 382.00 Td (Development scores are our development evaluation. Those test and full-set files are included for the) Tj ET
-BT /F1 10.0 Tf 48.00 369.00 Td (organizers to score. We never graded the test split. No test Spearman is claimed.) Tj ET
-BT /F2 13.0 Tf 48.00 341.00 Td (Data) Tj ET
-BT /F1 10.0 Tf 48.00 323.00 Td (Development inputs are the public SwissGov-RSD development pages, 168 documents per language. Test) Tj ET
-BT /F1 10.0 Tf 48.00 310.00 Td (predictions are 56 documents per language. Full-set predictions are 224 documents per language, in id) Tj ET
-BT /F1 10.0 Tf 48.00 297.00 Td (order. Development scores are our development evaluation. The test and full-set predictions are) Tj ET
-BT /F1 10.0 Tf 48.00 284.00 Td (included for the organizers to score. We never graded the test split. This repository does not contain) Tj ET
-BT /F1 10.0 Tf 48.00 271.00 Td (that gold. The SwissGov text stays CC-BY-4.0 and is not relicensed.) Tj ET
-BT /F2 13.0 Tf 48.00 243.00 Td (Evaluation) Tj ET
-BT /F1 10.0 Tf 48.00 225.00 Td (The summary table is the evaluation that should be quoted. It has three official development runs and) Tj ET
-BT /F1 10.0 Tf 48.00 212.00 Td (no others. Layer-map numbers in the selection section answer why hidden state 15 was scored. They are) Tj ET
-BT /F1 10.0 Tf 48.00 199.00 Td (not a substitute for the printed row.) Tj ET
-BT /F2 13.0 Tf 48.00 171.00 Td (Limitations) Tj ET
-BT /F1 10.0 Tf 48.00 153.00 Td (States are causal, so a token sees only its left context. An empty subword span scores 1, which) Tj ET
-BT /F1 10.0 Tf 48.00 140.00 Td (inflates a few punctuation tokens. The final layer raises aligned tokens and different tokens together,) Tj ET
-BT /F1 10.0 Tf 48.00 127.00 Td (so a last-layer DiffAlign score looks large and ranks poorly. Italian train, on the per-document map,) Tj ET
-BT /F1 10.0 Tf 48.00 114.00 Td (prefers layer 14 by 0.001. The submitted choice is still layer 15 because validation prefers it in all) Tj ET
-BT /F1 10.0 Tf 48.00 101.00 Td (three languages and the official development grade prefers it to layer 8. The unclamped paper formula) Tj ET
-BT /F1 10.0 Tf 48.00 88.00 Td (was not rerun. 70B was not run. No test Spearman is reported. We never graded the test split.) Tj ET
-BT /F2 13.0 Tf 48.00 60.00 Td (Reproducibility) Tj ET
+BT /F1 10.0 Tf 48.00 545.00 Td (Italian train is the exception. Its best layer is 14, at 0.1913, and layer 15 is 0.1903. An n-weighted) Tj ET
+BT /F1 10.0 Tf 48.00 532.00 Td (mean of the same per-document values picks the same best layer in every row, including Italian train at) Tj ET
+BT /F1 10.0 Tf 48.00 519.00 Td (layer 14. Layer 15 beats layer 8 by about 0.03 on every slice.) Tj ET
+BT /F1 10.0 Tf 48.00 502.00 Td (Before running further representation changes, three variants on swiss-ai/Apertus-v1.5-8B were) Tj ET
+BT /F1 10.0 Tf 48.00 489.00 Td (pre-registered in docs/preregistration.md with a strict gate: beat word-mean-pool L15 on dev/train) Tj ET
+BT /F1 10.0 Tf 48.00 476.00 Td (\(134/lang\), confirm on dev/val \(34/lang\), and beat full-dev official grade by at least +0.0050. On) Tj ET
+BT /F1 10.0 Tf 48.00 463.00 Td (dev/train and dev/val token-pooled Spearman, variant \(a\) mean_l12_17 scored 0.2641 / 0.2457 \(official) Tj ET
+BT /F1 10.0 Tf 48.00 450.00 Td (full-dev 0.2613\), variant \(c\) combined scored 0.2750 / 0.2529 \(official full-dev 0.2717\), and variant) Tj ET
+BT /F1 10.0 Tf 48.00 437.00 Td (\(b\) subword_first_l15 scored 0.2843 / 0.2592 vs word-mean-pool L15 at 0.2734 / 0.2527, and achieved) Tj ET
+BT /F1 10.0 Tf 48.00 424.00 Td (0.2803 on the official full-dev grade \(+0.0100 over 0.2703\). Variant \(b\) therefore became) Tj ET
+BT /F1 10.0 Tf 48.00 411.00 Td (predictions/dev. Word-mean-pool L15 remains in predictions/l15, and hidden state 8 remains in) Tj ET
+BT /F1 10.0 Tf 48.00 398.00 Td (predictions/ablation_l8.) Tj ET
+BT /F2 13.0 Tf 48.00 370.00 Td (Use of Apertus) Tj ET
+BT /F1 10.0 Tf 48.00 352.00 Td (One checkpoint: swiss-ai/Apertus-v1.5-8B. No second embedding model and no closed API. The development) Tj ET
+BT /F1 10.0 Tf 48.00 339.00 Td (forward pass read 564,349 tokens and wrote 0 generated tokens. With the weights already cached,) Tj ET
+BT /F1 10.0 Tf 48.00 326.00 Td (layer-15 subword-first scoring took 549.8 seconds on one Apple GPU. A cold load of the 8B weights needs) Tj ET
+BT /F1 10.0 Tf 48.00 313.00 Td (about 16 GB. Apertus 70B was not run. It does not fit in 48 GB on this machine. The Getting Started) Tj ET
+BT /F1 10.0 Tf 48.00 300.00 Td (introduction says builders work with both sizes. The UZH challenge FAQ says either size is in scope,) Tj ET
+BT /F1 10.0 Tf 48.00 287.00 Td (and that efficiency can make a tuned 8B competitive. This submission is the 8B.) Tj ET
+BT /F1 10.0 Tf 48.00 270.00 Td (Test predictions, 56 documents per language, and full-set predictions, 224 documents per language, use) Tj ET
+BT /F1 10.0 Tf 48.00 257.00 Td (the same frozen hidden-state-15 subword-first method. The test forward pass was 207,075 tokens and) Tj ET
+BT /F1 10.0 Tf 48.00 244.00 Td (261.8 seconds. Development scores are our development evaluation. Those test and full-set files are) Tj ET
+BT /F1 10.0 Tf 48.00 231.00 Td (included for the organizers to score. We never graded the test split. No test Spearman is claimed.) Tj ET
+BT /F2 13.0 Tf 48.00 203.00 Td (Data) Tj ET
+BT /F1 10.0 Tf 48.00 185.00 Td (Development inputs are the public SwissGov-RSD development pages, 168 documents per language. Test) Tj ET
+BT /F1 10.0 Tf 48.00 172.00 Td (predictions are 56 documents per language. Full-set predictions are 224 documents per language, in id) Tj ET
+BT /F1 10.0 Tf 48.00 159.00 Td (order. Development scores are our development evaluation. The test and full-set predictions are) Tj ET
+BT /F1 10.0 Tf 48.00 146.00 Td (included for the organizers to score. We never graded the test split. This repository does not contain) Tj ET
+BT /F1 10.0 Tf 48.00 133.00 Td (that gold. The SwissGov text stays CC-BY-4.0 and is not relicensed.) Tj ET
+BT /F2 13.0 Tf 48.00 105.00 Td (Evaluation) Tj ET
+BT /F1 10.0 Tf 48.00 87.00 Td (The summary table is the evaluation that should be quoted. It has six official development runs) Tj ET
+BT /F1 10.0 Tf 48.00 74.00 Td (\(submitted subword-first L15, pre-registered \(c\), word-mean-pool L15, pre-registered \(a\), L8, and) Tj ET
+BT /F1 10.0 Tf 48.00 61.00 Td (clamped final layer\). Layer-map and pre-registration numbers explain why subword-first hidden state 15) Tj ET
 endstream
 endobj
 9 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 12 0 R /F2 13 0 R >> /XObject << /Im1 11 0 R >> >> >>
 endobj
 10 0 obj
-<< /Length 1700 >>
+<< /Length 2532 >>
 stream
-BT /F1 10.0 Tf 48.00 738.00 Td (The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. Judges run make run. That) Tj ET
-BT /F1 10.0 Tf 48.00 725.00 Td (builds the Docker image and grades predictions/dev with --split dev. It does not load the model. make) Tj ET
-BT /F1 10.0 Tf 48.00 712.00 Td (run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not) Tj ET
-BT /F1 10.0 Tf 48.00 699.00 Td (the scorer. make predict writes a new layer-15 development run under predictions/rerun. It needs the) Tj ET
-BT /F1 10.0 Tf 48.00 686.00 Td (Apertus weights and a Hugging Face token only if those weights are not cached. The Docker image grades) Tj ET
-BT /F1 10.0 Tf 48.00 673.00 Td (the same committed development files. An earlier image was built and graded under podman on) Tj ET
-BT /F1 10.0 Tf 48.00 660.00 Td (linux/amd64. Docker is not installed on this Mac, so the current image has not been rebuilt here.) Tj ET
-BT /F2 13.0 Tf 48.00 632.00 Td (Next steps) Tj ET
-BT /F1 10.0 Tf 48.00 614.00 Td (Development scores are our development evaluation. Test predictions, 56 documents per language, and) Tj ET
-BT /F1 10.0 Tf 48.00 601.00 Td (full-set predictions, 224 documents per language, use the frozen hidden-state-15 method and are) Tj ET
-BT /F1 10.0 Tf 48.00 588.00 Td (included for the organizers to score. We never graded the test split. make run grades the development) Tj ET
-BT /F1 10.0 Tf 48.00 575.00 Td (files only. A 70B run is future work on a larger machine.) Tj ET
-BT /F2 13.0 Tf 48.00 547.00 Td (License) Tj ET
-BT /F1 10.0 Tf 48.00 529.00 Td (Report CC-BY-4.0. Code Apache-2.0. SwissGov text stays CC-BY-4.0, not relicensed.) Tj ET
+BT /F1 10.0 Tf 48.00 738.00 Td (was adopted.) Tj ET
+BT /F2 13.0 Tf 48.00 710.00 Td (Limitations) Tj ET
+BT /F1 10.0 Tf 48.00 692.00 Td (States are causal, so a token sees only its left context. An empty subword span scores 1, which) Tj ET
+BT /F1 10.0 Tf 48.00 679.00 Td (inflates a few punctuation tokens. The final layer raises aligned tokens and different tokens together,) Tj ET
+BT /F1 10.0 Tf 48.00 666.00 Td (so a last-layer DiffAlign score looks large and ranks poorly. Italian train, on the per-document map,) Tj ET
+BT /F1 10.0 Tf 48.00 653.00 Td (prefers layer 14 by 0.001. The unclamped paper formula was not rerun. 70B was not run. No test Spearman) Tj ET
+BT /F1 10.0 Tf 48.00 640.00 Td (is reported. We never graded the test split.) Tj ET
+BT /F2 13.0 Tf 48.00 612.00 Td (Reproducibility) Tj ET
+BT /F1 10.0 Tf 48.00 594.00 Td (The public tree is https://github.com/moscraciunxxx/SpanDiff-HackApertus. Judges run make run. That) Tj ET
+BT /F1 10.0 Tf 48.00 581.00 Td (builds the Docker image and grades predictions/dev with --split dev. It does not load the model. make) Tj ET
+BT /F1 10.0 Tf 48.00 568.00 Td (run-local is that grade when Docker is not installed. LLM_NAME, LLM_BASE_URL, and LLM_API_KEY are not) Tj ET
+BT /F1 10.0 Tf 48.00 555.00 Td (the scorer. make predict writes a new deterministic layer-15 development run under predictions/rerun.) Tj ET
+BT /F1 10.0 Tf 48.00 542.00 Td (It needs the Apertus weights and a Hugging Face token only if those weights are not cached. The Docker) Tj ET
+BT /F1 10.0 Tf 48.00 529.00 Td (image grades the same committed development files. An earlier image was built and graded under podman) Tj ET
+BT /F1 10.0 Tf 48.00 516.00 Td (on linux/amd64. Docker is not installed on this Mac, so the current image has not been rebuilt here.) Tj ET
+BT /F2 13.0 Tf 48.00 488.00 Td (Next steps) Tj ET
+BT /F1 10.0 Tf 48.00 470.00 Td (Development scores are our development evaluation. Test predictions, 56 documents per language, and) Tj ET
+BT /F1 10.0 Tf 48.00 457.00 Td (full-set predictions, 224 documents per language, use the frozen hidden-state-15 subword-first method) Tj ET
+BT /F1 10.0 Tf 48.00 444.00 Td (and are included for the organizers to score. We never graded the test split. make run grades the) Tj ET
+BT /F1 10.0 Tf 48.00 431.00 Td (development files only. A 70B run is future work on a larger machine.) Tj ET
+BT /F2 13.0 Tf 48.00 403.00 Td (License) Tj ET
+BT /F1 10.0 Tf 48.00 385.00 Td (Report CC-BY-4.0. Code Apache-2.0. SwissGov text stays CC-BY-4.0, not relicensed.) Tj ET
 endstream
 endobj
 11 0 obj
@@ -824,16 +881,16 @@ xref
 0000000058 00000 n 
 0000000133 00000 n 
 0000000298 00000 n 
-0000007353 00000 n 
-0000007518 00000 n 
-0000011166 00000 n 
-0000011331 00000 n 
-0000020603 00000 n 
-0000020769 00000 n 
-0000022522 00000 n 
-0000114016 00000 n 
-0000114087 00000 n 
+0000009564 00000 n 
+0000009729 00000 n 
+0000013427 00000 n 
+0000013592 00000 n 
+0000023259 00000 n 
+0000023425 00000 n 
+0000026010 00000 n 
+0000117504 00000 n 
+0000117575 00000 n 
 trailer << /Size 14 /Root 1 0 R >>
 startxref
-114163
+117651
 %%EOF

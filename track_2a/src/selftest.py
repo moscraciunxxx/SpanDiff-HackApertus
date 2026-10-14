@@ -21,6 +21,11 @@ from spandiff.leakage import needles, scan  # noqa: E402
 LANGS = ("de", "fr", "it")
 KEYS = {"id", "text_a", "text_b", "labels_a", "labels_b"}
 GRADED_SHA = {
+    "de": "cf296400041926f87ea4fa0cc68547b2cfbc43b0437583d637fcc5a74cffd163",
+    "fr": "ef2f1fa6293bcbf164118682ecf7646c4dc0ad92342abfeb77e334d726316ae1",
+    "it": "3a170ac7d1a1f1dfdfeef55804c2e753c5718bda033c0d121daac0d7c7b8beff",
+}
+L15_WORD_SHA = {
     "de": "bb0c1cac606d6ee8e407f968f99797640311040e1e86b506cb93f708e75952f6",
     "fr": "56b58418d67c22e7114cc8457647f02d65aeae117d974f64edf6c13a74f0cee9",
     "it": "c83223ce12938f255615e3b8c491d79449987b057024e152c1ebe9083fc70ddb",
@@ -122,15 +127,14 @@ def _check_id_partition() -> None:
         nums = [int(item.rsplit("_", 1)[-1]) for item in full]
         if nums != list(range(224)):
             raise SystemExit(f"{lang} 224-id file is not admin ids 0 through 223")
-        dev_bytes = (PRED / f"SpanDiff_admin_{lang}.jsonl.jsonl").read_bytes()
         l15_bytes = (
             REPO / "track_2a" / "predictions" / "l15" / f"SpanDiff_admin_{lang}.jsonl.jsonl"
         ).read_bytes()
-        if dev_bytes != l15_bytes:
-            raise SystemExit(f"{lang} development file is not the layer-15 file")
+        if hashlib.sha256(l15_bytes).hexdigest() != L15_WORD_SHA[lang]:
+            raise SystemExit(f"{lang} predictions/l15 is not the frozen word-mean-pool L15 ablation")
     for rel in ("README.md", "track_2a/README.md", "track_2a/technical_report.md"):
-        if "byte-identical copy" not in (REPO / rel).read_text(encoding="utf-8"):
-            raise SystemExit(f"{rel} does not say predictions/l15 copies predictions/dev")
+        if "predictions/l15" not in (REPO / rel).read_text(encoding="utf-8"):
+            raise SystemExit(f"{rel} does not retain predictions/l15 as an ablation row")
 
 
 def _check_command() -> None:
@@ -220,9 +224,12 @@ def _check_printed_mean() -> None:
     """The primary score is the four-decimal mean of the three printed cells."""
     import run
 
-    sample = "Spearman:\nde\tfr\tit\n0,296\t0,191\t0,324\n"
-    if run.printed_spearman_mean(sample) != "0.2703":
-        raise SystemExit("printed mean of the submission cells is not 0.2703")
+    sample = "Spearman:\nde\tfr\tit\n0,309\t0,199\t0,333\n"
+    if run.printed_spearman_mean(sample) != "0.2803":
+        raise SystemExit("printed mean of the submission cells is not 0.2803")
+    layer15_word = "Spearman:\nde\tfr\tit\n0,296\t0,191\t0,324\n"
+    if run.printed_spearman_mean(layer15_word) != "0.2703":
+        raise SystemExit("printed mean of the word-mean-pool L15 cells is not 0.2703")
     layer8 = "Spearman:\nde\tfr\tit\n0,245\t0,165\t0,282\n"
     final = "Spearman:\nde\tfr\tit\n0,053\t0,056\t0,106\n"
     if run.printed_spearman_mean(layer8) != "0.2307":
@@ -230,12 +237,15 @@ def _check_printed_mean() -> None:
     if run.printed_spearman_mean(final) != "0.0717":
         raise SystemExit("printed mean of the final-layer cells is not 0.0717")
     saved_dir = REPO / "track_2a" / "docs"
-    saved = (saved_dir / "official_dev_stdout_L15.txt").read_text(encoding="utf-8")
-    if run.printed_spearman_mean(saved) != "0.2703":
-        raise SystemExit("saved development stdout does not mean 0.2703")
-    if "0.2703" in saved:
+    saved = (saved_dir / "official_dev_stdout_subword_l15.txt").read_text(encoding="utf-8")
+    if run.printed_spearman_mean(saved) != "0.2803":
+        raise SystemExit("saved development stdout does not mean 0.2803")
+    if "0.2803" in saved:
         raise SystemExit("saved development stdout already contains the mean the official script does not print")
     for name, expected in (
+        ("official_dev_stdout_L15.txt", "0.2703"),
+        ("official_dev_stdout_l12_17.txt", "0.2613"),
+        ("official_dev_stdout_combined.txt", "0.2717"),
         ("official_dev_stdout.txt", "0.2307"),
         ("official_dev_stdout_last.txt", "0.0717"),
     ):
@@ -250,8 +260,8 @@ def _check_printed_mean() -> None:
         "track_2a/docs/architecture.md",
     ):
         text = (REPO / rel).read_text(encoding="utf-8")
-        if "0.2703" not in text:
-            raise SystemExit(f"{rel} does not state the printed mean 0.2703")
+        if "0.2803" not in text or "0.2703" not in text:
+            raise SystemExit(f"{rel} does not state both 0.2803 and the 0.2703 L15 ablation")
         if "to 3 decimals" in text:
             raise SystemExit(f"{rel} still rounds the printed mean to 3 decimals")
     for rel in ("README.md", "track_2a/README.md", "track_2a/technical_report.md"):
@@ -266,7 +276,10 @@ def _check_printed_mean() -> None:
     if "does not replace `track_2a/predictions/dev`" not in root_readme:
         raise SystemExit("README lets make predict replace the graded files")
     for name in (
+        "track_2a/docs/official_dev_stdout_subword_l15.txt",
         "track_2a/docs/official_dev_stdout_L15.txt",
+        "track_2a/docs/official_dev_stdout_l12_17.txt",
+        "track_2a/docs/official_dev_stdout_combined.txt",
         "track_2a/docs/official_dev_stdout.txt",
         "track_2a/docs/official_dev_stdout_last.txt",
     ):
@@ -289,8 +302,8 @@ def _check_printed_mean() -> None:
             raise SystemExit(f"{rel} treats the current image as the podman grade")
     for name in ("track_2a/SpanDiff_Method.pdf", "track_2a/SpanDiff_Report.pdf"):
         blob = (REPO / name).read_bytes()
-        if b"0.2703" not in blob:
-            raise SystemExit(f"{name} does not contain the printed mean 0.2703")
+        if b"0.2803" not in blob or b"0.2703" not in blob:
+            raise SystemExit(f"{name} does not contain the printed means 0.2803 and 0.2703")
 
 
 def _check_prefix_labels() -> None:
@@ -531,12 +544,12 @@ def _check_ship_notes() -> None:
     if "submitted print is hidden state 15" not in pooling:
         raise SystemExit("pooling notes still treat hidden state 8 as the submission")
     pipeline = (REPO / "track_2a" / "docs" / "pipeline_check.txt").read_text(encoding="utf-8")
-    if "0,296" not in pipeline or "0.2703" not in pipeline:
-        raise SystemExit("pipeline check still quotes hidden state 8 as the official result")
+    if "0,309" not in pipeline or "0.2803" not in pipeline or "0.2703" not in pipeline:
+        raise SystemExit("pipeline check does not quote 0.2803 and the 0.2703 ablation")
     if "Hidden state 8 ablation" not in pipeline:
         raise SystemExit("pipeline check does not label the hidden-state-8 result as an ablation")
     sources = (REPO / "track_2a" / "data" / "swissgov" / "SOURCES.txt").read_text(encoding="utf-8")
-    if "0.2703" not in sources or "not CDLA-Permissive-2.0" not in sources:
+    if "0.2803" not in sources or "0.2703" not in sources or "not CDLA-Permissive-2.0" not in sources:
         raise SystemExit("SOURCES.txt does not keep the SwissGov licence and the submitted mean")
     if "Submitted development print, hidden state 15" not in sources:
         raise SystemExit("SOURCES.txt still quotes hidden state 8 as the submission")
@@ -548,7 +561,7 @@ def _check_ship_notes() -> None:
     words = spoken.split()
     if len(words) > 300:
         raise SystemExit(f"demo script is {len(words)} words")
-    if "0.2703" not in spoken or "0,296" not in spoken:
+    if "0.2803" not in spoken or "0,309" not in spoken or "0.2703" not in spoken:
         raise SystemExit("demo script does not speak the printed development score")
     if "Judges run make run." not in spoken:
         raise SystemExit("demo script does not speak the judge command")

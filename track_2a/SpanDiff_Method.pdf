@@ -9,7 +9,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 2580 >>
+<< /Length 3343 >>
 stream
 BT
 /F1 11 Tf
@@ -19,45 +19,61 @@ BT
 T*
 (swiss-ai/Apertus-v1.5-8B. The submitted state is hidden state 15 \(index 0 is the) Tj
 T*
-(embedding\). Each side is encoded alone. Subwords are mean-pooled into the whitespace token) Tj
+(embedding\). Each side is encoded alone. Following the pre-registered paper-order) Tj
 T*
-(they overlap most. The score is clamp\(1 - max cosine to the other side, 0, 1\), written to) Tj
+(subword-first formulation \(docs/preregistration.md\), each content subword is scored by) Tj
 T*
-(6 decimals. Generated tokens = 0. Apertus 70B was not run.) Tj
+(clamp\(1 - max cosine to the other side, 0, 1\), and subword scores are averaged inside the) Tj
+T*
+(whitespace token they overlap most, rounded to 6 decimals. Generated tokens = 0. Apertus) Tj
+T*
+(70B was not run.) Tj
 T*
 (Development scores are our development evaluation. Official script, development split:) Tj
 T*
-(Spearman de 0,296 ; fr 0,191 ; it 0,324. Unweighted mean 0.2703. Kendall de 0,238 ; fr) Tj
+(Spearman de 0,309 ; fr 0,199 ; it 0,333. Unweighted mean 0.2803. Kendall de 0,249 ; fr) Tj
 T*
-(0,154 ; it 0,259. Each development file has 168 lines. Forward-pass tokens on that run:) Tj
+(0,161 ; it 0,266. Each development file has 168 lines. Forward-pass tokens on that run:) Tj
 T*
-(564349. Scoring time: 515 seconds. Test predictions, 56 documents per language, and) Tj
+(564349. Scoring time: 549.8 seconds. Test predictions, 56 documents per language, and) Tj
 T*
-(full-set predictions, 224 documents per language, use the frozen hidden-state-15 method) Tj
+(full-set predictions, 224 documents per language, use the frozen hidden-state-15) Tj
 T*
-(and are included for the organizers to score. We never graded the test split. make run) Tj
+(subword-first method and are included for the organizers to score. We never graded the) Tj
 T*
-(grades the development files only.) Tj
+(test split. make run grades the development files only.) Tj
 T*
-(The same command on the hidden-state-8 ablation printed de 0,245 ; fr 0,165 ; it 0,282 ;) Tj
+(On the same official command, the word-mean-pool hidden-state-15 ablation) Tj
 T*
-(mean 0.2307. The final-layer clamped DiffAlign recipe printed de 0,053 ; fr 0,056 ; it) Tj
+(\(predictions/l15\) printed de 0,296 ; fr 0,191 ; it 0,324 ; mean 0.2703. Pre-registered) Tj
 T*
-(0,106 ; mean 0.0717. Those files are not the submission.) Tj
+(variant \(a\), averaging hidden states 12-17 with word mean-pooling, printed de 0,285 ; fr) Tj
+T*
+(0,183 ; it 0,316 ; mean 0.2613. Pre-registered variant \(c\), combining hidden states 12-17) Tj
+T*
+(with subword-first scoring, printed de 0,298 ; fr 0,192 ; it 0,325 ; mean 0.2717. The) Tj
+T*
+(hidden-state-8 ablation printed de 0,245 ; fr 0,165 ; it 0,282 ; mean 0.2307. The) Tj
+T*
+(final-layer clamped DiffAlign recipe printed de 0,053 ; fr 0,056 ; it 0,106 ; mean 0.0717.) Tj
+T*
+(Those ablation files are not the primary submission.) Tj
 T*
 (The UZH challenge asks for a SwissGov-paper baseline on this same Apertus model. That) Tj
 T*
-(baseline is the clamped final-layer row, mean 0.0717. The submitted mean is 0.2703. The) Tj
+(baseline is the clamped final-layer row, mean 0.0717. The submitted mean is 0.2803 \(and) Tj
 T*
-(paper does not clamp. An unclamped rescore was not produced. The UZH FAQ says either the) Tj
+(0.2703 with word-first mean-pooling\). The paper does not clamp. An unclamped rescore was) Tj
 T*
-(8B or the 70B is in scope.) Tj
+(not produced. The UZH FAQ says either the 8B or the 70B is in scope.) Tj
 T*
 (Layer 15 was chosen because the saved per-language development map peaks in the middle of) Tj
 T*
-(the network, and the official development grade is higher at 15 than at 8. The map is in) Tj
+(the network, and pre-registered variant \(b\) beat word-mean-pool L15 on dev/train \(0.2843) Tj
 T*
-(docs/layer_curve.png. It is an average-rank study, not a second official score.) Tj
+(vs 0.2734\), dev/val \(0.2592 vs 0.2527\), and the full-development official grade \(+0.0100,) Tj
+T*
+(exceeding the +0.0050 threshold\). The map is in docs/layer_curve.png.) Tj
 T*
 (Windows are at most 512 tokenizer tokens. The development pass is 1619 windows. Each) Tj
 T*
@@ -87,8 +103,8 @@ xref
 0000000058 00000 n 
 0000000115 00000 n 
 0000000241 00000 n 
-0000002873 00000 n 
+0000003636 00000 n 
 trailer << /Size 6 /Root 1 0 R >>
 startxref
-2943
+3706
 %%EOF

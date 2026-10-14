@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from spandiff import MODEL_ID
 from spandiff.align import (
+    assign_subwords,
     diff_against,
     gold_tokens,
     locate_tokens,
@@ -218,14 +219,115 @@ def context_limit(config) -> int:
     return min(int(raw), 512)
 
 
+def _encode_window_subwords(model, tokenizer, text: str, spans: list[tuple[int, int]], device: str):
+    import torch
+
+    batch = tokenizer(
+        text,
+        return_tensors="pt",
+        return_offsets_mapping=True,
+        add_special_tokens=True,
+        padding=False,
+        truncation=False,
+    )
+    if int(batch["input_ids"].shape[0]) != 1:
+        raise RuntimeError("expected batch size 1 with no padding")
+    offsets = [(int(a), int(b)) for a, b in batch.pop("offset_mapping")[0].tolist()]
+    model_inputs = {
+        key: value.to(device) if hasattr(value, "to") else value
+        for key, value in batch.items()
+    }
+    with torch.no_grad():
+        outputs = model(**model_inputs, output_hidden_states=True, use_cache=False)
+    layer = chosen_layer_tensor(outputs, hidden_state_count(model.config))[0].detach().float().cpu().tolist()
+    del outputs
+    input_tokens = int(batch["input_ids"].shape[-1])
+    buckets = assign_subwords(offsets, spans)
+    subs: list[list[float]] = []
+    counts: list[int] = []
+    for bucket in buckets:
+        counts.append(len(bucket))
+        for idx in bucket:
+            subs.append(layer[idx])
+    return subs, counts, input_tokens
+
+
+def encode_side_subwords(model, tokenizer, text: str, spans: list[tuple[int, int]], device: str, max_length: int):
+    """Encode one document side into stitched content subwords and per-word subword counts."""
+    if not spans:
+        return [], [], 0
+
+    def fits(piece: str) -> bool:
+        ids = tokenizer.encode(piece, add_special_tokens=True)
+        return len(ids) <= max_length
+
+    groups = pack_spans(text, spans, fits)
+    subs: list[list[float]] = []
+    counts: list[int] = []
+    seen_tokens = 0
+    for group in groups:
+        start = group[0][0]
+        piece = text[start : group[-1][1]]
+        local = [(span_start - start, span_end - start) for span_start, span_end in group]
+        if not fits(piece):
+            raise RuntimeError(
+                "A single whitespace token exceeds the context window. "
+                "Refusing to drop it or to call another model."
+            )
+        win_subs, win_counts, count = _encode_window_subwords(model, tokenizer, piece, local, device)
+        subs.extend(win_subs)
+        counts.extend(win_counts)
+        seen_tokens += count
+    if len(counts) != len(spans):
+        raise RuntimeError("stitched subword counts do not match whitespace tokens")
+    return subs, counts, seen_tokens
+
+
+def _pool_subword_scores(subs_src: list[list[float]], counts_src: list[int], subs_other: list[list[float]]) -> list[float]:
+    if not counts_src:
+        return []
+    if not subs_src or not subs_other:
+        return [1.0] * len(counts_src)
+    raw_scores = diff_against(subs_src, subs_other)
+    out: list[float] = []
+    cursor = 0
+    for count in counts_src:
+        if count == 0:
+            out.append(1.0)
+        else:
+            val = sum(raw_scores[cursor : cursor + count]) / count
+            out.append(round(float(val), 6))
+            cursor += count
+    if cursor != len(raw_scores):
+        raise RuntimeError("subword scores were not consumed in order")
+    return out
+
+
 def score_record(model, tokenizer, record: dict, device: str, max_length: int) -> tuple[str, int]:
     # A full-document forward of a long page was killed with no traceback.
     # Every caller, including a judge re-run, uses the same 512-token windows.
+    # Paper order: clamp(1 - max cosine, 0, 1) per subword at hidden state 15, then mean-pool within each word.
     max_length = min(int(max_length), 512)
     text_a, tokens_a = source_text(record, "a")
     text_b, tokens_b = source_text(record, "b")
     spans_a = locate_tokens(text_a, tokens_a)
     spans_b = locate_tokens(text_b, tokens_b)
-    vectors_a, tokens_in_a = encode_side(model, tokenizer, text_a, spans_a, device, max_length)
-    vectors_b, tokens_in_b = encode_side(model, tokenizer, text_b, spans_b, device, max_length)
-    return dumps_line(record, vectors_a, vectors_b), tokens_in_a + tokens_in_b
+    subs_a, counts_a, tokens_in_a = encode_side_subwords(model, tokenizer, text_a, spans_a, device, max_length)
+    subs_b, counts_b, tokens_in_b = encode_side_subwords(model, tokenizer, text_b, spans_b, device, max_length)
+    if len(counts_a) != len(tokens_a) or len(counts_b) != len(tokens_b):
+        raise RuntimeError(
+            f"refusing to pad or truncate {record.get('id')}: "
+            f"pooled {len(counts_a)}/{len(counts_b)} != gold tokens {len(tokens_a)}/{len(tokens_b)}"
+        )
+    labels_a = _pool_subword_scores(subs_a, counts_a, subs_b)
+    labels_b = _pool_subword_scores(subs_b, counts_b, subs_a)
+    line = dumps_encoder(
+        {
+            "id": record["id"],
+            "text_a": record["text_a"],
+            "text_b": record["text_b"],
+            "labels_a": labels_a,
+            "labels_b": labels_b,
+        }
+    )
+    return line, tokens_in_a + tokens_in_b
