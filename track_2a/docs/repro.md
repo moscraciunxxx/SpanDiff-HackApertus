@@ -4,6 +4,7 @@ On 14 Oct 2026, `make predict` run twice produced byte-identical `predictions/re
 
 ## Deterministic scoring settings
 
+- Model revision: `swiss-ai/Apertus-v1.5-8B` at `a411d838600baf0e3635a3daf66fb7c55fc97bb6`. That is the checkpoint used for the committed predictions.
 - Method: pre-registered Tier-1 Combination (`track_2a/docs/preregistration.md`) on `swiss-ai/Apertus-v1.5-8B` hidden state 15 — document-mean contrastive centering (`beta = 0.50`), bidirectional CSLS hubness margin (`alpha = 0.50, k = 5`), sentence-constrained alignment (`lambda = 0.35`, matched sentence `+/- 1`), paper-order subword-first `clamp(1 - max cosine, 0, 1)` pooled into whitespace tokens, and window-2 triangular span smoothing over content tokens (`track_2a/src/spandiff/score.py`).
 - Batch size 1 with `padding=False` and `truncation=False` per 512-token window.
 - Fixed seeds (`random.seed(0)`, `torch.manual_seed(0)`) and `torch.use_deterministic_algorithms(True, warn_only=True)`.

@@ -2,7 +2,7 @@
 
 Repository: https://github.com/moscraciunxxx/SpanDiff-HackApertus
 
-Frozen method: an out-of-fold ridge on Apertus hidden state 15. Development mean `0.3430`. Coefficients: `track_2a/docs/ridge_weights.json`.
+Frozen method: an out-of-fold ridge on Apertus hidden state 15. Development mean `0.3430`. Coefficients: `track_2a/docs/ridge_weights.json`. Predictions use `swiss-ai/Apertus-v1.5-8B` revision `a411d838600baf0e3635a3daf66fb7c55fc97bb6`.
 
 SpanDiff scores token-level semantic drift on Swiss federal pages for Track 2A (UZH). It reads hidden state 15 of `swiss-ai/Apertus-v1.5-8B` and applies the pre-registered Tier-1 Combination (`track_2a/docs/preregistration.md`): document-mean contrastive centering (`beta = 0.50`), bidirectional CSLS hubness margin (`alpha = 0.50, k = 5`), sentence-constrained alignment (`lambda = 0.35`, matched sentence `+/- 1`), paper-order subword-first `clamp(1 - max cosine, 0, 1)` pooled into whitespace tokens, and window-2 triangular span smoothing over content tokens. No text is generated. Apertus 70B was not run.
 

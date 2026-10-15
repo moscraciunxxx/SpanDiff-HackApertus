@@ -2,7 +2,7 @@
 
 Repository: https://github.com/moscraciunxxx/SpanDiff-HackApertus
 
-Frozen method: out-of-fold ridge, development mean `0.3430`. Coefficients: `docs/ridge_weights.json`.
+Frozen method: out-of-fold ridge, development mean `0.3430`. Coefficients: `docs/ridge_weights.json`. Predictions use `swiss-ai/Apertus-v1.5-8B` revision `a411d838600baf0e3635a3daf66fb7c55fc97bb6`.
 
 Track 2A, UZH. Token-level difference on Swiss federal pages with Apertus v1.5 8B, hidden state 15. Pre-registered Tier-1 Combination (`docs/preregistration.md`): document-mean contrastive centering (`beta = 0.50`), bidirectional CSLS hubness margin (`alpha = 0.50, k = 5`), sentence-constrained alignment (`lambda = 0.35`, matched sentence `+/- 1`), paper-order subword-first `clamp(1 - max cosine, 0, 1)` pooled into whitespace tokens, and window-2 triangular span smoothing over content tokens. Generated tokens: 0. 70B was not run.
 
